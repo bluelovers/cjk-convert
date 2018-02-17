@@ -18,7 +18,7 @@ export function word(name: string, options = {}): string
 
 export function jp(txt: string, options = {}): string
 {
-	return zh(zh2jp(txt, {
+	return zh(zh2jp(zh(txt), {
 		// @ts-ignore
 		skip: '龙竜龍制征里像拜冰澤' + (options.skip || ''),
 	}))
