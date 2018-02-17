@@ -2,11 +2,43 @@
   "name": "cjk-convert",
   "version": "1.0.0",
   "description": "",
+  "keywords": [
+    "char",
+    "character",
+    "characters",
+    "chinese",
+    "cjk",
+    "cn",
+    "conv",
+    "conversion",
+    "convert",
+    "hanja",
+    "japanese",
+    "kanji",
+    "simplified",
+    "traditional",
+    "transform",
+    "tw",
+    "unicode",
+    "words",
+    "zh"
+  ],
+  "homepage": "https://github.com/bluelovers/cjk-convert#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/cjk-convert/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/cjk-convert.git"
+  },
+  "license": "ISC",
+  "author": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "chinese_convert": "^1.0.8",
+    "japanese": "^1.2.0"
+  }
 }
