@@ -2,14 +2,14 @@
  * Created by user on 2018/2/17/017.
  */
 
-import { tw2cn, cn2tw } from './convert/index';
+import { tw2cn, cn2tw } from '../convert/index';
 
-let _table_tw = {
+export let _table_tw = {
 	'罗': '羅',
 	'恶': '惡',
 };
 
-export const table_jp = {
+export let table_jp = {
 	'の': [
 		'之',
 		'的',
@@ -40,18 +40,30 @@ export const table_jp = {
 	],
 };
 
-let _table_cn = Object.keys(_table_tw)
-	.reduce(function (a, b)
-	{
-		a[_table_tw[b]] = b;
-
-		return a;
-	}, {})
-;
-
-export function _get(arr: string[], value: string | string[], ...values: Array<string | string[]>)
+export interface ISimpleTable
 {
-	let ret = []
+	[key: string]: string,
+}
+
+export let _table_cn: ISimpleTable = _update({}, _table_tw);
+
+export function _update(target: ISimpleTable, source: ISimpleTable): ISimpleTable
+{
+	target = Object.keys(source)
+		.reduce(function (a, b)
+		{
+			a[source[b]] = b;
+
+			return a;
+		}, {})
+	;
+
+	return target;
+}
+
+export function _get(arr: string[], value: string | string[], ...values: Array<string | string[]>): string[]
+{
+	let ret: string[] = []
 		.concat(value)
 		.concat(...values)
 		.filter(function (v)
@@ -60,17 +72,21 @@ export function _get(arr: string[], value: string | string[], ...values: Array<s
 		})
 	;
 
-	ret.sort();
+	//ret.length && ret.sort();
 
 	return ret;
 }
 
-export function jp(char): string[]
+export function jp(char: string): string[]
 {
-	return table_jp[char].slice();
+	let a: string[] = [];
+	a = _get(a, table_jp[char]);
+
+	return a;
+	//return table_jp[char].slice();
 }
 
-export function tw(char): string[]
+export function tw(char: string): string[]
 {
 	let a: string[] = [];
 
@@ -89,7 +105,7 @@ export function tw(char): string[]
 	return a;
 }
 
-export function cn(char): string[]
+export function cn(char: string): string[]
 {
 	let a: string[] = [];
 

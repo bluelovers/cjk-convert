@@ -7,6 +7,14 @@ export interface IcharCodeAtFn
 	(char, charCode, str)
 }
 
+export function array_unique(array: any[])
+{
+	return (array).filter(function (el, index, arr)
+	{
+		return index == arr.indexOf(el);
+	});
+}
+
 export function split(str): string[]
 {
 	return str.toString().split('');

@@ -2,3 +2,5 @@
 /package-lock.json
 /test/*.d.ts
 /test/*.js
+/test/**/*.d.ts
+/test/**/*.js
