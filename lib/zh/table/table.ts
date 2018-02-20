@@ -3,6 +3,7 @@
  */
 
 import { tw2cn, cn2tw } from '../convert/index';
+import { array_unique } from '../../util';
 
 export let _table_tw = {
 	'罗': '羅',
@@ -14,31 +15,60 @@ export let table_jp = {
 		'之',
 		'的',
 	],
-	'劍': [
-		'劍',
-		'剑',
-		'剣',
-	],
-	'剣': [
-		'劍',
-		'剑',
-		'剣',
-	],
 	'画': [
 		'划',
 		'画',
 		'劃',
 		'畫',
 	],
+};
+
+export let table_plus = {
+	'劍': [
+		'劍',
+		'剑',
+		'剣',
+		'劎',
+		'劒',
+		'剱',
+		'劔',
+	],
 	'砲': [
 		'砲',
 		'炮',
 	],
-	'炮': [
-		'砲',
-		'炮',
+	'偽': [
+		'偽',
+		'僞',
+	],
+	'內': [
+		'內',
+		'内',
+	],
+	'鬥': [
+		'鬭',
+		'鬥',
+		'鬭',
+		'闘',
+		'斗',
 	],
 };
+
+Object.keys(table_plus)
+	.forEach(function (key)
+	{
+		table_plus[key] = array_unique(table_plus[key]);
+
+		table_plus[key].forEach(function (s)
+		{
+			table_plus[s] = table_plus[key];
+		})
+	})
+;
+
+Object.assign(table_jp, table_plus);
+
+//console.log(table_jp);
 
 export interface ISimpleTable
 {

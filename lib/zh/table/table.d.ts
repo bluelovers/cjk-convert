@@ -4,11 +4,14 @@ export declare let _table_tw: {
 };
 export declare let table_jp: {
     'の': string[];
-    '劍': string[];
-    '剣': string[];
     '画': string[];
+};
+export declare let table_plus: {
+    '劍': string[];
     '砲': string[];
-    '炮': string[];
+    '偽': string[];
+    '內': string[];
+    '鬥': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
