@@ -20,7 +20,7 @@ export function jp(txt: string, options = {}): string
 {
 	return zh(zh2jp(zh(txt), {
 		// @ts-ignore
-		skip: '龙竜龍制征里像拜冰澤' + (options.skip || ''),
+		skip: '龙竜龍制征里像拜冰澤涉' + (options.skip || ''),
 	}))
 		.replace(/诅/g, '詛')
 		.replace(/复仇/g, '復仇')
@@ -40,6 +40,7 @@ export function zh(txt: string, options = {}): string
 		.replace(/亏/g, '虧')
 		.replace(/[·‧・···•]/g, '・')
 		.replace(/泽/g, '澤')
+		.replace(/^(?:后)記/, '後記')
 		//.replace(/当/g, '當')
 		;
 }
