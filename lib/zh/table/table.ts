@@ -4,6 +4,7 @@
 
 import { tw2cn, cn2tw } from '../convert/index';
 import { array_unique } from '../../util';
+import * as deepmerge from 'deepmerge-plus';
 
 export let _table_tw = {
 	'罗': '羅',
@@ -20,6 +21,15 @@ export let table_jp = {
 		'画',
 		'劃',
 		'畫',
+	],
+	'闘': [
+		'斗',
+	],
+	'鬥': [
+		'斗',
+	],
+	'鬭': [
+		'斗',
 	],
 };
 
@@ -48,7 +58,6 @@ export let table_plus = {
 	'鬥': [
 		'鬭',
 		'鬥',
-		'鬭',
 		'闘',
 		//'斗',
 	],
@@ -66,7 +75,14 @@ Object.keys(table_plus)
 	})
 ;
 
-Object.assign(table_jp, table_plus);
+table_jp = deepmerge(table_jp, table_plus);
+
+Object.keys(table_jp)
+	.forEach(function (key)
+	{
+		table_jp[key] = array_unique(table_jp[key]);
+	})
+;
 
 //console.log(table_jp);
 

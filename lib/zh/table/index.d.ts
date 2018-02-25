@@ -1,3 +1,5 @@
+import libTable from './table';
+export { libTable };
 export interface IOptions {
     skip?: any;
 }

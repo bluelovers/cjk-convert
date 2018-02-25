@@ -6,6 +6,8 @@ import { jp2zht, jp2zhs } from '../../jp';
 import libTable from './table';
 import { array_unique } from '../../util';
 
+export { libTable }
+
 export interface IOptions
 {
 	skip?
