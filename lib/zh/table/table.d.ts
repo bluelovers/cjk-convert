@@ -15,6 +15,7 @@ export declare let table_plus: {
     '偽': string[];
     '內': string[];
     '鬥': string[];
+    '鶏': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
