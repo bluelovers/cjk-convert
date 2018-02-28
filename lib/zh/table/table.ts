@@ -90,8 +90,6 @@ Object.keys(table_jp)
 	})
 ;
 
-//console.log(table_jp);
-
 export interface ISimpleTable
 {
 	[key: string]: string,
@@ -135,20 +133,11 @@ export function jp(char: string): string[]
 	a = _get(a, table_jp[char]);
 
 	return a;
-	//return table_jp[char].slice();
 }
 
 export function tw(char: string): string[]
 {
 	let a: string[] = [];
-
-	/*
-	if (_table_tw[char])
-	{
-		a.push(_table_tw[char])
-	}
-	a.push(cn2tw(char));
-	*/
 
 	a = _get(a, _table_tw[char], cn2tw(char));
 
@@ -161,14 +150,6 @@ export function cn(char: string): string[]
 {
 	let a: string[] = [];
 
-	/*
-	if (_table_cn[char])
-	{
-		a.push(_table_cn[char])
-	}
-
-	a.push(tw2cn(char));
-	*/
 	a = _get(a, _table_cn[char], tw2cn(char));
 
 	//console.log('tw2cn', char, a);
