@@ -33,6 +33,11 @@ export function jp(txt: string, options = {}): string
 export function zh(txt: string, options = {}): string
 {
 	return txt
+
+		.replace(/[\u2000-\u200F]/g, '')
+		.replace(/[\u2028-\u202F]/g, '')
+		.replace(/[\u205F-\u2060]/g, '')
+
 		.replace(/与/g, '與')
 		.replace(/[亜亚亞]/g, '亞')
 		.replace(/価/, '價')
@@ -45,6 +50,7 @@ export function zh(txt: string, options = {}): string
 		.replace(/复(仇|讐)/g, '復$1')
 		//.replace(/死后/g, '死後')
 		//.replace(/当/g, '當')
+
 		;
 }
 
