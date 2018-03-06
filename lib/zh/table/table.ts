@@ -67,6 +67,10 @@ export let table_plus = {
 		'雞',
 		'鸡',
 	],
+	'兎': [
+		'兎',
+		'兔',
+	],
 };
 
 Object.keys(table_plus)
