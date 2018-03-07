@@ -4,23 +4,28 @@
 
 import { zh2jp } from '../jp';
 
-export function filename(name: string, options = {}): string
+export interface IOptions
+{
+	skip?: string,
+}
+
+export function filename(name: string, options: IOptions = {}): string
 {
 	return jp(name, options)
 		.replace(/·/g, '・')
 		;
 }
 
-export function word(name: string, options = {}): string
+export function word(name: string, options: IOptions = {}): string
 {
 	return jp(name, options);
 }
 
-export function jp(txt: string, options = {}): string
+export function jp(txt: string, options: IOptions = {}): string
 {
 	return zh(zh2jp(zh(txt), {
 		// @ts-ignore
-		skip: '龙竜龍制征里像拜冰澤涉丑' + (options.skip || ''),
+		skip: '龙竜龍制征里像拜冰澤涉丑兒娘志' + (options.skip || ''),
 	}))
 		.replace(/诅/g, '詛')
 		.replace(/复仇/g, '復仇')
@@ -30,13 +35,15 @@ export function jp(txt: string, options = {}): string
 		;
 }
 
-export function zh(txt: string, options = {}): string
+export function zh(txt: string, options: IOptions = {}): string
 {
 	return txt
 
 		.replace(/[\u2000-\u200F]/g, '')
 		.replace(/[\u2028-\u202F]/g, '')
 		.replace(/[\u205F-\u2060]/g, '')
+
+		//.replace(/儿/g, '兒')
 
 		.replace(/与/g, '與')
 		.replace(/[亜亚亞]/g, '亞')
