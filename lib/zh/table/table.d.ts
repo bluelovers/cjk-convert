@@ -8,6 +8,7 @@ export declare let table_jp: {
     '闘': string[];
     '鬥': string[];
     '鬭': string[];
+    '闇': string[];
 };
 export declare let table_plus: {
     '劍': string[];

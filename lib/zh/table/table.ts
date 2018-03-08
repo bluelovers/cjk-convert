@@ -31,6 +31,9 @@ export let table_jp = {
 	'鬭': [
 		'斗',
 	],
+	'闇': [
+		'暗',
+	],
 };
 
 export let table_plus = {
