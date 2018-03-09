@@ -23,6 +23,7 @@ export declare let table_plus: {
     '兎': string[];
     '坏': string[];
     '殻': string[];
+    '像': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

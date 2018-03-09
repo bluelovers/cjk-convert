@@ -96,6 +96,9 @@ export let table_plus = {
 		'殼',
 		'壳',
 	],
+	'像': [
+		'象',
+	],
 };
 
 Object.keys(table_plus)
