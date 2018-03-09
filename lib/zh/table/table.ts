@@ -9,6 +9,7 @@ import * as deepmerge from 'deepmerge-plus';
 export let _table_tw = {
 	'罗': '羅',
 	'恶': '惡',
+	'苏': '蘇',
 };
 
 export let table_jp = {
@@ -33,6 +34,16 @@ export let table_jp = {
 	],
 	'闇': [
 		'暗',
+	],
+	'囌': [
+		'苏',
+		'蘇',
+		'囌',
+	],
+	'苏': [
+		'苏',
+		'蘇',
+		'囌',
 	],
 };
 
@@ -73,6 +84,17 @@ export let table_plus = {
 	'兎': [
 		'兎',
 		'兔',
+	],
+	'坏': [
+		'坯',
+		'坏',
+		"壊",
+		"壞",
+	],
+	'殻': [
+		'殻',
+		'殼',
+		'壳',
 	],
 };
 

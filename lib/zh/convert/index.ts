@@ -31,10 +31,13 @@ export function tw2cn(text: string, options: IOptions = {}, ...argv): string
 
 export let table_cn2tw: ITable = Object.assign(_table_cn2tw, {
 	'恶': '惡',
+	'苏': '蘇',
+	'壳': '殻',
 });
 
 export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
-
+	'殻': '壳',
+	'殼': '壳',
 });
 
 export const REGEXP_TEST = /[\u4E00-\u9FFF]/g;

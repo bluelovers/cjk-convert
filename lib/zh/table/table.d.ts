@@ -1,6 +1,7 @@
 export declare let _table_tw: {
     '罗': string;
     '恶': string;
+    '苏': string;
 };
 export declare let table_jp: {
     'の': string[];
@@ -9,6 +10,8 @@ export declare let table_jp: {
     '鬥': string[];
     '鬭': string[];
     '闇': string[];
+    '囌': string[];
+    '苏': string[];
 };
 export declare let table_plus: {
     '劍': string[];
@@ -18,6 +21,8 @@ export declare let table_plus: {
     '鬥': string[];
     '鶏': string[];
     '兎': string[];
+    '坏': string[];
+    '殻': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
