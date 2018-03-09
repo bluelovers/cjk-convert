@@ -10,6 +10,7 @@ export let _table_tw = {
 	'罗': '羅',
 	'恶': '惡',
 	'苏': '蘇',
+	'馆': '館',
 };
 
 export let table_jp = {
@@ -34,6 +35,11 @@ export let table_jp = {
 	],
 	'闇': [
 		'暗',
+	],
+	'図': [
+		'図',
+		'圖',
+		'图',
 	],
 };
 
@@ -95,6 +101,12 @@ export let table_plus = {
 		'蘇',
 		'囌',
 	],
+	'館': [
+		'館',
+		'館',
+		'舘',
+		'馆',
+	],
 };
 
 Object.keys(table_plus)
@@ -109,6 +121,7 @@ Object.keys(table_plus)
 	})
 ;
 
+// @ts-ignore
 table_jp = deepmerge(table_jp, table_plus);
 
 Object.keys(table_jp)

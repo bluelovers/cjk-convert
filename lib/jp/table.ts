@@ -57,6 +57,8 @@ export function addNew(table: string[][], jp, zht, zhs): string[][]
 
 	["殻", "殻", "壳"],
 
+	["館", "館", "馆"],
+
 	//["兎", "兔", "兔"],
 	//["兔", "兔", "兔"],
 
