@@ -107,6 +107,11 @@ export let table_plus = {
 		'舘',
 		'馆',
 	],
+	'鳥': [
+		'鳥',
+		'鸟',
+		'𫠓',
+	],
 };
 
 Object.keys(table_plus)
