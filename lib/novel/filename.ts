@@ -3,10 +3,12 @@
  */
 
 import { zh2jp } from '../jp';
+import { cn2tw } from '../zh/convert';
 
 export interface IOptions
 {
 	skip?: string,
+	safe?: boolean,
 }
 
 export function filename(name: string, options: IOptions = {}): string
@@ -25,7 +27,8 @@ export function jp(txt: string, options: IOptions = {}): string
 {
 	return zh(zh2jp(zh(txt), {
 		// @ts-ignore
-		skip: '龙竜龍制征里像拜冰澤涉丑兒娘志' + (options.skip || ''),
+		skip: '龙竜龍制征里像拜冰澤涉丑兒娘姐姉志儿' + (options.skip || ''),
+		safe: typeof options.safe == 'boolean' ? options.safe : true,
 	}))
 		.replace(/诅/g, '詛')
 		.replace(/复仇/g, '復仇')
@@ -55,6 +58,12 @@ export function zh(txt: string, options: IOptions = {}): string
 		.replace(/^(?:后)(記|日)/, '後$1')
 		.replace(/回复/g, '回復')
 		.replace(/复(仇|讐)/g, '復$1')
+
+		.replace(/[么预枪丛迈这个尔儿]+/g, function (s)
+		{
+			return cn2tw(s)
+		})
+
 		//.replace(/死后/g, '死後')
 		//.replace(/当/g, '當')
 

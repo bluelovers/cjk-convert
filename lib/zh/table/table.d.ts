@@ -27,6 +27,7 @@ export declare let table_plus: {
     '蘇': string[];
     '館': string[];
     '鳥': string[];
+    '視': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

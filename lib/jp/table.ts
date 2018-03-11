@@ -8,30 +8,17 @@
  * @see http://www5b.biglobe.ne.jp/%7Eharigaya/variants.html
  */
 
+import * as fs from 'fs';
+
 /**
  * 資料來源 https://www.jpmarumaru.com/tw/teachKanjiComparison.asp
  * @see https://www.jpmarumaru.com/tw/teachKanjiComparison.asp
  */
 const teachKanjiComparison = require('./teachKanjiComparison.json') as string[][];
 
-export let TABLE = [] as string[][];
+type IPLUS_TABLE = [string, string, string][];
 
-export function addNew(table: string[][], jp, zht, zhs): string[][]
-{
-	jp = Array.isArray(jp) ? jp : [jp];
-	zht = Array.isArray(zht) ? zht : [zht];
-	zhs = Array.isArray(zhs) ? zhs : [zhs];
-
-	table.push([
-		jp,
-		zht,
-		zhs,
-	]);
-
-	return table;
-}
-
-[
+const PLUS_TABLE: IPLUS_TABLE = [
 	['蝕', '蝕', '蚀'],
 	["絲", "絲", "丝"],
 	["異", "異", "异"],
@@ -59,10 +46,22 @@ export function addNew(table: string[][], jp, zht, zhs): string[][]
 
 	["館", "館", "馆"],
 
+	["槍", "槍", "枪"],
+
 	//["兎", "兔", "兔"],
 	//["兔", "兔", "兔"],
 
-].forEach(function ([jp, zht, zhs])
+];
+
+const PLUS_TABLE_SAFE: IPLUS_TABLE = [
+
+	["歴", "歷", "历"],
+
+];
+
+export let TABLE = [] as string[][];
+
+PLUS_TABLE.forEach(function ([jp, zht, zhs])
 {
 	addNew(TABLE, jp, zht, zhs);
 });
@@ -96,6 +95,13 @@ export let TABLE_SAFE = [] as string[][];
 	});
 
 	TABLE_SAFE = [];
+
+	PLUS_TABLE_SAFE.forEach(function ([jp, zht, zhs])
+	{
+		addNew(TABLE, jp, zht, zhs);
+		addNew(TABLE_SAFE, jp, zht, zhs);
+	});
+
 	let cache = [];
 
 	for (let i in TABLE)
@@ -146,5 +152,26 @@ export let TABLE_SAFE = [] as string[][];
 	}
 }
 
+export function addNew(table: string[][], jp, zht, zhs): string[][]
+{
+	jp = Array.isArray(jp) ? jp : [jp];
+	zht = Array.isArray(zht) ? zht : [zht];
+	zhs = Array.isArray(zhs) ? zhs : [zhs];
+
+	table.push([
+		jp,
+		zht,
+		zhs,
+	]);
+
+	return table;
+}
+
 export default TABLE;
 //export default exports;
+
+if (0)
+{
+	console.log(TABLE_SAFE);
+	//fs.writeFileSync('./temp.json', JSON.stringify(TABLE_SAFE, null, "\t"));
+}
