@@ -10,6 +10,7 @@ export declare let table_jp: {
     '闘': string[];
     '鬥': string[];
     '鬭': string[];
+    '鬪': string[];
     '闇': string[];
     '図': string[];
 };

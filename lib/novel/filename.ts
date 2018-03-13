@@ -27,7 +27,7 @@ export function jp(txt: string, options: IOptions = {}): string
 {
 	return zh(zh2jp(zh(txt), {
 		// @ts-ignore
-		skip: '龙竜龍制征里像拜冰澤涉丑兒娘姐姉志儿' + (options.skip || ''),
+		skip: '竜龍制征里像拜冰澤涉丑兒娘姐姉志儿從' + (options.skip || ''),
 		safe: typeof options.safe == 'boolean' ? options.safe : true,
 	}))
 		.replace(/诅/g, '詛')
@@ -59,7 +59,12 @@ export function zh(txt: string, options: IOptions = {}): string
 		.replace(/回复/g, '回復')
 		.replace(/复(仇|讐)/g, '復$1')
 
-		.replace(/[么预枪丛迈这个尔儿]+/g, function (s)
+		.replace(/里面/g, '裡面')
+		.replace(/([今此])后/g, '$1後')
+
+
+
+		.replace(/[么预枪丛迈这个尔儿从龙]+/g, function (s)
 		{
 			return cn2tw(s)
 		})
