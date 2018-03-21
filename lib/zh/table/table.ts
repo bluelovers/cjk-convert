@@ -44,6 +44,12 @@ export let table_jp = {
 		'圖',
 		'图',
 	],
+	'复': [
+		'复',
+		'復',
+		'複',
+		//'覆',
+	],
 };
 
 export let table_plus = {

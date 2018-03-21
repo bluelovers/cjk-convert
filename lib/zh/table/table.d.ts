@@ -13,6 +13,7 @@ export declare let table_jp: {
     '鬪': string[];
     '闇': string[];
     '図': string[];
+    '复': string[];
 };
 export declare let table_plus: {
     '劍': string[];
