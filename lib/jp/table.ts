@@ -56,6 +56,7 @@ const PLUS_TABLE: IPLUS_TABLE = [
 const PLUS_TABLE_SAFE: IPLUS_TABLE = [
 
 	["歴", "歷", "历"],
+	["絶", "絕", "绝"],
 
 ];
 

@@ -135,6 +135,11 @@ export let table_plus = {
 		'嶮',
 		'崄',
 	],
+	'絶': [
+		'絶',
+		'絕',
+		'绝',
+	],
 };
 
 Object.keys(table_plus)
