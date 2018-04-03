@@ -35,6 +35,7 @@ export function jp(txt: string, options: IOptions = {}): string
 		.replace(/戦斗/g, '戦闘')
 		.replace(/^プロローグ/, '序')
 		.replace(/^エピローグ/, '終章')
+		.replace(/総/g, '總')
 		;
 }
 
@@ -64,7 +65,7 @@ export function zh(txt: string, options: IOptions = {}): string
 
 
 
-		.replace(/[么预枪丛迈这个尔儿从龙]+/g, function (s)
+		.replace(/[么预枪丛迈这个尔儿从龙丝风]+/ug, function (s)
 		{
 			return cn2tw(s)
 		})

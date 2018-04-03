@@ -2,6 +2,8 @@
  * Created by user on 2017/12/9/009.
  */
 
+import UString from 'uni-string';
+
 export interface IcharCodeAtFn
 {
 	(char, charCode, str)
@@ -17,7 +19,8 @@ export function array_unique(array: any[])
 
 export function split(str): string[]
 {
-	return str.toString().split('');
+	return UString.split(str, '');
+	//return str.toString().split('');
 }
 
 export function charCodeAt(str, cb?: IcharCodeAtFn): number[]

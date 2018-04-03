@@ -34,6 +34,7 @@ export declare let table_plus: {
     '絶': string[];
     '鉄': string[];
     '諸': string[];
+    '尋': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

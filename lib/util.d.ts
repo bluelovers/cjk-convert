@@ -1,6 +1,3 @@
-/**
- * Created by user on 2017/12/9/009.
- */
 export interface IcharCodeAtFn {
     (char: any, charCode: any, str: any): any;
 }
