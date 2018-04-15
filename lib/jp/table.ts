@@ -51,13 +51,14 @@ const PLUS_TABLE: IPLUS_TABLE = [
 	//["兎", "兔", "兔"],
 	//["兔", "兔", "兔"],
 
+	['静', '靜', '静'],
+
 ];
 
 const PLUS_TABLE_SAFE: IPLUS_TABLE = [
 
 	["歴", "歷", "历"],
 	["絶", "絕", "绝"],
-
 ];
 
 export let TABLE = [] as string[][];
