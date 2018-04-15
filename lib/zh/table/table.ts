@@ -182,6 +182,13 @@ export let table_plus = {
 		'歳',
 		'岁',
 	],
+	// https://zh.wikipedia.org/wiki/%E9%8D%BE%E5%A7%93
+	'鐘': [
+		'鐘',
+		'鍾',
+		'钟',
+		'锺',
+	],
 };
 
 Object.keys(table_plus)

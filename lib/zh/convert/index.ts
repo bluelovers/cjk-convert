@@ -43,6 +43,8 @@ export let table_cn2tw: ITable = Object.assign(_table_cn2tw, {
 	'里': '裡',
 	'后': '後',
 	'当': '當',
+	'锺': '鍾',
+	'钟': '鐘',
 });
 
 export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
@@ -52,6 +54,8 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 	'後': '后',
 	'儅': '儅',
 	'噹': '当',
+	'鍾': '锺',
+	'鐘': '钟',
 });
 
 export const REGEXP_TEST = /[\u4E00-\u9FFF]/g;
