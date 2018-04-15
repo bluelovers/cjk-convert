@@ -18,6 +18,7 @@ export declare let table_jp: {
     '闇': string[];
     '図': string[];
     '复': string[];
+    '当': string[];
 };
 export declare let table_plus: {
     '劍': string[];

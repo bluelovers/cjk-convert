@@ -50,6 +50,12 @@ export let table_jp = {
 		'複',
 		//'覆',
 	],
+	'当': [
+		'当',
+		'噹',
+		'當',
+		'儅',
+	],
 };
 
 export let table_plus = {
