@@ -4,7 +4,11 @@ export interface IOptions {
      */
     skip?: any;
     table?: ITable | typeof _call;
+    safe?: boolean;
 }
+export declare const defaultOptions: Readonly<{
+    safe: boolean;
+}>;
 export declare function cn2tw(text: string, options?: IOptions, ...argv: any[]): string;
 export declare function tw2cn(text: string, options?: IOptions, ...argv: any[]): string;
 export declare let table_cn2tw: ITable;

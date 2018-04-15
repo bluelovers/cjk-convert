@@ -17,7 +17,13 @@ export interface IOptions
 	skip?,
 
 	table?: ITable | typeof _call,
+
+	safe?: boolean,
 }
+
+export const defaultOptions = Object.freeze({
+	safe: true,
+});
 
 export function cn2tw(text: string, options: IOptions = {}, ...argv): string
 {
@@ -35,18 +41,54 @@ export let table_cn2tw: ITable = Object.assign(_table_cn2tw, {
 	'壳': '殻',
 	'馆': '館',
 	'里': '裡',
+	'后': '後',
 });
 
 export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 	'殻': '壳',
 	'殼': '壳',
 	'館': '馆',
+	'後': '后',
 });
 
 export const REGEXP_TEST = /[\u4E00-\u9FFF]/g;
 
+const SAFE_MODE_CHAR = [
+	'后',
+	'里',
+];
+
 export function _call(fn, text: string, options: IOptions = {}, ...argv)
 {
+	options = Object.assign({}, defaultOptions, options);
+
+	if (options.safe)
+	{
+		if (!options.skip)
+		{
+			options.skip = SAFE_MODE_CHAR.slice();
+		}
+		else if (typeof options.skip == 'string')
+		{
+			options.skip += '后';
+		}
+		else if (Array.isArray(options.skip))
+		{
+			options.skip = options.skip.concat(SAFE_MODE_CHAR);
+		}
+		else
+		{
+			options.table = SAFE_MODE_CHAR.reduce(function (a, b)
+			{
+				a[b] = b;
+
+				return a;
+			}, options.table || {});
+		}
+
+		//console.log(options);
+	}
+
 	if (options.skip || options.table)
 	{
 		return text.replace(REGEXP_TEST, function (text)
@@ -83,3 +125,6 @@ export interface ITable
 
 import * as zhConvert from './index';
 export default zhConvert;
+
+//console.log(cn2tw('轉换最里后裡後轉换最后'));
+//console.log(tw2cn('轉换最里后裡後轉换最后'));

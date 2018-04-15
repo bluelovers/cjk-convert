@@ -2,7 +2,7 @@
  * Created by user on 2018/2/17/017.
  */
 
-import { tw2cn, cn2tw } from '../convert/index';
+import { tw2cn, cn2tw, IOptions } from '../convert/index';
 import { array_unique } from '../../util';
 import * as deepmerge from 'deepmerge-plus';
 
@@ -161,6 +161,11 @@ export let table_plus = {
 		'裏',
 		'里',
 	],
+	'鑑': [
+		'鑑',
+		'鉴',
+		'鑒',
+	],
 };
 
 Object.keys(table_plus)
@@ -222,7 +227,7 @@ export function _get(arr: string[], value: string | string[], ...values: Array<s
 	return ret;
 }
 
-export function jp(char: string): string[]
+export function jp(char: string, options: IOptions = {}): string[]
 {
 	let a: string[] = [];
 	a = _get(a, table_jp[char]);
@@ -230,22 +235,22 @@ export function jp(char: string): string[]
 	return a;
 }
 
-export function tw(char: string): string[]
+export function tw(char: string, options: IOptions = {}): string[]
 {
 	let a: string[] = [];
 
-	a = _get(a, _table_tw[char], cn2tw(char));
+	a = _get(a, _table_tw[char], cn2tw(char, options));
 
 	//console.log('cn2tw', char, a);
 
 	return a;
 }
 
-export function cn(char: string): string[]
+export function cn(char: string, options: IOptions = {}): string[]
 {
 	let a: string[] = [];
 
-	a = _get(a, _table_cn[char], tw2cn(char));
+	a = _get(a, _table_cn[char], tw2cn(char, options));
 
 	//console.log('tw2cn', char, a);
 

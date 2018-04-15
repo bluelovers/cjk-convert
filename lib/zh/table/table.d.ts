@@ -1,3 +1,7 @@
+/**
+ * Created by user on 2018/2/17/017.
+ */
+import { IOptions } from '../convert/index';
 export declare let _table_tw: {
     '罗': string;
     '恶': string;
@@ -36,6 +40,7 @@ export declare let table_plus: {
     '諸': string[];
     '尋': string[];
     '裡': string[];
+    '鑑': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
@@ -43,8 +48,8 @@ export interface ISimpleTable {
 export declare let _table_cn: ISimpleTable;
 export declare function _update(target: ISimpleTable, source: ISimpleTable): ISimpleTable;
 export declare function _get(arr: string[], value: string | string[], ...values: Array<string | string[]>): string[];
-export declare function jp(char: string): string[];
-export declare function tw(char: string): string[];
-export declare function cn(char: string): string[];
+export declare function jp(char: string, options?: IOptions): string[];
+export declare function tw(char: string, options?: IOptions): string[];
+export declare function cn(char: string, options?: IOptions): string[];
 import * as self from './table';
 export default self;

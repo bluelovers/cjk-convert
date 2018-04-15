@@ -1,8 +1,9 @@
 import libTable from './table';
 export { libTable };
-export interface IOptions {
-    skip?: any;
-}
+export declare type IOptions = {
+    safe?: boolean;
+    skip?;
+};
 export declare function _get(a: any, value: any, ...values: any[]): any;
 /**
  * 取出此漢字所對應的繁漢字

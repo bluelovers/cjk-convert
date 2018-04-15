@@ -8,9 +8,9 @@ import { array_unique } from '../../util';
 
 export { libTable }
 
-export interface IOptions
-{
-	skip?
+export type IOptions = {
+	safe?: boolean,
+	skip?,
 }
 
 export function _get(a, value, ...values)
@@ -37,7 +37,7 @@ function _wrapFn(fn: string)
 			return [char];
 		}
 
-		let a = libTable[fn](char);
+		let a = libTable[fn](char, options);
 
 		a = array_unique(a);
 		a.sort();
@@ -88,11 +88,11 @@ export function auto(char: string, options: IOptions = {}): string[]
 
 	let a = _get([],
 		char,
-		libTable.tw(char),
-		libTable.cn(char),
-		(!options.skip || options.skip.indexOf(jt) == -1) && libTable.cn(jt),
-		(!options.skip || options.skip.indexOf(js) == -1) && libTable.tw(js),
-		libTable.jp(char),
+		libTable.tw(char, options),
+		libTable.cn(char, options),
+		(!options.skip || options.skip.indexOf(jt) == -1) && libTable.cn(jt, options),
+		(!options.skip || options.skip.indexOf(js) == -1) && libTable.tw(js, options),
+		libTable.jp(char, options),
 		);
 
 	/*
