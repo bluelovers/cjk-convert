@@ -41,6 +41,8 @@ export declare let table_plus: {
     '尋': string[];
     '裡': string[];
     '鑑': string[];
+    '麵': string[];
+    '歲': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

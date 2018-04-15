@@ -166,6 +166,16 @@ export let table_plus = {
 		'鉴',
 		'鑒',
 	],
+	'麵': [
+		'麵',
+		'麪',
+		'麺',
+	],
+	'歲': [
+		'歲',
+		'歳',
+		'岁',
+	],
 };
 
 Object.keys(table_plus)
