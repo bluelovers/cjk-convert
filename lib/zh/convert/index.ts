@@ -56,6 +56,7 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 	'噹': '当',
 	'鍾': '锺',
 	'鐘': '钟',
+	'㑹': '会',
 });
 
 export const REGEXP_TEST = /[\u4E00-\u9FFF]/g;
