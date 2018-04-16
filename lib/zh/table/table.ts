@@ -199,6 +199,12 @@ export let table_plus = {
 		'凃',
 		'涂',
 	],
+
+	'髮': [
+		'髮',
+		'髪',
+		//'发',
+	],
 };
 
 Object.keys(table_plus)

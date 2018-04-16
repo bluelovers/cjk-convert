@@ -47,6 +47,7 @@ export declare let table_plus: {
     '鐘': string[];
     '會': string[];
     '塗': string[];
+    '髮': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
