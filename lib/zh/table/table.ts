@@ -205,6 +205,12 @@ export let table_plus = {
 		'髪',
 		//'发',
 	],
+
+	'話': [
+		'話',
+		'话',
+		'䛡',
+	],
 };
 
 Object.keys(table_plus)

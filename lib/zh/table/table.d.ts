@@ -48,6 +48,7 @@ export declare let table_plus: {
     '會': string[];
     '塗': string[];
     '髮': string[];
+    '話': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
