@@ -19,6 +19,8 @@ export declare let table_jp: {
     '図': string[];
     '复': string[];
     '当': string[];
+    '閤': string[];
+    '阁': string[];
 };
 export declare let table_plus: {
     '劍': string[];
@@ -49,6 +51,8 @@ export declare let table_plus: {
     '塗': string[];
     '髮': string[];
     '話': string[];
+    '閤': string[];
+    '蔘': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
