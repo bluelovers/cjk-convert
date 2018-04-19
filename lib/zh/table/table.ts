@@ -15,9 +15,17 @@ export let _table_tw = {
 
 export let table_jp = {
 	'の': [
+		'の',
 		'之',
 		'的',
 	],
+
+	'と': [
+		'と',
+		'與',
+		'与',
+	],
+
 	'画': [
 		'划',
 		'画',
@@ -229,6 +237,7 @@ export let table_plus = {
 		'參',
 		'参',
 	],
+
 };
 
 Object.keys(table_plus)
@@ -321,4 +330,5 @@ export function cn(char: string, options: IOptions = {}): string[]
 }
 
 import * as self from './table';
+
 export default self;
