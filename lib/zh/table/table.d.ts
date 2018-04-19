@@ -8,6 +8,9 @@ export declare let _table_tw: {
     '苏': string;
     '馆': string;
 };
+/**
+ * 此表內只有符合 KEY 值時才會觸發
+ */
 export declare let table_jp: {
     'の': string[];
     'と': string[];
@@ -23,6 +26,9 @@ export declare let table_jp: {
     '閤': string[];
     '阁': string[];
 };
+/**
+ * 此表內符合以下任意值時會觸發
+ */
 export declare let table_plus: {
     '劍': string[];
     '砲': string[];

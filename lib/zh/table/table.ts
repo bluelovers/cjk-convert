@@ -13,6 +13,9 @@ export let _table_tw = {
 	'馆': '館',
 };
 
+/**
+ * 此表內只有符合 KEY 值時才會觸發
+ */
 export let table_jp = {
 	'の': [
 		'の',
@@ -73,6 +76,9 @@ export let table_jp = {
 	],
 };
 
+/**
+ * 此表內符合以下任意值時會觸發
+ */
 export let table_plus = {
 	'劍': [
 		'劍',
