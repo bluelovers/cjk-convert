@@ -25,6 +25,7 @@ export declare let table_jp: {
     '当': string[];
     '閤': string[];
     '阁': string[];
+    '罗': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
@@ -60,6 +61,7 @@ export declare let table_plus: {
     '話': string[];
     '閤': string[];
     '蔘': string[];
+    '労': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
