@@ -260,6 +260,12 @@ export let table_plus = {
 		'劳',
 	],
 
+	'国': [
+		'国',
+		'囯',
+		'國',
+	],
+
 };
 
 Object.keys(table_plus)
