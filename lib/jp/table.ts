@@ -61,6 +61,7 @@ const PLUS_TABLE_SAFE: IPLUS_TABLE = [
 
 	["歴", "歷", "历"],
 	["絶", "絕", "绝"],
+	["別", "別", "别"],
 ];
 
 export let TABLE = [] as string[][];
