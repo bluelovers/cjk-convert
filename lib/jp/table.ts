@@ -55,6 +55,8 @@ const PLUS_TABLE: IPLUS_TABLE = [
 
 	['髪', '髮', null],
 
+	['棄', '棄', '弃'],
+
 ];
 
 const PLUS_TABLE_SAFE: IPLUS_TABLE = [
