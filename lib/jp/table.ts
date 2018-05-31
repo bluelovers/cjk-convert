@@ -9,6 +9,7 @@
  */
 
 import * as fs from 'fs';
+import { array_unique } from '../util';
 
 /**
  * 資料來源 https://www.jpmarumaru.com/tw/teachKanjiComparison.asp
@@ -18,7 +19,7 @@ const teachKanjiComparison = require('./teachKanjiComparison.json') as string[][
 
 type IPLUS_TABLE = [string, string, string][];
 
-const PLUS_TABLE: IPLUS_TABLE = [
+const PLUS_TABLE: IPLUS_TABLE = array_unique<IPLUS_TABLE>([
 	['蝕', '蝕', '蚀'],
 	["絲", "絲", "丝"],
 	["異", "異", "异"],
@@ -56,16 +57,20 @@ const PLUS_TABLE: IPLUS_TABLE = [
 	['髪', '髮', null],
 
 	['棄', '棄', '弃'],
+	['強', '強', '强'],
 
-];
+	['罵', '罵', '骂'],
 
-const PLUS_TABLE_SAFE: IPLUS_TABLE = [
+]);
+
+const PLUS_TABLE_SAFE: IPLUS_TABLE = array_unique([
 
 	["歴", "歷", "历"],
 	["絶", "絕", "绝"],
 	["別", "別", "别"],
 	["魯", "魯", "鲁"],
-];
+
+] as IPLUS_TABLE);
 
 export let TABLE = [] as string[][];
 
@@ -74,7 +79,7 @@ PLUS_TABLE.forEach(function ([jp, zht, zhs])
 	addNew(TABLE, jp, zht, zhs);
 });
 
-TABLE = TABLE.concat(teachKanjiComparison);
+TABLE = array_unique(TABLE.concat(teachKanjiComparison));
 
 export let TABLE_SAFE = [] as string[][];
 

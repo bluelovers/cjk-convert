@@ -3,19 +3,25 @@
  */
 
 import UString from 'uni-string';
+export { array_unique, lazy_unique } from 'array-hyper-unique';
 
 export interface IcharCodeAtFn
 {
 	(char, charCode, str)
 }
 
-export function array_unique(array: any[])
+/*
+export function array_unique<T>(array: T): T
 {
+	return arrUniq(array);
+
 	return (array).filter(function (el, index, arr)
 	{
 		return index == arr.indexOf(el);
 	});
+
 }
+*/
 
 export function split(str): string[]
 {

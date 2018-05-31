@@ -266,6 +266,12 @@ export let table_plus = {
 		'國',
 	],
 
+	'罵': [
+		'罵',
+		'骂',
+		'駡',
+	],
+
 };
 
 Object.keys(table_plus)
