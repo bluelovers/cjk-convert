@@ -64,6 +64,7 @@ export declare let table_plus: {
     '労': string[];
     '国': string[];
     '罵': string[];
+    '対': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
