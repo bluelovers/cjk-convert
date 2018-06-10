@@ -57,18 +57,14 @@
   "scripts": {
     "dts-bundle": "node ./test/dts-bundle.js",
     "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\"",
-    "travis": "typedoc --ignoreCompilerErrors --options typedoc.config.js"
+    "travis": "typedoc --options typedoc.config.js"
   },
   "dependencies": {
-    "array-hyper-unique": "^1.0.0",
+    "array-hyper-unique": "^1.0.2",
     "chinese_convert": "^1.0.8",
     "deep-eql": "^3.0.1",
-    "deepmerge-plus": "^2.1.1",
+    "deepmerge-plus": "^2.1.2",
     "japanese": "^1.2.0",
-    "uni-string": "^1.0.1"
-  },
-  "devDependencies": {
-    "typedoc": "^0.10.0",
-    "typedoc-plugin-markdown": "^1.0.14"
+    "uni-string": "^1.0.2"
   }
 }
