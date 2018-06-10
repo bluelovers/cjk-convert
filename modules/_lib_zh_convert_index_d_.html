@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;lib/zh/table/list&quot; | cjk-conv</title>
+	<title>&quot;lib/zh/convert/index.d&quot; | cjk-conv</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_lib_zh_table_list_.html">&quot;lib/zh/table/list&quot;</a>
+					<a href="_lib_zh_convert_index_d_.html">&quot;lib/zh/convert/index.d&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;lib/zh/table/list&quot;</h1>
+			<h1>External module &quot;lib/zh/convert/index.d&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -69,149 +69,164 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Type aliases</h3>
+							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_lib_zh_table_list_.html#ioptions" class="tsd-kind-icon">IOptions</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_lib_zh_convert_index_d_.ioptions.html" class="tsd-kind-icon">IOptions</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_lib_zh_convert_index_d_.itable.html" class="tsd-kind-icon">ITable</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_lib_zh_convert_index_d_.html#regexp_test" class="tsd-kind-icon">REGEXP_<wbr>TEST</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_lib_zh_convert_index_d_.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_lib_zh_convert_index_d_.html#table_cn2tw" class="tsd-kind-icon">table_<wbr>cn2tw</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_lib_zh_convert_index_d_.html#table_tw2cn" class="tsd-kind-icon">table_<wbr>tw2cn</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_table_list_.html#arrcjk" class="tsd-kind-icon">arr<wbr>Cjk</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_table_list_.html#chartablelist" class="tsd-kind-icon">char<wbr>Table<wbr>List</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_table_list_.html#textlist" class="tsd-kind-icon">text<wbr>List</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_convert_index_d_.html#_call" class="tsd-kind-icon">_call</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_convert_index_d_.html#cn2tw" class="tsd-kind-icon">cn2tw</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_convert_index_d_.html#tw2cn" class="tsd-kind-icon">tw2cn</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Type aliases</h2>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
-					<a name="ioptions" class="tsd-anchor"></a>
-					<h3>IOptions</h3>
-					<div class="tsd-signature tsd-kind-icon">IOptions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+					<a name="regexp_test" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> REGEXP_<wbr>TEST</h3>
+					<div class="tsd-signature tsd-kind-icon">REGEXP_<wbr>TEST<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/f54c755/lib/zh/table/list.ts#L11">lib/zh/table/list.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/f54c755/lib/zh/convert/index.d.ts#L21">lib/zh/convert/index.d.ts:21</a></li>
 						</ul>
 					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> lang<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">"zh"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"cn"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"jp"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"auto"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> options<wbr>ZhTable<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">IOptionsZhTable</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> skip<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span></h5>
-							</li>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+					<a name="defaultoptions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> default<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/f54c755/lib/zh/convert/index.d.ts#L14">lib/zh/convert/index.d.ts:14</a></li>
 						</ul>
-					</div>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+					<a name="table_cn2tw" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagLet">Let</span> table_<wbr>cn2tw</h3>
+					<div class="tsd-signature tsd-kind-icon">table_<wbr>cn2tw<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_lib_zh_convert_index_d_.itable.html" class="tsd-signature-type">ITable</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/f54c755/lib/zh/convert/index.d.ts#L19">lib/zh/convert/index.d.ts:19</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+					<a name="table_tw2cn" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagLet">Let</span> table_<wbr>tw2cn</h3>
+					<div class="tsd-signature tsd-kind-icon">table_<wbr>tw2cn<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_lib_zh_convert_index_d_.itable.html" class="tsd-signature-type">ITable</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/f54c755/lib/zh/convert/index.d.ts#L20">lib/zh/convert/index.d.ts:20</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="arrcjk" class="tsd-anchor"></a>
-					<h3>arr<wbr>Cjk</h3>
+					<a name="_call" class="tsd-anchor"></a>
+					<h3>_call</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">arr<wbr>Cjk<span class="tsd-signature-symbol">(</span>arr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">IOptionsCjkConv</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">_call<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_lib_zh_convert_index_d_.ioptions.html" class="tsd-signature-type">IOptions</a>, <span class="tsd-signature-symbol">...</span>argv<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/f54c755/lib/zh/table/list.ts#L110">lib/zh/table/list.ts:110</a></li>
+									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/f54c755/lib/zh/convert/index.d.ts#L22">lib/zh/convert/index.d.ts:22</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><p>arrCjk([&#39;司马&#39;, &#39;上官&#39;, &#39;欧阳&#39;, &#39;夏侯&#39;])
-										// =&gt; [ &#39;司马&#39;, &#39;上官&#39;, &#39;欧阳&#39;, &#39;夏侯&#39;, &#39;司馬&#39;, &#39;歐陽&#39;, &#39;欧陽&#39; ]</p>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arr: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>fn: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <span class="tsd-signature-type">IOptionsCjkConv</span><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<h5>text: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/_lib_zh_convert_index_d_.ioptions.html" class="tsd-signature-type">IOptions</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>argv: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="chartablelist" class="tsd-anchor"></a>
-					<h3>char<wbr>Table<wbr>List</h3>
+					<a name="cn2tw" class="tsd-anchor"></a>
+					<h3>cn2tw</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">char<wbr>Table<wbr>List<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="_lib_zh_table_list_.html#ioptions" class="tsd-signature-type">IOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">cn2tw<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_lib_zh_convert_index_d_.ioptions.html" class="tsd-signature-type">IOptions</a>, <span class="tsd-signature-symbol">...</span>argv<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/f54c755/lib/zh/table/list.ts#L24">lib/zh/table/list.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/f54c755/lib/zh/convert/index.d.ts#L17">lib/zh/convert/index.d.ts:17</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<dl class="tsd-comment-tags">
-									<dt>example</dt>
-									<dd><p>charTableList(&#39;司马&#39;)
-										// =&gt; [ [ &#39;司&#39; ], [ &#39;馬&#39;, &#39;马&#39; ] ]</p>
-									</dd>
-								</dl>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>text: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="_lib_zh_table_list_.html#ioptions" class="tsd-signature-type">IOptions</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/_lib_zh_convert_index_d_.ioptions.html" class="tsd-signature-type">IOptions</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>argv: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="textlist" class="tsd-anchor"></a>
-					<h3>text<wbr>List</h3>
+					<a name="tw2cn" class="tsd-anchor"></a>
+					<h3>tw2cn</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">text<wbr>List<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="_lib_zh_table_list_.html#ioptions" class="tsd-signature-type">IOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">tw2cn<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_lib_zh_convert_index_d_.ioptions.html" class="tsd-signature-type">IOptions</a>, <span class="tsd-signature-symbol">...</span>argv<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/f54c755/lib/zh/table/list.ts#L53">lib/zh/table/list.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/f54c755/lib/zh/convert/index.d.ts#L18">lib/zh/convert/index.d.ts:18</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p> @example
-										textList(&#39;司马&#39;)
-									// =&gt; [ &#39;司馬&#39;, &#39;司马&#39; ]</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>text: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="_lib_zh_table_list_.html#ioptions" class="tsd-signature-type">IOptions</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="../interfaces/_lib_zh_convert_index_d_.ioptions.html" class="tsd-signature-type">IOptions</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>argv: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -272,7 +287,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="_lib_zh_convert_index_.html">"lib/zh/convert/index"</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="_lib_zh_convert_index_d_.html">"lib/zh/convert/index.d"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -281,7 +296,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="_lib_zh_table_index_d_.html">"lib/zh/table/index.d"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="_lib_zh_table_list_.html">"lib/zh/table/list"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -297,17 +312,32 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="_lib_zh_table_list_.html#ioptions" class="tsd-kind-icon">IOptions</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_lib_zh_convert_index_d_.ioptions.html" class="tsd-kind-icon">IOptions</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_lib_zh_convert_index_d_.itable.html" class="tsd-kind-icon">ITable</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="_lib_zh_convert_index_d_.html#regexp_test" class="tsd-kind-icon">REGEXP_<wbr>TEST</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="_lib_zh_convert_index_d_.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="_lib_zh_convert_index_d_.html#table_cn2tw" class="tsd-kind-icon">table_<wbr>cn2tw</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="_lib_zh_convert_index_d_.html#table_tw2cn" class="tsd-kind-icon">table_<wbr>tw2cn</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_lib_zh_table_list_.html#arrcjk" class="tsd-kind-icon">arr<wbr>Cjk</a>
+						<a href="_lib_zh_convert_index_d_.html#_call" class="tsd-kind-icon">_call</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_lib_zh_table_list_.html#chartablelist" class="tsd-kind-icon">char<wbr>Table<wbr>List</a>
+						<a href="_lib_zh_convert_index_d_.html#cn2tw" class="tsd-kind-icon">cn2tw</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_lib_zh_table_list_.html#textlist" class="tsd-kind-icon">text<wbr>List</a>
+						<a href="_lib_zh_convert_index_d_.html#tw2cn" class="tsd-kind-icon">tw2cn</a>
 					</li>
 				</ul>
 			</nav>
