@@ -1,3 +1,6 @@
+/**
+ * Created by user on 2018/2/17/017.
+ */
 export interface IOptions {
     skip?: string;
     safe?: boolean;

@@ -8,14 +8,13 @@
  * @see http://www5b.biglobe.ne.jp/%7Eharigaya/variants.html
  */
 
-import * as fs from 'fs';
 import { array_unique } from '../util';
 
 /**
  * 資料來源 https://www.jpmarumaru.com/tw/teachKanjiComparison.asp
  * @see https://www.jpmarumaru.com/tw/teachKanjiComparison.asp
  */
-const teachKanjiComparison = require('./teachKanjiComparison.json') as string[][];
+import teachKanjiComparison = require('./teachKanjiComparison.json');
 
 type IPLUS_TABLE = [string, string, string][];
 
@@ -79,6 +78,7 @@ PLUS_TABLE.forEach(function ([jp, zht, zhs])
 	addNew(TABLE, jp, zht, zhs);
 });
 
+// @ts-ignore
 TABLE = array_unique(TABLE.concat(teachKanjiComparison));
 
 export let TABLE_SAFE = [] as string[][];
@@ -185,6 +185,8 @@ export default TABLE;
 
 if (0)
 {
+	// @ts-ignore
+	import * as fs from 'fs';
 	console.log(TABLE_SAFE);
 	//fs.writeFileSync('./temp.json', JSON.stringify(TABLE_SAFE, null, "\t"));
 }

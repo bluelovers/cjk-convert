@@ -1,3 +1,8 @@
+/**
+ * Created by user on 2018/2/15/015.
+ *
+ * same as chinese_convert, but a little bug fix
+ */
 export interface IOptions {
     /**
      * 忽略的字 or 任何支援 indexOf 的 Object

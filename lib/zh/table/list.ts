@@ -21,7 +21,7 @@ export type IOptions = {
  * charTableList('司马')
  * // => [ [ '司' ], [ '馬', '马' ] ]
  */
-export function charTableList(text: string, options: IOptions = {})
+export function charTableList(text: string, options: IOptions = {}): string[][]
 {
 	let a = UString.split(text, '');
 
@@ -60,9 +60,11 @@ export function textList(text: string, options: IOptions = {}): string[]
 	{
 		if (Array.isArray(arr[0]))
 		{
+			// @ts-ignore
 			arr = arr[0];
 		}
 
+		// @ts-ignore
 		return arr;
 	}
 

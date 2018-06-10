@@ -19,6 +19,8 @@
     //"ESModuleInterop": true,
     //"esModuleInterop": true,
 
+    "resolveJsonModule": true,
+
     "strict": false,
 
     //"forceConsistentCasingInFileNames": true,

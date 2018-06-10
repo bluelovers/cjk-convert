@@ -5,7 +5,7 @@ import { IOptions as IOptionsZhTable } from './index';
 import { IOptions as IOptionsCjkConv } from '../convert';
 export declare type IOptions = {
     optionsZhTable?: IOptionsZhTable;
-    skip?;
+    skip?: any;
     lang?: 'zh' | 'cn' | 'jp' | 'auto' | string;
 };
 /**
@@ -14,7 +14,7 @@ export declare type IOptions = {
  * charTableList('司马')
  * // => [ [ '司' ], [ '馬', '马' ] ]
  */
-export declare function charTableList(text: string, options?: IOptions): any;
+export declare function charTableList(text: string, options?: IOptions): string[][];
 /**
  *
  *  @example
