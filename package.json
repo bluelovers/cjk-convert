@@ -49,15 +49,15 @@
   "license": "ISC",
   "author": "",
   "main": "index.js",
+  "types": "cjk-conv.d.ts",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
   "scripts": {
-    "doc": "typedoc --theme markdown --out ./docs --ignoreCompilerErrors --exclude **/{node_modules,test,doc}/**/* index.ts",
-    "doc2": "typedoc --theme markdown --externalPattern \"**/(node_modules|test|doc)/**\" --out ./docs --ignoreCompilerErrors --exclude \"**/(node_modules|test|doc)/**/*\" .",
-    "doc3": "typedoc --theme markdown --out ./docs --ignoreCompilerErrors .",
-    "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\""
+    "dts-bundle": "node ./test/dts-bundle.js",
+    "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\"",
+    "travis": "typedoc --ignoreCompilerErrors --options ./typedoc.config.js"
   },
   "dependencies": {
     "array-hyper-unique": "^1.0.0",

@@ -15,7 +15,7 @@
 *.old
 
 tsconfig.json
-#package-lock.json
+package-lock.json
 
 test
 
@@ -23,3 +23,12 @@ test
 .gitkeep
 
 /.*
+### npm template
+
+
+
+#package-lock.json
+
+
+
+/typedoc.config.js

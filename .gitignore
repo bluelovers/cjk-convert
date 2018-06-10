@@ -28,3 +28,10 @@ tests/**/*.d.ts
 tests/*.js
 tests/*.d.ts
 tests/temp*
+/docs/
+### git2 template
+
+
+
+
+

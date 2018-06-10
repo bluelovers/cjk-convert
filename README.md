@@ -98,3 +98,24 @@ console.log('input=%s => cn2=%s', tw, cn2);
 ### zhTable
 
 提供給 [`regexp-cjk`](https://www.npmjs.com/package/regexp-cjk) 使用
+
+### zhTableList
+
+[API](lib/zh/table/list.d.ts)
+
+*port from [novel-segment](https://github.com/bluelovers/node-segment/blob/master/lib/util/cjk.ts)*
+
+```ts
+import zhTableList from 'cjk-conv/lib/zh/table/list';
+```
+
+```ts
+zhTableList.charTableList('司马')
+// => [ [ '司' ], [ '馬', '马' ] ]
+
+zhTableList.textList('司马')
+// => [ '司馬', '司马' ]
+
+zhTableList.arrCjk(['司马', '上官', '欧阳', '夏侯'])
+// => [ '司马', '上官', '欧阳', '夏侯', '司馬', '歐陽', '欧陽' ]
+```
