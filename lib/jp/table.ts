@@ -14,6 +14,7 @@ import { array_unique } from '../util';
  * 資料來源 https://www.jpmarumaru.com/tw/teachKanjiComparison.asp
  * @see https://www.jpmarumaru.com/tw/teachKanjiComparison.asp
  */
+// @ts-ignore
 import teachKanjiComparison = require('./teachKanjiComparison.json');
 
 type IPLUS_TABLE = [string, string, string][];
