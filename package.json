@@ -57,7 +57,7 @@
   "scripts": {
     "dts-bundle": "node ./test/dts-bundle.js",
     "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\"",
-    "travis": "typedoc --ignoreCompilerErrors --options ./typedoc.config.js"
+    "travis": "typedoc --ignoreCompilerErrors --options typedoc.config.js"
   },
   "dependencies": {
     "array-hyper-unique": "^1.0.0",
