@@ -18,7 +18,7 @@ module.exports = {
 	ignoreCompilerErrors: true,
 	excludeExternals: true,
 
-	includeDeclarations: true,
+	//includeDeclarations: true,
 
 	externalPattern: "**/node_modules/**",
 
