@@ -184,10 +184,10 @@ export function addNew(table: string[][], jp, zht, zhs): string[][]
 export default TABLE;
 //export default exports;
 
-if (0)
-{
-	// @ts-ignore
-	import * as fs from 'fs';
-	console.log(TABLE_SAFE);
-	//fs.writeFileSync('./temp.json', JSON.stringify(TABLE_SAFE, null, "\t"));
-}
+//if (0)
+//{
+//	// @ts-ignore
+//	import * as fs from 'fs';
+//	console.log(TABLE_SAFE);
+//	//fs.writeFileSync('./temp.json', JSON.stringify(TABLE_SAFE, null, "\t"));
+//}
