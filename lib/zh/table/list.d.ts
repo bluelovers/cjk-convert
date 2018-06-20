@@ -11,8 +11,10 @@ export declare type IOptions = {
 /**
  *
  * @example
+ * ```
  * charTableList('司马')
  * // => [ [ '司' ], [ '馬', '马' ] ]
+ * ```
  */
 export declare function charTableList(text: string, options?: IOptions): string[][];
 /**

@@ -16,7 +16,9 @@ module.exports = {
 //	theme: path.relative(process.cwd(), p),
 	theme: p,
 	ignoreCompilerErrors: true,
-	excludeExternals: true,
+//	excludeExternals: true,
+
+	mode: 'modules',
 
 	//includeDeclarations: true,
 

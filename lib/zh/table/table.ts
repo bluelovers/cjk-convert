@@ -278,6 +278,12 @@ export let table_plus = {
 		'对',
 	],
 
+	'鏽': [
+		'鏽',
+		'銹',
+		'锈',
+	],
+
 };
 
 Object.keys(table_plus)
