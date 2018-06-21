@@ -284,6 +284,13 @@ export let table_plus = {
 		'锈',
 	],
 
+	'駄': [
+		'駄',
+		'䭾',
+		'馱',
+		'驮',
+	],
+
 };
 
 Object.keys(table_plus)
