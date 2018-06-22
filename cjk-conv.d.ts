@@ -23,16 +23,21 @@ declare module 'cjk-conv/lib/index' {
 }
 
 declare module 'cjk-conv/lib/zh/convert/index' {
+    /**
+        * Created by user on 2018/2/15/015.
+        *
+        * same as chinese_convert, but a little bug fix
+        */
     export interface IOptions {
-        /**
-          * 忽略的字 or 任何支援 indexOf 的 Object
-          */
-        skip?: any;
-        table?: ITable | typeof _call;
-        safe?: boolean;
+            /**
+                * 忽略的字 or 任何支援 indexOf 的 Object
+                */
+            skip?: any;
+            table?: ITable | typeof _call;
+            safe?: boolean;
     }
     export const defaultOptions: Readonly<{
-        safe: boolean;
+            safe: boolean;
     }>;
     export function cn2tw(text: string, options?: IOptions, ...argv: any[]): string;
     export function tw2cn(text: string, options?: IOptions, ...argv: any[]): string;
@@ -41,35 +46,38 @@ declare module 'cjk-conv/lib/zh/convert/index' {
     export const REGEXP_TEST: RegExp;
     export function _call(fn: any, text: string, options?: IOptions, ...argv: any[]): any;
     export interface ITable {
-        [key: string]: string;
+            [key: string]: string;
     }
     import * as zhConvert from 'cjk-conv/lib/zh/convert/index';
     export default zhConvert;
 }
 
 declare module 'cjk-conv/lib/zh/table/index' {
+    /**
+        * Created by user on 2018/2/17/017.
+        */
     import libTable from 'cjk-conv/lib/zh/table/table';
     export { libTable };
     export type IOptions = {
             safe?: boolean;
-            skip?;
+            skip?: any;
     };
     export function _get(a: any, value: any, ...values: any[]): any;
     /**
         * 取出此漢字所對應的繁漢字
         * @type {(char: string, options?: IOptions) => string[]}
         */
-    export const tw: (char: string, options?: zhTable.IOptions) => string[];
+    export const tw: (char: string, options?: IOptions) => string[];
     /**
         * 取出此漢字所對應的簡漢字
         * @type {(char: string, options?: IOptions) => string[]}
         */
-    export const cn: (char: string, options?: zhTable.IOptions) => string[];
+    export const cn: (char: string, options?: IOptions) => string[];
     /**
         * 取出此漢字所對應的日漢字
         * @type {(char: string, options?: IOptions) => string[]}
         */
-    export const jp: (char: string, options?: zhTable.IOptions) => string[];
+    export const jp: (char: string, options?: IOptions) => string[];
     /**
         * 自動取出此漢字所對應的簡繁日漢字
         *
@@ -92,6 +100,9 @@ declare module 'cjk-conv/lib/jp/index' {
 }
 
 declare module 'cjk-conv/lib/novel/filename' {
+    /**
+      * Created by user on 2018/2/17/017.
+      */
     export interface IOptions {
         skip?: string;
         safe?: boolean;
@@ -172,6 +183,8 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '国': string[];
             '罵': string[];
             '対': string[];
+            '鏽': string[];
+            '駄': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
@@ -187,6 +200,14 @@ declare module 'cjk-conv/lib/zh/table/table' {
 }
 
 declare module 'cjk-conv/lib/jp/core' {
+    /**
+        * Created by user on 2017/12/24/024.
+        *
+        * this module only do the char is exists in jp, zht, zhs
+        * so don't use this module when u wanna fully zht <=> zhs
+        *
+        * 目前只支援 簡繁日漢字 並非全 cjk 漢字支援
+        */
     import ZHJP_TABLE, { TABLE_SAFE as ZHJP_TABLE_SAFE } from 'cjk-conv/lib/jp/table';
     export { ZHJP_TABLE, ZHJP_TABLE_SAFE };
     export const KEY_JP = "jp";
@@ -225,34 +246,34 @@ declare module 'cjk-conv/lib/jp/core' {
         * only 只將 日文漢字 => 轉為繁漢字
         * @type {IFrom2To}
         */
-    export const jp2zht: jpConvert.IFrom2To;
+    export const jp2zht: IFrom2To;
     /**
         * only 只將 日文漢字 => 轉為簡漢字
         * @type {IFrom2To}
         */
-    export const jp2zhs: jpConvert.IFrom2To;
+    export const jp2zhs: IFrom2To;
     /**
         * only 簡漢字 => 轉為日漢字
         * @type {IFrom2To}
         */
-    export const zhs2jp: jpConvert.IFrom2To;
+    export const zhs2jp: IFrom2To;
     /**
         * only 只將 繁漢字 => 轉為日文漢字
         * @type {IFrom2To}
         */
-    export const zht2jp: jpConvert.IFrom2To;
+    export const zht2jp: IFrom2To;
     /**
         * only 只將簡繁日 當中共通的 繁漢字 => 轉為簡漢字
         * 請勿作為簡繁轉換用
         * @type {IFrom2To}
         */
-    export const zht2zhs: jpConvert.IFrom2To;
+    export const zht2zhs: IFrom2To;
     /**
         * only 只將簡繁日 當中共通的 簡漢字 => 轉為繁漢字
         * 請勿作為簡繁轉換用
         * @type {IFrom2To}
         */
-    export const zhs2zht: jpConvert.IFrom2To;
+    export const zhs2zht: IFrom2To;
     /**
         * only 只將簡繁日 當中共通的 簡繁漢字 => 轉為日文漢字
         *
@@ -272,7 +293,7 @@ declare module 'cjk-conv/lib/jp/core' {
         * @param {IOptions} options
         * @returns {string}
         */
-    export const cjk2jp: typeof jpConvert.zh2jp;
+    export const cjk2jp: typeof zh2jp;
     /**
         * only 只將簡繁日 當中共通的 漢字 => 轉為繁體漢字
         * 請勿作為簡繁轉換用
@@ -292,9 +313,9 @@ declare module 'cjk-conv/lib/jp/core' {
         */
     export function cjk2zhs(str: any, options?: IOptions): string;
     export function init(overwrite?: boolean): {
-            jp: jpConvert.ITABLE;
-            zht: jpConvert.ITABLE;
-            zhs: jpConvert.ITABLE;
+            jp: ITABLE;
+            zht: ITABLE;
+            zhs: ITABLE;
     };
     export function _getdata(char: string, from: string, to: string, safe?: boolean): string;
     export interface IFrom2To extends Function {
@@ -305,6 +326,15 @@ declare module 'cjk-conv/lib/jp/core' {
 }
 
 declare module 'cjk-conv/lib/jp/table' {
+    /**
+      * Created by user on 2017/12/24/024.
+      *
+      * @see https://www.jcinfo.net/tw/tools/kanji
+      * @see http://dict.variants.moe.edu.tw/variants/rbt/japan_chinese_character_tiles.rbt?pageId=2981908
+      * @see https://en.wikipedia.org/wiki/List_of_j%C5%8Dy%C5%8D_kanji
+      * @see https://hanzi.unihan.com.cn/CJKCompare
+      * @see http://www5b.biglobe.ne.jp/%7Eharigaya/variants.html
+      */
     export let TABLE: string[][];
     export let TABLE_SAFE: string[][];
     export function addNew(table: string[][], jp: any, zht: any, zhs: any): string[][];
