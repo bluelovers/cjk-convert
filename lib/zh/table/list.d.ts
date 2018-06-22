@@ -19,9 +19,9 @@ export declare type IOptions = {
 export declare function charTableList(text: string, options?: IOptions): string[][];
 /**
  *
- *  @example
- *  textList('司马')
- *  // => [ '司馬', '司马' ]
+ * @example
+ * textList('司马')
+ * // => [ '司馬', '司马' ]
  */
 export declare function textList(text: string, options?: IOptions): string[];
 /**
