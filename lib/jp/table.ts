@@ -63,6 +63,8 @@ const PLUS_TABLE: IPLUS_TABLE = array_unique<IPLUS_TABLE>([
 
 	['駄', '馱', '驮'],
 
+	['沢', '澤', '泽'],
+
 ]);
 
 const PLUS_TABLE_SAFE: IPLUS_TABLE = array_unique([
