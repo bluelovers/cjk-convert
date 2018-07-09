@@ -291,6 +291,12 @@ export let table_plus = {
 		'驮',
 	],
 
+	'薩': [
+		'薩',
+		'萨',
+		'蕯',
+	],
+
 };
 
 Object.keys(table_plus)
