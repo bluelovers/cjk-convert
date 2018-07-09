@@ -28,7 +28,7 @@
     "locale": "zh-TW",
     "pretty": true,
 
-//    "removeComments": true,
+    "removeComments": false,
 
 //    "baseUrl": ".",
 //    "sourceRoot": ".",
