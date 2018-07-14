@@ -297,6 +297,12 @@ export let table_plus = {
 		'蕯',
 	],
 
+	'単': [
+		'単',
+		'單',
+		'单',
+	],
+
 };
 
 Object.keys(table_plus)
