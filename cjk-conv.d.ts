@@ -188,6 +188,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '薩': string[];
             '単': string[];
             '継': string[];
+            '驗': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
