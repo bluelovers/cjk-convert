@@ -26,6 +26,9 @@ export declare let table_jp: {
     '閤': string[];
     '阁': string[];
     '罗': string[];
+    '乾': string[];
+    '亁': string[];
+    '乹': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
