@@ -70,6 +70,7 @@ export declare let table_plus: {
     '薩': string[];
     '単': string[];
     '継': string[];
+    '驗': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

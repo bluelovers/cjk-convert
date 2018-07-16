@@ -309,6 +309,14 @@ export let table_plus = {
 		'继',
 	],
 
+	'驗': [
+		'驗',
+		'验',
+		'騐',
+
+		'験',
+	],
+
 };
 
 Object.keys(table_plus)
