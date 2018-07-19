@@ -29,6 +29,11 @@ export declare let table_jp: {
     '乾': string[];
     '亁': string[];
     '乹': string[];
+    '历': string[];
+    '歴': string[];
+    '歷': string[];
+    '暦': string[];
+    '曆': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
@@ -74,6 +79,7 @@ export declare let table_plus: {
     '単': string[];
     '継': string[];
     '驗': string[];
+    '歴': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

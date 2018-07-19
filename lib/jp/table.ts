@@ -65,11 +65,13 @@ const PLUS_TABLE: IPLUS_TABLE = array_unique<IPLUS_TABLE>([
 
 	['沢', '澤', '泽'],
 
+	["歴", "歷", "历"],
+	["暦", "曆", "历"],
+
 ]);
 
 const PLUS_TABLE_SAFE: IPLUS_TABLE = array_unique([
 
-	["歴", "歷", "历"],
 	["絶", "絕", "绝"],
 	["別", "別", "别"],
 	["魯", "魯", "鲁"],
