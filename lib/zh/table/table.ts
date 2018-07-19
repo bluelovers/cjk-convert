@@ -361,6 +361,12 @@ export let table_plus = {
 		'曆',
 	],
 
+	'団': [
+		'团',
+		'団',
+		'團',
+	],
+
 };
 
 Object.keys(table_plus)
