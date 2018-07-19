@@ -198,6 +198,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '継': string[];
             '驗': string[];
             '歴': string[];
+            '暦': string[];
             '団': string[];
     };
     export interface ISimpleTable {

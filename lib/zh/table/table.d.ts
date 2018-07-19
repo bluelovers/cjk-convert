@@ -80,6 +80,7 @@ export declare let table_plus: {
     '継': string[];
     '驗': string[];
     '歴': string[];
+    '暦': string[];
     '団': string[];
 };
 export interface ISimpleTable {
