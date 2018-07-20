@@ -380,6 +380,12 @@ export let table_plus = {
 		'庅',
 	],
 
+	'戰': [
+		'戦',
+		'戰',
+		'战',
+	],
+
 };
 
 Object.keys(table_plus)
