@@ -152,6 +152,8 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '歷': string[];
             '暦': string[];
             '曆': string[];
+            '呻': string[];
+            '覆': string[];
     };
     /**
         * 此表內符合以下任意值時會觸發
@@ -202,6 +204,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '団': string[];
             '麼': string[];
             '戰': string[];
+            '乡': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
