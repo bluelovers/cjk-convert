@@ -35,6 +35,7 @@ export declare let table_jp: {
     '暦': string[];
     '曆': string[];
     '呻': string[];
+    '覆': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
