@@ -82,6 +82,7 @@ export declare let table_plus: {
     '歴': string[];
     '暦': string[];
     '団': string[];
+    '麼': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

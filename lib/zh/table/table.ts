@@ -374,6 +374,12 @@ export let table_plus = {
 		'團',
 	],
 
+	'麼': [
+		'麼',
+		'麽',
+		'庅',
+	],
+
 };
 
 Object.keys(table_plus)
