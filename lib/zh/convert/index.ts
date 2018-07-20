@@ -53,6 +53,9 @@ export let table_cn2tw: ITable = Object.assign(_table_cn2tw, {
 	'国': '國',
 	'验': '驗',
 	'准': '準',
+
+	//'历': '曆',
+	'历': '歷',
 });
 
 export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
