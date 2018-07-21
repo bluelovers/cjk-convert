@@ -423,6 +423,13 @@ export let table_plus = {
 		'余',
 	],
 
+	'網': [
+		'網',
+		'䋄',
+		'䋞',
+		'网',
+	],
+
 };
 
 Object.keys(table_plus)

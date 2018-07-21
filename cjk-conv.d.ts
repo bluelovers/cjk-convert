@@ -209,6 +209,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '乡': string[];
             '勉': string[];
             '餘': string[];
+            '網': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;

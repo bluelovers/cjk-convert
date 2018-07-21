@@ -91,6 +91,7 @@ export declare let table_plus: {
     '乡': string[];
     '勉': string[];
     '餘': string[];
+    '網': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
