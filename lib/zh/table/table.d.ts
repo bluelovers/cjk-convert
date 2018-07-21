@@ -36,6 +36,8 @@ export declare let table_jp: {
     '曆': string[];
     '呻': string[];
     '覆': string[];
+    '勉': string[];
+    '勉': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
@@ -87,6 +89,7 @@ export declare let table_plus: {
     '麼': string[];
     '戰': string[];
     '乡': string[];
+    '勉': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
