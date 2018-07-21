@@ -208,6 +208,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '戰': string[];
             '乡': string[];
             '勉': string[];
+            '餘': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
