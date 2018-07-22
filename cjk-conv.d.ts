@@ -210,6 +210,9 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '勉': string[];
             '餘': string[];
             '網': string[];
+            '託': string[];
+            '纖': string[];
+            '鍊': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
