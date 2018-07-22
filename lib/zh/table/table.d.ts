@@ -94,6 +94,7 @@ export declare let table_plus: {
     '網': string[];
     '託': string[];
     '纖': string[];
+    '鍊': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

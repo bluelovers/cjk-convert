@@ -444,6 +444,15 @@ export let table_plus = {
 		'繊',
 	],
 
+	'鍊': [
+		'鍊',
+		'錬',
+		'𫔀',
+
+		'炼',
+		'煉',
+	],
+
 };
 
 Object.keys(table_plus)
