@@ -68,6 +68,8 @@ const PLUS_TABLE: IPLUS_TABLE = array_unique<IPLUS_TABLE>([
 	["歴", "歷", "历"],
 	["暦", "曆", "历"],
 
+	["刹", "剎", "刹"],
+
 ]);
 
 const PLUS_TABLE_SAFE: IPLUS_TABLE = array_unique([
