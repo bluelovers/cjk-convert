@@ -532,6 +532,11 @@ export let table_plus = {
 		'繋',
 	],
 
+	'廻': [
+		'廻',
+		'迴',
+	],
+
 };
 
 Object.keys(table_plus)
