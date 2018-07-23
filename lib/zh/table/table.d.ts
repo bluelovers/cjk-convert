@@ -95,6 +95,9 @@ export declare let table_plus: {
     '託': string[];
     '纖': string[];
     '鍊': string[];
+    '擊': string[];
+    '實': string[];
+    '於': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
