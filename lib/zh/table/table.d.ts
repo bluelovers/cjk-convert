@@ -101,6 +101,7 @@ export declare let table_plus: {
     '證': string[];
     '據': string[];
     '處': string[];
+    '瞪': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

@@ -490,6 +490,12 @@ export let table_plus = {
 		'処',
 	],
 
+	'瞪': [
+		'瞪',
+		'瞠',
+		'眙',
+	],
+
 };
 
 Object.keys(table_plus)
