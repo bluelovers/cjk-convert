@@ -537,6 +537,12 @@ export let table_plus = {
 		'迴',
 	],
 
+	'録': [
+		'録',
+		'錄',
+		'录',
+	],
+
 };
 
 Object.keys(table_plus)
