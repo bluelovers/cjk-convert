@@ -501,6 +501,12 @@ export let table_plus = {
 		'胑',
 	],
 
+	'肉': [
+		'肉',
+		'宍',
+		'𠕎',
+	],
+
 };
 
 Object.keys(table_plus)

@@ -103,6 +103,7 @@ export declare let table_plus: {
     '處': string[];
     '瞪': string[];
     '肢': string[];
+    '肉': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
