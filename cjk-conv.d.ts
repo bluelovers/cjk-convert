@@ -156,6 +156,8 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '覆': string[];
             '勉': string[];
             '勉': string[];
+            '甦': string[];
+            '忧': string[];
     };
     /**
         * 此表內符合以下任意值時會觸發
@@ -213,6 +215,17 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '託': string[];
             '纖': string[];
             '鍊': string[];
+            '擊': string[];
+            '實': string[];
+            '於': string[];
+            '證': string[];
+            '據': string[];
+            '處': string[];
+            '瞪': string[];
+            '肢': string[];
+            '肉': string[];
+            '憂': string[];
+            '繫': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;

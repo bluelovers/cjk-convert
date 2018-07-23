@@ -57,6 +57,7 @@
   "scripts": {
     "dts-bundle": "node ./test/dts-bundle.js",
     "prepublishOnly": "npm run dts-bundle",
+    "postpublish": "echo postpublish && node ./script/publish-after",
     "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\"",
     "travis": "typedoc --options ./typedoc.config.js"
   },

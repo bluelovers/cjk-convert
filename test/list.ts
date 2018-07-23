@@ -4,10 +4,14 @@
 
 import { array_unique } from 'array-hyper-unique';
 import { charTableList, textList } from '../lib/zh/table/list';
+import { cn2tw, tw2cn } from '../lib/zh/convert';
 
-let word = `历,曆 暦,歷 歴`;
+let word = `聯繫联系`;
 
 word = array_unique(word.split('')).join('');
 
 console.log(charTableList(word));
 console.log(textList(word));
+
+console.log(cn2tw(word));
+console.log(tw2cn(word));
