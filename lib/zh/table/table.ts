@@ -496,6 +496,11 @@ export let table_plus = {
 		'眙',
 	],
 
+	'肢': [
+		'肢',
+		'胑',
+	],
+
 };
 
 Object.keys(table_plus)
