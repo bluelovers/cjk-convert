@@ -38,6 +38,8 @@ export declare let table_jp: {
     '覆': string[];
     '勉': string[];
     '勉': string[];
+    '甦': string[];
+    '忧': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
@@ -104,6 +106,7 @@ export declare let table_plus: {
     '瞪': string[];
     '肢': string[];
     '肉': string[];
+    '憂': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
