@@ -55,12 +55,16 @@
     "test": "test"
   },
   "scripts": {
+    "precommit": "npm run dts-bundle && git add cjk-conv.d.ts",
     "dts-bundle": "node ./test/dts-bundle.js",
     "prepublishOnly": "npm run dts-bundle",
     "postpublish": "echo postpublish && node ./script/publish-after",
     "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\"",
     "travis": "typedoc --options ./typedoc.config.js"
   },
+  "pre-commit": [
+    "precommit"
+  ],
   "dependencies": {
     "array-hyper-unique": "^1.0.2",
     "chinese_convert": "^1.0.8",
