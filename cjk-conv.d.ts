@@ -226,6 +226,8 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '肉': string[];
             '憂': string[];
             '繫': string[];
+            '廻': string[];
+            '録': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
