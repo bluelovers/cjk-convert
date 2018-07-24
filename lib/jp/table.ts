@@ -72,6 +72,8 @@ const PLUS_TABLE: IPLUS_TABLE = array_unique<IPLUS_TABLE>([
 
 	["錬", "鍊", "炼"],
 
+	["蓋", "蓋", "盖"],
+
 ]);
 
 const PLUS_TABLE_SAFE: IPLUS_TABLE = array_unique([

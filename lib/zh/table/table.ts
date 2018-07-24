@@ -560,6 +560,18 @@ export let table_plus = {
 		'壷',
 	],
 
+	'茲': [
+		'茲',
+		'兹',
+		'玆',
+	],
+
+	'蓋': [
+		'蓋',
+		'盖',
+		'葢',
+	],
+
 };
 
 Object.keys(table_plus)
