@@ -1,6 +1,6 @@
 {
   "name": "cjk-conv",
-  "version": "1.0.58",
+  "version": "1.0.59",
   "description": "convert chinese, japanese 簡繁日漢字轉換 ( merge/split submodule from node-novel, regexp-cjk, str-util )",
   "keywords": [
     "char",
@@ -57,7 +57,7 @@
   "scripts": {
     "precommit": "npm run dts-bundle && git add cjk-conv.d.ts",
     "dts-bundle": "node ./test/dts-bundle.js",
-    "prepublishOnly": "npm run dts-bundle",
+    "prepublishOnly": "npm run dts-bundle && git add cjk-conv.d.ts",
     "postpublish": "echo postpublish && node ./script/publish-after",
     "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\"",
     "travis": "typedoc --options ./typedoc.config.js"
