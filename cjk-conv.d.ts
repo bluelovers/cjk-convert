@@ -228,6 +228,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '繫': string[];
             '廻': string[];
             '録': string[];
+            '鎗': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
