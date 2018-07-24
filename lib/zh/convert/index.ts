@@ -93,6 +93,7 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 
 	'壞': '坏',
 	'壊': '坏',
+
 });
 
 export const REGEXP_TEST = /[\u4E00-\u9FFF]/g;

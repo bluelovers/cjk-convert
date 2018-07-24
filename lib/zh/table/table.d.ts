@@ -110,6 +110,7 @@ export declare let table_plus: {
     '繫': string[];
     '廻': string[];
     '録': string[];
+    '鎗': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
