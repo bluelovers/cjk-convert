@@ -233,6 +233,8 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '壶': string[];
             '茲': string[];
             '蓋': string[];
+            '蹟': string[];
+            '癒': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
