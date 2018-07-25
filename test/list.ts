@@ -6,7 +6,7 @@ import { array_unique } from 'array-hyper-unique';
 import { charTableList, textList } from '../lib/zh/table/list';
 import { cn2tw, tw2cn } from '../lib/zh/convert';
 
-let word = `蓋蓋葢`;
+let word = `遊歷,遊历,游历`;
 
 word = array_unique(word.split('')).join('');
 
