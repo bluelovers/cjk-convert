@@ -572,6 +572,12 @@ export let table_plus = {
 		'葢',
 	],
 
+	'蹟': [
+		'蹟',
+		'跡',
+		'迹',
+	],
+
 };
 
 Object.keys(table_plus)
