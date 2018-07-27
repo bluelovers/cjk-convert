@@ -236,6 +236,10 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '蹟': string[];
             '癒': string[];
             '辺': string[];
+            '準': string[];
+            '衛': string[];
+            '晚': string[];
+            '裸': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;

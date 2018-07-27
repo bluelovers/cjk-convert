@@ -606,6 +606,11 @@ export let table_plus = {
 		'晩',
 	],
 
+	'裸': [
+		'裸',
+		'躶',
+	],
+
 };
 
 Object.keys(table_plus)
