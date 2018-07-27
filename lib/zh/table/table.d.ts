@@ -117,6 +117,7 @@ export declare let table_plus: {
     '蓋': string[];
     '蹟': string[];
     '癒': string[];
+    '辺': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

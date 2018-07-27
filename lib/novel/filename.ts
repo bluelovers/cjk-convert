@@ -36,6 +36,14 @@ export function jp(txt: string, options: IOptions = {}): string
 		.replace(/^プロローグ/, '序')
 		.replace(/^エピローグ/, '終章')
 		.replace(/総/g, '總')
+		.replace(/帰|归/g, '歸')
+		.replace(/辺/g, '邊')
+		.replace(/対/g, '對')
+		.replace(/独/g, '獨')
+		.replace(/実/g, '實')
+		.replace(/決斗/g, '決闘')
+		.replace(/仮/g, '假')
+		.replace(/戦/g, '戰')
 		;
 }
 
@@ -57,13 +65,15 @@ export function zh(txt: string, options: IOptions = {}): string
 		.replace(/[·‧・···•]/g, '・')
 		.replace(/泽/g, '澤')
 		.replace(/^(?:后)(記|日)/, '後$1')
+		.replace(/(身)(?:后)/, '$1後')
+		.replace(/(?:后)(悔)/, '後$1')
 		.replace(/回复/g, '回復')
 		.replace(/复(仇|讐)/g, '復$1')
 
 		.replace(/里面/g, '裡面')
 		.replace(/([今此])后/g, '$1後')
 
-		.replace(/[么预枪丛迈这个尔儿从龙丝风劳弃别]+/ug, function (s)
+		.replace(/[么预枪丛迈这个尔儿从龙丝风劳弃别驯卢妈称号]+/ug, function (s)
 		{
 			return cn2tw(s)
 		})
