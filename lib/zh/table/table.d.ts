@@ -118,6 +118,9 @@ export declare let table_plus: {
     '蹟': string[];
     '癒': string[];
     '辺': string[];
+    '準': string[];
+    '衛': string[];
+    '晚': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
