@@ -69,6 +69,8 @@ export let table_cn2tw: ITable = Object.assign(_table_cn2tw, {
 
 	'畲': '畲',
 
+	'处': '處',
+
 });
 
 export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
@@ -101,6 +103,25 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 	'佘': '佘',
 	'畲': '畲',
 
+	'處': '处',
+
+});
+
+
+[
+	//
+	'処',
+].forEach(function (v)
+{
+	delete table_cn2tw[v];
+});
+
+[
+	//
+	'処',
+].forEach(function (v)
+{
+	delete table_tw2cn[v];
 });
 
 export const REGEXP_TEST = /[\u4E00-\u9FFF]/g;
