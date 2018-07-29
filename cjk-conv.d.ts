@@ -240,6 +240,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '衛': string[];
             '晚': string[];
             '裸': string[];
+            '亀': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
