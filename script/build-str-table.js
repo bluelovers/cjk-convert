@@ -11,7 +11,25 @@ let build_path = path.join(__dirname, '../build');
         setImmediate(done);
     });
     await build('zh/convert/table_cn2tw', index_1.table_cn2tw);
+    await buildSafe('table_tw2cn', index_1.table_tw2cn, index_1.table_cn2tw);
 })();
+function buildSafe(name, table1, table2) {
+    let a = Object.keys(table1)
+        .reduce(function (a, from) {
+        let to = table1[from];
+        if (from !== table2[to] || table2[from]) {
+            a.unsafe.push(from);
+        }
+        else {
+            a.safe.push(from);
+        }
+        return a;
+    }, {
+        safe: [],
+        unsafe: [],
+    });
+    console.log(a);
+}
 function build(name, table) {
     let table2 = Object.keys(table)
         .reduce(function (a, from) {

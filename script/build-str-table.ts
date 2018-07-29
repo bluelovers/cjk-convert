@@ -15,7 +15,39 @@ let build_path = path.join(__dirname, '../build');
 	});
 
 	await build('zh/convert/table_cn2tw', table_cn2tw);
+
+	await buildSafe('table_tw2cn', table_tw2cn, table_cn2tw);
 })();
+
+function buildSafe(name: string, table1: {
+	[k: string]: string,
+}, table2: {
+	[k: string]: string,
+})
+{
+	let a = Object.keys(table1)
+		.reduce(function (a, from)
+		{
+			let to = table1[from];
+
+			if (from !== table2[to] || table2[from])
+			{
+				a.unsafe.push(from);
+			}
+			else
+			{
+				a.safe.push(from);
+			}
+
+			return a;
+		}, {
+			safe: [],
+			unsafe: [],
+		})
+	;
+
+	console.log(a);
+}
 
 function build(name: string, table: {
 	[k: string]: string,

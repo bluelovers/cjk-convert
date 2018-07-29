@@ -7,7 +7,7 @@ import { jp2zhs, jp2zht, zh2jp } from '../lib/jp/core';
 import { charTableList, textList } from '../lib/zh/table/list';
 import { cn2tw, tw2cn } from '../lib/zh/convert';
 
-let word = `佣傭`;
+let word = `恆恒恒`;
 
 word = array_unique(word.split('')).join('');
 

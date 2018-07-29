@@ -65,6 +65,8 @@ export let table_cn2tw: ITable = Object.assign(_table_cn2tw, {
 	'𫔀': '鍊',
 	'炼': '煉',
 
+	'恒': '恆',
+
 });
 
 export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
