@@ -20,8 +20,8 @@ export function toStrTableArray(table: {
 		throw new TypeError(`table '${typeof table}' ${table}`);
 	}
 
-	let arr = [];
-	let a2b = [];
+	let from = [];
+	let to = [];
 
 	const ks = Object.keys(table);
 	ks.sort();
@@ -31,6 +31,12 @@ export function toStrTableArray(table: {
 	for (let k of ks)
 	{
 		let k2 = table[k];
+
+		if (k === k2)
+		{
+			//console.error(`skip ${k}`);
+			continue;
+		}
 
 		let s1 = split(k);
 		let s2 = split(k2);
@@ -51,13 +57,13 @@ export function toStrTableArray(table: {
 			}
 		}
 
-		arr.push(k);
-		a2b.push(k2);
+		from.push(k);
+		to.push(k2);
 	}
 
 	return {
-		from: arr,
-		to: a2b,
+		from,
+		to,
 	}
 }
 
