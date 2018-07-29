@@ -37,6 +37,7 @@ export function fixOptions(options: IOptions = {}, table: ITable)
 	return options;
 }
 
+/*
 let msg = `并且之后在深海変異成亚种的半人鱼。顺便说一句，当时人鱼国的守护神《海之神》特里斯坦，发现在神代时代时被自己封印的宿敌复活了。`;
 
 console.log(1, cn2tw(msg, {
@@ -46,6 +47,7 @@ console.log(1, cn2tw(msg, {
 console.log(2, cn2tw_min(msg, {
 	safe: false,
 }));
+*/
 
 import * as zhConvertMin from './min';
 export default zhConvertMin;

@@ -58,7 +58,7 @@
     "build-table": "node ./script/build-str-table",
     "precommit": "npm run build-table && npm run dts-bundle && git add cjk-conv.d.ts",
     "dts-bundle": "node ./test/dts-bundle.js",
-    "prepublishOnly": "npm run dts-bundle && git add cjk-conv.d.ts",
+    "prepublishOnly": "npm run build-table && npm run dts-bundle && git add cjk-conv.d.ts",
     "postpublish": "echo postpublish && node ./script/publish-after",
     "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\"",
     "travis": "typedoc --options ./typedoc.config.js"
@@ -73,5 +73,8 @@
     "deepmerge-plus": "^2.1.2",
     "japanese": "^1.2.0",
     "uni-string": "^1.0.2"
+  },
+  "devDependencies": {
+    "fs-extra": "^7.0.0"
   }
 }
