@@ -11,24 +11,30 @@ let build_path = path.join(__dirname, '../build');
         setImmediate(done);
     });
     await build('zh/convert/table_cn2tw', index_1.table_cn2tw);
-    await buildSafe('table_tw2cn', index_1.table_tw2cn, index_1.table_cn2tw);
+    await buildDebug('zh/convert/table_tw2cn', index_1.table_tw2cn, index_1.table_cn2tw);
+    await buildDebug('zh/convert/table_cn2tw', index_1.table_cn2tw, index_1.table_tw2cn);
 })();
-function buildSafe(name, table1, table2) {
-    let a = Object.keys(table1)
+function buildDebug(name, table1, table2) {
+    let out = Object.keys(table1)
+        .sort(function (a, b) {
+        return a.codePointAt(0) - b.codePointAt(0);
+    })
         .reduce(function (a, from) {
         let to = table1[from];
         if (from !== table2[to] || table2[from]) {
-            a.unsafe.push(from);
+            a.unsafe[from] = to;
         }
         else {
-            a.safe.push(from);
+            a.safe[from] = to;
         }
         return a;
     }, {
-        safe: [],
-        unsafe: [],
+        safe: {},
+        unsafe: {},
     });
-    console.log(a);
+    return fs.outputJSON(path.join(build_path, `${name}.debug.json`), out, {
+        spaces: "\t",
+    });
 }
 function build(name, table) {
     let table2 = Object.keys(table)

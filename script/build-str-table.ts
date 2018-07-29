@@ -16,37 +16,44 @@ let build_path = path.join(__dirname, '../build');
 
 	await build('zh/convert/table_cn2tw', table_cn2tw);
 
-	await buildSafe('table_tw2cn', table_tw2cn, table_cn2tw);
+	await buildDebug('zh/convert/table_tw2cn', table_tw2cn, table_cn2tw);
+	await buildDebug('zh/convert/table_cn2tw', table_cn2tw, table_tw2cn);
 })();
 
-function buildSafe(name: string, table1: {
+function buildDebug(name: string, table1: {
 	[k: string]: string,
 }, table2: {
 	[k: string]: string,
 })
 {
-	let a = Object.keys(table1)
+	let out = Object.keys(table1)
+		.sort(function (a, b)
+		{
+			return a.codePointAt(0) - b.codePointAt(0)
+		})
 		.reduce(function (a, from)
 		{
 			let to = table1[from];
 
 			if (from !== table2[to] || table2[from])
 			{
-				a.unsafe.push(from);
+				a.unsafe[from] = to;
 			}
 			else
 			{
-				a.safe.push(from);
+				a.safe[from] = to;
 			}
 
 			return a;
 		}, {
-			safe: [],
-			unsafe: [],
+			safe: {},
+			unsafe: {},
 		})
 	;
 
-	console.log(a);
+	return fs.outputJSON(path.join(build_path, `${name}.debug.json`), out, {
+		spaces: "\t",
+	});
 }
 
 function build(name: string, table: {
