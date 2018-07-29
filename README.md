@@ -95,6 +95,31 @@ console.log('input=%s => cn2=%s', tw, cn2);
 
 ```
 
+#### zhConvertMin
+
+* [min.d.ts](lib/zh/convert/min.d.ts)
+
+以最小的字典來進行繁簡轉換，減少錯誤轉換的狀況
+
+```ts
+import { tw2cn_min, cn2tw_min } from 'cjk-conv/lib/zh/convert/min';
+
+let msg = `并且之后在深海変異成亚种的半人鱼。顺便说一句，当时人鱼国的守护神《海之神》特里斯坦，发现在神代时代时被自己封印的宿敌复活了。`;
+
+console.log(1, cn2tw(msg, {
+	safe: false,
+}));
+
+console.log(2, cn2tw_min(msg, {
+	safe: false,
+}));
+```
+
+```
+1 '並且之後在深海変異成亞種的半人魚。順便說一句，當時人魚國的守護神《海之神》特裡斯坦，發現在神代時代時被自己封印的宿敵復活了。'
+2 '並且之后在深海変異成亞種的半人魚。順便說一句，當時人魚國的守護神《海之神》特里斯坦，發現在神代時代時被自己封印的宿敵復活了。'
+```
+
 ### zhTable
 
 提供給 [`regexp-cjk`](https://www.npmjs.com/package/regexp-cjk) 使用

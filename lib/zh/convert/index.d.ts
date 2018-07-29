@@ -10,6 +10,7 @@ export interface IOptions {
     skip?: any;
     table?: ITable | typeof _call;
     safe?: boolean;
+    tableOnly?: boolean;
 }
 export declare const defaultOptions: Readonly<{
     safe: boolean;

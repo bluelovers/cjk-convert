@@ -8,6 +8,7 @@ import * as _table_cn2tw from 'chinese_convert/cn2tw';
 import * as _table_tw2cn from 'chinese_convert/tw2cn';
 
 import { cn2tw as _cn2tw, tw2cn as _tw2cn } from 'chinese_convert';
+import { CharacterRange } from 'regexp2/lib';
 
 export interface IOptions
 {
@@ -19,6 +20,8 @@ export interface IOptions
 	table?: ITable | typeof _call,
 
 	safe?: boolean,
+
+	tableOnly?: boolean,
 }
 
 export const defaultOptions = Object.freeze({
@@ -71,6 +74,10 @@ export let table_cn2tw: ITable = Object.assign(_table_cn2tw, {
 
 	'处': '處',
 
+	'复': '復',
+
+	'钜': '鉅',
+
 });
 
 export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
@@ -116,6 +123,9 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 	'岳': '岳',
 	'卜': '卜',
 	'于': '于',
+	'里': '里',
+
+	'鉅': '钜',
 
 });
 
@@ -134,6 +144,7 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 
 [
 	//
+	'鉅',
 ].forEach(function (v)
 {
 	delete table_cn2tw[v];
@@ -141,6 +152,7 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 
 [
 	//
+	'钜',
 ].forEach(function (v)
 {
 	delete table_tw2cn[v];
@@ -184,26 +196,38 @@ export function _call(fn, text: string, options: IOptions = {}, ...argv)
 		//console.log(options);
 	}
 
-	if (options.skip || options.table)
+	if (options.skip || options.table || options.tableOnly)
 	{
+		let { skip, table, tableOnly } = options;
+		let not_tableOnly = !tableOnly;
+
+		if (tableOnly && !table)
+		{
+			throw new Error(`table is ${table}`);
+		}
+
 		return text.replace(REGEXP_TEST, function (text)
 		{
-			if (options.skip.indexOf(text) == -1)
+			if (skip && skip.indexOf(text) !== -1)
 			{
-				return fn(text);
+				return text;
 			}
-			else if (options.table && typeof options.table == 'function')
+			else if (table && typeof table == 'function')
 			{
-				let ret = options.table(fn, text, options, ...argv);
+				let ret = table(fn, text, options, ...argv);
 
 				if (ret !== null && typeof ret != 'undefined')
 				{
 					return ret;
 				}
 			}
-			else if (options.table && options.table[text])
+			else if (table && table[text])
 			{
-				return options.table[text];
+				return table[text];
+			}
+			else if (not_tableOnly)
+			{
+				return fn(text);
 			}
 
 			return text;

@@ -35,6 +35,7 @@ declare module 'cjk-conv/lib/zh/convert/index' {
             skip?: any;
             table?: ITable | typeof _call;
             safe?: boolean;
+            tableOnly?: boolean;
     }
     export const defaultOptions: Readonly<{
             safe: boolean;
@@ -144,6 +145,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '閤': string[];
             '阁': string[];
             '罗': string[];
+            '幹': string[];
             '乾': string[];
             '亁': string[];
             '乹': string[];
@@ -241,6 +243,8 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '晚': string[];
             '裸': string[];
             '亀': string[];
+            '凼': string[];
+            '艸': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;

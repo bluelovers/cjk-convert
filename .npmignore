@@ -35,3 +35,5 @@ test
 /script/
 /pre-commit-hook.bat
 /build/
+!/build/zh/convert/table_cn2tw.debug.json
+!/build/zh/convert/table_tw2cn.debug.json
