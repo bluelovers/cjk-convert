@@ -65,14 +65,7 @@ function build(name: string, table: {
 		{
 			let to = table[from];
 
-			if (from !== to)
-			{
-				a[from] = to;
-			}
-			else
-			{
-				console.error(`skip ${from}`);
-			}
+			a[from] = to;
 
 			return a;
 		}, {})

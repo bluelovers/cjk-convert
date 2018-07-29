@@ -40,12 +40,7 @@ function build(name, table) {
     let table2 = Object.keys(table)
         .reduce(function (a, from) {
         let to = table[from];
-        if (from !== to) {
-            a[from] = to;
-        }
-        else {
-            console.error(`skip ${from}`);
-        }
+        a[from] = to;
         return a;
     }, {});
     let t1 = strtable_1.toStrTableArray(table2, {

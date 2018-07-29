@@ -105,6 +105,8 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 
 	'處': '处',
 
+	'丑': '丑',
+
 });
 
 

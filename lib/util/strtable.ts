@@ -32,12 +32,6 @@ export function toStrTableArray(table: {
 	{
 		let k2 = table[k];
 
-		if (k === k2)
-		{
-			//console.error(`skip ${k}`);
-			continue;
-		}
-
 		let s1 = split(k);
 		let s2 = split(k2);
 
