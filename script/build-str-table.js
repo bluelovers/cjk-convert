@@ -32,15 +32,15 @@ function build(name, table) {
     console.log(`build: ${name}
 table1 : ${Object.keys(table).length}
 table2 : ${Object.keys(table2).length}
-safe   : ${t1.from.length}
-unsafe : ${t2.from.length}`);
+base   : ${t1.from.length}
+unicode: ${t2.from.length}`);
     return Promise.all([
         fs.outputJSON(path.join(build_path, `${name}.json`), table2, {
             spaces: "\t",
         }),
-        fs.outputFile(path.join(build_path, `${name}.safe.from.txt`), t1.from.join('')),
-        fs.outputFile(path.join(build_path, `${name}.safe.to.txt`), t1.to.join('')),
-        fs.outputFile(path.join(build_path, `${name}.unsafe.from.txt`), t2.from.join('')),
-        fs.outputFile(path.join(build_path, `${name}.unsafe.to.txt`), t2.to.join('')),
+        fs.outputFile(path.join(build_path, `${name}.base.from.txt`), t1.from.join('')),
+        fs.outputFile(path.join(build_path, `${name}.base.to.txt`), t1.to.join('')),
+        fs.outputFile(path.join(build_path, `${name}.unicode.from.txt`), t2.from.join('')),
+        fs.outputFile(path.join(build_path, `${name}.unicode.to.txt`), t2.to.join('')),
     ]);
 }
