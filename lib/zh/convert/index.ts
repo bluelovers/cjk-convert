@@ -106,13 +106,34 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 	'處': '处',
 
 	'丑': '丑',
+	'么': '么',
+	'几': '几',
+	'后': '后',
+	'斗': '斗',
+	'艸': '艸',
+	'干': '干',
+	'虫': '虫',
+	'岳': '岳',
+	'卜': '卜',
+	'于': '于',
 
 });
-
 
 [
 	//
 	'処',
+	'佘',
+	'畲',
+	'氹',
+	'凼',
+].forEach(function (v)
+{
+	delete table_tw2cn[v];
+	delete table_cn2tw[v];
+});
+
+[
+	//
 ].forEach(function (v)
 {
 	delete table_cn2tw[v];
@@ -120,7 +141,6 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 
 [
 	//
-	'処',
 ].forEach(function (v)
 {
 	delete table_tw2cn[v];

@@ -7,7 +7,7 @@ import { jp2zhs, jp2zht, zh2jp } from '../lib/jp/core';
 import { charTableList, textList } from '../lib/zh/table/list';
 import { cn2tw, tw2cn } from '../lib/zh/convert';
 
-let word = `處处処`;
+let word = `干乾幹`;
 
 word = array_unique(word.split('')).join('');
 
