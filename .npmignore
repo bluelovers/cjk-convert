@@ -34,3 +34,4 @@ test
 /typedoc.config.js
 /script/
 /pre-commit-hook.bat
+/build/

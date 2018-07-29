@@ -55,7 +55,8 @@
     "test": "test"
   },
   "scripts": {
-    "precommit": "npm run dts-bundle && git add cjk-conv.d.ts",
+    "build-table": "node ./script/build-str-table",
+    "precommit": "npm run build-table && npm run dts-bundle && git add cjk-conv.d.ts",
     "dts-bundle": "node ./test/dts-bundle.js",
     "prepublishOnly": "npm run dts-bundle && git add cjk-conv.d.ts",
     "postpublish": "echo postpublish && node ./script/publish-after",
