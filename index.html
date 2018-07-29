@@ -145,7 +145,26 @@ cn2 = tw2cn(tw, {
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'input=%s =&gt; cn2=%s'</span>, tw, cn2);
 
 </code></pre>
-				<h3 id="zhtable">zhTable</h3>
+				<h4 id="zhconvertmin">zhConvertMin</h4>
+				<ul>
+					<li><a href="lib/zh/convert/min.d.ts">min.d.ts</a></li>
+				</ul>
+				<p>以最小的字典來進行繁簡轉換，減少錯誤轉換的狀況</p>
+				<pre><code class="lang-ts"><span class="hljs-keyword">import</span> { tw2cn_min, cn2tw_min } <span class="hljs-keyword">from</span> <span class="hljs-string">'cjk-conv/lib/zh/convert/min'</span>;
+
+<span class="hljs-keyword">let</span> msg = <span class="hljs-string">`并且之后在深海変異成亚种的半人鱼。顺便说一句，当时人鱼国的守护神《海之神》特里斯坦，发现在神代时代时被自己封印的宿敌复活了。`</span>;
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span>, cn2tw(msg, {
+    safe: <span class="hljs-literal">false</span>,
+}));
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span>, cn2tw_min(msg, {
+    safe: <span class="hljs-literal">false</span>,
+}));
+</code></pre>
+				<pre><code><span class="hljs-symbol">1 </span><span class="hljs-comment">'並且之後在深海変異成亞種的半人魚。順便說一句，當時人魚國的守護神《海之神》特裡斯坦，發現在神代時代時被自己封印的宿敵復活了。'</span>
+<span class="hljs-symbol">2 </span><span class="hljs-comment">'並且之后在深海変異成亞種的半人魚。順便說一句，當時人魚國的守護神《海之神》特里斯坦，發現在神代時代時被自己封印的宿敵復活了。'</span>
+</code></pre><h3 id="zhtable">zhTable</h3>
 				<p>提供給 <a href="https://www.npmjs.com/package/regexp-cjk"><code>regexp-cjk</code></a> 使用</p>
 				<h3 id="zhtablelist">zhTableList</h3>
 				<p><a href="lib/zh/table/list.d.ts">API</a></p>
@@ -199,6 +218,9 @@ zhTableList.arrCjk([<span class="hljs-string">'司马'</span>, <span class="hljs
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_lib_zh_convert_index_.html">"lib/zh/convert/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_lib_zh_convert_min_.html">"lib/zh/convert/min"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_lib_zh_table_index_.html">"lib/zh/table/index"</a>
