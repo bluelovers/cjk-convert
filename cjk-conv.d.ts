@@ -45,6 +45,11 @@ declare module 'cjk-conv/lib/zh/convert/index' {
     export let table_cn2tw: ITable;
     export let table_tw2cn: ITable;
     export const REGEXP_TEST: RegExp;
+    export const SAFE_MODE_CHAR: string[];
+    export function getOptionsSkip(options: IOptions, skip?: string[]): IOptions;
+    export function getOptions(options?: IOptions, defaultOpts?: Readonly<{
+            safe: boolean;
+    }>, skip?: string[]): IOptions;
     export function _call(fn: any, text: string, options?: IOptions, ...argv: any[]): any;
     export interface ITable {
             [key: string]: string;

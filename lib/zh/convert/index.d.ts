@@ -20,6 +20,11 @@ export declare function tw2cn(text: string, options?: IOptions, ...argv: any[]):
 export declare let table_cn2tw: ITable;
 export declare let table_tw2cn: ITable;
 export declare const REGEXP_TEST: RegExp;
+export declare const SAFE_MODE_CHAR: string[];
+export declare function getOptionsSkip(options: IOptions, skip?: string[]): IOptions;
+export declare function getOptions(options?: IOptions, defaultOpts?: Readonly<{
+    safe: boolean;
+}>, skip?: string[]): IOptions;
 export declare function _call(fn: any, text: string, options?: IOptions, ...argv: any[]): any;
 export interface ITable {
     [key: string]: string;

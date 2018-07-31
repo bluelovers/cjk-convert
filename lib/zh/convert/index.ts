@@ -160,41 +160,55 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 
 export const REGEXP_TEST = /[\u4E00-\u9FFF]/g;
 
-const SAFE_MODE_CHAR = [
+export const SAFE_MODE_CHAR = [
 	'后',
 	'里',
 ];
 
-export function _call(fn, text: string, options: IOptions = {}, ...argv)
+export function getOptionsSkip(options: IOptions, skip = SAFE_MODE_CHAR)
 {
-	options = Object.assign({}, defaultOptions, options);
+	if (!options.skip)
+	{
+		options.skip = skip.slice();
+	}
+	else if (typeof options.skip == 'string')
+	{
+		options.skip += skip.join('');
+	}
+	else if (Array.isArray(options.skip))
+	{
+		options.skip = options.skip.slice().concat(skip);
+	}
+	else
+	{
+		options.table = skip.reduce(function (a, b)
+		{
+			a[b] = b;
+
+			return a;
+		}, Object.assign({}, options.table || {}));
+	}
+
+	return options;
+}
+
+export function getOptions(options: IOptions = {}, defaultOpts = defaultOptions, skip = SAFE_MODE_CHAR)
+{
+	options = Object.assign({}, defaultOpts, options);
 
 	if (options.safe)
 	{
-		if (!options.skip)
-		{
-			options.skip = SAFE_MODE_CHAR.slice();
-		}
-		else if (typeof options.skip == 'string')
-		{
-			options.skip += '后';
-		}
-		else if (Array.isArray(options.skip))
-		{
-			options.skip = options.skip.concat(SAFE_MODE_CHAR);
-		}
-		else
-		{
-			options.table = SAFE_MODE_CHAR.reduce(function (a, b)
-			{
-				a[b] = b;
-
-				return a;
-			}, options.table || {});
-		}
+		options = getOptionsSkip(options, skip);
 
 		//console.log(options);
 	}
+
+	return options;
+}
+
+export function _call(fn, text: string, options: IOptions = {}, ...argv)
+{
+	options = getOptions(options);
 
 	if (options.skip || options.table || options.tableOnly)
 	{
