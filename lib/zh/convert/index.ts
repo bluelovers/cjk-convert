@@ -130,7 +130,16 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 });
 
 [
-	//
+	// 不轉換的共用字
+	'札',
+].forEach(function (v)
+{
+	table_tw2cn[v] = v;
+	table_cn2tw[v] = v;
+});
+
+[
+	// 從轉換表中刪除的字
 	'処',
 	'佘',
 	'畲',
@@ -143,7 +152,7 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 });
 
 [
-	//
+	// 從 簡體轉換表內刪除的字
 	'鉅',
 ].forEach(function (v)
 {
@@ -151,7 +160,7 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 });
 
 [
-	//
+	// 從繁體轉換表內刪除的字
 	'钜',
 ].forEach(function (v)
 {

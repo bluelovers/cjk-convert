@@ -636,6 +636,11 @@ export let table_plus = {
 		'草',
 	],
 
+	'札': [
+		'箚',
+		'剳',
+	],
+
 };
 
 Object.keys(table_plus)

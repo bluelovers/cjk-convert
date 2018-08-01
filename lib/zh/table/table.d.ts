@@ -126,6 +126,7 @@ export declare let table_plus: {
     '亀': string[];
     '凼': string[];
     '艸': string[];
+    '札': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
