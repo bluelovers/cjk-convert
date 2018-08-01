@@ -145,7 +145,6 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '鬪': string[];
             '闇': string[];
             '図': string[];
-            '复': string[];
             '当': string[];
             '閤': string[];
             '阁': string[];
@@ -251,6 +250,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '凼': string[];
             '艸': string[];
             '札': string[];
+            '复': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
