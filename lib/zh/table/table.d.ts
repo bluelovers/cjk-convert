@@ -43,6 +43,7 @@ export declare let table_jp: {
     '鹹': string[];
     '准': string[];
     '準': string[];
+    '袮': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
