@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>cjk-conv</title>
+	<title>runes2</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">cjk-conv</a>
+					<a href="index.html" class="title">runes2</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -57,7 +57,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> cjk-conv</h1>
+			<h1> runes2</h1>
 		</div>
 	</div>
 </header>
@@ -65,120 +65,45 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<h1 id="cjk-conv">cjk-conv</h1>
+				<h1 id="-runes">✂️ Runes</h1>
 				<blockquote>
-					<p>convert chinese, japanese 簡繁日漢字轉換 ( merge/split submodule from node-novel, regexp-cjk, str-util )</p>
+					<p>Unicode-aware JS string splitting with full Emoji support.</p>
 				</blockquote>
-				<p><code>npm install cjk-conv</code></p>
-				<h2 id="usage">usage</h2>
-				<pre><code class="lang-ts"><span class="hljs-keyword">import</span> cjkConv <span class="hljs-keyword">from</span> <span class="hljs-string">'cjk-conv'</span>;
-<span class="hljs-keyword">import</span> { cjkConv } <span class="hljs-keyword">from</span> <span class="hljs-string">'cjk-conv'</span>;
-<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> cjkConv <span class="hljs-keyword">from</span> <span class="hljs-string">'cjk-conv'</span>;
-<span class="hljs-keyword">const</span> cjkConv = <span class="hljs-built_in">require</span>(<span class="hljs-string">"cjk-conv"</span>);
+				<p>Split a string into its constituent characters, without munging emoji and other non-BMP code points.</p>
+				<p><strong>this is typescript version fork form <a href="https://www.npmjs.com/package/runes"><code>runes</code></a></strong></p>
+				<h2 id="why-">Why?</h2>
+				<p>The native <code>String#split</code> implementation does not pay attention to <a href="http://en.wikipedia.org/wiki/UTF-16">surrogate pairs</a>. When the code units of a surrogate pair are split apart, they are not intelligible on their own. Unless they are put back together in the correct order, individual code units will cause problems in code that handles strings.</p>
+				<h2 id="installation">Installation</h2>
+				<pre><code class="lang-js">$ npm install runes2
 </code></pre>
-				<h3 id="api">api</h3>
-				<p><a href="lib/index.d.ts">see</a></p>
-				<pre><code class="lang-ts">{ zhConvert, tw2cn, cn2tw }
-
-{ zhTable }
-
-{ jpConvert, zh2jp, jp2zht, jp2zhs, cjk2zht, cjk2zhs, cjk2jp }
+				<h2 id="example">Example</h2>
+				<pre><code class="lang-ts"><span class="hljs-keyword">const</span> runes = <span class="hljs-built_in">require</span>(<span class="hljs-string">'runes2'</span>)
+<span class="hljs-keyword">const</span> runes = <span class="hljs-built_in">require</span>(<span class="hljs-string">'runes2'</span>).runes
+<span class="hljs-keyword">import</span> runes <span class="hljs-keyword">from</span> <span class="hljs-string">'runes2'</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> runes <span class="hljs-keyword">from</span> <span class="hljs-string">'runes2'</span>;
 </code></pre>
-				<h3 id="jpconvert">jpConvert</h3>
-				<pre><code class="lang-ts"><span class="hljs-keyword">let</span> t = <span class="hljs-string">'魔物解説　ランク等話　蚀蝕蝕王で触王 冒険者ギルド解説 蚀|蝕战|戦马|馬亚|亞國預中日漢字對照表'</span>;
+				<pre><code class="lang-js"><span class="hljs-comment">// Standard String.split</span>
+<span class="hljs-string">'♥️'</span>.split(<span class="hljs-string">''</span>) <span class="hljs-comment">// =&gt; ['♥', '️']</span>
+<span class="hljs-string">'Emoji 🤖'</span>.split(<span class="hljs-string">''</span>) <span class="hljs-comment">// =&gt; ['E', 'm', 'o', 'j', 'i', ' ', '�', '�']</span>
+<span class="hljs-string">'👩‍👩‍👧‍👦'</span>.split(<span class="hljs-string">''</span>) <span class="hljs-comment">// =&gt; ['�', '�', '‍', '�', '�', '‍', '�', '�', '‍', '�', '�']</span>
 
-<span class="hljs-comment">/**
- * zh2jp = cjk2jp
- */</span>
-[
-    <span class="hljs-string">'zh2jp'</span>,
-    <span class="hljs-string">'jp2zhs'</span>,
-    <span class="hljs-string">'jp2zht'</span>,
+<span class="hljs-comment">// ES6 string iterator</span>
+[...<span class="hljs-string">'♥️'</span>] =&gt; [ <span class="hljs-string">'♥'</span>, <span class="hljs-string">'️'</span> ]
+[...<span class="hljs-string">'Emoji 🤖'</span>] <span class="hljs-comment">// =&gt; [ 'E', 'm', 'o', 'j', 'i', ' ', '🤖' ]</span>
+[...<span class="hljs-string">'👩‍👩‍👧‍👦'</span>] <span class="hljs-comment">// =&gt; [ '👩', '', '👩', '', '👧', '', '👦' ]</span>
 
-    <span class="hljs-literal">null</span>,
-
-    <span class="hljs-string">'cjk2jp'</span>,
-    <span class="hljs-string">'cjk2zhs'</span>,
-    <span class="hljs-string">'cjk2zht'</span>,
-].forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">fn</span>)
-</span>{
-    <span class="hljs-keyword">if</span> (!fn)
-    {
-        <span class="hljs-built_in">console</span>.log();
-    }
-    <span class="hljs-keyword">else</span>
-    {
-        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`[<span class="hljs-subst">${fn.padEnd(7, ' ')}</span>]`</span>, cjkConv.jpConvert[fn](t));
-    }
-});
-</code></pre>
-				<p>output</p>
-				<pre><code>[zh2jp  ] 魔物解説　ランク等話　蝕蝕蝕王で触王 冒険者ギルド解説 蝕|<span class="hljs-string">蝕戦</span>|<span class="hljs-string">戦馬</span>|<span class="hljs-string">馬亜</span>|<span class="hljs-string">亜国預中日漢字対照表
-[jp2zhs ] 魔物解说　ランク等话　蚀蚀蚀王で触王 冒险者ギルド解说 蚀</span>|<span class="hljs-string">蚀战</span>|<span class="hljs-string">战马</span>|<span class="hljs-string">马亚</span>|<span class="hljs-string">亞國預中日汉字對照表
-[jp2zht ] 魔物解說　ランク等話　蚀蝕蝕王で觸王 冒險者ギルド解說 蚀</span>|<span class="hljs-string">蝕战</span>|<span class="hljs-string">戰马</span>|<span class="hljs-string">馬亚</span>|<span class="hljs-string">亞國預中日漢字對照表
-
-[cjk2jp ] 魔物解説　ランク等話　蝕蝕蝕王で触王 冒険者ギルド解説 蝕</span>|<span class="hljs-string">蝕戦</span>|<span class="hljs-string">戦馬</span>|<span class="hljs-string">馬亜</span>|<span class="hljs-string">亜国預中日漢字対照表
-[cjk2zhs] 魔物解说　ランク等话　蚀蚀蚀王で触王 冒险者ギルド解说 蚀</span>|<span class="hljs-string">蚀战</span>|<span class="hljs-string">战马</span>|<span class="hljs-string">马亚</span>|<span class="hljs-string">亚国預中日汉字对照表
-[cjk2zht] 魔物解說　ランク等話　蝕蝕蝕王で觸王 冒險者ギルド解說 蝕</span>|<span class="hljs-string">蝕戰</span>|<span class="hljs-string">戰馬</span>|<span class="hljs-string">馬亞</span>|<span class="hljs-string">亞國預中日漢字對照表</span>
-</code></pre><h3 id="zhconvert">zhConvert</h3>
-				<ul>
-					<li><a href="lib/zh/convert/index.d.ts">see</a></li>
-				</ul>
-				<p>same as <code>chinese_convert</code>, but a little bug fix</p>
-				<pre><code class="lang-ts"><span class="hljs-keyword">let</span> input = <span class="hljs-string">'简繁转换功能测试簡繁轉換功能測試'</span>;
-<span class="hljs-keyword">let</span> tw = cn2tw(input);
-<span class="hljs-keyword">let</span> cn2 = tw2cn(tw);
-
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'input=%s =&gt; tw =%s'</span>, input, tw);
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'input=%s =&gt; cn2=%s'</span>, tw, cn2);
-
-tw = cn2tw(input, {
-    skip: <span class="hljs-string">'转换轉換'</span>,
-});
-cn2 = tw2cn(tw, {
-    skip: <span class="hljs-string">'转换轉換'</span>,
-});
-
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'以下忽略特定字詞不轉換'</span>);
-
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'input=%s =&gt; tw =%s'</span>, input, tw);
-<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'input=%s =&gt; cn2=%s'</span>, tw, cn2);
+<span class="hljs-comment">// Runes</span>
+runes(<span class="hljs-string">'♥️'</span>) <span class="hljs-comment">// =&gt; ['♥️']</span>
+runes(<span class="hljs-string">'Emoji 🤖'</span>) <span class="hljs-comment">// =&gt; ['E', 'm', 'o', 'j', 'i', ' ', '🤖']</span>
+runes(<span class="hljs-string">'👩‍👩‍👧‍👦'</span>) <span class="hljs-comment">// =&gt; ['👩‍👩‍👧‍👦']</span>
 
 </code></pre>
-				<h4 id="zhconvertmin">zhConvertMin</h4>
-				<ul>
-					<li><a href="lib/zh/convert/min.d.ts">min.d.ts</a></li>
-				</ul>
-				<p>以最小的字典來進行繁簡轉換，減少錯誤轉換的狀況</p>
-				<pre><code class="lang-ts"><span class="hljs-keyword">import</span> { tw2cn_min, cn2tw_min } <span class="hljs-keyword">from</span> <span class="hljs-string">'cjk-conv/lib/zh/convert/min'</span>;
+				<h2 id="substring-example">Substring example</h2>
+				<pre><code class="lang-js"><span class="hljs-comment">// String.substring</span>
+<span class="hljs-string">'👨‍👨‍👧‍👧a'</span>.substring(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; '�‍👨‍👧‍👧a'</span>
 
-<span class="hljs-keyword">let</span> msg = <span class="hljs-string">`并且之后在深海変異成亚种的半人鱼。顺便说一句，当时人鱼国的守护神《海之神》特里斯坦，发现在神代时代时被自己封印的宿敌复活了。`</span>;
-
-<span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span>, cn2tw(msg, {
-    safe: <span class="hljs-literal">false</span>,
-}));
-
-<span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span>, cn2tw_min(msg, {
-    safe: <span class="hljs-literal">false</span>,
-}));
-</code></pre>
-				<pre><code><span class="hljs-symbol">1 </span><span class="hljs-comment">'並且之後在深海変異成亞種的半人魚。順便說一句，當時人魚國的守護神《海之神》特裡斯坦，發現在神代時代時被自己封印的宿敵復活了。'</span>
-<span class="hljs-symbol">2 </span><span class="hljs-comment">'並且之后在深海変異成亞種的半人魚。順便說一句，當時人魚國的守護神《海之神》特里斯坦，發現在神代時代時被自己封印的宿敵復活了。'</span>
-</code></pre><h3 id="zhtable">zhTable</h3>
-				<p>提供給 <a href="https://www.npmjs.com/package/regexp-cjk"><code>regexp-cjk</code></a> 使用</p>
-				<h3 id="zhtablelist">zhTableList</h3>
-				<p><a href="lib/zh/table/list.d.ts">API</a></p>
-				<p><em>port from <a href="https://github.com/bluelovers/node-segment/blob/master/lib/util/cjk.ts">novel-segment</a></em></p>
-				<pre><code class="lang-ts"><span class="hljs-keyword">import</span> zhTableList <span class="hljs-keyword">from</span> <span class="hljs-string">'cjk-conv/lib/zh/table/list'</span>;
-</code></pre>
-				<pre><code class="lang-ts">zhTableList.charTableList(<span class="hljs-string">'司马'</span>)
-<span class="hljs-comment">// =&gt; [ [ '司' ], [ '馬', '马' ] ]</span>
-
-zhTableList.textList(<span class="hljs-string">'司马'</span>)
-<span class="hljs-comment">// =&gt; [ '司馬', '司马' ]</span>
-
-zhTableList.arrCjk([<span class="hljs-string">'司马'</span>, <span class="hljs-string">'上官'</span>, <span class="hljs-string">'欧阳'</span>, <span class="hljs-string">'夏侯'</span>])
-<span class="hljs-comment">// =&gt; [ '司马', '上官', '欧阳', '夏侯', '司馬', '歐陽', '欧陽' ]</span>
+<span class="hljs-comment">// Runes</span>
+runes.substr(<span class="hljs-string">'👨‍👨‍👧‍👧a'</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 'a'</span>
 </code></pre>
 			</div>
 		</div>
@@ -215,6 +140,9 @@ zhTableList.arrCjk([<span class="hljs-string">'司马'</span>, <span class="hljs
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_lib_util_strtable_.html">"lib/util/strtable"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_lib_zh_convert_core_.html">"lib/zh/convert/core"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_lib_zh_convert_index_.html">"lib/zh/convert/index"</a>
