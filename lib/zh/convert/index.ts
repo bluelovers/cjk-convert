@@ -205,6 +205,8 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 	'扦',
 	'捻',
 	'撚',
+	'遝',
+	'沓',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
