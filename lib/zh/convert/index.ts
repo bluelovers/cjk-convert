@@ -7,8 +7,9 @@
 import * as _table_cn2tw from 'chinese_convert/cn2tw';
 import * as _table_tw2cn from 'chinese_convert/tw2cn';
 
-import { cn2tw as _cn2tw, tw2cn as _tw2cn } from 'chinese_convert';
+//import { cn2tw as _cn2tw, tw2cn as _tw2cn } from 'chinese_convert';
 import { CharacterRange } from 'regexp2/lib';
+import { _cn2tw, _tw2cn } from './core';
 
 export interface IOptions
 {
@@ -78,6 +79,8 @@ export let table_cn2tw: ITable = Object.assign(_table_cn2tw, {
 
 	'钜': '鉅',
 
+	'谑': '謔',
+
 });
 
 export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
@@ -129,6 +132,41 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 
 	'禦': '御',
 
+	'謔': '谑',
+
+	'餘': '馀',
+
+	'范': '范',
+
+});
+
+[
+	// 從轉換表中刪除的字
+	'処',
+	//'佘',
+	'畲',
+	'氹',
+	'凼',
+].forEach(function (v)
+{
+	delete table_tw2cn[v];
+	delete table_cn2tw[v];
+});
+
+[
+	// 從 簡體轉換表內刪除的字
+	'鉅',
+].forEach(function (v)
+{
+	delete table_cn2tw[v];
+});
+
+[
+	// 從繁體轉換表內刪除的字
+	'钜',
+].forEach(function (v)
+{
+	delete table_tw2cn[v];
 });
 
 [
@@ -155,39 +193,14 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 	'准',
 	'棲',
 	'栖',
+	'嚯',
+	'余',
+	'薑',
+	'姜',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
 	table_cn2tw[v] = v;
-});
-
-[
-	// 從轉換表中刪除的字
-	'処',
-	'佘',
-	'畲',
-	'氹',
-	'凼',
-].forEach(function (v)
-{
-	delete table_tw2cn[v];
-	delete table_cn2tw[v];
-});
-
-[
-	// 從 簡體轉換表內刪除的字
-	'鉅',
-].forEach(function (v)
-{
-	delete table_cn2tw[v];
-});
-
-[
-	// 從繁體轉換表內刪除的字
-	'钜',
-].forEach(function (v)
-{
-	delete table_tw2cn[v];
 });
 
 export const REGEXP_TEST = /[\u4E00-\u9FFF]/g;

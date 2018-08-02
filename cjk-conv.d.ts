@@ -164,6 +164,9 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '勉': string[];
             '甦': string[];
             '忧': string[];
+            '鹹': string[];
+            '准': string[];
+            '準': string[];
     };
     /**
         * 此表內符合以下任意值時會觸發
@@ -251,6 +254,17 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '艸': string[];
             '札': string[];
             '复': string[];
+            '污': string[];
+            '伙': string[];
+            '御': string[];
+            '鬱': string[];
+            '淩': string[];
+            '紮': string[];
+            '痴': string[];
+            '栖': string[];
+            '犇': string[];
+            '範': string[];
+            '薑': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;

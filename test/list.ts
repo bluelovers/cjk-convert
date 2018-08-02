@@ -8,7 +8,7 @@ import { charTableList, textList } from '../lib/zh/table/list';
 import { cn2tw, tw2cn } from '../lib/zh/convert';
 import { cn2tw_min, tw2cn_min } from '../lib/zh/convert/min';
 
-let word = `栖棲准準`;
+let word = `姜薑`;
 
 word = array_unique(word.split('')).join('');
 
