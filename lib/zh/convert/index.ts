@@ -80,6 +80,7 @@ export let table_cn2tw: ITable = Object.assign(_table_cn2tw, {
 	'钜': '鉅',
 
 	'谑': '謔',
+	'谘': '諮',
 
 });
 
@@ -137,6 +138,9 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 	'餘': '馀',
 
 	'范': '范',
+	'朴': '朴',
+	'咨': '咨',
+	'諮': '谘',
 
 });
 
