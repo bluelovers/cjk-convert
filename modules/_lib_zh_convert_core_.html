@@ -74,21 +74,29 @@
 						<section class="tsd-index-section ">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_lib_zh_convert_core_.ioptions.html" class="tsd-kind-icon">IOptions</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_lib_zh_convert_core_.itable.html" class="tsd-kind-icon">ITable</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_lib_zh_convert_core_.html#regexp_test" class="tsd-kind-icon">REGEXP_<wbr>TEST</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_lib_zh_convert_core_.html#safe_mode_char" class="tsd-kind-icon">SAFE_<wbr>MODE_<wbr>CHAR</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_lib_zh_convert_core_.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_lib_zh_convert_core_.html#textmap" class="tsd-kind-icon">text<wbr>Map</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_convert_core_.html#_call" class="tsd-kind-icon">_call</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_convert_core_.html#_cn2tw" class="tsd-kind-icon">_cn2tw</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_convert_core_.html#_tw2cn" class="tsd-kind-icon">_tw2cn</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_convert_core_.html#charmap" class="tsd-kind-icon">char<wbr>Map</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_convert_core_.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_convert_core_.html#getoptionsskip" class="tsd-kind-icon">get<wbr>Options<wbr>Skip</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_convert_core_.html#removesame" class="tsd-kind-icon">remove<wbr>Same</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_convert_core_.html#textmap1" class="tsd-kind-icon">text<wbr>Map1</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_convert_core_.html#textmap2" class="tsd-kind-icon">text<wbr>Map2</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_zh_convert_core_.html#textmap3" class="tsd-kind-icon">text<wbr>Map3</a></li>
@@ -101,18 +109,85 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+					<a name="regexp_test" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> REGEXP_<wbr>TEST</h3>
+					<div class="tsd-signature tsd-kind-icon">REGEXP_<wbr>TEST<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;/[\u4E00-\u9FFF]/g</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/abeaa7d/lib/zh/convert/core.ts#L122">lib/zh/convert/core.ts:122</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+					<a name="safe_mode_char" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> SAFE_<wbr>MODE_<wbr>CHAR</h3>
+					<div class="tsd-signature tsd-kind-icon">SAFE_<wbr>MODE_<wbr>CHAR<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;后&#x27;,&#x27;里&#x27;,]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/abeaa7d/lib/zh/convert/core.ts#L124">lib/zh/convert/core.ts:124</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+					<a name="defaultoptions" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> default<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;Object.freeze({safe: true,})</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/abeaa7d/lib/zh/convert/core.ts#L119">lib/zh/convert/core.ts:119</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
 					<a name="textmap" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> text<wbr>Map</h3>
 					<div class="tsd-signature tsd-kind-icon">text<wbr>Map<span class="tsd-signature-symbol">:</span> <a href="_lib_zh_convert_core_.html#textmap4" class="tsd-signature-type">textMap4</a><span class="tsd-signature-symbol"> =&nbsp;textMap4</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/1916ca5/lib/zh/convert/core.ts#L71">lib/zh/convert/core.ts:71</a></li>
+							<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/abeaa7d/lib/zh/convert/core.ts#L72">lib/zh/convert/core.ts:72</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="_call" class="tsd-anchor"></a>
+					<h3>_call</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">_call<span class="tsd-signature-symbol">(</span>fn<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_lib_zh_convert_core_.ioptions.html" class="tsd-signature-type">IOptions</a>, <span class="tsd-signature-symbol">...</span>argv<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/abeaa7d/lib/zh/convert/core.ts#L170">lib/zh/convert/core.ts:170</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fn: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>text: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="../interfaces/_lib_zh_convert_core_.ioptions.html" class="tsd-signature-type">IOptions</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>argv: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
 					<a name="_cn2tw" class="tsd-anchor"></a>
 					<h3>_cn2tw</h3>
@@ -123,7 +198,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/1916ca5/lib/zh/convert/core.ts#L73">lib/zh/convert/core.ts:73</a></li>
+									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/abeaa7d/lib/zh/convert/core.ts#L74">lib/zh/convert/core.ts:74</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -146,7 +221,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/1916ca5/lib/zh/convert/core.ts#L79">lib/zh/convert/core.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/abeaa7d/lib/zh/convert/core.ts#L80">lib/zh/convert/core.ts:80</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -169,7 +244,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/1916ca5/lib/zh/convert/core.ts#L14">lib/zh/convert/core.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/abeaa7d/lib/zh/convert/core.ts#L15">lib/zh/convert/core.ts:15</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -186,6 +261,86 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="getoptions" class="tsd-anchor"></a>
+					<h3>get<wbr>Options</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Options<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_lib_zh_convert_core_.ioptions.html" class="tsd-signature-type">IOptions</a>, defaultOpts<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">object</span>, skip<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_lib_zh_convert_core_.ioptions.html" class="tsd-signature-type">IOptions</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/abeaa7d/lib/zh/convert/core.ts#L156">lib/zh/convert/core.ts:156</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="../interfaces/_lib_zh_convert_core_.ioptions.html" class="tsd-signature-type">IOptions</a><span class="tsd-signature-symbol"> =&nbsp;{}</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> defaultOpts: <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;defaultOptions</span></h5>
+									<ul class="tsd-parameters">
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> skip: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;SAFE_MODE_CHAR</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_lib_zh_convert_core_.ioptions.html" class="tsd-signature-type">IOptions</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="getoptionsskip" class="tsd-anchor"></a>
+					<h3>get<wbr>Options<wbr>Skip</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Options<wbr>Skip<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/_lib_zh_convert_core_.ioptions.html" class="tsd-signature-type">IOptions</a>, skip<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_lib_zh_convert_core_.ioptions.html" class="tsd-signature-type">IOptions</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/abeaa7d/lib/zh/convert/core.ts#L129">lib/zh/convert/core.ts:129</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <a href="../interfaces/_lib_zh_convert_core_.ioptions.html" class="tsd-signature-type">IOptions</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> skip: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;SAFE_MODE_CHAR</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_lib_zh_convert_core_.ioptions.html" class="tsd-signature-type">IOptions</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="removesame" class="tsd-anchor"></a>
+					<h3>remove<wbr>Same</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Same<span class="tsd-signature-symbol">(</span>table<span class="tsd-signature-symbol">: </span><a href="../interfaces/_lib_zh_convert_core_.itable.html" class="tsd-signature-type">ITable</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_lib_zh_convert_core_.itable.html" class="tsd-signature-type">ITable</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/abeaa7d/lib/zh/convert/core.ts#L88">lib/zh/convert/core.ts:88</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>table: <a href="../interfaces/_lib_zh_convert_core_.itable.html" class="tsd-signature-type">ITable</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_lib_zh_convert_core_.itable.html" class="tsd-signature-type">ITable</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
 					<a name="textmap1" class="tsd-anchor"></a>
 					<h3>text<wbr>Map1</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
@@ -195,7 +350,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/1916ca5/lib/zh/convert/core.ts#L20">lib/zh/convert/core.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/abeaa7d/lib/zh/convert/core.ts#L21">lib/zh/convert/core.ts:21</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -221,7 +376,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/1916ca5/lib/zh/convert/core.ts#L34">lib/zh/convert/core.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/abeaa7d/lib/zh/convert/core.ts#L35">lib/zh/convert/core.ts:35</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -247,7 +402,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/1916ca5/lib/zh/convert/core.ts#L48">lib/zh/convert/core.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/abeaa7d/lib/zh/convert/core.ts#L49">lib/zh/convert/core.ts:49</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -273,7 +428,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/1916ca5/lib/zh/convert/core.ts#L62">lib/zh/convert/core.ts:62</a></li>
+									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/abeaa7d/lib/zh/convert/core.ts#L63">lib/zh/convert/core.ts:63</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -306,10 +461,25 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_lib_zh_convert_core_.ioptions.html" class="tsd-kind-icon">IOptions</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
 						<a href="../interfaces/_lib_zh_convert_core_.itable.html" class="tsd-kind-icon">ITable</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="_lib_zh_convert_core_.html#regexp_test" class="tsd-kind-icon">REGEXP_<wbr>TEST</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="_lib_zh_convert_core_.html#safe_mode_char" class="tsd-kind-icon">SAFE_<wbr>MODE_<wbr>CHAR</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="_lib_zh_convert_core_.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
 						<a href="_lib_zh_convert_core_.html#textmap" class="tsd-kind-icon">text<wbr>Map</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_lib_zh_convert_core_.html#_call" class="tsd-kind-icon">_call</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_lib_zh_convert_core_.html#_cn2tw" class="tsd-kind-icon">_cn2tw</a>
@@ -319,6 +489,15 @@
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_lib_zh_convert_core_.html#charmap" class="tsd-kind-icon">char<wbr>Map</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_lib_zh_convert_core_.html#getoptions" class="tsd-kind-icon">get<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_lib_zh_convert_core_.html#getoptionsskip" class="tsd-kind-icon">get<wbr>Options<wbr>Skip</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_lib_zh_convert_core_.html#removesame" class="tsd-kind-icon">remove<wbr>Same</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_lib_zh_convert_core_.html#textmap1" class="tsd-kind-icon">text<wbr>Map1</a>
