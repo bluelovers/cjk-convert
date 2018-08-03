@@ -2,7 +2,8 @@
  * Created by user on 2018/2/17/017.
  */
 
-import { tw2cn, cn2tw, IOptions } from '../convert/index';
+import { IOptions } from '../convert/core';
+import { tw2cn, cn2tw} from '../convert/index';
 import { array_unique } from '../../util';
 import * as deepmerge from 'deepmerge-plus';
 
@@ -738,6 +739,12 @@ export let table_plus = {
 	'撚': [
 		'撚',
 		'捻',
+	],
+
+	'喂': [
+		'喂',
+		'餵',
+		'餧',
 	],
 
 };

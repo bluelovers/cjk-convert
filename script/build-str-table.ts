@@ -26,14 +26,14 @@ async function buildDebug(name: string, table1: {
 	[k: string]: string,
 })
 {
-	let out = Object.keys(table1)
+	let out = Object.entries(table1)
 		.sort(function (a, b)
 		{
-			return a.codePointAt(0) - b.codePointAt(0)
+			return a[0].codePointAt(0) - b[0].codePointAt(0)
 		})
-		.reduce(function (a, from)
+		.reduce(function (a, b)
 		{
-			let to = table1[from];
+			let [from, to] = b;
 
 			if (from !== table2[to] || table2[from] || (to in table1 && (table1[to] != from)))
 			{
@@ -71,10 +71,10 @@ function build(name: string, table: {
 	[k: string]: string,
 })
 {
-	let table2 = Object.keys(table)
-		.reduce(function (a, from)
+	let table2 = Object.entries(table)
+		.reduce(function (a, b)
 		{
-			let to = table[from];
+			let [from, to] = b;
 
 			a[from] = to;
 

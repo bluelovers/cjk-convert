@@ -15,12 +15,12 @@ let build_path = path.join(__dirname, '../build');
     await buildDebug('zh/convert/table_cn2tw', index_1.table_cn2tw, index_1.table_tw2cn);
 })();
 async function buildDebug(name, table1, table2) {
-    let out = Object.keys(table1)
+    let out = Object.entries(table1)
         .sort(function (a, b) {
-        return a.codePointAt(0) - b.codePointAt(0);
+        return a[0].codePointAt(0) - b[0].codePointAt(0);
     })
-        .reduce(function (a, from) {
-        let to = table1[from];
+        .reduce(function (a, b) {
+        let [from, to] = b;
         if (from !== table2[to] || table2[from] || (to in table1 && (table1[to] != from))) {
             a.unsafe[from] = to;
         }
@@ -45,9 +45,9 @@ async function buildDebug(name, table1, table2) {
     ]);
 }
 function build(name, table) {
-    let table2 = Object.keys(table)
-        .reduce(function (a, from) {
-        let to = table[from];
+    let table2 = Object.entries(table)
+        .reduce(function (a, b) {
+        let [from, to] = b;
         a[from] = to;
         return a;
     }, {});

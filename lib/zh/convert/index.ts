@@ -6,28 +6,21 @@
 
 import * as _table_cn2tw from 'chinese_convert/cn2tw';
 import * as _table_tw2cn from 'chinese_convert/tw2cn';
-
 //import { cn2tw as _cn2tw, tw2cn as _tw2cn } from 'chinese_convert';
-import { CharacterRange } from 'regexp2/lib';
-import { _cn2tw, _tw2cn } from './core';
-
-export interface IOptions
-{
-	/**
-	 * 忽略的字 or 任何支援 indexOf 的 Object
-	 */
-	skip?,
-
-	table?: ITable | typeof _call,
-
-	safe?: boolean,
-
-	tableOnly?: boolean,
-}
-
-export const defaultOptions = Object.freeze({
-	safe: true,
-});
+import {
+	_call,
+	_cn2tw,
+	_tw2cn,
+	defaultOptions,
+	getOptions,
+	getOptionsSkip,
+	IOptions,
+	ITable,
+	REGEXP_TEST,
+	SAFE_MODE_CHAR,
+} from './core';
+import * as zhConvert from './index';
+import { wiki_s2t_v2, wiki_t2s_v2 } from './wikipedia';
 
 export function cn2tw(text: string, options: IOptions = {}, ...argv): string
 {
@@ -39,7 +32,7 @@ export function tw2cn(text: string, options: IOptions = {}, ...argv): string
 	return _call(_tw2cn, text, options, ...argv);
 }
 
-export let table_cn2tw: ITable = Object.assign(_table_cn2tw, {
+export let table_cn2tw: ITable = Object.assign(_table_cn2tw, wiki_s2t_v2, {
 	'恶': '惡',
 	'苏': '蘇',
 	'壳': '殻',
@@ -86,7 +79,7 @@ export let table_cn2tw: ITable = Object.assign(_table_cn2tw, {
 
 });
 
-export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
+export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2, {
 	'殻': '壳',
 	'殼': '壳',
 	'館': '馆',
@@ -144,6 +137,8 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 	'咨': '咨',
 	'諮': '谘',
 
+	'齣': '齣',
+
 });
 
 [
@@ -170,10 +165,28 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 [
 	// 從繁體轉換表內刪除的字
 	'钜',
+	// 加入 wikipedia.ts 後 產生的冷門字
+	'党',
+	'万',
+	'与',
 ].forEach(function (v)
 {
 	delete table_tw2cn[v];
 });
+
+Object
+	.entries({
+		'餵': '𫗭',
+		'餧': '𫗪',
+	})
+	.forEach(function (v)
+	{
+		let [t, s] = v;
+
+		table_tw2cn[t] = s;
+		table_cn2tw[s] = t;
+	})
+;
 
 [
 	// 不轉換的共用字
@@ -215,105 +228,17 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, {
 	table_cn2tw[v] = v;
 });
 
-export const REGEXP_TEST = /[\u4E00-\u9FFF]/g;
-
-export const SAFE_MODE_CHAR = [
-	'后',
-	'里',
-];
-
-export function getOptionsSkip(options: IOptions, skip = SAFE_MODE_CHAR)
-{
-	if (!options.skip)
-	{
-		options.skip = skip.slice();
-	}
-	else if (typeof options.skip == 'string')
-	{
-		options.skip += skip.join('');
-	}
-	else if (Array.isArray(options.skip))
-	{
-		options.skip = options.skip.slice().concat(skip);
-	}
-	else
-	{
-		options.table = skip.reduce(function (a, b)
-		{
-			a[b] = b;
-
-			return a;
-		}, Object.assign({}, options.table || {}));
-	}
-
-	return options;
+export {
+	_call,
+	IOptions,
+	ITable,
+	getOptions,
+	defaultOptions,
+	REGEXP_TEST,
+	getOptionsSkip,
+	SAFE_MODE_CHAR,
 }
 
-export function getOptions(options: IOptions = {}, defaultOpts = defaultOptions, skip = SAFE_MODE_CHAR)
-{
-	options = Object.assign({}, defaultOpts, options);
-
-	if (options.safe)
-	{
-		options = getOptionsSkip(options, skip);
-
-		//console.log(options);
-	}
-
-	return options;
-}
-
-export function _call(fn, text: string, options: IOptions = {}, ...argv)
-{
-	options = getOptions(options);
-
-	if (options.skip || options.table || options.tableOnly)
-	{
-		let { skip, table, tableOnly } = options;
-		let not_tableOnly = !tableOnly;
-
-		if (tableOnly && !table)
-		{
-			throw new Error(`table is ${table}`);
-		}
-
-		return text.replace(REGEXP_TEST, function (text)
-		{
-			if (skip && skip.indexOf(text) !== -1)
-			{
-				return text;
-			}
-			else if (table && typeof table == 'function')
-			{
-				let ret = table(fn, text, options, ...argv);
-
-				if (ret !== null && typeof ret != 'undefined')
-				{
-					return ret;
-				}
-			}
-			else if (table && table[text])
-			{
-				return table[text];
-			}
-			else if (not_tableOnly)
-			{
-				return fn(text);
-			}
-
-			return text;
-		});
-	}
-
-	return fn(text, options, ...argv);
-}
-
-export interface ITable
-{
-	[key: string]: string,
-}
-
-import * as zhConvert from './index';
 export default zhConvert;
 
 //console.log(cn2tw('轉换最里后裡後轉换最后'));

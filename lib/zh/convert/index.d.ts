@@ -3,31 +3,11 @@
  *
  * same as chinese_convert, but a little bug fix
  */
-export interface IOptions {
-    /**
-     * 忽略的字 or 任何支援 indexOf 的 Object
-     */
-    skip?: any;
-    table?: ITable | typeof _call;
-    safe?: boolean;
-    tableOnly?: boolean;
-}
-export declare const defaultOptions: Readonly<{
-    safe: boolean;
-}>;
+import { _call, defaultOptions, getOptions, getOptionsSkip, IOptions, ITable, REGEXP_TEST, SAFE_MODE_CHAR } from './core';
+import * as zhConvert from './index';
 export declare function cn2tw(text: string, options?: IOptions, ...argv: any[]): string;
 export declare function tw2cn(text: string, options?: IOptions, ...argv: any[]): string;
 export declare let table_cn2tw: ITable;
 export declare let table_tw2cn: ITable;
-export declare const REGEXP_TEST: RegExp;
-export declare const SAFE_MODE_CHAR: string[];
-export declare function getOptionsSkip(options: IOptions, skip?: string[]): IOptions;
-export declare function getOptions(options?: IOptions, defaultOpts?: Readonly<{
-    safe: boolean;
-}>, skip?: string[]): IOptions;
-export declare function _call(fn: any, text: string, options?: IOptions, ...argv: any[]): any;
-export interface ITable {
-    [key: string]: string;
-}
-import * as zhConvert from './index';
+export { _call, IOptions, ITable, getOptions, defaultOptions, REGEXP_TEST, getOptionsSkip, SAFE_MODE_CHAR, };
 export default zhConvert;

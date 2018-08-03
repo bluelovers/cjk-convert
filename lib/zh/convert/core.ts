@@ -4,6 +4,7 @@
 
 import * as _table_cn2tw from 'chinese_convert/cn2tw';
 import * as _table_tw2cn from 'chinese_convert/tw2cn';
+import * as self from './core';
 import UString = require('uni-string');
 
 export interface ITable
@@ -82,6 +83,131 @@ export function _tw2cn(text: string): string
 	return textMap(text, _table_tw2cn);
 }
 
-import * as self from './core';
-
 export default self;
+
+export function removeSame(table: ITable)
+{
+	return Object.entries(table)
+		.reduce(function (a, b)
+		{
+			let [k, v] = b;
+
+			if (k != v)
+			{
+				a[k] = v;
+			}
+
+			return a;
+		}, {} as ITable)
+	;
+}
+
+export interface IOptions
+{
+	/**
+	 * 忽略的字 or 任何支援 indexOf 的 Object
+	 */
+	skip?,
+
+	table?: ITable | typeof _call,
+
+	safe?: boolean,
+
+	tableOnly?: boolean,
+}
+
+export const defaultOptions = Object.freeze({
+	safe: true,
+});
+export const REGEXP_TEST = /[\u4E00-\u9FFF]/g;
+
+export const SAFE_MODE_CHAR = [
+	'后',
+	'里',
+];
+
+export function getOptionsSkip(options: IOptions, skip = SAFE_MODE_CHAR)
+{
+	if (!options.skip)
+	{
+		options.skip = skip.slice();
+	}
+	else if (typeof options.skip == 'string')
+	{
+		options.skip += skip.join('');
+	}
+	else if (Array.isArray(options.skip))
+	{
+		options.skip = options.skip.slice().concat(skip);
+	}
+	else
+	{
+		options.table = skip.reduce(function (a, b)
+		{
+			a[b] = b;
+
+			return a;
+		}, Object.assign({}, options.table || {}));
+	}
+
+	return options;
+}
+
+export function getOptions(options: IOptions = {}, defaultOpts = defaultOptions, skip = SAFE_MODE_CHAR)
+{
+	options = Object.assign({}, defaultOpts, options);
+
+	if (options.safe)
+	{
+		options = getOptionsSkip(options, skip);
+
+		//console.log(options);
+	}
+
+	return options;
+}
+
+export function _call(fn, text: string, options: IOptions = {}, ...argv)
+{
+	options = getOptions(options);
+
+	if (options.skip || options.table || options.tableOnly)
+	{
+		let { skip, table, tableOnly } = options;
+		let not_tableOnly = !tableOnly;
+
+		if (tableOnly && !table)
+		{
+			throw new Error(`table is ${table}`);
+		}
+
+		return text.replace(REGEXP_TEST, function (text)
+		{
+			if (skip && skip.indexOf(text) !== -1)
+			{
+				return text;
+			}
+			else if (table && typeof table == 'function')
+			{
+				let ret = table(fn, text, options, ...argv);
+
+				if (ret !== null && typeof ret != 'undefined')
+				{
+					return ret;
+				}
+			}
+			else if (table && table[text])
+			{
+				return table[text];
+			}
+			else if (not_tableOnly)
+			{
+				return fn(text);
+			}
+
+			return text;
+		});
+	}
+
+	return fn(text, options, ...argv);
+}

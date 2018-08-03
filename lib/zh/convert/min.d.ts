@@ -3,7 +3,7 @@
  */
 import * as tableTw2CnDebug from '../../../build/zh/convert/table_tw2cn.debug.json';
 import * as tableCn2TwDebug from '../../../build/zh/convert/table_cn2tw.debug.json';
-import { IOptions, ITable } from './index';
+import { IOptions, ITable } from './core';
 export { tableTw2CnDebug, tableCn2TwDebug };
 export declare const SAFE_MODE_CHAR: string[];
 /**

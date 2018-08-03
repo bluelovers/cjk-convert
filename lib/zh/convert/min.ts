@@ -4,7 +4,8 @@
 
 import * as tableTw2CnDebug from '../../../build/zh/convert/table_tw2cn.debug.json';
 import * as tableCn2TwDebug from '../../../build/zh/convert/table_cn2tw.debug.json';
-import { tw2cn, cn2tw, IOptions, defaultOptions, ITable, getOptions, getOptionsSkip, SAFE_MODE_CHAR as _SAFE_MODE_CHAR } from './index';
+import { defaultOptions, getOptions, getOptionsSkip, IOptions, ITable, SAFE_MODE_CHAR as _SAFE_MODE_CHAR } from './core';
+import { tw2cn, cn2tw} from './index';
 
 export { tableTw2CnDebug, tableCn2TwDebug }
 

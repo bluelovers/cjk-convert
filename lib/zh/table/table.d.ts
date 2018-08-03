@@ -1,7 +1,7 @@
 /**
  * Created by user on 2018/2/17/017.
  */
-import { IOptions } from '../convert/index';
+import { IOptions } from '../convert/core';
 export declare let _table_tw: {
     '罗': string;
     '恶': string;
@@ -146,6 +146,7 @@ export declare let table_plus: {
     '樸': string[];
     '諮': string[];
     '撚': string[];
+    '喂': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
