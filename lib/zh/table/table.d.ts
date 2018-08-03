@@ -25,6 +25,7 @@ export declare let table_jp: {
     '閤': string[];
     '阁': string[];
     '罗': string[];
+    '干': string[];
     '幹': string[];
     '乾': string[];
     '亁': string[];
