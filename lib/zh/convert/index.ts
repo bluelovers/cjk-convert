@@ -222,6 +222,8 @@ Object
 	'撚',
 	'遝',
 	'沓',
+	'淨',
+	'栗',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;

@@ -24,37 +24,17 @@ declare module 'cjk-conv/lib/index' {
 
 declare module 'cjk-conv/lib/zh/convert/index' {
     /**
-        * Created by user on 2018/2/15/015.
-        *
-        * same as chinese_convert, but a little bug fix
-        */
-    export interface IOptions {
-            /**
-                * 忽略的字 or 任何支援 indexOf 的 Object
-                */
-            skip?: any;
-            table?: ITable | typeof _call;
-            safe?: boolean;
-            tableOnly?: boolean;
-    }
-    export const defaultOptions: Readonly<{
-            safe: boolean;
-    }>;
+      * Created by user on 2018/2/15/015.
+      *
+      * same as chinese_convert, but a little bug fix
+      */
+    import { _call, defaultOptions, getOptions, getOptionsSkip, IOptions, ITable, REGEXP_TEST, SAFE_MODE_CHAR } from 'cjk-conv/lib/zh/convert/core';
+    import * as zhConvert from 'cjk-conv/lib/zh/convert/index';
     export function cn2tw(text: string, options?: IOptions, ...argv: any[]): string;
     export function tw2cn(text: string, options?: IOptions, ...argv: any[]): string;
     export let table_cn2tw: ITable;
     export let table_tw2cn: ITable;
-    export const REGEXP_TEST: RegExp;
-    export const SAFE_MODE_CHAR: string[];
-    export function getOptionsSkip(options: IOptions, skip?: string[]): IOptions;
-    export function getOptions(options?: IOptions, defaultOpts?: Readonly<{
-            safe: boolean;
-    }>, skip?: string[]): IOptions;
-    export function _call(fn: any, text: string, options?: IOptions, ...argv: any[]): any;
-    export interface ITable {
-            [key: string]: string;
-    }
-    import * as zhConvert from 'cjk-conv/lib/zh/convert/index';
+    export { _call, IOptions, ITable, getOptions, defaultOptions, REGEXP_TEST, getOptionsSkip, SAFE_MODE_CHAR, };
     export default zhConvert;
 }
 
@@ -121,11 +101,50 @@ declare module 'cjk-conv/lib/novel/filename' {
     export default novelFilename;
 }
 
+declare module 'cjk-conv/lib/zh/convert/core' {
+    /**
+        * Created by user on 2018/8/2/002.
+        */
+    import * as self from 'cjk-conv/lib/zh/convert/core';
+    export interface ITable {
+            [key: string]: string;
+    }
+    export function charMap(s: string, table: ITable): string;
+    export function textMap1(text: string, table: ITable): string;
+    export function textMap2(text: string, table: ITable): string;
+    export function textMap3(text: string, table: ITable): string;
+    export function textMap4(text: string, table: ITable): string;
+    export { textMap4 as textMap };
+    export function _cn2tw(text: string): string;
+    export function _tw2cn(text: string): string;
+    export default self;
+    export function removeSame(table: ITable): self.ITable;
+    export interface IOptions {
+            /**
+                * 忽略的字 or 任何支援 indexOf 的 Object
+                */
+            skip?: any;
+            table?: ITable | typeof _call;
+            safe?: boolean;
+            tableOnly?: boolean;
+    }
+    export const defaultOptions: Readonly<{
+            safe: boolean;
+    }>;
+    export const REGEXP_TEST: RegExp;
+    export const SAFE_MODE_CHAR: string[];
+    export function getOptionsSkip(options: IOptions, skip?: string[]): self.IOptions;
+    export function getOptions(options?: IOptions, defaultOpts?: Readonly<{
+            safe: boolean;
+    }>, skip?: string[]): self.IOptions;
+    export function _call(fn: any, text: string, options?: IOptions, ...argv: any[]): any;
+}
+
 declare module 'cjk-conv/lib/zh/table/table' {
     /**
         * Created by user on 2018/2/17/017.
         */
-    import { IOptions } from 'cjk-conv/lib/zh/convert/index';
+    import { IOptions } from 'cjk-conv/lib/zh/convert/core';
     export let _table_tw: {
             '罗': string;
             '恶': string;
@@ -270,6 +289,9 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '樸': string[];
             '諮': string[];
             '撚': string[];
+            '喂': string[];
+            '淨': string[];
+            '栗': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
