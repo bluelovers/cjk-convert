@@ -20,7 +20,7 @@ let build_path = path.join(__dirname, '../build');
 	await buildDebug('zh/convert/table_cn2tw', table_cn2tw, table_tw2cn);
 })();
 
-function buildDebug(name: string, table1: {
+async function buildDebug(name: string, table1: {
 	[k: string]: string,
 }, table2: {
 	[k: string]: string,
@@ -51,9 +51,20 @@ function buildDebug(name: string, table1: {
 		})
 	;
 
-	return fs.outputJSON(path.join(build_path, `${name}.debug.json`), out, {
-		spaces: "\t",
+	let t1 = toStrTableArray(out.safe, {
+		coreJs: true,
+		ignore: true,
 	});
+
+	return Promise.all([
+
+		fs.outputFile(path.join(build_path, `${name}.safe.from.txt`), t1.from.join('')),
+		fs.outputFile(path.join(build_path, `${name}.safe.to.txt`), t1.to.join('')),
+
+		fs.outputJSON(path.join(build_path, `${name}.debug.json`), out, {
+			spaces: "\t",
+		})
+	]);
 }
 
 function build(name: string, table: {
