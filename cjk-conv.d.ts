@@ -149,6 +149,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '閤': string[];
             '阁': string[];
             '罗': string[];
+            '干': string[];
             '幹': string[];
             '乾': string[];
             '亁': string[];

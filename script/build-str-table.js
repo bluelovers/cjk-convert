@@ -21,7 +21,7 @@ function buildDebug(name, table1, table2) {
     })
         .reduce(function (a, from) {
         let to = table1[from];
-        if (from !== table2[to] || table2[from]) {
+        if (from !== table2[to] || table2[from] || (to in table1 && (table1[to] != from))) {
             a.unsafe[from] = to;
         }
         else {
