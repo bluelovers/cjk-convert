@@ -294,6 +294,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '栗': string[];
             '挽': string[];
             '灶': string[];
+            '線': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;

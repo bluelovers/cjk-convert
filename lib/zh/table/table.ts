@@ -768,6 +768,13 @@ export let table_plus = {
 		'竈',
 	],
 
+	'線': [
+		'線',
+		'缐',
+		'綫',
+		'线',
+	],
+
 };
 
 Object.keys(table_plus)
