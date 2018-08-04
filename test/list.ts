@@ -8,7 +8,7 @@ import { charTableList, textList } from '../lib/zh/table/list';
 import { cn2tw, tw2cn } from '../lib/zh/convert';
 import { cn2tw_min, tw2cn_min } from '../lib/zh/convert/min';
 
-let word = `脏臟髒`;
+let word = `划劃`;
 
 word = array_unique(word.split('')).join('');
 
