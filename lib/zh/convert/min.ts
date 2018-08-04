@@ -14,6 +14,7 @@ export const SAFE_MODE_CHAR_MIN = _SAFE_MODE_CHAR
 	.concat([
 		'忧',
 		'脏',
+		'划',
 	])
 ;
 

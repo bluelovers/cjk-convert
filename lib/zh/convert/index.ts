@@ -150,6 +150,8 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2, {
 	'儘': '尽',
 	'盡': '尽',
 
+	'划': '划',
+
 });
 
 [
@@ -240,7 +242,6 @@ Object
 	'竈',
 	'霉',
 	'黴',
-	'划',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
