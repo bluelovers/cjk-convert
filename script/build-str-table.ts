@@ -1,5 +1,6 @@
 import { toStrTable, toStrTableArray } from '../lib/util/strtable';
 import { table_tw2cn, table_cn2tw } from '../lib/zh/convert/index';
+import { SAFE_MODE_CHAR_MIN } from '../lib/zh/convert/min';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 
@@ -35,7 +36,7 @@ async function buildDebug(name: string, table1: {
 		{
 			let [from, to] = b;
 
-			if (from !== table2[to] || table2[from] || (to in table1 && (table1[to] != from)))
+			if (SAFE_MODE_CHAR_MIN.includes(from) || from !== table2[to] || table2[from] || (to in table1 && (table1[to] != from)))
 			{
 				a.unsafe[from] = to;
 			}

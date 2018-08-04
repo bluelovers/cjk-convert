@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const strtable_1 = require("../lib/util/strtable");
 const index_1 = require("../lib/zh/convert/index");
+const min_1 = require("../lib/zh/convert/min");
 const fs = require("fs-extra");
 const path = require("path");
 let build_path = path.join(__dirname, '../build');
@@ -21,7 +22,7 @@ async function buildDebug(name, table1, table2) {
     })
         .reduce(function (a, b) {
         let [from, to] = b;
-        if (from !== table2[to] || table2[from] || (to in table1 && (table1[to] != from))) {
+        if (min_1.SAFE_MODE_CHAR_MIN.includes(from) || from !== table2[to] || table2[from] || (to in table1 && (table1[to] != from))) {
             a.unsafe[from] = to;
         }
         else {

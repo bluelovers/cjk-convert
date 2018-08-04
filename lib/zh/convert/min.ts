@@ -9,12 +9,15 @@ import { tw2cn, cn2tw} from './index';
 
 export { tableTw2CnDebug, tableCn2TwDebug }
 
-export const SAFE_MODE_CHAR = _SAFE_MODE_CHAR
+export const SAFE_MODE_CHAR_MIN = _SAFE_MODE_CHAR
 	.slice()
 	.concat([
 		'忧',
+		'脏',
 	])
 ;
+
+export { SAFE_MODE_CHAR_MIN as SAFE_MODE_CHAR }
 
 /**
  * 以不造成歧異的字典表來取代
@@ -42,7 +45,7 @@ export function fixOptions(options: IOptions = {}, table: ITable)
 	options.table = options.table || Object.create(table);
 	options.tableOnly = options.tableOnly !== false;
 
-	options = getOptions(options, defaultOptions, SAFE_MODE_CHAR);
+	options = getOptions(options, defaultOptions, SAFE_MODE_CHAR_MIN);
 
 	return options;
 }
