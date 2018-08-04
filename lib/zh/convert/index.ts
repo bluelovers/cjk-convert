@@ -238,6 +238,8 @@ Object
 	'挽',
 	'灶',
 	'竈',
+	'霉',
+	'黴',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;

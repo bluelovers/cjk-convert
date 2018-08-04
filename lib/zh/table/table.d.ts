@@ -156,6 +156,7 @@ export declare let table_plus: {
     '灶': string[];
     '線': string[];
     '盡': string[];
+    '黴': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

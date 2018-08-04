@@ -190,6 +190,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '袮': string[];
             '儘': string[];
             '侭': string[];
+            '脏': string[];
     };
     /**
         * 此表內符合以下任意值時會觸發
@@ -298,7 +299,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '灶': string[];
             '線': string[];
             '盡': string[];
-            '脏': string[];
+            '黴': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
