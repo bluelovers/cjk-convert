@@ -80,6 +80,8 @@ export let table_cn2tw: ITable = Object.assign(_table_cn2tw, wiki_s2t_v2, {
 	'线': '線',
 	'缐': '線',
 
+	'尽': '盡',
+
 });
 
 export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2, {
@@ -144,6 +146,9 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2, {
 
 	'線': '线',
 	'綫': '线',
+
+	'儘': '尽',
+	'盡': '尽',
 
 });
 

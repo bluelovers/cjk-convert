@@ -45,6 +45,8 @@ export declare let table_jp: {
     '准': string[];
     '準': string[];
     '袮': string[];
+    '儘': string[];
+    '侭': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
@@ -152,6 +154,7 @@ export declare let table_plus: {
     '挽': string[];
     '灶': string[];
     '線': string[];
+    '盡': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
