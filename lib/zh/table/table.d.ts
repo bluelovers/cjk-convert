@@ -48,6 +48,8 @@ export declare let table_jp: {
     '儘': string[];
     '侭': string[];
     '脏': string[];
+    '发': string[];
+    '髮': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
