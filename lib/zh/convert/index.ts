@@ -152,6 +152,8 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2, {
 
 	'划': '划',
 
+	'凈': '净',
+
 });
 
 [
@@ -191,6 +193,8 @@ Object
 	.entries({
 		'餵': '𫗭',
 		'餧': '𫗪',
+
+		'淨': '净',
 	})
 	.forEach(function (v)
 	{
@@ -235,7 +239,7 @@ Object
 	'撚',
 	'遝',
 	'沓',
-	'淨',
+	//'淨',
 	'栗',
 	'挽',
 	'灶',
