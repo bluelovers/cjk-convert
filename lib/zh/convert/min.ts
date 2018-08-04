@@ -15,6 +15,7 @@ export const SAFE_MODE_CHAR_MIN = _SAFE_MODE_CHAR
 		'忧',
 		'脏',
 		'划',
+		'准',
 	])
 ;
 
