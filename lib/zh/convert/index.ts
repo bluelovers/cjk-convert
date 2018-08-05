@@ -246,6 +246,7 @@ Object
 	'竈',
 	'霉',
 	'黴',
+	'慾',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
