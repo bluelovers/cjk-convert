@@ -19,7 +19,7 @@ import { table_tw2cn, table_cn2tw } from 'cjk-conv/lib/zh/convert/index';
 - JSON: [table_tw2cn.json](zh/convert/table_tw2cn.json)
 - BASE: [base.from](zh/convert/table_tw2cn.base.from.txt) / [base.to](zh/convert/table_tw2cn.base.to.txt)
 - UNICODE: [unicode.from](zh/convert/table_tw2cn.unicode.from.txt) / [unicode.to](zh/convert/table_tw2cn.unicode.to.txt)
-- SAFE: [safe.from](zh/convert/table_tw2cn.safe.from.txt) / [safe.to](zh/convert/table_tw2cn.safe.to.txt)
+- SAFE: [safe.from](zh/convert/safe/table_tw2cn.base.from.txt) / [safe.to](zh/convert/safe/table_tw2cn.base.to.txt)
 - 
 
 ### 簡轉繁 table_cn2tw
@@ -27,5 +27,5 @@ import { table_tw2cn, table_cn2tw } from 'cjk-conv/lib/zh/convert/index';
 - JSON: [table_cn2tw.json](zh/convert/table_cn2tw.json)
 - BASE: [base.from](zh/convert/table_cn2tw.base.from.txt) / [base.to](zh/convert/table_cn2tw.base.to.txt)
 - UNICODE: [unicode.from](zh/convert/table_cn2tw.unicode.from.txt) / [unicode.to](zh/convert/table_cn2tw.unicode.to.txt)
-- SAFE: [safe.from](zh/convert/table_cn2tw.safe.from.txt) / [safe.to](zh/convert/table_cn2tw.safe.to.txt)
+- SAFE: [safe.from](zh/convert/safe/table_cn2tw.base.from.txt) / [safe.to](zh/convert/safe/table_cn2tw.base.to.txt)
 - 

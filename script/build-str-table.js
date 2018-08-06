@@ -7,13 +7,13 @@ const fs = require("fs-extra");
 const path = require("path");
 let build_path = path.join(__dirname, '../build');
 (async () => {
-    await build('zh/convert/table_tw2cn', index_1.table_tw2cn);
+    await build('table_tw2cn', index_1.table_tw2cn);
     await new Promise(function (done) {
         setImmediate(done);
     });
-    await build('zh/convert/table_cn2tw', index_1.table_cn2tw);
-    await buildDebug('zh/convert/table_tw2cn', index_1.table_tw2cn, index_1.table_cn2tw);
-    await buildDebug('zh/convert/table_cn2tw', index_1.table_cn2tw, index_1.table_tw2cn);
+    await build('table_cn2tw', index_1.table_cn2tw);
+    await buildDebug('table_tw2cn', index_1.table_tw2cn, index_1.table_cn2tw);
+    await buildDebug('table_cn2tw', index_1.table_cn2tw, index_1.table_tw2cn);
 })();
 async function buildDebug(name, table1, table2) {
     let out = Object.entries(table1)
@@ -37,10 +37,15 @@ async function buildDebug(name, table1, table2) {
         coreJs: true,
         ignore: true,
     });
+    let t2 = strtable_1.toStrTableArray(out.safe);
+    let path_out = path.join(build_path, 'zh/convert/');
+    let ID = 'safe';
     return Promise.all([
-        fs.outputFile(path.join(build_path, `${name}.safe.from.txt`), t1.from.join('')),
-        fs.outputFile(path.join(build_path, `${name}.safe.to.txt`), t1.to.join('')),
-        fs.outputJSON(path.join(build_path, `${name}.debug.json`), out, {
+        fs.outputFile(path.join(path_out, ID, `${name}.base.from.txt`), t1.from.join('')),
+        fs.outputFile(path.join(path_out, ID, `${name}.base.to.txt`), t1.to.join('')),
+        fs.outputFile(path.join(path_out, ID, `${name}.unicode.from.txt`), t2.from.join('')),
+        fs.outputFile(path.join(path_out, ID, `${name}.unicode.to.txt`), t2.to.join('')),
+        fs.outputJSON(path.join(path_out, `${name}.debug.json`), out, {
             spaces: "\t",
         })
     ]);
@@ -62,13 +67,14 @@ table1 : ${Object.keys(table).length}
 table2 : ${Object.keys(table2).length}
 base   : ${t1.from.length}
 unicode: ${t2.from.length}`);
+    let path_out = path.join(build_path, 'zh/convert/');
     return Promise.all([
-        fs.outputJSON(path.join(build_path, `${name}.json`), table2, {
+        fs.outputJSON(path.join(path_out, `${name}.json`), table2, {
             spaces: "\t",
         }),
-        fs.outputFile(path.join(build_path, `${name}.base.from.txt`), t1.from.join('')),
-        fs.outputFile(path.join(build_path, `${name}.base.to.txt`), t1.to.join('')),
-        fs.outputFile(path.join(build_path, `${name}.unicode.from.txt`), t2.from.join('')),
-        fs.outputFile(path.join(build_path, `${name}.unicode.to.txt`), t2.to.join('')),
+        fs.outputFile(path.join(path_out, `${name}.base.from.txt`), t1.from.join('')),
+        fs.outputFile(path.join(path_out, `${name}.base.to.txt`), t1.to.join('')),
+        fs.outputFile(path.join(path_out, `${name}.unicode.from.txt`), t2.from.join('')),
+        fs.outputFile(path.join(path_out, `${name}.unicode.to.txt`), t2.to.join('')),
     ]);
 }
