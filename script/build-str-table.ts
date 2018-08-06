@@ -113,13 +113,15 @@ unicode: ${t2.from.length}`);
 		'zh/convert/',
 	);
 
+	let ID = 'unsafe';
+
 	return Promise.all([
 		fs.outputJSON(path.join(path_out, `${name}.json`), table2, {
 			spaces: "\t",
 		}),
-		fs.outputFile(path.join(path_out, `${name}.base.from.txt`), t1.from.join('')),
-		fs.outputFile(path.join(path_out, `${name}.base.to.txt`), t1.to.join('')),
-		fs.outputFile(path.join(path_out, `${name}.unicode.from.txt`), t2.from.join('')),
-		fs.outputFile(path.join(path_out, `${name}.unicode.to.txt`), t2.to.join('')),
+		fs.outputFile(path.join(path_out, ID, `${name}.base.from.txt`), t1.from.join('')),
+		fs.outputFile(path.join(path_out, ID, `${name}.base.to.txt`), t1.to.join('')),
+		fs.outputFile(path.join(path_out, ID, `${name}.unicode.from.txt`), t2.from.join('')),
+		fs.outputFile(path.join(path_out, ID, `${name}.unicode.to.txt`), t2.to.join('')),
 	]);
 }
