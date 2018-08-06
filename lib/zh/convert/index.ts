@@ -66,8 +66,6 @@ export let table_cn2tw: ITable = Object.assign(_table_cn2tw, wiki_s2t_v2, {
 
 	'畲': '畲',
 
-	'处': '處',
-
 	'复': '復',
 
 	'钜': '鉅',
@@ -114,7 +112,7 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2, {
 	'佘': '佘',
 	'畲': '畲',
 
-	'處': '处',
+
 
 	'丑': '丑',
 	'么': '么',
@@ -195,6 +193,8 @@ Object
 		'餧': '𫗪',
 
 		'淨': '净',
+
+		'處': '处',
 	})
 	.forEach(function (v)
 	{
