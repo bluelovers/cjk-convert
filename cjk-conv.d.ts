@@ -310,6 +310,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '並': string[];
             '讚': string[];
             '観': string[];
+            '遊': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
