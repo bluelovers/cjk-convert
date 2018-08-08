@@ -80,6 +80,8 @@ export let table_cn2tw: ITable = Object.assign(_table_cn2tw, wiki_s2t_v2, {
 
 	'尽': '盡',
 
+	'处': '處',
+
 });
 
 export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2, {
@@ -156,7 +158,7 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2, {
 
 [
 	// 從轉換表中刪除的字
-	'処',
+	//'処',
 	//'佘',
 	'畲',
 	'氹',

@@ -17,6 +17,9 @@ export const SAFE_MODE_CHAR_MIN = _SAFE_MODE_CHAR
 		'划',
 		'准',
 		'发',
+		'処',
+		//'处',
+		'處',
 	])
 ;
 
