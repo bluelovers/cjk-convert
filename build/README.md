@@ -11,7 +11,8 @@
 可透過以下代碼取得相同資料
 
 ```ts
-import { table_tw2cn, table_cn2tw } from 'cjk-conv/lib/zh/convert/index';
+import { table_tw2cn, table_cn2tw } from 'cjk-conv/lib/zh/convert';
+import { tableCn2TwDebug, tableTw2CnDebug } from 'cjk-conv/lib/zh/convert/min';
 ```
 
 ### 繁轉簡 table_tw2cn
