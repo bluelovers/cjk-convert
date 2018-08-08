@@ -196,7 +196,6 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '慾': string[];
             '讚': string[];
             '冲': string[];
-            '氣': string[];
     };
     /**
         * 此表內符合以下任意值時會觸發
@@ -312,6 +311,8 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '観': string[];
             '遊': string[];
             '启': string[];
+            '廄': string[];
+            '氣': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
