@@ -169,6 +169,7 @@ export declare let table_plus: {
     '観': string[];
     '遊': string[];
     '启': string[];
+    '廄': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
