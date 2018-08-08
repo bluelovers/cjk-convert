@@ -12,7 +12,7 @@ export { tableTw2CnDebug, tableCn2TwDebug }
 export const SAFE_MODE_CHAR_MIN = _SAFE_MODE_CHAR
 	.slice()
 	.concat([
-		'忧',
+		//'忧',
 		'脏',
 		'划',
 		'准',
@@ -20,6 +20,8 @@ export const SAFE_MODE_CHAR_MIN = _SAFE_MODE_CHAR
 		'処',
 		//'处',
 		'處',
+		//'憂',
+		//'優',
 	])
 ;
 
