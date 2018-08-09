@@ -154,6 +154,8 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2, {
 
 	'凈': '净',
 
+	'杰': '杰',
+
 });
 
 [

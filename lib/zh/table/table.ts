@@ -883,6 +883,11 @@ export let table_plus = {
 		'欲',
 	],
 
+	'傑': [
+		'傑',
+		'杰',
+	],
+
 };
 
 Object.keys(table_plus)
