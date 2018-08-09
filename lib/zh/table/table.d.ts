@@ -170,6 +170,7 @@ export declare let table_plus: {
     '启': string[];
     '廄': string[];
     '氣': string[];
+    '欲': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

@@ -254,6 +254,7 @@ Object
 	'竈',
 	'霉',
 	'黴',
+	'欲',
 	'慾',
 ].forEach(function (v)
 {
