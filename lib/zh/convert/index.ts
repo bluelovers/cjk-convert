@@ -84,6 +84,8 @@ export let table_cn2tw: ITable = Object.assign(_table_cn2tw, wiki_s2t_v2, {
 
 	'面': '麵',
 
+	'舍': '捨',
+
 });
 
 export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2, {
@@ -160,6 +162,8 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2, {
 
 	'余': '余',
 	'面': '面',
+
+	'舍': '舍',
 
 });
 
