@@ -82,6 +82,8 @@ export let table_cn2tw: ITable = Object.assign(_table_cn2tw, wiki_s2t_v2, {
 
 	'处': '處',
 
+	'面': '麵',
+
 });
 
 export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2, {
@@ -156,6 +158,9 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2, {
 
 	'杰': '杰',
 
+	'余': '余',
+	'面': '面',
+
 });
 
 [
@@ -165,6 +170,7 @@ export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2, {
 	'畲',
 	'氹',
 	'凼',
+	'靣',
 ].forEach(function (v)
 {
 	delete table_tw2cn[v];
@@ -240,7 +246,7 @@ Object
 	'棲',
 	'栖',
 	'嚯',
-	'余',
+	//'余',
 	'薑',
 	'姜',
 	'扡',
