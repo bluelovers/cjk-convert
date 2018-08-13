@@ -316,6 +316,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '氣': string[];
             '欲': string[];
             '傑': string[];
+            '鍛': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
