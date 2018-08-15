@@ -121,6 +121,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'松': '鬆',
 
+	'𫔮': '閒',
+
 });
 
 table_tw2cn = Object.assign(table_tw2cn, {
@@ -306,6 +308,7 @@ Object
 	'欲',
 	'慾',
 	'征',
+	'讚',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
