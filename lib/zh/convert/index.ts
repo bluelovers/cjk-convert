@@ -32,7 +32,40 @@ export function tw2cn(text: string, options: IOptions = {}, ...argv): string
 	return _call(_tw2cn, text, options, ...argv);
 }
 
-export let table_cn2tw: ITable = Object.assign(_table_cn2tw, wiki_s2t_v2, {
+export let table_cn2tw: ITable = Object.assign(_table_cn2tw, wiki_s2t_v2);
+
+export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2);
+
+if (1)
+{
+	/**
+	 * 以下用來 reset 排序用
+	 */
+
+	[
+		// 從轉換表中刪除的字
+	].forEach(function (v)
+	{
+		delete table_tw2cn[v];
+		delete table_cn2tw[v];
+	});
+
+	[
+		// 從 簡體轉換表內刪除的字
+	].forEach(function (v)
+	{
+		delete table_cn2tw[v];
+	});
+
+	[
+		// 從繁體轉換表內刪除的字
+	].forEach(function (v)
+	{
+		delete table_tw2cn[v];
+	});
+}
+
+table_cn2tw = Object.assign(table_cn2tw, {
 	'恶': '惡',
 	'苏': '蘇',
 	'壳': '殻',
@@ -90,7 +123,7 @@ export let table_cn2tw: ITable = Object.assign(_table_cn2tw, wiki_s2t_v2, {
 
 });
 
-export let table_tw2cn: ITable = Object.assign(_table_tw2cn, wiki_t2s_v2, {
+table_tw2cn = Object.assign(table_tw2cn, {
 	'殻': '壳',
 	'殼': '壳',
 	'館': '馆',
@@ -272,6 +305,7 @@ Object
 	'黴',
 	'欲',
 	'慾',
+	'征',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;

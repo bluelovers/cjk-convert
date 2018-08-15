@@ -900,6 +900,11 @@ export let table_plus = {
 		'煅',
 	],
 
+	'徵': [
+		'徵',
+		'徴',
+	],
+
 };
 
 Object.keys(table_plus)
