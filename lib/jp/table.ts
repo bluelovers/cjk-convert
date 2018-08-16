@@ -103,7 +103,15 @@ PLUS_TABLE.forEach(function ([jp, zht, zhs])
 });
 
 // @ts-ignore
-TABLE = array_unique(TABLE.concat(teachKanjiComparison));
+TABLE = array_unique(TABLE.concat(teachKanjiComparison.filter(function (row)
+{
+	if (['尨'].includes(row[0][0]))
+	{
+		return false;
+	}
+
+	return true;
+})));
 
 export let TABLE_SAFE = [] as string[][];
 
@@ -117,6 +125,7 @@ export let TABLE_SAFE = [] as string[][];
 		'隻',
 		'无',
 		'叶',
+		//'尨',
 	];
 
 	TABLE = TABLE.filter(function (v)
