@@ -931,6 +931,11 @@ export let table_plus = {
 		'狵',
 	],
 
+	'圈': [
+		'圈',
+		'圏',
+	],
+
 };
 
 Object.keys(table_plus)
