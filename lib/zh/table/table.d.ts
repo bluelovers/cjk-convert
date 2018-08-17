@@ -54,6 +54,7 @@ export declare let table_jp: {
     '讚': string[];
     '冲': string[];
     '面': string[];
+    '鬚': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
