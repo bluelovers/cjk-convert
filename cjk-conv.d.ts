@@ -322,6 +322,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '贊': string[];
             '櫻': string[];
             '尨': string[];
+            '圈': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
