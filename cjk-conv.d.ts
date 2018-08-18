@@ -198,6 +198,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '冲': string[];
             '面': string[];
             '鬚': string[];
+            '揹': string[];
     };
     /**
         * 此表內符合以下任意值時會觸發
@@ -325,6 +326,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '尨': string[];
             '圈': string[];
             '凶': string[];
+            '浜': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
