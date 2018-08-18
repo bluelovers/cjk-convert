@@ -74,15 +74,13 @@
 				<h2 id="why-">Why?</h2>
 				<p>The native <code>String#split</code> implementation does not pay attention to <a href="http://en.wikipedia.org/wiki/UTF-16">surrogate pairs</a>. When the code units of a surrogate pair are split apart, they are not intelligible on their own. Unless they are put back together in the correct order, individual code units will cause problems in code that handles strings.</p>
 				<h2 id="installation">Installation</h2>
-				<pre><code class="lang-js">$ npm install runes2
-</code></pre>
+				<pre><code class="language-js">$ npm install runes2</code></pre>
 				<h2 id="example">Example</h2>
-				<pre><code class="lang-ts"><span class="hljs-keyword">const</span> runes = <span class="hljs-built_in">require</span>(<span class="hljs-string">'runes2'</span>)
+				<pre><code class="language-ts"><span class="hljs-keyword">const</span> runes = <span class="hljs-built_in">require</span>(<span class="hljs-string">'runes2'</span>)
 <span class="hljs-keyword">const</span> runes = <span class="hljs-built_in">require</span>(<span class="hljs-string">'runes2'</span>).runes
 <span class="hljs-keyword">import</span> runes <span class="hljs-keyword">from</span> <span class="hljs-string">'runes2'</span>;
-<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> runes <span class="hljs-keyword">from</span> <span class="hljs-string">'runes2'</span>;
-</code></pre>
-				<pre><code class="lang-js"><span class="hljs-comment">// Standard String.split</span>
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> runes <span class="hljs-keyword">from</span> <span class="hljs-string">'runes2'</span>;</code></pre>
+				<pre><code class="language-js"><span class="hljs-comment">// Standard String.split</span>
 <span class="hljs-string">'♥️'</span>.split(<span class="hljs-string">''</span>) <span class="hljs-comment">// =&gt; ['♥', '️']</span>
 <span class="hljs-string">'Emoji 🤖'</span>.split(<span class="hljs-string">''</span>) <span class="hljs-comment">// =&gt; ['E', 'm', 'o', 'j', 'i', ' ', '�', '�']</span>
 <span class="hljs-string">'👩‍👩‍👧‍👦'</span>.split(<span class="hljs-string">''</span>) <span class="hljs-comment">// =&gt; ['�', '�', '‍', '�', '�', '‍', '�', '�', '‍', '�', '�']</span>
@@ -96,15 +94,13 @@
 runes(<span class="hljs-string">'♥️'</span>) <span class="hljs-comment">// =&gt; ['♥️']</span>
 runes(<span class="hljs-string">'Emoji 🤖'</span>) <span class="hljs-comment">// =&gt; ['E', 'm', 'o', 'j', 'i', ' ', '🤖']</span>
 runes(<span class="hljs-string">'👩‍👩‍👧‍👦'</span>) <span class="hljs-comment">// =&gt; ['👩‍👩‍👧‍👦']</span>
-
 </code></pre>
 				<h2 id="substring-example">Substring example</h2>
-				<pre><code class="lang-js"><span class="hljs-comment">// String.substring</span>
+				<pre><code class="language-js"><span class="hljs-comment">// String.substring</span>
 <span class="hljs-string">'👨‍👨‍👧‍👧a'</span>.substring(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; '�‍👨‍👧‍👧a'</span>
 
 <span class="hljs-comment">// Runes</span>
-runes.substr(<span class="hljs-string">'👨‍👨‍👧‍👧a'</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 'a'</span>
-</code></pre>
+runes.substr(<span class="hljs-string">'👨‍👨‍👧‍👧a'</span>, <span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 'a'</span></code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -172,6 +168,15 @@ runes.substr(<span class="hljs-string">'👨‍👨‍👧‍👧a'</span>, <spa
 						<span>Externals</span>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="modules/_build_zh_convert_table_cn2tw_debug_.html">"build/zh/convert/table_<wbr>cn2tw.debug"</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="modules/_build_zh_convert_table_tw2cn_debug_.html">"build/zh/convert/table_<wbr>tw2cn.debug"</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="modules/_lib_jp_teachkanjicomparison_.html">"lib/jp/teach<wbr>Kanji<wbr>Comparison"</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="modules/_node_modules_array_hyper_unique_index_.html">"node_<wbr>modules/array-<wbr>hyper-<wbr>unique/index"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
@@ -197,6 +202,9 @@ runes.substr(<span class="hljs-string">'👨‍👨‍👧‍👧a'</span>, <spa
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
 						<a href="modules/_node_modules_uni_string_src_core_.html">"node_<wbr>modules/uni-<wbr>string/src/core"</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="modules/_package_.html">"package"</a>
 					</li>
 				</ul>
 			</nav>
