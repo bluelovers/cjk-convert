@@ -204,6 +204,9 @@ table_tw2cn = Object.assign(table_tw2cn, {
 
 	'松': '松',
 
+	'像': '象',
+	'象': '象',
+
 });
 
 [

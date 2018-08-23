@@ -124,6 +124,8 @@ export const REGEXP_TEST = /[\u4E00-\u9FFF]/g;
 export const SAFE_MODE_CHAR = [
 	'后',
 	'里',
+	'像',
+	'象',
 ];
 
 export function getOptionsSkip(options: IOptions, skip = SAFE_MODE_CHAR)
