@@ -6,5 +6,7 @@ export * from './lib/index';
 
 import cjkConv from './lib/index';
 
+export { version } from './package.json';
+
 export { cjkConv }
 export default cjkConv;
