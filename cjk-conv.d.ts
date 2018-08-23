@@ -6,7 +6,7 @@ declare module 'cjk-conv' {
       */
     export * from 'cjk-conv/lib/index';
     import cjkConv from 'cjk-conv/lib/index';
-    export { version } from 'cjk-conv/package.json';
+    export const version: string;
     export { cjkConv };
     export default cjkConv;
 }
@@ -21,87 +21,6 @@ declare module 'cjk-conv/lib/index' {
     export { default as novelFilename } from 'cjk-conv/lib/novel/filename';
     import * as cjkConv from 'cjk-conv/lib/index';
     export default cjkConv;
-}
-
-{
-    "name": "cjk-conv",
-    "version": "1.0.86",
-    "description": "convert chinese, japanese 簡繁日漢字轉換 ( merge/split submodule from node-novel, regexp-cjk, str-util )",
-    "keywords": [
-        "char",
-        "character",
-        "characters",
-        "chinese",
-        "cjk",
-        "cn",
-        "cn2tw",
-        "conv",
-        "conversion",
-        "convert",
-        "hanja",
-        "hanzi",
-        "japanese",
-        "jp2zhs",
-        "jp2zht",
-        "kanji",
-        "node-novel",
-        "regex",
-        "regexp",
-        "regular",
-        "regular expression",
-        "simplified",
-        "str-util",
-        "traditional",
-        "transform",
-        "tw",
-        "tw2cn",
-        "unicode",
-        "util",
-        "words",
-        "zh",
-        "zh2jp",
-        "zhs",
-        "zht"
-    ],
-    "homepage": "https://github.com/bluelovers/cjk-convert#readme",
-    "bugs": {
-        "url": "https://github.com/bluelovers/cjk-convert/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bluelovers/cjk-convert.git"
-    },
-    "license": "ISC",
-    "author": "",
-    "main": "index.js",
-    "types": "cjk-conv.d.ts",
-    "directories": {
-        "lib": "lib",
-        "test": "test"
-    },
-    "scripts": {
-        "build-table": "node ./script/build-str-table",
-        "precommit": "npm run build-table && npm run dts-bundle && git add cjk-conv.d.ts",
-        "dts-bundle": "node ./test/dts-bundle.js",
-        "prepublishOnly": "npm run build-table && npm run dts-bundle && git add cjk-conv.d.ts",
-        "postpublish": "echo postpublish && node ./script/publish-after",
-        "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\"",
-        "travis": "typedoc --options ./typedoc.config.js"
-    },
-    "pre-commit": [
-        "precommit"
-    ],
-    "dependencies": {
-        "array-hyper-unique": "^1.0.2",
-        "chinese_convert": "^1.0.8",
-        "deep-eql": "^3.0.1",
-        "deepmerge-plus": "^2.1.2",
-        "japanese": "^1.2.0",
-        "uni-string": "^1.0.2"
-    },
-    "devDependencies": {
-        "fs-extra": "^7.0.0"
-    }
 }
 
 declare module 'cjk-conv/lib/zh/convert/index' {
