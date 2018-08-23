@@ -44,6 +44,8 @@ if (1)
 
 	[
 		// 從轉換表中刪除的字
+		'像',
+		'象',
 	].forEach(function (v)
 	{
 		delete table_tw2cn[v];
@@ -122,6 +124,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 	'松': '鬆',
 
 	'𫔮': '閒',
+
+	//'象': '象',
 
 });
 
@@ -204,8 +208,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 
 	'松': '松',
 
-	'像': '象',
-	'象': '象',
+	//'像': '象',
+	//'象': '象',
 
 });
 

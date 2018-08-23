@@ -3,6 +3,6 @@
  */
 export * from './lib/index';
 import cjkConv from './lib/index';
-export { version } from './package.json';
+export declare const version: string;
 export { cjkConv };
 export default cjkConv;
