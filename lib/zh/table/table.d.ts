@@ -185,6 +185,7 @@ export declare let table_plus: {
     '凶': string[];
     '浜': string[];
     '煙': string[];
+    '黒': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

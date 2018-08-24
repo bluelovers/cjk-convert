@@ -965,6 +965,11 @@ export let table_plus = {
 		'菸',
 	],
 
+	'黒': [
+		'黒',
+		'黑',
+	],
+
 };
 
 Object.keys(table_plus)
