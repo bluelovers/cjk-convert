@@ -970,6 +970,12 @@ export let table_plus = {
 		'黑',
 	],
 
+	'樂': [
+		'樂',
+		'乐',
+		'楽',
+	],
+
 };
 
 Object.keys(table_plus)
