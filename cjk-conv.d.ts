@@ -329,6 +329,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '凶': string[];
             '浜': string[];
             '煙': string[];
+            '黒': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
