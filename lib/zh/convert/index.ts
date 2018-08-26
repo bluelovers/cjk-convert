@@ -326,6 +326,8 @@ Object
 	'征',
 	'讚',
 	'菸',
+	'拾',
+	'十',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
