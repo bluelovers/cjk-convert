@@ -57,6 +57,8 @@ export declare let table_jp: {
     '鬚': string[];
     '揹': string[];
     '捲': string[];
+    '巻': string[];
+    '苏': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
@@ -189,6 +191,7 @@ export declare let table_plus: {
     '黒': string[];
     '樂': string[];
     '薬': string[];
+    '劵': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

@@ -8,7 +8,7 @@ import { charTableList, textList } from '../lib/zh/table/list';
 import { cn2tw, tw2cn } from '../lib/zh/convert';
 import { cn2tw_min, tw2cn_min } from '../lib/zh/convert/min';
 
-let word = `捲卷`;
+let word = `券巻惠方卷馆館苏蘇恶惡罗羅甦`;
 
 word = array_unique(word.split('')).join('');
 

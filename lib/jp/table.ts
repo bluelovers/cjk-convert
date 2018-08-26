@@ -89,6 +89,8 @@ const PLUS_TABLE: IPLUS_TABLE = array_unique<IPLUS_TABLE>([
 
 	["煙", "煙", "烟"],
 
+	["甦", "甦", "苏"],
+
 ]);
 
 const PLUS_TABLE_SAFE: IPLUS_TABLE = array_unique([
@@ -96,6 +98,9 @@ const PLUS_TABLE_SAFE: IPLUS_TABLE = array_unique([
 	["絶", "絕", "绝"],
 	["別", "別", "别"],
 	["魯", "魯", "鲁"],
+
+	["蘇", "蘇", "苏"],
+	["巻", "卷", "卷"],
 
 ] as IPLUS_TABLE);
 
