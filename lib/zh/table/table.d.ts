@@ -56,6 +56,7 @@ export declare let table_jp: {
     '面': string[];
     '鬚': string[];
     '揹': string[];
+    '捲': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
