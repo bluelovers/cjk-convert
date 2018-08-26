@@ -330,6 +330,8 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '浜': string[];
             '煙': string[];
             '黒': string[];
+            '樂': string[];
+            '薬': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
