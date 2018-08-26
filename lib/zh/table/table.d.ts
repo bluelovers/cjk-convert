@@ -57,6 +57,7 @@ export declare let table_jp: {
     '鬚': string[];
     '揹': string[];
     '捲': string[];
+    '卷': string[];
     '巻': string[];
     '苏': string[];
 };
@@ -192,6 +193,7 @@ export declare let table_plus: {
     '樂': string[];
     '薬': string[];
     '劵': string[];
+    '貳': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

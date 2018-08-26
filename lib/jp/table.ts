@@ -102,6 +102,8 @@ const PLUS_TABLE_SAFE: IPLUS_TABLE = array_unique([
 	["蘇", "蘇", "苏"],
 	["巻", "卷", "卷"],
 
+	["弐", "貳", "贰"],
+
 ] as IPLUS_TABLE);
 
 export let TABLE = [] as string[][];
