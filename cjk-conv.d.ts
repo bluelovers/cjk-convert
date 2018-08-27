@@ -201,6 +201,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '鬚': string[];
             '揹': string[];
             '捲': string[];
+            '卷': string[];
             '巻': string[];
             '苏': string[];
     };
@@ -336,6 +337,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '樂': string[];
             '薬': string[];
             '劵': string[];
+            '貳': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
