@@ -91,6 +91,8 @@ const PLUS_TABLE: IPLUS_TABLE = array_unique<IPLUS_TABLE>([
 
 	["甦", "甦", "苏"],
 
+	["並", "並", "并"],
+
 ]);
 
 const PLUS_TABLE_SAFE: IPLUS_TABLE = array_unique([
