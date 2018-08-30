@@ -35,6 +35,8 @@ declare module 'cjk-conv/lib/zh/convert/index' {
     export function tw2cn(text: string, options?: IOptions, ...argv: any[]): string;
     export let table_cn2tw: ITable;
     export let table_tw2cn: ITable;
+    export function _cn2tw(text: string): string;
+    export function _tw2cn(text: string): string;
     export { _call, IOptions, ITable, getOptions, defaultOptions, REGEXP_TEST, getOptionsSkip, SAFE_MODE_CHAR, };
     export default zhConvert;
 }
@@ -116,8 +118,6 @@ declare module 'cjk-conv/lib/zh/convert/core' {
     export function textMap3(text: string, table: ITable): string;
     export function textMap4(text: string, table: ITable): string;
     export { textMap4 as textMap };
-    export function _cn2tw(text: string): string;
-    export function _tw2cn(text: string): string;
     export default self;
     export function removeSame(table: ITable): self.ITable;
     export interface IOptions {
