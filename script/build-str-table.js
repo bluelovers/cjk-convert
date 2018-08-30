@@ -1,21 +1,22 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const strtable_1 = require("../lib/util/strtable");
-const index_1 = require("../lib/zh/convert/index");
+const table_1 = require("../lib/zh/convert/table");
 const min_1 = require("../lib/zh/convert/min");
 const fs = require("fs-extra");
 const path = require("path");
+const table_plus_1 = require("../lib/zh/convert/table_plus");
 let build_path = path.join(__dirname, '../build');
 (async () => {
-    await build('table_tw2cn', index_1.table_tw2cn);
+    await build('table_tw2cn', table_1.table_tw2cn, table_plus_1.table_tw2cn_plus);
     await new Promise(function (done) {
         setImmediate(done);
     });
-    await build('table_cn2tw', index_1.table_cn2tw);
-    await buildDebug('table_tw2cn', index_1.table_tw2cn, index_1.table_cn2tw);
-    await buildDebug('table_cn2tw', index_1.table_cn2tw, index_1.table_tw2cn);
+    await build('table_cn2tw', table_1.table_cn2tw, table_plus_1.table_cn2tw_plus);
+    await buildDebug('table_tw2cn', table_1.table_tw2cn, table_1.table_cn2tw, table_plus_1.table_tw2cn_plus);
+    await buildDebug('table_cn2tw', table_1.table_cn2tw, table_1.table_tw2cn, table_plus_1.table_cn2tw_plus);
 })();
-async function buildDebug(name, table1, table2) {
+async function buildDebug(name, table1, table2, table_plus) {
     let out = Object.entries(table1)
         .sort(function (a, b) {
         return a[0].codePointAt(0) - b[0].codePointAt(0);
@@ -33,6 +34,9 @@ async function buildDebug(name, table1, table2) {
         safe: {},
         unsafe: {},
     });
+    if (table_plus) {
+        Object.assign(out.safe, table_plus);
+    }
     let t1 = strtable_1.toStrTableArray(out.safe, {
         coreJs: true,
         ignore: true,
@@ -50,13 +54,16 @@ async function buildDebug(name, table1, table2) {
         })
     ]);
 }
-function build(name, table) {
+function build(name, table, table_plus) {
     let table2 = Object.entries(table)
         .reduce(function (a, b) {
         let [from, to] = b;
         a[from] = to;
         return a;
     }, {});
+    if (table_plus) {
+        Object.assign(table2, table_plus);
+    }
     let t1 = strtable_1.toStrTableArray(table2, {
         coreJs: true,
         ignore: true,

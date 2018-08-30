@@ -1,29 +1,32 @@
 import { toStrTable, toStrTableArray } from '../lib/util/strtable';
-import { table_tw2cn, table_cn2tw } from '../lib/zh/convert/index';
+import { table_tw2cn, table_cn2tw } from '../lib/zh/convert/table';
 import { SAFE_MODE_CHAR_MIN } from '../lib/zh/convert/min';
 import * as fs from 'fs-extra';
 import * as path from 'path';
+import { table_cn2tw_plus, table_tw2cn_plus } from '../lib/zh/convert/table_plus';
 
 let build_path = path.join(__dirname, '../build');
 
 (async () =>
 {
-	await build('table_tw2cn', table_tw2cn);
+	await build('table_tw2cn', table_tw2cn, table_tw2cn_plus);
 
 	await new Promise(function (done)
 	{
 		setImmediate(done);
 	});
 
-	await build('table_cn2tw', table_cn2tw);
+	await build('table_cn2tw', table_cn2tw, table_cn2tw_plus);
 
-	await buildDebug('table_tw2cn', table_tw2cn, table_cn2tw);
-	await buildDebug('table_cn2tw', table_cn2tw, table_tw2cn);
+	await buildDebug('table_tw2cn', table_tw2cn, table_cn2tw, table_tw2cn_plus);
+	await buildDebug('table_cn2tw', table_cn2tw, table_tw2cn, table_cn2tw_plus);
 })();
 
 async function buildDebug(name: string, table1: {
 	[k: string]: string,
 }, table2: {
+	[k: string]: string,
+}, table_plus?: {
 	[k: string]: string,
 })
 {
@@ -51,6 +54,11 @@ async function buildDebug(name: string, table1: {
 			unsafe: {},
 		})
 	;
+
+	if (table_plus)
+	{
+		Object.assign(out.safe, table_plus);
+	}
 
 	let t1 = toStrTableArray(out.safe, {
 		coreJs: true,
@@ -82,6 +90,8 @@ async function buildDebug(name: string, table1: {
 
 function build(name: string, table: {
 	[k: string]: string,
+}, table_plus?: {
+	[k: string]: string,
 })
 {
 	let table2 = Object.entries(table)
@@ -94,6 +104,11 @@ function build(name: string, table: {
 			return a;
 		}, {})
 	;
+
+	if (table_plus)
+	{
+		Object.assign(table2, table_plus);
+	}
 
 	let t1 = toStrTableArray(table2, {
 		coreJs: true,

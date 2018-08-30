@@ -9,5 +9,7 @@ export declare function cn2tw(text: string, options?: IOptions, ...argv: any[]):
 export declare function tw2cn(text: string, options?: IOptions, ...argv: any[]): string;
 export declare let table_cn2tw: ITable;
 export declare let table_tw2cn: ITable;
+export declare function _cn2tw(text: string): string;
+export declare function _tw2cn(text: string): string;
 export { _call, IOptions, ITable, getOptions, defaultOptions, REGEXP_TEST, getOptionsSkip, SAFE_MODE_CHAR, };
 export default zhConvert;

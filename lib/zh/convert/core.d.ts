@@ -11,8 +11,6 @@ export declare function textMap2(text: string, table: ITable): string;
 export declare function textMap3(text: string, table: ITable): string;
 export declare function textMap4(text: string, table: ITable): string;
 export { textMap4 as textMap };
-export declare function _cn2tw(text: string): string;
-export declare function _tw2cn(text: string): string;
 export default self;
 export declare function removeSame(table: ITable): self.ITable;
 export interface IOptions {

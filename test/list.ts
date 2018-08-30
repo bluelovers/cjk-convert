@@ -8,7 +8,7 @@ import { charTableList, textList } from '../lib/zh/table/list';
 import { cn2tw, tw2cn } from '../lib/zh/convert';
 import { cn2tw_min, tw2cn_min } from '../lib/zh/convert/min';
 
-let word = `併并並`;
+let word = `線綫线缐`;
 
 word = array_unique(word.split('')).join('');
 

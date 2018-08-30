@@ -71,18 +71,6 @@ export function textMap4(text: string, table: ITable)
 export { textMap4 as textMap }
 const textMap = textMap4;
 
-export function _cn2tw(text: string): string
-{
-	// @ts-ignore
-	return textMap(text, _table_cn2tw);
-}
-
-export function _tw2cn(text: string): string
-{
-	// @ts-ignore
-	return textMap(text, _table_tw2cn);
-}
-
 export default self;
 
 export function removeSame(table: ITable)
