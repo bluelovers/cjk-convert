@@ -107,7 +107,7 @@ export interface IOptions
 export const defaultOptions = Object.freeze({
 	safe: true,
 });
-export const REGEXP_TEST = /[\u4E00-\u9FFF]/g;
+export const REGEXP_TEST = /[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]/ug;
 
 export const SAFE_MODE_CHAR = [
 	'后',

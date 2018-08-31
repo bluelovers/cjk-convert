@@ -78,7 +78,7 @@ namespace _
 
 			_[`${from}2${to}`] = function (str, options?: IOptions): string
 			{
-				if (!/[\u4E00-\u9FFF]+/.test(str.toString()))
+				if (!/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]+/u.test(str.toString()))
 				{
 					return str;
 				}
@@ -156,7 +156,7 @@ export const zhs2zht = _.zhs2zht;
  */
 export function zh2jp(str, options?: IOptions): string
 {
-	if (!/[\u4E00-\u9FFF]+/.test(str.toString()))
+	if (!/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]+/u.test(str.toString()))
 	{
 		return str;
 	}
@@ -208,7 +208,7 @@ export const cjk2jp = zh2jp;
  */
 export function cjk2zht(str, options?: IOptions): string
 {
-	if (!/[\u4E00-\u9FFF]+/.test(str.toString()))
+	if (!/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]+/u.test(str.toString()))
 	{
 		return str;
 	}
@@ -249,7 +249,7 @@ export function cjk2zht(str, options?: IOptions): string
  */
 export function cjk2zhs(str, options?: IOptions): string
 {
-	if (!/[\u4E00-\u9FFF]+/.test(str.toString()))
+	if (!/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]+/u.test(str.toString()))
 	{
 		return str;
 	}
