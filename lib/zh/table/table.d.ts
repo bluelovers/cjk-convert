@@ -60,6 +60,8 @@ export declare let table_jp: {
     '卷': string[];
     '巻': string[];
     '苏': string[];
+    '瀏': string[];
+    '浏': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
