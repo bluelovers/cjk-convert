@@ -340,6 +340,8 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '薬': string[];
             '劵': string[];
             '貳': string[];
+            '隷': string[];
+            '姫': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
