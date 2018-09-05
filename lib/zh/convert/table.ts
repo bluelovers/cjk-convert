@@ -311,6 +311,8 @@ Object
 	'証',
 	'捲',
 	'卷',
+	'燻',
+	'熏',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
