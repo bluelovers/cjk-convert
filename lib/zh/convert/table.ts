@@ -103,6 +103,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	//'象': '象',
 
+	'啮': '齧',
+
 });
 
 table_tw2cn = Object.assign(table_tw2cn, {
@@ -188,6 +190,9 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	//'象': '象',
 
 	'云': '云',
+
+	'嚙': '啮',
+	'齧': '啮',
 
 });
 

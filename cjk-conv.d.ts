@@ -206,6 +206,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '苏': string[];
             '瀏': string[];
             '浏': string[];
+            '吁': string[];
     };
     /**
         * 此表內符合以下任意值時會觸發
@@ -343,6 +344,8 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '隷': string[];
             '姫': string[];
             '燻': string[];
+            '籲': string[];
+            '齧': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;
