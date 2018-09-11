@@ -63,6 +63,8 @@ export declare let table_jp: {
     '瀏': string[];
     '浏': string[];
     '吁': string[];
+    '囉': string[];
+    '啰': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
