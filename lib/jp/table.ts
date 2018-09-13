@@ -93,6 +93,8 @@ const PLUS_TABLE: IPLUS_TABLE = array_unique<IPLUS_TABLE>([
 
 	["並", "並", "并"],
 
+	["贓", "贓", "赃"],
+
 ]);
 
 const PLUS_TABLE_SAFE: IPLUS_TABLE = array_unique([

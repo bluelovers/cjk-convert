@@ -105,6 +105,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'啮': '齧',
 
+	'赃': '贓',
+
 });
 
 table_tw2cn = Object.assign(table_tw2cn, {
