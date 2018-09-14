@@ -205,6 +205,7 @@ export declare let table_plus: {
     '籲': string[];
     '齧': string[];
     '鹼': string[];
+    '咸': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
