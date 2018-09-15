@@ -351,6 +351,9 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '鹼': string[];
             '咸': string[];
             '穗': string[];
+            '廢': string[];
+            '蹠': string[];
+            '吒': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;

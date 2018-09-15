@@ -107,6 +107,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'赃': '贓',
 
+	'咤': '吒',
+
 });
 
 table_tw2cn = Object.assign(table_tw2cn, {
@@ -197,6 +199,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'齧': '啮',
 
 	'咸': '咸',
+
+	'吒': '吒',
 
 });
 
@@ -327,6 +331,10 @@ Object
 	'吁',
 	'籲',
 	'龥',
+	'蹠',
+	'跖',
+	'矽',
+	'硅',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
