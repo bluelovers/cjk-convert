@@ -11,7 +11,7 @@ import libTable from '../lib/zh/table';
 import { cn2tw_min, tw2cn_min } from '../lib/zh/convert/min';
 import { zhRegExp } from 'regexp-cjk';
 
-let word = `剗刬剷鏟铲`;
+let word = `偷媮`;
 
 word = array_unique(word.split('')).join('');
 
