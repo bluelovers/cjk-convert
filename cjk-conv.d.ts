@@ -209,6 +209,8 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '吁': string[];
             '囉': string[];
             '啰': string[];
+            '修': string[];
+            '犟': string[];
     };
     /**
         * 此表內符合以下任意值時會觸發
@@ -354,6 +356,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '廢': string[];
             '蹠': string[];
             '吒': string[];
+            '剷': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;

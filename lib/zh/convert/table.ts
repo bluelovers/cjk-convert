@@ -22,6 +22,12 @@ if (1)
 		// 從轉換表中刪除的字
 		'像',
 		'象',
+
+		'剷',
+		'鏟',
+		'铲',
+		'刬',
+		'剗',
 	].forEach(function (v)
 	{
 		delete table_tw2cn[v];
@@ -108,6 +114,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 	'赃': '贓',
 
 	'咤': '吒',
+
+
 
 });
 
@@ -265,6 +273,9 @@ Object
 		'氣': '气',
 
 		'咸': '鹹',
+
+		'剗': '刬',
+		'鏟': '铲',
 	})
 	.forEach(function (v)
 	{
@@ -337,6 +348,8 @@ Object
 	'硅',
 	'脩',
 	'修',
+	'犟',
+	'剷',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;

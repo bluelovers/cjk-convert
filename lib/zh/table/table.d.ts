@@ -66,6 +66,7 @@ export declare let table_jp: {
     '囉': string[];
     '啰': string[];
     '修': string[];
+    '犟': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
@@ -211,6 +212,7 @@ export declare let table_plus: {
     '廢': string[];
     '蹠': string[];
     '吒': string[];
+    '剷': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
