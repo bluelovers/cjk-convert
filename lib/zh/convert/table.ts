@@ -335,6 +335,8 @@ Object
 	'跖',
 	'矽',
 	'硅',
+	'脩',
+	'修',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
