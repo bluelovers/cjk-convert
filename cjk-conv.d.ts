@@ -214,6 +214,8 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '嗬': string[];
             '唿': string[];
             '媮': string[];
+            '采': string[];
+            '彩': string[];
     };
     /**
         * 此表內符合以下任意值時會觸發
