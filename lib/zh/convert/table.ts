@@ -217,6 +217,10 @@ table_tw2cn = Object.assign(table_tw2cn, {
 
 	'症': '症',
 
+	'郁': '郁',
+
+	'采': '采',
+
 });
 
 [
@@ -285,6 +289,8 @@ Object
 		'鏟': '铲',
 
 		'盤': '盘',
+
+		'採': '采',
 	})
 	.forEach(function (v)
 	{
