@@ -228,6 +228,7 @@ export declare let table_plus: {
     '折': string[];
     '祐': string[];
     '瓮': string[];
+    '蹤': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
