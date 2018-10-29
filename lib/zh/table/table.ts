@@ -1223,6 +1223,11 @@ export let table_plus = {
 		'踨',
 	],
 
+	'暗': [
+		'闇',
+		'暗',
+	],
+
 };
 
 Object.keys(table_plus)

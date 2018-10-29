@@ -397,6 +397,8 @@ Object
 	'瓮',
 	'罋',
 	'甕',
+	'闇',
+	'暗',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
