@@ -1,6 +1,6 @@
 {
   "name": "cjk-conv",
-  "version": "1.0.105",
+  "version": "1.0.106",
   "description": "convert chinese, japanese 簡繁日漢字轉換 ( merge/split submodule from node-novel, regexp-cjk, str-util )",
   "keywords": [
     "char",
@@ -68,13 +68,13 @@
   ],
   "dependencies": {
     "array-hyper-unique": "^1.0.2",
-    "chinese_convert": "^1.0.8",
+    "chinese_convert": "1.0.8",
     "deep-eql": "^3.0.1",
     "deepmerge-plus": "^2.1.2",
     "japanese": "^1.2.0",
     "uni-string": "^1.0.2"
   },
   "devDependencies": {
-    "fs-extra": "^7.0.0"
+    "fs-extra": "^7"
   }
 }
