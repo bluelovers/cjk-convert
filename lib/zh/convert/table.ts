@@ -224,6 +224,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 
 	'踪': '踪',
 
+	'昵': '昵',
+
 });
 
 [
@@ -296,6 +298,8 @@ Object
 		'採': '采',
 
 		'棲': '栖',
+
+		'暱': '昵',
 	})
 	.forEach(function (v)
 	{

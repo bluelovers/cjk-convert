@@ -1228,6 +1228,11 @@ export let table_plus = {
 		'暗',
 	],
 
+	'昵': [
+		'昵',
+		'暱',
+	],
+
 };
 
 Object.keys(table_plus)
