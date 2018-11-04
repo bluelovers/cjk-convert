@@ -11,11 +11,12 @@ import libTable from '../lib/zh/table';
 import { cn2tw_min, tw2cn_min } from '../lib/zh/convert/min';
 import { zhRegExp } from 'regexp-cjk';
 
-let word = `剋克`;
+let word = `釐厘𠩺`;
 
 word = array_unique(word.split('')).join('');
 
 console.log(`zhRegExp\n`, new zhRegExp(word));
+console.log(`zhRegExp Unicode\n`, new zhRegExp(word, 'u'));
 
 console.log('charTableList\n', charTableList(word));
 console.log('textList\n', textList(word));
