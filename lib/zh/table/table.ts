@@ -1238,6 +1238,11 @@ export let table_plus = {
 		'暱',
 	],
 
+	'布': [
+		'布',
+		'佈',
+	],
+
 };
 
 Object.keys(table_plus)

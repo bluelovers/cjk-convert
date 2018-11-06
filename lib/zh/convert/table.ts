@@ -405,6 +405,8 @@ Object
 	'甕',
 	'闇',
 	'暗',
+	'佈',
+	'布',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
