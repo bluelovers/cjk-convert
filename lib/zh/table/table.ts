@@ -1243,6 +1243,12 @@ export let table_plus = {
 		'佈',
 	],
 
+	'為': [
+		'為',
+		'为',
+		'爲',
+	],
+
 };
 
 Object.keys(table_plus)
