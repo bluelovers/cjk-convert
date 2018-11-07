@@ -56,8 +56,8 @@
   },
   "scripts": {
     "build-table": "node ./script/build-str-table",
-    "precommit": "npm run build-table && npm run dts-bundle && git add cjk-conv.d.ts",
-    "dts-bundle": "node ./test/dts-bundle.js",
+    "precommit": "npm run build-table && npm run dts-bundle",
+    "dts-bundle": "node ./test/dts-bundle.js && git add cjk-conv.d.ts",
     "prepublishOnly": "npm run build-table && npm run dts-bundle && git add cjk-conv.d.ts",
     "postpublish": "echo postpublish && node ./script/publish-after",
     "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\"",

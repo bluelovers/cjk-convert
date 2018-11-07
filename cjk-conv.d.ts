@@ -377,6 +377,8 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '暗': string[];
             '昵': string[];
             '布': string[];
+            '為': string[];
+            '綳': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;

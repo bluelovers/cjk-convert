@@ -1249,6 +1249,12 @@ export let table_plus = {
 		'爲',
 	],
 
+	'綳': [
+		'綳',
+		'繃',
+		'绷',
+	],
+
 };
 
 Object.keys(table_plus)
