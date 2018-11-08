@@ -407,6 +407,8 @@ Object
 	'暗',
 	'佈',
 	'布',
+	'痺',
+	'痹',
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
