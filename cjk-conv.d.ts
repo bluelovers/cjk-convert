@@ -380,6 +380,7 @@ declare module 'cjk-conv/lib/zh/table/table' {
             '為': string[];
             '綳': string[];
             '痺': string[];
+            '痲': string[];
     };
     export interface ISimpleTable {
             [key: string]: string;

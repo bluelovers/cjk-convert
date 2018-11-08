@@ -71,7 +71,7 @@
     "chinese_convert": "1.0.8",
     "deepmerge-plus": "^2.1.2",
     "japanese": "^1.2.0",
-    "uni-string": "^1.0.2"
+    "uni-string": "^1.1.0"
   },
   "devDependencies": {
     "deep-eql": "^4.0.0",
