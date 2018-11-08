@@ -115,6 +115,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'咤': '吒',
 
+	'痳': '痲',
+
 
 
 });
@@ -227,6 +229,9 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'昵': '昵',
 
 	'厘': '厘',
+
+	'痲': '痳',
+	'痳': '痳',
 
 });
 
