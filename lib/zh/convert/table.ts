@@ -117,8 +117,6 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'痳': '痲',
 
-
-
 });
 
 table_tw2cn = Object.assign(table_tw2cn, {
@@ -414,6 +412,10 @@ Object
 	'布',
 	'痺',
 	'痹',
+
+	'雇',
+	'僱',
+
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
