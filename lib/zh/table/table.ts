@@ -1270,6 +1270,12 @@ export let table_plus = {
 		'僱',
 	],
 
+	'敘': [
+		'敘',
+		'叙',
+		'敍',
+	],
+
 };
 
 Object.keys(table_plus)
