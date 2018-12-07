@@ -231,6 +231,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'痲': '痳',
 	'痳': '痳',
 
+	'怜': '怜',
+
 });
 
 [
