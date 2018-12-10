@@ -1282,6 +1282,12 @@ export let table_plus = {
 		'荡',
 	],
 
+	'勛': [
+		'勛',
+		'勳',
+		'勋',
+	],
+
 };
 
 Object.keys(table_plus)
