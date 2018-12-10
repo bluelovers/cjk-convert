@@ -239,6 +239,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'蕩': '荡',
 	'盪': '荡',
 
+	'悽': '悽',
+
 });
 
 [
