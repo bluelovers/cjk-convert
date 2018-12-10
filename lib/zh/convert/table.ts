@@ -117,7 +117,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'痳': '痲',
 
-	'荡': '盪',
+	//'荡': '盪',
+	'荡': '蕩',
 
 });
 

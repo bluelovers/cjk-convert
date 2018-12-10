@@ -14,7 +14,7 @@ export let table_cn2tw_plus: ITable = {
 	'线': '線',
 	'啮': '齧',
 	'赃': '贓',
-	'荡': '盪',
+	'荡': '蕩',
 };
 
 import * as self from './table_plus';
