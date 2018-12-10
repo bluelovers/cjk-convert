@@ -100,6 +100,8 @@ const PLUS_TABLE: IPLUS_TABLE = array_unique<IPLUS_TABLE>([
 	["踪", "蹤", "踪"],
 	["踪", "踪", "踪"],
 
+	["秘", "祕", "秘"],
+
 ]);
 
 const PLUS_TABLE_SAFE: IPLUS_TABLE = array_unique([

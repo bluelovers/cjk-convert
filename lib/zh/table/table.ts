@@ -1288,6 +1288,17 @@ export let table_plus = {
 		'勋',
 	],
 
+	'祕': [
+		'祕',
+		'秘',
+	],
+
+	'牆': [
+		'牆',
+		'墙',
+		'墻',
+	],
+
 };
 
 Object.keys(table_plus)

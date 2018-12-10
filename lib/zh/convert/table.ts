@@ -120,6 +120,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 	//'荡': '盪',
 	'荡': '蕩',
 
+	'墙': '牆',
+
 });
 
 table_tw2cn = Object.assign(table_tw2cn, {
@@ -240,6 +242,9 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'盪': '荡',
 
 	'悽': '悽',
+
+	'牆': '墙',
+	'墻': '墙',
 
 });
 
@@ -425,6 +430,9 @@ Object
 
 	'雇',
 	'僱',
+
+	'秘',
+	'祕',
 
 ].forEach(function (v)
 {
