@@ -1276,6 +1276,12 @@ export let table_plus = {
 		'敍',
 	],
 
+	'盪': [
+		'盪',
+		'蕩',
+		'荡',
+	],
+
 };
 
 Object.keys(table_plus)
