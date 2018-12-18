@@ -4,7 +4,7 @@
 
 import * as path from 'path';
 import * as PackageJson from '../package.json';
-import * as CrossSpawn from 'cross-spawn';
+import * as CrossSpawn from 'cross-spawn-extra';
 /// <reference types="cross-spawn" />
 
 (async () =>
