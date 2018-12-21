@@ -245,6 +245,7 @@ export declare let table_plus: {
     '牆': string[];
     '爾': string[];
     '焰': string[];
+    '默': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
