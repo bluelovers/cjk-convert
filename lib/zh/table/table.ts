@@ -1315,6 +1315,12 @@ export let table_plus = {
 		'黙',
 	],
 
+	'壓': [
+		'壓',
+		'压',
+		'圧',
+	],
+
 };
 
 Object.keys(table_plus)
