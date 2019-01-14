@@ -4,5 +4,5 @@
 import { ITable } from './core';
 export declare let table_cn2tw: ITable;
 export declare let table_tw2cn: ITable;
-import * as self from './table';
-export default self;
+declare const _default: typeof import("./table");
+export default _default;

@@ -84,5 +84,4 @@ export function zh(txt: string, options: IOptions = {}): string
 		;
 }
 
-import * as novelFilename from './filename';
-export default novelFilename;
+export default exports as typeof import('./filename');

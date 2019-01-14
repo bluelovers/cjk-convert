@@ -394,5 +394,4 @@ export interface IFrom2To extends Function
 	(str, options?: IOptions): string;
 }
 
-import * as jpConvert from './core';
-export default jpConvert;
+export default exports as typeof import('./core');

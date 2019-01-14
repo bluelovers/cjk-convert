@@ -6,6 +6,7 @@ export { libTable };
 export declare type IOptions = {
     safe?: boolean;
     skip?: any;
+    greedyTable?: boolean;
 };
 export declare function _get(a: any, value: any, ...values: any[]): any;
 /**
@@ -31,5 +32,5 @@ export declare const jp: (char: string, options?: IOptions) => string[];
  * @returns {string[]}
  */
 export declare function auto(char: string, options?: IOptions): string[];
-import * as zhTable from './index';
-export default zhTable;
+declare const _default: typeof import(".");
+export default _default;

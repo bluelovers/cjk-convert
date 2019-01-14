@@ -8,5 +8,4 @@ export { default as jpConvert, zh2jp, jp2zht, jp2zhs, cjk2zht, cjk2zhs, cjk2jp }
 
 export { default as novelFilename } from './novel/filename';
 
-import * as cjkConv from './index';
-export default cjkConv;
+export default exports as typeof import('./index');

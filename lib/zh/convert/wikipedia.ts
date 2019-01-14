@@ -5381,6 +5381,4 @@ export const wiki_t2s = {
 export const wiki_t2s_v2 = removeSame(wiki_t2s);
 export const wiki_s2t_v2 = removeSame(wiki_s2t);
 
-import * as self from './wikipedia'
-
-export default self;
+export default exports as typeof import('./wikipedia');

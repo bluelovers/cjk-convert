@@ -2,8 +2,8 @@
  * Created by user on 2018/7/29/029.
  */
 
-import * as tableTw2CnDebug from '../../../build/zh/convert/table_tw2cn.debug.json';
-import * as tableCn2TwDebug from '../../../build/zh/convert/table_cn2tw.debug.json';
+import tableTw2CnDebug = require('../../../build/zh/convert/table_tw2cn.debug.json');
+import tableCn2TwDebug = require('../../../build/zh/convert/table_cn2tw.debug.json');
 import { defaultOptions, getOptions, getOptionsSkip, IOptions, ITable, SAFE_MODE_CHAR as _SAFE_MODE_CHAR } from './core';
 import { tw2cn, cn2tw} from './index';
 
@@ -70,5 +70,4 @@ console.log(2, cn2tw_min(msg, {
 }));
 */
 
-import * as zhConvertMin from './min';
-export default zhConvertMin;
+export default exports as typeof import('./min');

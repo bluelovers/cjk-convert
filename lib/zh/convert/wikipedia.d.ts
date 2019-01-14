@@ -5131,5 +5131,5 @@ export declare const wiki_t2s: {
 };
 export declare const wiki_t2s_v2: ITable;
 export declare const wiki_s2t_v2: ITable;
-import * as self from './wikipedia';
-export default self;
+declare const _default: typeof import("./wikipedia");
+export default _default;

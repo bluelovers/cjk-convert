@@ -19,5 +19,5 @@ export declare function toStrTable(table: {
 };
 export declare function jsSplit(s: string): string[];
 export declare function utf8Split(s: string): string[];
-import * as self from './strtable';
-export default self;
+declare const _default: typeof import("./strtable");
+export default _default;

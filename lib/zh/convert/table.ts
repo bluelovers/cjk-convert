@@ -440,6 +440,4 @@ Object
 	table_cn2tw[v] = v;
 });
 
-import * as self from './table';
-export default self;
-
+export default exports as typeof import('./table');

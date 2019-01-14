@@ -1,8 +1,8 @@
 /**
  * Created by user on 2018/7/29/029.
  */
-import * as tableTw2CnDebug from '../../../build/zh/convert/table_tw2cn.debug.json';
-import * as tableCn2TwDebug from '../../../build/zh/convert/table_cn2tw.debug.json';
+import tableTw2CnDebug = require('../../../build/zh/convert/table_tw2cn.debug.json');
+import tableCn2TwDebug = require('../../../build/zh/convert/table_cn2tw.debug.json');
 import { IOptions, ITable } from './core';
 export { tableTw2CnDebug, tableCn2TwDebug };
 export declare const SAFE_MODE_CHAR_MIN: string[];
@@ -16,5 +16,5 @@ export declare function tw2cn_min(text: string, options?: IOptions, ...argv: any
  */
 export declare function cn2tw_min(text: string, options?: IOptions, ...argv: any[]): string;
 export declare function fixOptions(options: IOptions, table: ITable): IOptions;
-import * as zhConvertMin from './min';
-export default zhConvertMin;
+declare const _default: typeof import("./min.js");
+export default _default;

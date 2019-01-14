@@ -4,7 +4,7 @@
  * same as chinese_convert, but a little bug fix
  */
 import { _call, defaultOptions, getOptions, getOptionsSkip, IOptions, ITable, REGEXP_TEST, SAFE_MODE_CHAR } from './core';
-import * as zhConvert from './index';
+import zhConvert = require('./index');
 export declare function cn2tw(text: string, options?: IOptions, ...argv: any[]): string;
 export declare function tw2cn(text: string, options?: IOptions, ...argv: any[]): string;
 export declare let table_cn2tw: ITable;

@@ -5,6 +5,7 @@
 import zhTable, { IOptions as IOptionsZhTable } from './index';
 import { IOptions as IOptionsCjkConv } from '../convert';
 import CjkConv from '../..';
+export { default as jpConvert, zh2jp, jp2zht, jp2zhs, cjk2zht, cjk2zhs, cjk2jp } from '../../jp/index';
 
 import UString from 'uni-string';
 
@@ -113,13 +114,13 @@ export function arrCjk(arr: string[], options: IOptionsCjkConv = {}): string[]
 {
 	return arr
 	// @ts-ignore
-		.concat(arr.map(w(CjkConv.cjk2zht)))
+		.concat(arr.map(w(cjk2zht)))
 		// @ts-ignore
-		.concat(arr.map(w(CjkConv.cn2tw)))
+		.concat(arr.map(w(cn2tw)))
 		// @ts-ignore
-		.concat(arr.map(w(CjkConv.cjk2zhs)))
+		.concat(arr.map(w(cjk2zhs)))
 		// @ts-ignore
-		.concat(arr.map(w(CjkConv.cjk2jp)))
+		.concat(arr.map(w(cjk2jp)))
 		.filter(function (value, index, array)
 		{
 			return array.indexOf(value) == index;
@@ -135,5 +136,4 @@ export function arrCjk(arr: string[], options: IOptionsCjkConv = {}): string[]
 	}
 }
 
-import * as zhTableList from './list';
-export default zhTableList;
+export default exports as typeof import('./list');

@@ -3,6 +3,7 @@
  */
 import { IOptions as IOptionsZhTable } from './index';
 import { IOptions as IOptionsCjkConv } from '../convert';
+export { default as jpConvert, zh2jp, jp2zht, jp2zhs, cjk2zht, cjk2zhs, cjk2jp } from '../../jp/index';
 export declare type IOptions = {
     optionsZhTable?: IOptionsZhTable;
     skip?: any;
@@ -30,5 +31,5 @@ export declare function textList(text: string, options?: IOptions): string[];
  * // => [ '司马', '上官', '欧阳', '夏侯', '司馬', '歐陽', '欧陽' ]
  */
 export declare function arrCjk(arr: string[], options?: IOptionsCjkConv): string[];
-import * as zhTableList from './list';
-export default zhTableList;
+declare const _default: typeof import("./list");
+export default _default;

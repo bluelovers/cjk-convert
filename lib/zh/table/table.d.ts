@@ -260,5 +260,5 @@ export declare function _get(arr: string[], value: string | string[], ...values:
 export declare function jp(char: string, options?: IOptions): string[];
 export declare function tw(char: string, options?: IOptions): string[];
 export declare function cn(char: string, options?: IOptions): string[];
-import * as self from './table';
-export default self;
+declare const _default: typeof import("./table");
+export default _default;

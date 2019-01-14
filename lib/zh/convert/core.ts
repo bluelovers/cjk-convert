@@ -4,7 +4,6 @@
 
 import * as _table_cn2tw from 'chinese_convert/cn2tw';
 import * as _table_tw2cn from 'chinese_convert/tw2cn';
-import * as self from './core';
 import UString = require('uni-string');
 
 export interface ITable
@@ -71,7 +70,7 @@ export function textMap4(text: string, table: ITable)
 export { textMap4 as textMap }
 const textMap = textMap4;
 
-export default self;
+export default exports as typeof import('./core');
 
 export function removeSame(table: ITable)
 {

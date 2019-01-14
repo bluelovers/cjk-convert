@@ -2,7 +2,7 @@
  * Created by user on 2018/2/17/017.
  */
 
-import { jp2zht, jp2zhs } from '../../jp';
+import { jp2zht, jp2zhs, zh2jp, cjk2zht, cjk2zhs, cjk2jp } from '../../jp';
 import libTable from './table';
 import { array_unique } from '../../util';
 
@@ -11,6 +11,7 @@ export { libTable }
 export type IOptions = {
 	safe?: boolean,
 	skip?,
+	greedyTable?: boolean,
 }
 
 export function _get(a, value, ...values)
@@ -93,6 +94,11 @@ export function auto(char: string, options: IOptions = {}): string[]
 		(!options.skip || options.skip.indexOf(jt) == -1) && libTable.cn(jt, options),
 		(!options.skip || options.skip.indexOf(js) == -1) && libTable.tw(js, options),
 		libTable.jp(char, options),
+
+		(options.greedyTable && cjk2jp(char)),
+		(options.greedyTable && cjk2zhs(jt)),
+		(options.greedyTable && cjk2zht(js)),
+
 		);
 
 	/*
@@ -117,5 +123,4 @@ export function auto(char: string, options: IOptions = {}): string[]
 	return a;
 }
 
-import * as zhTable from './index';
-export default zhTable;
+export default exports as typeof import('./index');

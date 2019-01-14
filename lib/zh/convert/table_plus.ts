@@ -17,5 +17,4 @@ export let table_cn2tw_plus: ITable = {
 	'荡': '蕩',
 };
 
-import * as self from './table_plus';
-export default self;
+export default exports as typeof import('./table_plus');

@@ -83,7 +83,6 @@ export function utf8Split(s: string)
 	return UString.split(s, '');
 }
 
-import * as self from './strtable';
-export default self;
+export default exports as typeof import('./strtable');
 
 //console.log(__filename, require.extensions);

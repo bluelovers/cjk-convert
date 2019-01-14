@@ -5,7 +5,7 @@
 import { IOptions } from '../convert/core';
 import { tw2cn, cn2tw} from '../convert/index';
 import { array_unique } from '../../util';
-import * as deepmerge from 'deepmerge-plus';
+import deepmerge = require('deepmerge-plus');
 
 export let _table_tw = {
 	'罗': '羅',
@@ -1428,6 +1428,4 @@ export function cn(char: string, options: IOptions = {}): string[]
 	return a;
 }
 
-import * as self from './table';
-
-export default self;
+export default exports as typeof import('./table');

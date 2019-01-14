@@ -119,5 +119,5 @@ export declare function _getdata(char: string, from: string, to: string, safe?: 
 export interface IFrom2To extends Function {
     (str: any, options?: IOptions): string;
 }
-import * as jpConvert from './core';
-export default jpConvert;
+declare const _default: typeof import("./core");
+export default _default;

@@ -22,7 +22,7 @@ import {
 	SAFE_MODE_CHAR,
 	textMap,
 } from './core';
-import * as zhConvert from './index';
+import zhConvert = require('./index');
 import { table_cn2tw_plus, table_tw2cn_plus } from './table_plus';
 import { wiki_s2t_v2, wiki_t2s_v2 } from './wikipedia';
 
