@@ -19,8 +19,8 @@ declare module 'cjk-conv/lib/index' {
     export { default as zhTable, IOptions as IOptionsZhTable } from 'cjk-conv/lib/zh/table/index';
     export { default as jpConvert, zh2jp, jp2zht, jp2zhs, cjk2zht, cjk2zhs, cjk2jp } from 'cjk-conv/lib/jp/index';
     export { default as novelFilename } from 'cjk-conv/lib/novel/filename';
-    import * as cjkConv from 'cjk-conv/lib/index';
-    export default cjkConv;
+    const _default: typeof import(".");
+    export default _default;
 }
 
 declare module 'cjk-conv/lib/zh/convert/index' {
@@ -30,7 +30,7 @@ declare module 'cjk-conv/lib/zh/convert/index' {
       * same as chinese_convert, but a little bug fix
       */
     import { _call, defaultOptions, getOptions, getOptionsSkip, IOptions, ITable, REGEXP_TEST, SAFE_MODE_CHAR } from 'cjk-conv/lib/zh/convert/core';
-    import * as zhConvert from 'cjk-conv/lib/zh/convert/index';
+    import zhConvert = require('cjk-conv/lib/zh/convert/index');
     export function cn2tw(text: string, options?: IOptions, ...argv: any[]): string;
     export function tw2cn(text: string, options?: IOptions, ...argv: any[]): string;
     export let table_cn2tw: ITable;
@@ -50,6 +50,7 @@ declare module 'cjk-conv/lib/zh/table/index' {
     export type IOptions = {
             safe?: boolean;
             skip?: any;
+            greedyTable?: boolean;
     };
     export function _get(a: any, value: any, ...values: any[]): any;
     /**
@@ -75,8 +76,8 @@ declare module 'cjk-conv/lib/zh/table/index' {
         * @returns {string[]}
         */
     export function auto(char: string, options?: IOptions): string[];
-    import * as zhTable from 'cjk-conv/lib/zh/table/index';
-    export default zhTable;
+    const _default: typeof import(".");
+    export default _default;
 }
 
 declare module 'cjk-conv/lib/jp/index' {
@@ -84,8 +85,8 @@ declare module 'cjk-conv/lib/jp/index' {
       * Created by user on 2018/2/17/017.
       */
     export { zh2jp, zht2jp, zhs2jp, zhs2zht, zht2zhs, cjk2zhs, jp2zhs, jp2zht, cjk2zht, cjk2jp, IOptions } from 'cjk-conv/lib/jp/core';
-    import * as jpConvert from 'cjk-conv/lib/jp/index';
-    export default jpConvert;
+    const _default: typeof import(".");
+    export default _default;
 }
 
 declare module 'cjk-conv/lib/novel/filename' {
@@ -100,15 +101,14 @@ declare module 'cjk-conv/lib/novel/filename' {
     export function word(name: string, options?: IOptions): string;
     export function jp(txt: string, options?: IOptions): string;
     export function zh(txt: string, options?: IOptions): string;
-    import * as novelFilename from 'cjk-conv/lib/novel/filename';
-    export default novelFilename;
+    const _default: typeof import("./filename");
+    export default _default;
 }
 
 declare module 'cjk-conv/lib/zh/convert/core' {
     /**
         * Created by user on 2018/8/2/002.
         */
-    import * as self from 'cjk-conv/lib/zh/convert/core';
     export interface ITable {
             [key: string]: string;
     }
@@ -118,8 +118,9 @@ declare module 'cjk-conv/lib/zh/convert/core' {
     export function textMap3(text: string, table: ITable): string;
     export function textMap4(text: string, table: ITable): string;
     export { textMap4 as textMap };
-    export default self;
-    export function removeSame(table: ITable): self.ITable;
+    const _default: typeof import("./core");
+    export default _default;
+    export function removeSame(table: ITable): ITable;
     export interface IOptions {
             /**
                 * 忽略的字 or 任何支援 indexOf 的 Object
@@ -134,10 +135,10 @@ declare module 'cjk-conv/lib/zh/convert/core' {
     }>;
     export const REGEXP_TEST: RegExp;
     export const SAFE_MODE_CHAR: string[];
-    export function getOptionsSkip(options: IOptions, skip?: string[]): self.IOptions;
+    export function getOptionsSkip(options: IOptions, skip?: string[]): IOptions;
     export function getOptions(options?: IOptions, defaultOpts?: Readonly<{
             safe: boolean;
-    }>, skip?: string[]): self.IOptions;
+    }>, skip?: string[]): IOptions;
     export function _call(fn: any, text: string, options?: IOptions, ...argv: any[]): any;
 }
 
@@ -404,8 +405,8 @@ declare module 'cjk-conv/lib/zh/table/table' {
     export function jp(char: string, options?: IOptions): string[];
     export function tw(char: string, options?: IOptions): string[];
     export function cn(char: string, options?: IOptions): string[];
-    import * as self from 'cjk-conv/lib/zh/table/table';
-    export default self;
+    const _default: typeof import("./table");
+    export default _default;
 }
 
 declare module 'cjk-conv/lib/jp/core' {
@@ -530,8 +531,8 @@ declare module 'cjk-conv/lib/jp/core' {
     export interface IFrom2To extends Function {
             (str: any, options?: IOptions): string;
     }
-    import * as jpConvert from 'cjk-conv/lib/jp/core';
-    export default jpConvert;
+    const _default: typeof import("./core");
+    export default _default;
 }
 
 declare module 'cjk-conv/lib/jp/table' {

@@ -96,8 +96,8 @@ export function auto(char: string, options: IOptions = {}): string[]
 		libTable.jp(char, options),
 
 		(options.greedyTable && cjk2jp(char)),
-		(options.greedyTable && cjk2zhs(jt)),
-		(options.greedyTable && cjk2zht(js)),
+		(options.greedyTable && cjk2zhs(char)),
+		(options.greedyTable && cjk2zht(char)),
 
 		);
 
