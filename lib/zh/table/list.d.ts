@@ -3,7 +3,6 @@
  */
 import { IOptions as IOptionsZhTable } from './index';
 import { IOptions as IOptionsCjkConv } from '../convert';
-export { default as jpConvert, zh2jp, jp2zht, jp2zhs, cjk2zht, cjk2zhs, cjk2jp } from '../../jp/index';
 export declare type IOptions = {
     optionsZhTable?: IOptionsZhTable;
     skip?: any;

@@ -5,7 +5,8 @@
 import zhTable, { IOptions as IOptionsZhTable } from './index';
 import { IOptions as IOptionsCjkConv } from '../convert';
 import CjkConv from '../..';
-export { default as jpConvert, zh2jp, jp2zht, jp2zhs, cjk2zht, cjk2zhs, cjk2jp } from '../../jp/index';
+import { default as zhConvert, tw2cn, cn2tw } from '../../zh/convert/index';
+import { default as jpConvert, zh2jp, jp2zht, jp2zhs, cjk2zht, cjk2zhs, cjk2jp } from '../../jp/index';
 
 import UString from 'uni-string';
 
