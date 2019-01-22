@@ -6,10 +6,11 @@ import tableTw2CnDebug = require('../../../build/zh/convert/table_tw2cn.debug.js
 import tableCn2TwDebug = require('../../../build/zh/convert/table_cn2tw.debug.json');
 import { defaultOptions, getOptions, getOptionsSkip, IOptions, ITable, SAFE_MODE_CHAR as _SAFE_MODE_CHAR } from './core';
 import { tw2cn, cn2tw} from './index';
+import { array_unique } from 'array-hyper-unique';
 
 export { tableTw2CnDebug, tableCn2TwDebug }
 
-export const SAFE_MODE_CHAR_MIN = _SAFE_MODE_CHAR
+export const SAFE_MODE_CHAR_MIN = array_unique(_SAFE_MODE_CHAR
 	.slice()
 	.concat([
 		//'忧',
@@ -22,7 +23,8 @@ export const SAFE_MODE_CHAR_MIN = _SAFE_MODE_CHAR
 		'處',
 		//'憂',
 		//'優',
-	])
+		'餵',
+	]))
 ;
 
 export { SAFE_MODE_CHAR_MIN as SAFE_MODE_CHAR }

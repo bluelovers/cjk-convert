@@ -10,8 +10,9 @@ import { cn2tw, tw2cn } from '../lib/zh/convert';
 import libTable from '../lib/zh/table';
 import { cn2tw_min, tw2cn_min } from '../lib/zh/convert/min';
 import { zhRegExp } from 'regexp-cjk';
+import UString = require('uni-string');
 
-let word = `轉移`;
+let word = `餵𫗭喂`;
 
 word = array_unique(word.split('')).join('');
 
@@ -49,7 +50,7 @@ console.log('zh2jp', zh2jp(word));
 
 function _table_each(word: string, fn: (char: string) => string[])
 {
-	return array_unique(word.split('')
+	return array_unique(UString.split(word, '')
 		.reduce(function (a, b)
 		{
 			a.push(...fn(b));

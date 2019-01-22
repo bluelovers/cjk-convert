@@ -2,6 +2,7 @@
  * Created by user on 2018/8/2/002.
  */
 
+import { array_unique } from 'array-hyper-unique';
 import * as _table_cn2tw from 'chinese_convert/cn2tw';
 import * as _table_tw2cn from 'chinese_convert/tw2cn';
 import UString = require('uni-string');
@@ -108,10 +109,11 @@ export const defaultOptions = Object.freeze({
 });
 export const REGEXP_TEST = /[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]/ug;
 
-export const SAFE_MODE_CHAR = [
+export const SAFE_MODE_CHAR = array_unique([
 	'后',
 	'里',
-];
+	'餵',
+]);
 
 export function getOptionsSkip(options: IOptions, skip = SAFE_MODE_CHAR)
 {
