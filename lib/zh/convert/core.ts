@@ -62,7 +62,7 @@ export function textMap3(text: string, table: ITable)
 
 export function textMap4(text: string, table: ITable)
 {
-	return text.replace(/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]/u, function (s)
+	return text.replace(/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]/ug, function (s)
 	{
 		return charMap(s, table);
 	});

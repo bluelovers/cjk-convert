@@ -12,7 +12,7 @@ import { cn2tw_min, tw2cn_min } from '../lib/zh/convert/min';
 import { zhRegExp } from 'regexp-cjk';
 import UString = require('uni-string');
 
-let word = `餵𫗭喂`;
+let word = `熏燻`;
 
 word = array_unique(word.split('')).join('');
 
