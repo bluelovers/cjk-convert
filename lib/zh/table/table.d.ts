@@ -250,6 +250,7 @@ export declare let table_plus: {
     '廸': string[];
     '曉': string[];
     '霸': string[];
+    '霊': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

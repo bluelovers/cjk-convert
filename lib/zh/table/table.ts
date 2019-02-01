@@ -1332,11 +1332,17 @@ export let table_plus = {
 		'暁',
 	],
 
-
 	'霸': [
 		'霸',
 		'覇',
 	],
+
+	'霊': [
+		'霊',
+		'靈',
+		'灵',
+	],
+
 };
 
 Object.keys(table_plus)
