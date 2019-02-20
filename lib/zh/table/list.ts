@@ -9,12 +9,13 @@ import { default as zhConvert, tw2cn, cn2tw } from '../../zh/convert/index';
 import { default as jpConvert, zh2jp, jp2zht, jp2zhs, cjk2zht, cjk2zhs, cjk2jp } from '../../jp/index';
 
 import UString from 'uni-string';
+import { array_unique } from 'array-hyper-unique';
 
 export type IOptions = {
 	optionsZhTable?: IOptionsZhTable,
 	skip?,
 
-	lang?: 'zh' | 'cn' | 'jp' | 'auto' | string,
+	lang?: 'cn' | 'jp' | 'auto' | string,
 }
 
 /**
@@ -135,6 +136,56 @@ export function arrCjk(arr: string[], options: IOptionsCjkConv = {}): string[]
 			return fn(s, options);
 		}
 	}
+}
+
+/**
+ * 用來標準化字串 作為排序用
+ */
+export function slugify(input: string, options?: IOptions, unsafe2?: boolean): string
+/**
+ * 用來標準化字串 作為排序用
+ */
+export function slugify(input: string, unsafe2?: boolean): string
+export function slugify(input: string, options: IOptions | boolean = {}, unsafe2?: boolean): string
+{
+	if (typeof options === 'boolean')
+	{
+		[unsafe2, options] = [options, {}];
+	}
+
+	options = (options || {}) as IOptions;
+
+	options = {
+		...options,
+		optionsZhTable: {
+			safe: false,
+			greedyTable: true,
+			...options.optionsZhTable,
+		}
+	};
+
+	let arr: string[][];
+
+	if (unsafe2)
+	{
+		let k = input
+			.replace(/噁/g, '惡')
+		;
+
+		arr = charTableList(k, options);
+	}
+	else
+	{
+		arr = charTableList(input, options)
+	}
+
+	return arr
+		.reduce(function (s, a)
+		{
+			s.push(a[0]);
+			return s
+		}, [])
+		.join('')
 }
 
 export default exports as typeof import('./list');

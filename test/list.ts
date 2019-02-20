@@ -5,14 +5,14 @@
 import { array_unique } from 'array-hyper-unique';
 import { _word_zh_core } from 'regexp-cjk/lib/conv';
 import { jp2zhs, jp2zht, zh2jp } from '../lib/jp/core';
-import { charTableList, textList } from '../lib/zh/table/list';
+import { charTableList, textList, slugify } from '../lib/zh/table/list';
 import { cn2tw, tw2cn } from '../lib/zh/convert';
 import libTable from '../lib/zh/table';
 import { cn2tw_min, tw2cn_min } from '../lib/zh/convert/min';
 import { zhRegExp } from 'regexp-cjk';
 import UString = require('uni-string');
 
-let word = `霊灵`;
+let word = `噁宅恶`;
 
 word = array_unique(word.split('')).join('');
 
@@ -47,6 +47,8 @@ console.log('jp2zht', jp2zht(word));
 console.log('jp2zhs', jp2zhs(word));
 console.log('zh2jp', zh2jp(word));
 
+console.log('slugify', slugify(word));
+console.log('slugify true', slugify(word, true));
 
 function _table_each(word: string, fn: (char: string) => string[])
 {

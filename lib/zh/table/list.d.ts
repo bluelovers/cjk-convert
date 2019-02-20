@@ -6,7 +6,7 @@ import { IOptions as IOptionsCjkConv } from '../convert';
 export declare type IOptions = {
     optionsZhTable?: IOptionsZhTable;
     skip?: any;
-    lang?: 'zh' | 'cn' | 'jp' | 'auto' | string;
+    lang?: 'cn' | 'jp' | 'auto' | string;
 };
 /**
  *
@@ -30,5 +30,13 @@ export declare function textList(text: string, options?: IOptions): string[];
  * // => [ '司马', '上官', '欧阳', '夏侯', '司馬', '歐陽', '欧陽' ]
  */
 export declare function arrCjk(arr: string[], options?: IOptionsCjkConv): string[];
+/**
+ * 用來標準化字串 作為排序用
+ */
+export declare function slugify(input: string, options?: IOptions, unsafe2?: boolean): string;
+/**
+ * 用來標準化字串 作為排序用
+ */
+export declare function slugify(input: string, unsafe2?: boolean): string;
 declare const _default: typeof import("./list");
 export default _default;
