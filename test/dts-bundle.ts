@@ -4,11 +4,26 @@
 
 // @ts-ignore
 import * as pkg from '../package.json';
-// @ts-ignore
-import dts = require('dts-bundle');
 import path = require('path');
 
-dts.bundle({
-	name: pkg.name,
-	main: path.join(__dirname, '../index.d.ts')
-});
+try
+{
+	// @ts-ignore
+	const dts = require('dts-bundle');
+
+	dts.bundle({
+		name: pkg.name,
+		main: path.join(__dirname, '../index.d.ts')
+	});
+}
+catch (e)
+{
+	if (e.code !== 'MODULE_NOT_FOUND')
+	{
+		console.error(e);
+	}
+	else
+	{
+		console.warn(`dts-bundle 不存在，忽略本次錯誤`);
+	}
+}
