@@ -1343,6 +1343,12 @@ export let table_plus = {
 		'灵',
 	],
 
+	'泪': [
+		'泪',
+		'涙',
+		'淚',
+	],
+
 };
 
 Object.keys(table_plus)
