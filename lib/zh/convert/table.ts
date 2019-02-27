@@ -325,6 +325,8 @@ Object
 		'棲': '栖',
 
 		'暱': '昵',
+
+		'繨': '𫄤',
 	})
 	.forEach(function (v)
 	{
