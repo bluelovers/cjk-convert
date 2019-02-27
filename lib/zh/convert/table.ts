@@ -124,6 +124,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'占': '佔',
 
+	'借': '藉',
+
 });
 
 table_tw2cn = Object.assign(table_tw2cn, {
@@ -250,6 +252,9 @@ table_tw2cn = Object.assign(table_tw2cn, {
 
 	'佔': '占',
 	'占': '占',
+
+	'藉': '借',
+	'借': '借',
 
 });
 

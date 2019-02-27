@@ -1355,6 +1355,11 @@ export let table_plus = {
 		'犧',
 	],
 
+	'藉': [
+		'藉',
+		'耤',
+	],
+
 };
 
 Object.keys(table_plus)

@@ -253,6 +253,7 @@ export declare let table_plus: {
     '霊': string[];
     '泪': string[];
     '牺': string[];
+    '藉': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
