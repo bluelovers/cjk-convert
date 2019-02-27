@@ -122,6 +122,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'墙': '牆',
 
+	'占': '佔',
+
 });
 
 table_tw2cn = Object.assign(table_tw2cn, {
@@ -245,6 +247,9 @@ table_tw2cn = Object.assign(table_tw2cn, {
 
 	'牆': '墙',
 	'墻': '墙',
+
+	'佔': '占',
+	'占': '占',
 
 });
 
