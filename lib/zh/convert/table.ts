@@ -256,6 +256,9 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'藉': '借',
 	'借': '借',
 
+	'噸': '噸',
+	'吨': '吨',
+
 });
 
 [

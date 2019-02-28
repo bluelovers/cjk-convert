@@ -1360,6 +1360,11 @@ export let table_plus = {
 		'耤',
 	],
 
+	'噸': [
+		'噸',
+		'吨',
+	],
+
 };
 
 Object.keys(table_plus)
