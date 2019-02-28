@@ -126,6 +126,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'借': '藉',
 
+	'制': '製',
+
 });
 
 table_tw2cn = Object.assign(table_tw2cn, {
@@ -258,6 +260,10 @@ table_tw2cn = Object.assign(table_tw2cn, {
 
 	'噸': '噸',
 	'吨': '吨',
+
+	'製': '制',
+	'制': '制',
+
 
 });
 
