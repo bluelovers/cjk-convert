@@ -128,6 +128,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'制': '製',
 
+	'征': '徵',
+
 });
 
 table_tw2cn = Object.assign(table_tw2cn, {
@@ -264,6 +266,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'製': '制',
 	'制': '制',
 
+	'徵': '征',
+	'征': '征',
 
 });
 
@@ -394,7 +398,7 @@ Object
 	'黴',
 	'欲',
 	'慾',
-	'征',
+	//'征',
 	'讚',
 	'菸',
 	'拾',
