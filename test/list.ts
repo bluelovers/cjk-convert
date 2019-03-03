@@ -20,7 +20,7 @@ console.inspectOptions = {
 	colors: true,
 };
 
-let word = `冲沖衝`;
+let word = `喂餵𫗭餧`;
 
 word = array_unique(word.split('')).join('');
 
@@ -110,6 +110,26 @@ function print_log(label: unknown | unknown[], ...args: unknown[])
 
 function diff_log(src_text: string, new_text: string): string
 {
+	let src_arr = UString.split(src_text, '');
+	let new_arr = UString.split(new_text, '');
+
+	let diff_arr = new_arr.reduce(function (a, s, i)
+	{
+		if (src_arr[i] != s)
+		{
+			let color = 'green';
+			let t = console[color].chalk(s);
+			a.push(t);
+		}
+		else
+		{
+			a.push(s);
+		}
+
+		return a
+	}, []);
+
+	/*
 	let diff = jsdiff.diffChars(src_text, new_text);
 
 	let diff_arr = diff
@@ -131,6 +151,7 @@ function diff_log(src_text: string, new_text: string): string
 			return a;
 		}, [])
 	;
+	*/
 
 	return diff_arr.join('');
 }

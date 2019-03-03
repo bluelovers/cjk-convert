@@ -170,6 +170,8 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 	{
 		let k = input
 			.replace(/噁/g, '惡')
+			.replace(/[繋繫係]/g, '系')
+			.replace(/[糊鬍]/g, '胡')
 		;
 
 		arr = charTableList(k, options);
