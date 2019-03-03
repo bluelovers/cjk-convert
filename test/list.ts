@@ -20,7 +20,7 @@ console.inspectOptions = {
 	colors: true,
 };
 
-let word = `俱具`;
+let word = `冈岡`;
 
 word = array_unique(word.split('')).join('');
 
@@ -52,6 +52,20 @@ print_diff('tw2cn', tw2cn(word), word);
 
 print_diff('cn2tw_min', cn2tw_min(word), word);
 print_diff('tw2cn_min', tw2cn_min(word), word);
+
+print_diff('cn2tw false', cn2tw(word, {
+	safe: false,
+}), word);
+print_diff('tw2cn false', tw2cn(word, {
+	safe: false,
+}), word);
+
+print_diff('cn2tw_min false', cn2tw_min(word, {
+	safe: false,
+}), word);
+print_diff('tw2cn_min false', tw2cn_min(word, {
+	safe: false,
+}), word);
 
 print_diff('jp2zht', jp2zht(word), word);
 print_diff('jp2zhs', jp2zhs(word), word);

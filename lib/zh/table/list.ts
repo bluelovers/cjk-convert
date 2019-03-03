@@ -190,8 +190,10 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[侭儘盡]/g, '尽')
 			.replace(/[優忧憂]/g, '忧')
 			.replace(/[俱倶]/g, '具')
-			.replace(/[之的]/g, 'の')
+			.replace(/[之的得]/g, 'の')
 			.replace(/[與与]/g, 'と')
+			.replace(/[她他牠祂]/g, '它')
+			.replace(/[支隻枝]/g, '只')
 		;
 
 		arr = charTableList(k, options);
