@@ -6,5 +6,7 @@
 import { ITable } from './core';
 export declare let table_tw2cn_plus: ITable;
 export declare let table_cn2tw_plus: ITable;
+export declare let table_tw2cn_min_plus: ITable;
+export declare let table_cn2tw_min_plus: ITable;
 declare const _default: typeof import("./table_plus");
 export default _default;

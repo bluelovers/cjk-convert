@@ -17,4 +17,12 @@ export let table_cn2tw_plus: ITable = {
 	'荡': '蕩',
 };
 
+export let table_tw2cn_min_plus: ITable = {
+	'衝': '衝',
+};
+
+export let table_cn2tw_min_plus: ITable = {
+
+};
+
 export default exports as typeof import('./table_plus');

@@ -1373,6 +1373,11 @@ export let table_plus = {
 		'吨',
 	],
 
+	'俱': [
+		'俱',
+		'倶',
+	],
+
 };
 
 Object.keys(table_plus)

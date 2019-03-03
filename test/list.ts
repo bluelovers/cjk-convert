@@ -11,44 +11,54 @@ import libTable from '../lib/zh/table';
 import { cn2tw_min, tw2cn_min } from '../lib/zh/convert/min';
 import { zhRegExp } from 'regexp-cjk';
 import UString = require('uni-string');
+import { console } from 'debug-color2';
+import jsdiff = require('diff');
+import NodeUtil = require('util');
 
-let word = `盡儘侭`;
+console.enabledColor = true;
+console.inspectOptions = {
+	colors: true,
+};
+
+let word = `冲沖衝`;
 
 word = array_unique(word.split('')).join('');
 
-console.log(`zhRegExp\n`, new zhRegExp(word));
-console.log(`zhRegExp Unicode\n`, new zhRegExp(word, 'u'));
+print_log('word', word);
 
-console.log(`zhRegExp greedyTable\n`, new zhRegExp(word, 'u', {
+print_obj(`zhRegExp\n`, new zhRegExp(word));
+print_obj(`zhRegExp Unicode\n`, new zhRegExp(word, 'u'));
+
+print_obj(`zhRegExp greedyTable\n`, new zhRegExp(word, 'u', {
 	greedyTable: true,
 }));
 
-console.log('charTableList\n', charTableList(word));
-console.log('textList\n', textList(word));
+print_obj('charTableList\n', charTableList(word));
+print_obj('textList\n', textList(word));
 
-console.log('libTable.auto\n', _table_each(word, libTable.auto));
-console.log('libTable.tw\n', _table_each(word, libTable.tw));
-console.log('libTable.cn\n', _table_each(word, libTable.cn));
-console.log('libTable.jp\n', _table_each(word, libTable.jp));
+print_obj('libTable.auto\n', _table_each(word, libTable.auto));
+print_obj('libTable.tw\n', _table_each(word, libTable.tw));
+print_obj('libTable.cn\n', _table_each(word, libTable.cn));
+print_obj('libTable.jp\n', _table_each(word, libTable.jp));
 
-console.log('libTable.auto greedyTable\n', _table_each(word, (s) => {
+print_obj('libTable.auto greedyTable\n', _table_each(word, (s) => {
 	return libTable.auto(s, {
 		greedyTable: true,
 	})
 }));
 
-console.log('cn2tw', cn2tw(word));
-console.log('tw2cn', tw2cn(word));
+print_diff('cn2tw', cn2tw(word), word);
+print_diff('tw2cn', tw2cn(word), word);
 
-console.log('cn2tw_min', cn2tw_min(word));
-console.log('tw2cn_min', tw2cn_min(word));
+print_diff('cn2tw_min', cn2tw_min(word), word);
+print_diff('tw2cn_min', tw2cn_min(word), word);
 
-console.log('jp2zht', jp2zht(word));
-console.log('jp2zhs', jp2zhs(word));
-console.log('zh2jp', zh2jp(word));
+print_diff('jp2zht', jp2zht(word), word);
+print_diff('jp2zhs', jp2zhs(word), word);
+print_diff('zh2jp', zh2jp(word), word);
 
-console.log('slugify', slugify(word));
-console.log('slugify true', slugify(word, true));
+print_diff('slugify', slugify(word), word);
+print_diff('slugify true', slugify(word, true), word);
 
 function _table_each(word: string, fn: (char: string) => string[])
 {
@@ -59,4 +69,68 @@ function _table_each(word: string, fn: (char: string) => string[])
 
 			return a;
 		}, [] as string[]))
+}
+
+function print_diff(label: unknown | unknown[], new_text: string, src_text: string)
+{
+	print_log(label, diff_log(src_text, new_text));
+}
+
+function print_obj(label: unknown | unknown[], args: unknown)
+{
+	let inspect = NodeUtil.inspect(args, console.inspectOptions);
+
+	if (Array.isArray(label))
+	{
+		console.log(...label);
+	}
+	else if (typeof label === 'string')
+	{
+		console.log(label.replace(/\n$/, ''));
+	}
+	else
+	{
+		console.log(label);
+	}
+
+	console.log(inspect);
+}
+
+function print_log(label: unknown | unknown[], ...args: unknown[])
+{
+	if (Array.isArray(label))
+	{
+		console.log(...label, ...args);
+	}
+	else
+	{
+		console.log(label, ...args);
+	}
+}
+
+function diff_log(src_text: string, new_text: string): string
+{
+	let diff = jsdiff.diffChars(src_text, new_text);
+
+	let diff_arr = diff
+		.reduce(function (a, part)
+		{
+			if (part.added)
+			{
+				let color = part.added ? 'green' :
+					part.removed ? 'red' : 'grey';
+
+				let t = console[color].chalk(part.value);
+				a.push(t);
+			}
+			else if (!part.removed)
+			{
+				a.push(part.value);
+			}
+
+			return a;
+		}, [])
+	;
+
+	return diff_arr.join('');
 }

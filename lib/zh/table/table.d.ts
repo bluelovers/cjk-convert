@@ -255,6 +255,7 @@ export declare let table_plus: {
     '牺': string[];
     '藉': string[];
     '噸': string[];
+    '俱': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

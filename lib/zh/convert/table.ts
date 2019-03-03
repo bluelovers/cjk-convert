@@ -130,6 +130,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'征': '徵',
 
+	'冲': '衝',
+
 });
 
 table_tw2cn = Object.assign(table_tw2cn, {

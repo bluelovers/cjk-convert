@@ -1,9 +1,9 @@
 import { toStrTable, toStrTableArray } from '../lib/util/strtable';
 import { table_tw2cn, table_cn2tw } from '../lib/zh/convert/table';
 import { SAFE_MODE_CHAR_MIN } from '../lib/zh/convert/min';
-import * as fs from 'fs-extra';
-import * as path from 'path';
-import { table_cn2tw_plus, table_tw2cn_plus } from '../lib/zh/convert/table_plus';
+import fs = require('fs-extra');
+import path = require('path');
+import { table_cn2tw_plus, table_tw2cn_plus, table_cn2tw_min_plus, table_tw2cn_min_plus } from '../lib/zh/convert/table_plus';
 
 let build_path = path.join(__dirname, '../build');
 
@@ -18,8 +18,8 @@ let build_path = path.join(__dirname, '../build');
 
 	await build('table_cn2tw', table_cn2tw, table_cn2tw_plus);
 
-	await buildDebug('table_tw2cn', table_tw2cn, table_cn2tw, table_tw2cn_plus);
-	await buildDebug('table_cn2tw', table_cn2tw, table_tw2cn, table_cn2tw_plus);
+	await buildDebug('table_tw2cn', table_tw2cn, table_cn2tw, table_tw2cn_plus, table_tw2cn_min_plus);
+	await buildDebug('table_cn2tw', table_cn2tw, table_tw2cn, table_cn2tw_plus, table_cn2tw_min_plus);
 })();
 
 async function buildDebug(name: string, table1: {
@@ -27,6 +27,8 @@ async function buildDebug(name: string, table1: {
 }, table2: {
 	[k: string]: string,
 }, table_plus?: {
+	[k: string]: string,
+}, table_min_plus?: {
 	[k: string]: string,
 })
 {
@@ -58,6 +60,11 @@ async function buildDebug(name: string, table1: {
 	if (table_plus)
 	{
 		Object.assign(out.safe, table_plus);
+	}
+
+	if (table_min_plus)
+	{
+		Object.assign(out.safe, table_min_plus);
 	}
 
 	let t1 = toStrTableArray(out.safe, {

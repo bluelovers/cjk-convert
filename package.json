@@ -74,6 +74,8 @@
     "uni-string": "^1.1.0"
   },
   "devDependencies": {
+    "diff": "^4.0.1",
+    "debug-color2": "^1.0.6",
     "cross-spawn-extra": "^1.0.5",
     "fs-extra": "^7"
   }
