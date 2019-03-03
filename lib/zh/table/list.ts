@@ -169,9 +169,29 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 	if (unsafe2)
 	{
 		let k = input
-			.replace(/噁/g, '惡')
+			.replace(/[噁悪惡]/g, '恶')
 			.replace(/[繋繫係]/g, '系')
 			.replace(/[糊鬍]/g, '胡')
+			.replace(/[儅噹當]/g, '当')
+			.replace(/[復複覆]/g, '复')
+			.replace(/[囌蘇甦]/g, '苏')
+			.replace(/[採彩]/g, '采')
+			.replace(/[囉啰羅]/g, '罗')
+			.replace(/[浏瀏劉]/g, '刘')
+			.replace(/[劵卷巻捲]/g, '券')
+			.replace(/[划劃畫]/g, '画')
+			.replace(/[鬥闘鬭鬪]/g, '斗')
+			.replace(/[乾亁乹幹]/g, '干')
+			.replace(/[図图]/g, '圖')
+			.replace(/[暦曆歴歷]/g, '历')
+			.replace(/[麪麵麺]/g, '面')
+			.replace(/[讃讚賛贊赞]/g, '赞')
+			.replace(/[發髪髮]/g, '发')
+			.replace(/[侭儘盡]/g, '尽')
+			.replace(/[優忧憂]/g, '忧')
+			.replace(/[俱倶]/g, '具')
+			.replace(/[之的]/g, 'の')
+			.replace(/[與与]/g, 'と')
 		;
 
 		arr = charTableList(k, options);

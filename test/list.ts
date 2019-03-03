@@ -20,7 +20,7 @@ console.inspectOptions = {
 	colors: true,
 };
 
-let word = `喂餵𫗭餧`;
+let word = `俱具`;
 
 word = array_unique(word.split('')).join('');
 
