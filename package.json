@@ -67,7 +67,6 @@
     "precommit"
   ],
   "dependencies": {
-    "@bluelovers/tsconfig": "^1.0.1",
     "array-hyper-unique": "^1.0.7",
     "chinese_convert": "1.0.8",
     "deepmerge-plus": "^2.1.3",
@@ -75,6 +74,7 @@
     "uni-string": "^1.1.0"
   },
   "devDependencies": {
+    "@bluelovers/tsconfig": "^1.0.1",
     "diff": "^4.0.1",
     "debug-color2": "^1.0.7",
     "cross-spawn-extra": "^1.0.5",
