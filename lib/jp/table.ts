@@ -106,6 +106,9 @@ const PLUS_TABLE: IPLUS_TABLE = array_unique<IPLUS_TABLE>([
 
 	["圧", "壓", "压"],
 
+	["凄", "淒", "凄"],
+	["凄", "悽", "凄"],
+
 ]);
 
 const PLUS_TABLE_SAFE: IPLUS_TABLE = array_unique([

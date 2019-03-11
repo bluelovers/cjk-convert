@@ -2,8 +2,8 @@
  * Created by user on 2018/8/30/030.
  */
 
-import * as _table_cn2tw from 'chinese_convert/cn2tw';
-import * as _table_tw2cn from 'chinese_convert/tw2cn';
+import _table_cn2tw = require('chinese_convert/cn2tw');
+import _table_tw2cn = require('chinese_convert/tw2cn');
 
 import { ITable } from './core';
 import { wiki_s2t_v2, wiki_t2s_v2 } from './wikipedia';
@@ -49,6 +49,9 @@ if (1)
 	});
 }
 
+/**
+ * 簡轉繁
+ */
 table_cn2tw = Object.assign(table_cn2tw, {
 	'恶': '惡',
 	'苏': '蘇',
@@ -138,6 +141,9 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 });
 
+/**
+ * 繁轉簡
+ */
 table_tw2cn = Object.assign(table_tw2cn, {
 	'殻': '壳',
 	'殼': '壳',
