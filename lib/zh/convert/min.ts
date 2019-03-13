@@ -31,6 +31,8 @@ export const SAFE_MODE_CHAR_MIN = array_unique(_SAFE_MODE_CHAR
 		//'憂',
 		//'優',
 		'餵',
+		'炮',
+		'砲',
 	]))
 ;
 

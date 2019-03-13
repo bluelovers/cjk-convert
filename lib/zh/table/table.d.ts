@@ -74,6 +74,7 @@ export declare let table_jp: {
     '彩': string[];
     '𠩺': string[];
     '恶': string[];
+    '炰': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
