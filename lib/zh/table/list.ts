@@ -195,6 +195,8 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[她他牠祂]/g, '它')
 			.replace(/[支隻枝]/g, '只')
 			.replace(/[炮砲炰]/g, '泡')
+			.replace(/[仲]/g, '中')
+			.replace(/[原]/g, '元')
 		;
 
 		arr = charTableList(k, options);
