@@ -141,6 +141,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'炮': '砲',
 
+	'奸': '姦',
+
 });
 
 /**

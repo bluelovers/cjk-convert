@@ -33,6 +33,8 @@ export const SAFE_MODE_CHAR_MIN = array_unique(_SAFE_MODE_CHAR
 		'餵',
 		'炮',
 		'砲',
+		'奸',
+		'姦',
 	]))
 ;
 

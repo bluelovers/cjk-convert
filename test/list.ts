@@ -20,7 +20,7 @@ console.inspectOptions = {
 	colors: true,
 };
 
-let word = `炮砲泡炰`;
+let word = `姦奸`;
 
 word = array_unique(word.split('')).join('');
 
