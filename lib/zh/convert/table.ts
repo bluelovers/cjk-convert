@@ -143,6 +143,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'奸': '姦',
 
+	'困': '睏',
+
 });
 
 /**
@@ -292,6 +294,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 
 	'隻': '只',
 	'只': '只',
+
+	'困': '困',
 
 });
 
