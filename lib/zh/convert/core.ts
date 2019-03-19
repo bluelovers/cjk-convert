@@ -113,6 +113,7 @@ export const SAFE_MODE_CHAR = array_unique([
 	'后',
 	'里',
 	'餵',
+	'志',
 ]);
 
 export function getOptionsSkip(options: IOptions, skip = SAFE_MODE_CHAR)
