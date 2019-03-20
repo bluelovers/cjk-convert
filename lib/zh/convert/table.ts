@@ -501,6 +501,9 @@ Object
 	'秘',
 	'祕',
 
+	'周',
+	'週',
+
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;

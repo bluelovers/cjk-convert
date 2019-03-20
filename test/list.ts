@@ -20,7 +20,7 @@ console.inspectOptions = {
 	colors: true,
 };
 
-let word = `鰐鳄鱷`;
+let word = `周週`;
 
 word = array_unique(word.split('')).join('');
 
