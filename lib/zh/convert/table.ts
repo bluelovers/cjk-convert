@@ -151,6 +151,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'鳄': '鱷',
 
+	'卤': '滷',
+
 });
 
 /**
@@ -310,6 +312,9 @@ table_tw2cn = Object.assign(table_tw2cn, {
 
 	'鱷': '鳄',
 	'鰐': '鳄',
+
+	'鹵': '卤',
+	'滷': '卤',
 
 });
 
@@ -503,6 +508,8 @@ Object
 
 	'周',
 	'週',
+
+	'闢',
 
 ].forEach(function (v)
 {

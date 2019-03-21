@@ -75,6 +75,12 @@ export declare let table_jp: {
     '𠩺': string[];
     '恶': string[];
     '炰': string[];
+    '辟': string[];
+    '避': string[];
+    '闢': string[];
+    '滷': string[];
+    '鹵': string[];
+    '卤': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
@@ -262,6 +268,7 @@ export declare let table_plus: {
     '向': string[];
     '悽': string[];
     '鱷': string[];
+    '滷': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;
