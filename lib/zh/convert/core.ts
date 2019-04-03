@@ -116,6 +116,8 @@ export const SAFE_MODE_CHAR = array_unique([
 	'志',
 	'布',
 	'佈',
+	'系',
+	'繫',
 ]);
 
 export function getOptionsSkip(options: IOptions, skip = SAFE_MODE_CHAR)

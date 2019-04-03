@@ -20,7 +20,7 @@ console.inspectOptions = {
 	colors: true,
 };
 
-let word = `鹵卤滷魯鲁`;
+let word = `繫系`;
 
 word = array_unique(word.split('')).join('');
 

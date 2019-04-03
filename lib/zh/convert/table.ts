@@ -153,6 +153,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'卤': '滷',
 
+	'系': '繫',
+
 });
 
 /**
@@ -315,6 +317,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 
 	'鹵': '卤',
 	'滷': '卤',
+
+	'系': '系',
 
 });
 
