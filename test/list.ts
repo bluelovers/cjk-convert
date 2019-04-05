@@ -20,7 +20,7 @@ console.inspectOptions = {
 	colors: true,
 };
 
-let word = `繫系`;
+let word = `分份`;
 
 word = array_unique(word.split('')).join('');
 

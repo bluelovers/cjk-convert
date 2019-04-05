@@ -155,6 +155,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'系': '繫',
 
+	'分': '份',
+
 });
 
 /**
@@ -319,6 +321,9 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'滷': '卤',
 
 	'系': '系',
+
+	'份': '分',
+	'分': '分',
 
 });
 
