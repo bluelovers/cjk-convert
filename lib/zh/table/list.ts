@@ -176,7 +176,7 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[復複覆]/g, '复')
 			.replace(/[囌蘇甦]/g, '苏')
 			.replace(/[採彩]/g, '采')
-			.replace(/[囉啰羅]/g, '罗')
+			.replace(/[囉啰羅㑩儸]/g, '罗')
 			.replace(/[浏瀏劉]/g, '刘')
 			.replace(/[劵卷巻捲]/g, '券')
 			.replace(/[划劃畫]/g, '画')

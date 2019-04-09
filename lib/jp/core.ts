@@ -9,6 +9,7 @@
 
 import { split } from '../util';
 import ZHJP_TABLE, { TABLE_SAFE as ZHJP_TABLE_SAFE } from './table';
+import { _re_cjk_conv } from 'regexp-helper/lib/cjk-conv';
 
 export { ZHJP_TABLE, ZHJP_TABLE_SAFE };
 
@@ -57,6 +58,9 @@ export const defaultOptions: IOptions = {
 	safe: true,
 };
 
+// /[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]+/u
+const REGEXP_TEST = new RegExp(_re_cjk_conv('u').source + '+', 'u');
+
 namespace _
 {
 	init();
@@ -78,7 +82,7 @@ namespace _
 
 			_[`${from}2${to}`] = function (str, options?: IOptions): string
 			{
-				if (!/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]+/u.test(str.toString()))
+				if (!REGEXP_TEST.test(str.toString()))
 				{
 					return str;
 				}
@@ -156,7 +160,7 @@ export const zhs2zht = _.zhs2zht;
  */
 export function zh2jp(str, options?: IOptions): string
 {
-	if (!/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]+/u.test(str.toString()))
+	if (!REGEXP_TEST.test(str.toString()))
 	{
 		return str;
 	}
@@ -208,7 +212,7 @@ export const cjk2jp = zh2jp;
  */
 export function cjk2zht(str, options?: IOptions): string
 {
-	if (!/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]+/u.test(str.toString()))
+	if (!REGEXP_TEST.test(str.toString()))
 	{
 		return str;
 	}
@@ -249,7 +253,7 @@ export function cjk2zht(str, options?: IOptions): string
  */
 export function cjk2zhs(str, options?: IOptions): string
 {
-	if (!/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]+/u.test(str.toString()))
+	if (!REGEXP_TEST.test(str.toString()))
 	{
 		return str;
 	}

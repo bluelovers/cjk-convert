@@ -6,6 +6,7 @@ import { array_unique } from 'array-hyper-unique';
 import * as _table_cn2tw from 'chinese_convert/cn2tw';
 import * as _table_tw2cn from 'chinese_convert/tw2cn';
 import UString = require('uni-string');
+import { _re_cjk_conv } from 'regexp-helper/lib/cjk-conv';
 
 export interface ITable
 {
@@ -62,7 +63,7 @@ export function textMap3(text: string, table: ITable)
 
 export function textMap4(text: string, table: ITable)
 {
-	return text.replace(/[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]/ug, function (s)
+	return text.replace(REGEXP_TEST, function (s)
 	{
 		return charMap(s, table);
 	});
@@ -107,7 +108,7 @@ export interface IOptions
 export const defaultOptions = Object.freeze({
 	safe: true,
 });
-export const REGEXP_TEST = /[\u4E00-\u9FFF\u{20000}-\u{2FA1F}]/ug;
+export const REGEXP_TEST = _re_cjk_conv('ug');
 
 export const SAFE_MODE_CHAR = array_unique([
 	'后',

@@ -20,7 +20,7 @@ console.inspectOptions = {
 	colors: true,
 };
 
-let word = `分份`;
+let word = `囉啰羅罗㑩儸`;
 
 word = array_unique(word.split('')).join('');
 
