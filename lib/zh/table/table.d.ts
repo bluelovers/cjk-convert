@@ -81,6 +81,9 @@ export declare let table_jp: {
     '滷': string[];
     '鹵': string[];
     '卤': string[];
+    '儓': string[];
+    '檯': string[];
+    '台': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發

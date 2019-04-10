@@ -201,6 +201,7 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[乾亁乹幹]/g, '干')
 			.replace(/[避闢]/g, '辟')
 			.replace(/[滷鹵卤鲁]/g, '魯')
+			.replace(/[檯臺颱儓]/g, '台')
 		;
 
 		arr = charTableList(k, options);
