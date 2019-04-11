@@ -205,6 +205,7 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[宻祕秘]/g, '密')
 			.replace(/[謎谜]/g, '迷')
 			.replace(/[砂沙]/g, '沙')
+			.replace(/[編篇编]/g, '篇')
 		;
 
 		arr = charTableList(k, options);
