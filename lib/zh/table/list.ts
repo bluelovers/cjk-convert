@@ -214,6 +214,9 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[妳祢]/ug, '你')
 			.replace(/[喰飠⻞飧]/ug, '食')
 			.replace(/[瑪馬玛马]/ug, '马')
+			.replace(/[餸餚]/ug, '餚')
+			.replace(/[裸]/ug, '果')
+			.replace(/[凱凯鎧铠]/ug, '凱')
 		;
 
 		arr = charTableList(k, options);
