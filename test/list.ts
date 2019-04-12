@@ -20,7 +20,7 @@ console.inspectOptions = {
 	colors: true,
 };
 
-let word = `唇脣`;
+let word = `她他牠祂佗`;
 
 word = array_unique(word.split('')).join('');
 

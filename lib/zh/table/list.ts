@@ -192,7 +192,7 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[俱倶]/g, '具')
 			.replace(/[之的得]/g, 'の')
 			.replace(/[與与]/g, 'と')
-			.replace(/[她他牠祂]/g, '它')
+			.replace(/[她他牠祂佗]/g, '它')
 			.replace(/[支隻枝]/g, '只')
 			.replace(/[炮砲炰]/g, '泡')
 			.replace(/[仲]/g, '中')
@@ -204,8 +204,16 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[檯臺颱儓]/g, '台')
 			.replace(/[宻祕秘]/g, '密')
 			.replace(/[謎谜]/g, '迷')
-			.replace(/[砂沙]/g, '沙')
+			.replace(/[砂莎]/g, '沙')
 			.replace(/[編篇编]/g, '篇')
+			.replace(/[冶]/g, '治')
+			.replace(/[炼煉錬鍊𫔀練练]/ug, '練')
+			.replace(/[亞亚婭]/ug, '亚')
+			.replace(/[塞賽]/ug, '赛')
+			.replace(/[腾騰籐籘]/ug, '藤')
+			.replace(/[妳祢]/ug, '你')
+			.replace(/[喰飠⻞飧]/ug, '食')
+			.replace(/[瑪馬玛马]/ug, '马')
 		;
 
 		arr = charTableList(k, options);
