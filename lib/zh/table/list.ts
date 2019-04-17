@@ -217,6 +217,14 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[餸餚]/ug, '餚')
 			.replace(/[裸]/ug, '果')
 			.replace(/[凱凯鎧铠]/ug, '凱')
+			.replace(/[帖贴]/ug, '貼')
+			.replace(/[什甚]/ug, '什')
+			.replace(/[聯联連连]/ug, '連')
+			.replace(/[像]/ug, '象')
+			.replace(/[藉]/ug, '借')
+			.replace(/[蕾]/ug, '雷')
+			.replace(/[訂订]/ug, '定')
+			.replace(/[嚮]/ug, '向')
 		;
 
 		arr = charTableList(k, options);

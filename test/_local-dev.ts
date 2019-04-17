@@ -35,5 +35,4 @@ export function mochaAsync(fn: Function)
 	};
 }
 
-import * as self from './_local-dev';
-export default self;
+export default exports as typeof import('./_local-dev');

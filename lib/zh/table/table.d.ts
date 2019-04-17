@@ -86,6 +86,8 @@ export declare let table_jp: {
     '台': string[];
     '練': string[];
     '练': string[];
+    '繫': string[];
+    '繋': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
