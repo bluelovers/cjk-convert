@@ -208,7 +208,7 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[編篇编]/g, '篇')
 			.replace(/[冶]/g, '治')
 			.replace(/[炼煉錬鍊𫔀練练]/ug, '練')
-			.replace(/[亞亚婭]/ug, '亚')
+			.replace(/[亞亚婭娅]/ug, '亚')
 			.replace(/[塞賽]/ug, '赛')
 			.replace(/[腾騰籐籘]/ug, '藤')
 			.replace(/[妳祢]/ug, '你')
