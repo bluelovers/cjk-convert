@@ -534,6 +534,9 @@ Object
 	'簷',
 	'檐',
 
+	'涌',
+	'湧',
+
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;

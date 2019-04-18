@@ -283,6 +283,7 @@ export declare let table_plus: {
     '炭': string[];
     '糸': string[];
     '簷': string[];
+    '涌': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

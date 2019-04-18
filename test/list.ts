@@ -20,7 +20,7 @@ console.inspectOptions = {
 	colors: true,
 };
 
-let word = `簷檐`;
+let word = `涌湧`;
 
 word = array_unique(word.split('')).join('');
 
