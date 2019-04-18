@@ -197,7 +197,7 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[炮砲炰]/g, '泡')
 			.replace(/[仲]/g, '中')
 			.replace(/[原]/g, '元')
-			.replace(/[迴]/g, '回')
+			.replace(/[迴廻]/g, '回')
 			.replace(/[乾亁乹幹]/g, '干')
 			.replace(/[避闢]/g, '辟')
 			.replace(/[滷鹵卤鲁]/g, '魯')
@@ -227,6 +227,7 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[嚮]/ug, '向')
 			.replace(/[糸糹丝]/ug, '絲')
 			.replace(/[筒]/ug, '桶')
+			.replace(/[兹玆滋]/ug, '茲')
 		;
 
 		arr = charTableList(k, options);
