@@ -1516,6 +1516,11 @@ export let table_plus = {
 		'丝',
 	],
 
+	'簷': [
+		'簷',
+		'檐',
+	],
+
 };
 
 Object.keys(table_plus)

@@ -531,6 +531,9 @@ Object
 
 	'闢',
 
+	'簷',
+	'檐',
+
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
