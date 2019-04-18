@@ -20,7 +20,7 @@ console.inspectOptions = {
 	colors: true,
 };
 
-let word = `従從从`;
+let word = `糸糹丝`;
 
 word = array_unique(word.split('')).join('');
 

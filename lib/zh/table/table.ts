@@ -1510,6 +1510,12 @@ export let table_plus = {
 		'碳',
 	],
 
+	'糸': [
+		'糸',
+		'絲',
+		'丝',
+	],
+
 };
 
 Object.keys(table_plus)

@@ -225,6 +225,8 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[蕾]/ug, '雷')
 			.replace(/[訂订]/ug, '定')
 			.replace(/[嚮]/ug, '向')
+			.replace(/[糸糹丝]/ug, '絲')
+			.replace(/[筒]/ug, '桶')
 		;
 
 		arr = charTableList(k, options);
