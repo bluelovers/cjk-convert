@@ -20,7 +20,7 @@ console.inspectOptions = {
 	colors: true,
 };
 
-let word = `禄祿`;
+let word = `吶呐訥讷`;
 
 word = array_unique(word.split('')).join('');
 
