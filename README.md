@@ -4,6 +4,8 @@
 
 `npm install cjk-conv`
 
+[LIVE DEMO](https://demonovel.netlify.com/tool/cjk-conv)
+
 ## usage
 
 ```ts
@@ -143,4 +145,21 @@ zhTableList.textList('司马')
 
 zhTableList.arrCjk(['司马', '上官', '欧阳', '夏侯'])
 // => [ '司马', '上官', '欧阳', '夏侯', '司馬', '歐陽', '欧陽' ]
+```
+
+### slugify
+
+> 可以用來作為檢查不同字串是否為相同的類似/異體漢字
+
+```ts
+import { slugify } from 'cjk-conv/lib/zh/table/list';
+```
+
+```ts
+let word = `吶呐訥讷`;
+
+print_diff('slugify', slugify(word), word);
+// => slugify 吶吶訥訥
+print_diff('slugify true', slugify(word, true), word);
+// => slugify true 吶吶吶吶
 ```
