@@ -88,6 +88,8 @@ export declare let table_jp: {
     '练': string[];
     '繫': string[];
     '繋': string[];
+    '糓': string[];
+    '穀': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發
@@ -284,6 +286,7 @@ export declare let table_plus: {
     '糸': string[];
     '簷': string[];
     '涌': string[];
+    '糓': string[];
 };
 export interface ISimpleTable {
     [key: string]: string;

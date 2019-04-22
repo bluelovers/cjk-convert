@@ -20,11 +20,15 @@ console.inspectOptions = {
 	colors: true,
 };
 
-let word = `吶呐訥讷`;
+NodeUtil.inspect.defaultOptions.colors = true;
 
-word = array_unique(word.split('')).join('');
+let word = `谷穀糓`;
 
-print_log('word', word);
+let ws = array_unique(UString.split(word, ''));
+
+word = ws.join('');
+
+print_log('word', NodeUtil.inspect(word), NodeUtil.inspect(ws), NodeUtil.inspect(ws.length));
 
 print_obj(`zhRegExp\n`, new zhRegExp(word));
 print_obj(`zhRegExp Unicode\n`, new zhRegExp(word, 'u'));
