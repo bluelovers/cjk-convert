@@ -70,6 +70,7 @@
 					<p>convert chinese, japanese 簡繁日漢字轉換 ( merge/split submodule from node-novel, regexp-cjk, str-util )</p>
 				</blockquote>
 				<p><code>npm install cjk-conv</code></p>
+				<p><a href="https://demonovel.netlify.com/tool/cjk-conv">LIVE DEMO</a></p>
 				<h2 id="usage">usage</h2>
 				<pre><code class="language-ts"><span class="hljs-keyword">import</span> cjkConv <span class="hljs-keyword">from</span> <span class="hljs-string">'cjk-conv'</span>;
 <span class="hljs-keyword">import</span> { cjkConv } <span class="hljs-keyword">from</span> <span class="hljs-string">'cjk-conv'</span>;
@@ -171,6 +172,17 @@ zhTableList.textList(<span class="hljs-string">'司马'</span>)
 
 zhTableList.arrCjk([<span class="hljs-string">'司马'</span>, <span class="hljs-string">'上官'</span>, <span class="hljs-string">'欧阳'</span>, <span class="hljs-string">'夏侯'</span>])
 <span class="hljs-comment">// =&gt; [ '司马', '上官', '欧阳', '夏侯', '司馬', '歐陽', '欧陽' ]</span></code></pre>
+				<h3 id="slugify">slugify</h3>
+				<blockquote>
+					<p>可以用來作為檢查不同字串是否為相同的類似/異體漢字</p>
+				</blockquote>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { slugify } <span class="hljs-keyword">from</span> <span class="hljs-string">'cjk-conv/lib/zh/table/list'</span>;</code></pre>
+				<pre><code class="language-ts"><span class="hljs-keyword">let</span> word = <span class="hljs-string">`吶呐訥讷`</span>;
+
+print_diff(<span class="hljs-string">'slugify'</span>, slugify(word), word);
+<span class="hljs-comment">// =&gt; slugify 吶吶訥訥</span>
+print_diff(<span class="hljs-string">'slugify true'</span>, slugify(word, <span class="hljs-literal">true</span>), word);
+<span class="hljs-comment">// =&gt; slugify true 吶吶吶吶</span></code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
