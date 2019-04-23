@@ -230,6 +230,7 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[兹玆滋]/ug, '茲')
 			.replace(/[呐訥讷]/ug, '吶')
 			.replace(/[穀糓]/ug, '谷')
+			.replace(/[两兩倆俩]/ug, '両')
 		;
 
 		arr = charTableList(k, options);

@@ -62,3 +62,4 @@ bin/*.d.ts
 ### temp template
 /*.log
 /*.lock
+/cjk-conv.d.ts
