@@ -165,6 +165,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'谷': '穀',
 
+	'板': '闆',
+
 });
 
 /**
@@ -340,6 +342,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 
 	'谷': '谷',
 	'穀󠄀': '谷',
+
+	'板': '板',
 
 });
 

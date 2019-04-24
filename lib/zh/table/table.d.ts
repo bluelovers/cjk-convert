@@ -90,6 +90,7 @@ export declare let table_jp: {
     '繋': string[];
     '糓': string[];
     '穀': string[];
+    '版': string[];
 };
 /**
  * 此表內符合以下任意值時會觸發

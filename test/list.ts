@@ -22,7 +22,7 @@ console.inspectOptions = {
 
 NodeUtil.inspect.defaultOptions.colors = true;
 
-let word = `週周`;
+let word = `版板闆`;
 
 let ws = array_unique(UString.split(word, ''));
 
