@@ -233,6 +233,8 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[两兩倆俩]/ug, '両')
 			.replace(/[帳賬账]/ug, '帐')
 			.replace(/[版闆]/ug, '板')
+			.replace(/[待]/ug, '呆')
+			.replace(/[熔鎔镕融螎]/ug, '溶')
 		;
 
 		arr = charTableList(k, options);

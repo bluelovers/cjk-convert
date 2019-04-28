@@ -167,6 +167,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'板': '闆',
 
+
+
 });
 
 /**

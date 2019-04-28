@@ -1,6 +1,6 @@
 {
   "name": "cjk-conv",
-  "version": "1.1.37",
+  "version": "1.1.38",
   "description": "convert chinese, japanese 簡繁日漢字轉換 ( merge/split submodule from node-novel, regexp-cjk, str-util )",
   "keywords": [
     "char",
@@ -59,7 +59,7 @@
     "build-table": "node ./script/build-str-table",
     "dts-bundle": "node ./test/dts-bundle.js && git add cjk-conv.d.ts",
     "precommit": "npm run build-table && npm run dts-bundle",
-    "prepublishOnly": "npm run build-table && npm run dts-bundle && git add cjk-conv.d.ts",
+    "prepublishOnly": "npx npm-check-updates -u --packageFile ./package.json && npm run build-table && npm run dts-bundle && git add cjk-conv.d.ts",
     "postpublish": "echo postpublish && node ./script/publish-after",
     "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\"",
     "travis": "typedoc --options ./typedoc.config.js"
@@ -76,7 +76,7 @@
     "uni-string": "^1.1.0"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.1",
+    "@bluelovers/tsconfig": "^1.0.3",
     "cross-spawn-extra": "^1.0.5",
     "debug-color2": "^1.0.7",
     "diff": "^4.0.1",
