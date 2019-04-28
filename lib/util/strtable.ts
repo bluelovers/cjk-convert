@@ -46,6 +46,9 @@ export function toStrTableArray(table: {
 			}
 			else
 			{
+				//console.dir(s1);
+				//console.dir(s2);
+				
 				throw new TypeError(msg);
 				break;
 			}

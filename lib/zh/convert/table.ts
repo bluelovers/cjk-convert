@@ -343,7 +343,7 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'綵': '䌽',
 
 	'谷': '谷',
-	'穀󠄀': '谷',
+	'穀': '谷',
 
 	'板': '板',
 
