@@ -548,6 +548,9 @@ Object
 	'涌',
 	'湧',
 
+	'家',
+	'傢',
+
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;

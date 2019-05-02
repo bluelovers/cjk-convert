@@ -1551,6 +1551,11 @@ export let table_plus = {
 		'兩',
 	],
 
+	'家': [
+		'家',
+		'傢',
+	],
+
 };
 
 Object.keys(table_plus)

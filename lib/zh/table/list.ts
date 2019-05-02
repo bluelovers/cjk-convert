@@ -238,6 +238,7 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[匯汇]/ug, '彙')
 			.replace(/[彿仏]/ug, '佛')
 			.replace(/[阿]/ug, '啊')
+			.replace(/[家]/ug, '傢')
 		;
 
 		arr = charTableList(k, options);
