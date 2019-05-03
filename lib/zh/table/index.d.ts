@@ -6,7 +6,7 @@ export { libTable };
 export declare type IOptions = {
     safe?: boolean;
     skip?: any;
-    greedyTable?: boolean;
+    greedyTable?: boolean | number;
 };
 export declare function _get(a: any, value: any, ...values: any[]): any;
 /**

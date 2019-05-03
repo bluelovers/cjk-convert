@@ -1566,8 +1566,6 @@ export let table_plus = {
 		'他',
 	],
 
-
-
 };
 
 Object.keys(table_plus)

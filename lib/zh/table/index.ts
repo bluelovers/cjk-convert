@@ -5,13 +5,14 @@
 import { jp2zht, jp2zhs, zh2jp, cjk2zht, cjk2zhs, cjk2jp } from '../../jp';
 import libTable from './table';
 import { array_unique } from '../../util';
+import { slugify } from './list';
 
 export { libTable }
 
 export type IOptions = {
 	safe?: boolean,
 	skip?,
-	greedyTable?: boolean,
+	greedyTable?: boolean | number,
 }
 
 export function _get(a, value, ...values)
@@ -87,6 +88,8 @@ export function auto(char: string, options: IOptions = {}): string[]
 	let jt = jp2zht(char);
 	let js = jp2zhs(char);
 
+	let greedyTable: number = (options.greedyTable as any) | 0;
+
 	let a = _get([],
 		char,
 		libTable.tw(char, options),
@@ -95,9 +98,11 @@ export function auto(char: string, options: IOptions = {}): string[]
 		(!options.skip || options.skip.indexOf(js) == -1) && libTable.tw(js, options),
 		libTable.jp(char, options),
 
-		(options.greedyTable && cjk2jp(char)),
-		(options.greedyTable && cjk2zhs(char)),
-		(options.greedyTable && cjk2zht(char)),
+		(greedyTable && cjk2jp(char)),
+		(greedyTable && cjk2zhs(char)),
+		(greedyTable && cjk2zht(char)),
+
+		//(greedyTable > 1 && slugify(char, true)),
 
 		);
 
