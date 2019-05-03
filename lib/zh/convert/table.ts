@@ -348,6 +348,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'彙': '汇',
 	'匯': '汇',
 
+	'祢': '祢',
+
 });
 
 [

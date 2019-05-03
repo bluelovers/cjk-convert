@@ -211,7 +211,7 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			.replace(/[亞亚婭娅]/ug, '亚')
 			.replace(/[塞賽]/ug, '赛')
 			.replace(/[腾騰籐籘]/ug, '藤')
-			.replace(/[妳祢]/ug, '你')
+			.replace(/[妳祢禰]/ug, '你')
 			.replace(/[喰飠⻞飧]/ug, '食')
 			.replace(/[瑪馬玛马]/ug, '马')
 			.replace(/[餸餚]/ug, '餚')
