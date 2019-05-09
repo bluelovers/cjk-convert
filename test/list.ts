@@ -22,7 +22,7 @@ console.inspectOptions = {
 
 NodeUtil.inspect.defaultOptions.colors = true;
 
-let word = `后餵志布系`;
+let word = `爆暴`;
 
 let ws = array_unique(UString.split(word, ''));
 
@@ -37,6 +37,10 @@ print_obj(`zhRegExp greedyTable\n`, new zhRegExp(word, 'u', {
 	greedyTable: true,
 }));
 
+print_obj(`zhRegExp greedyTable 2\n`, new zhRegExp(word, 'u', {
+	greedyTable: 2,
+}));
+
 print_obj('charTableList\n', charTableList(word));
 print_obj('textList\n', textList(word));
 
@@ -45,9 +49,15 @@ print_obj('libTable.tw\n', _table_each(word, libTable.tw));
 print_obj('libTable.cn\n', _table_each(word, libTable.cn));
 print_obj('libTable.jp\n', _table_each(word, libTable.jp));
 
-print_obj('libTable.auto greedyTable\n', _table_each(word, (s) => {
+print_obj('libTable.auto greedyTable\n', _table_each2(word, (s) => {
 	return libTable.auto(s, {
 		greedyTable: true,
+	})
+}));
+
+print_obj('libTable.auto greedyTable 2\n', _table_each2(word, (s) => {
+	return libTable.auto(s, {
+		greedyTable: 2,
 	})
 }));
 
@@ -97,6 +107,17 @@ function _table_each(word: string, fn: (char: string) => string[])
 
 			return a;
 		}, [] as string[]))
+}
+
+function _table_each2(word: string, fn: (char: string) => string[])
+{
+	return UString.split(word, '')
+		.reduce(function (a, b)
+		{
+			a.push(fn(b));
+
+			return a;
+		}, [] as string[][])
 }
 
 function print_diff(label: unknown | unknown[], new_text: string, src_text: string)

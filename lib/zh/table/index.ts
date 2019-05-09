@@ -6,6 +6,7 @@ import { jp2zht, jp2zhs, zh2jp, cjk2zht, cjk2zhs, cjk2jp } from '../../jp';
 import libTable from './table';
 import { array_unique } from '../../util';
 import { slugify } from './list';
+import { greedyTableCharArray } from './greedy';
 
 export { libTable }
 
@@ -102,7 +103,7 @@ export function auto(char: string, options: IOptions = {}): string[]
 		(greedyTable && cjk2zhs(char)),
 		(greedyTable && cjk2zht(char)),
 
-		//(greedyTable > 1 && slugify(char, true)),
+		(greedyTable > 1 && greedyTableCharArray(char)),
 
 		);
 

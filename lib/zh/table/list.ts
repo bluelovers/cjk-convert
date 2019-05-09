@@ -4,12 +4,11 @@
 
 import zhTable, { IOptions as IOptionsZhTable } from './index';
 import { IOptions as IOptionsCjkConv } from '../convert';
-import CjkConv from '../..';
-import { default as zhConvert, tw2cn, cn2tw } from '../../zh/convert/index';
-import { default as jpConvert, zh2jp, jp2zht, jp2zhs, cjk2zht, cjk2zhs, cjk2jp } from '../../jp/index';
+import { cn2tw } from '../../zh/convert/index';
+import { cjk2jp, cjk2zhs, cjk2zht } from '../../jp/index';
 
 import UString from 'uni-string';
-import { array_unique } from 'array-hyper-unique';
+import { _greedyTableBuild, greedyTableReplace, greedyTableTest } from './greedy';
 
 export type IOptions = {
 	optionsZhTable?: IOptionsZhTable,
@@ -161,92 +160,11 @@ export function slugify(input: string, options: IOptions | boolean = {}, unsafe2
 			safe: false,
 			greedyTable: true,
 			...options.optionsZhTable,
-		}
+		},
 	};
 
-	let arr: string[][];
-
-	if (unsafe2)
-	{
-		let k = input
-			.replace(/[噁悪惡]/g, '恶')
-			.replace(/[繋繫係]/g, '系')
-			.replace(/[糊鬍]/g, '胡')
-			.replace(/[儅噹當]/g, '当')
-			.replace(/[復複覆]/g, '复')
-			.replace(/[囌蘇甦]/g, '苏')
-			.replace(/[採彩睬踩埰綵䌽]/g, '采')
-			.replace(/[囉啰羅㑩儸]/g, '罗')
-			.replace(/[浏瀏劉]/g, '刘')
-			.replace(/[劵卷巻捲]/g, '券')
-			.replace(/[划劃畫]/g, '画')
-			.replace(/[鬥闘鬭鬪]/g, '斗')
-			.replace(/[乾亁乹幹]/g, '干')
-			.replace(/[図图]/g, '圖')
-			.replace(/[暦曆歴歷]/g, '历')
-			.replace(/[麪麵麺]/g, '面')
-			.replace(/[讃讚賛贊赞]/g, '赞')
-			.replace(/[發髪髮]/g, '发')
-			.replace(/[侭儘盡]/g, '尽')
-			.replace(/[優忧憂]/g, '忧')
-			.replace(/[俱倶]/g, '具')
-			.replace(/[之的得]/g, 'の')
-			.replace(/[與与]/g, 'と')
-			.replace(/[她他牠祂佗]/g, '它')
-			.replace(/[支隻枝]/g, '只')
-			.replace(/[炮砲炰]/g, '泡')
-			.replace(/[仲]/g, '中')
-			.replace(/[原]/g, '元')
-			.replace(/[迴廻]/g, '回')
-			.replace(/[乾亁乹幹]/g, '干')
-			.replace(/[避闢]/g, '辟')
-			.replace(/[滷鹵卤鲁]/g, '魯')
-			.replace(/[檯臺颱儓]/g, '台')
-			.replace(/[宻祕秘]/g, '密')
-			.replace(/[謎谜]/g, '迷')
-			.replace(/[砂莎]/g, '沙')
-			.replace(/[編篇编]/g, '篇')
-			.replace(/[冶]/g, '治')
-			.replace(/[炼煉錬鍊𫔀練练]/ug, '練')
-			.replace(/[亞亚婭娅]/ug, '亚')
-			.replace(/[塞賽]/ug, '赛')
-			.replace(/[腾騰籐籘]/ug, '藤')
-			.replace(/[妳祢禰]/ug, '你')
-			.replace(/[喰飠⻞飧]/ug, '食')
-			.replace(/[瑪馬玛马]/ug, '马')
-			.replace(/[餸餚]/ug, '餚')
-			.replace(/[裸]/ug, '果')
-			.replace(/[凱凯鎧铠]/ug, '凱')
-			.replace(/[帖贴]/ug, '貼')
-			.replace(/[什甚]/ug, '什')
-			.replace(/[聯联連连]/ug, '連')
-			.replace(/[像]/ug, '象')
-			.replace(/[藉]/ug, '借')
-			.replace(/[蕾]/ug, '雷')
-			.replace(/[訂订]/ug, '定')
-			.replace(/[嚮]/ug, '向')
-			.replace(/[糸糹丝]/ug, '絲')
-			.replace(/[筒]/ug, '桶')
-			.replace(/[兹玆滋]/ug, '茲')
-			.replace(/[呐訥讷]/ug, '吶')
-			.replace(/[穀糓]/ug, '谷')
-			.replace(/[两兩倆俩]/ug, '両')
-			.replace(/[帳賬账]/ug, '帐')
-			.replace(/[版闆]/ug, '板')
-			.replace(/[待]/ug, '呆')
-			.replace(/[熔鎔镕融螎]/ug, '溶')
-			.replace(/[匯汇]/ug, '彙')
-			.replace(/[彿仏]/ug, '佛')
-			.replace(/[阿]/ug, '啊')
-			.replace(/[家]/ug, '傢')
-		;
-
-		arr = charTableList(k, options);
-	}
-	else
-	{
-		arr = charTableList(input, options)
-	}
+	let k = unsafe2 ? greedyTableReplace(input) : input;
+	let arr: string[][] = charTableList(k, options);
 
 	return arr
 		.reduce(function (s, a)
