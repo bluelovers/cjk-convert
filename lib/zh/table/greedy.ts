@@ -80,7 +80,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[爆]/ug, '暴'],
 ]);
 
-console.log(_greedyTableCacheTest);
+//console.log(_greedyTableCacheTest);
 
 export function _greedyTableBuild(data: [RegExp, string][]): {
 	_greedyTableCacheRegexp: readonly (readonly [RegExp, string])[];
