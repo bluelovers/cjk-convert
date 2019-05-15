@@ -167,6 +167,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'板': '闆',
 
+	'注': '註',
+
 });
 
 /**
@@ -349,6 +351,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'匯': '汇',
 
 	'祢': '祢',
+
+	'注': '注',
 
 });
 

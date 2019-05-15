@@ -79,6 +79,11 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[家]/ug, '傢'],
 	[/[爆]/ug, '暴'],
 	[/[網䋄䋞綱纲]/ug, '网'],
+	[/[註]/ug, '注'],
+	[/[灌贯潅]/ug, '貫'],
+	[/[倒]/ug, '到'],
+	[/[秤]/ug, '平'],
+	[/[勋勛勲勳]/ug, '勋'],
 ]);
 
 //console.log(_greedyTableCacheTest);
