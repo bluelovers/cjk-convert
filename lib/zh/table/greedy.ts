@@ -87,7 +87,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[麗丽莉]/ug, '利'],
 	[/[已巳]/ug, '己'],
 	[/[嗬]/ug, '呵'],
-	[/[哟喲哊]/ug, '呦'],
+	[/[哊哟唷唹喲]/ug, '呦'],
 ]);
 
 //console.log(_greedyTableCacheTest);
