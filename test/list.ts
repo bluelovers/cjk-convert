@@ -22,7 +22,7 @@ console.inspectOptions = {
 
 NodeUtil.inspect.defaultOptions.colors = true;
 
-let word = `哟喲哊唷唹呦`;
+let word = `卷捲`;
 
 let ws = array_unique(UString.split(word, ''));
 
@@ -64,15 +64,15 @@ print_obj('libTable.auto greedyTable 2\n', _table_each2(word, (s) => {
 print_diff('cn2tw', cn2tw(word), word);
 print_diff('tw2cn', tw2cn(word), word);
 
-print_diff('cn2tw_min', cn2tw_min(word), word);
-print_diff('tw2cn_min', tw2cn_min(word), word);
-
 print_diff('cn2tw false', cn2tw(word, {
 	safe: false,
 }), word);
 print_diff('tw2cn false', tw2cn(word, {
 	safe: false,
 }), word);
+
+print_diff('cn2tw_min', cn2tw_min(word), word);
+print_diff('tw2cn_min', tw2cn_min(word), word);
 
 print_diff('cn2tw_min false', cn2tw_min(word, {
 	safe: false,
