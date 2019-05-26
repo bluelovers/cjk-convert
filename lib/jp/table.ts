@@ -8,7 +8,7 @@
  * @see http://www5b.biglobe.ne.jp/%7Eharigaya/variants.html
  */
 
-import { array_unique } from '../util';
+import { array_unique } from 'array-hyper-unique';
 
 /**
  * 資料來源 https://www.jpmarumaru.com/tw/teachKanjiComparison.asp
@@ -110,8 +110,6 @@ const PLUS_TABLE: IPLUS_TABLE = array_unique<IPLUS_TABLE>([
 	["凄", "悽", "凄"],
 
 	["穀󠄁", "穀󠄀", "谷"],
-
-	//["藤󠄁", "藤", "藤"],
 
 ]);
 

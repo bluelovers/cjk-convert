@@ -1,6 +1,6 @@
 {
   "name": "cjk-conv",
-  "version": "1.1.53",
+  "version": "1.1.56",
   "description": "convert chinese, japanese 簡繁日漢字轉換 ( merge/split submodule from node-novel, regexp-cjk, str-util )",
   "keywords": [
     "char",
@@ -65,7 +65,7 @@
     "dts-bundle": "node ./test/dts-bundle.js && git add cjk-conv.d.ts",
     "ncu": "npx npm-check-updates -u",
     "precommit": "npm run build-table && npm run dts-bundle",
-    "prepublishOnly": "npx npm-check-updates -u --packageFile ./package.json && npm run sort-package-json && npm run build-table && npm run dts-bundle && git add cjk-conv.d.ts",
+    "prepublishOnly": "npx npm-check-updates -u --packageFile ./package.json && npm run sort-package-json && npm run build-table && npm run dts-bundle && git add cjk-conv.d.ts && npm run test",
     "postpublish": "echo postpublish && node ./script/publish-after",
     "sort-package-json": "npx sort-package-json ./package.json",
     "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\"",

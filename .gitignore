@@ -35,3 +35,4 @@ tests/temp*
 
 
 
+/.eslintrc.json.tpl

@@ -7,5 +7,3 @@ export interface IcharCodeAtFn {
 }
 export declare function split(str: any): string[];
 export declare function charCodeAt(str: any, cb?: IcharCodeAtFn): number[];
-declare const _default: typeof import("./util");
-export default _default;

@@ -4,7 +4,7 @@
 
 import { IOptions } from '../convert/core';
 import { tw2cn, cn2tw} from '../convert/index';
-import { array_unique } from '../../util';
+import { array_unique } from 'array-hyper-unique';
 import deepmerge = require('deepmerge-plus');
 
 export let _table_tw = {

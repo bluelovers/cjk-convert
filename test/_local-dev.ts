@@ -1,13 +1,39 @@
 // @ts-ignore
-import * as chai from 'chai';
+import _chai = require('chai');
 // @ts-ignore
-import { expect, assert } from 'chai';
+// @ts-ignore
+//import { expect, assert } from 'chai';
+
+import { IChaiInstalled } from 'chai-asserttype-extra'
+//import ChaiPlugin = require('chai-asserttype-extra');
+import ChaiStatic = Chai.ChaiStatic;
+
+let chai: IChaiInstalled<ChaiStatic> | ChaiStatic;
+
+if (requireResolve('chai-asserttype-extra'))
+{
+	const ChaiPlugin = require('chai-asserttype-extra').ChaiPlugin;
+
+	chai = ChaiPlugin.install(_chai) as IChaiInstalled<ChaiStatic>;
+}
+else
+{
+	chai = _chai;
+}
+
+if (requireResolve('chai-string'))
+{
+	chai.use(require('chai-string'));
+}
+
+const { expect, assert } = chai;
+
 export { chai, expect, assert }
 
 // @ts-ignore
-import * as path from 'path';
+import path = require('path');
 // @ts-ignore
-import * as util from 'util';
+import util = require('util');
 
 export { path, util };
 
@@ -36,3 +62,16 @@ export function mochaAsync(fn: Function)
 }
 
 export default exports as typeof import('./_local-dev');
+
+export function requireResolve(name: string): string
+{
+	try
+	{
+		return require.resolve(name)
+	}
+	catch (e)
+	{
+
+	}
+	return null;
+}
