@@ -12,12 +12,12 @@ export let _table_tw = {
 	'恶': '惡',
 	'苏': '蘇',
 	'馆': '館',
-};
+} as const;
 
 /**
  * 此表內只有符合 KEY 值時才會觸發
  */
-export let table_jp = {
+let table_jp_core = {
 	'の': [
 		'の',
 		'之',
@@ -436,12 +436,12 @@ export let table_jp = {
 		'板',
 	],
 
-};
+} as const;
 
 /**
  * 此表內符合以下任意值時會觸發
  */
-export let table_plus = {
+let table_plus_core = {
 	'劍': [
 		'劍',
 		'剑',
@@ -1566,29 +1566,58 @@ export let table_plus = {
 		'他',
 	],
 
-};
+} as const;
 
-Object.keys(table_plus)
-	.forEach(function (key)
-	{
-		table_plus[key] = array_unique(table_plus[key]);
+/**
+ * 此表內符合以下任意值時會觸發
+ */
+export const table_plus = _buildTablePlus(table_plus_core);
 
-		table_plus[key].forEach(function (s)
+/**
+ * 此表內只有符合 KEY 值時才會觸發
+ */
+export const table_jp = _mergeTable(table_jp_core, table_plus);
+
+_uniqueTable(table_jp);
+
+type IArrayOrReadonly<U> = U[] | readonly U[];
+
+export function _uniqueTable<T extends Record<string, IArrayOrReadonly<string>>>(table_jp: T)
+{
+	Object.keys(table_jp)
+		.forEach(function (key)
 		{
-			table_plus[s] = table_plus[key];
+			// @ts-ignore
+			table_jp[key] = array_unique(table_jp[key]);
 		})
-	})
-;
+	;
 
-// @ts-ignore
-table_jp = deepmerge(table_jp, table_plus);
+	return table_jp;
+}
 
-Object.keys(table_jp)
-	.forEach(function (key)
-	{
-		table_jp[key] = array_unique(table_jp[key]);
-	})
-;
+export function _buildTablePlus<T extends string, U extends string>(table_plus: Record<T, IArrayOrReadonly<U>>): Record<U | T, string[]>
+{
+	Object.keys(table_plus)
+		.forEach(function (key)
+		{
+			table_plus[key] = array_unique(table_plus[key]);
+
+			table_plus[key].forEach(function (s)
+			{
+				table_plus[s] = table_plus[key];
+			})
+		})
+	;
+
+	// @ts-ignore
+	return table_plus
+}
+
+export function _mergeTable<T extends string, U extends string>(table_jp: Record<T, IArrayOrReadonly<string>>, table_plus: Record<U, IArrayOrReadonly<string>>): Record<U | T, string[]>
+{
+	// @ts-ignore
+	return deepmerge(table_jp, table_plus);
+}
 
 export interface ISimpleTable
 {
