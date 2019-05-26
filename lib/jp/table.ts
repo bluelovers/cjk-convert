@@ -111,6 +111,8 @@ const PLUS_TABLE: IPLUS_TABLE = array_unique<IPLUS_TABLE>([
 
 	["穀󠄁", "穀󠄀", "谷"],
 
+	//["藤󠄁", "藤", "藤"],
+
 ]);
 
 const PLUS_TABLE_SAFE: IPLUS_TABLE = array_unique([
