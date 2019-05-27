@@ -20,10 +20,7 @@ export function _get(a, value, ...values)
 {
 	a = libTable._get(a, value, ...values);
 
-	a = array_unique(a);
-	a.sort();
-
-	return a;
+	return array_unique(a).sort();
 }
 
 function _wrapFn(fn: string)
