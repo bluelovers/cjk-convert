@@ -22,13 +22,13 @@ console.inspectOptions = {
 
 NodeUtil.inspect.defaultOptions.colors = true;
 
-let word = `𡬶𫗭䭾`;
+let word = `痲痳痳麻嘛`;
 
 let ws = array_unique(UString.split(word, ''));
 
 word = ws.join('');
 
-print_log('word', NodeUtil.inspect(word), NodeUtil.inspect(ws.sort()), NodeUtil.inspect(ws.length));
+print_log('word', NodeUtil.inspect(word), NodeUtil.inspect(ws.sort()), NodeUtil.inspect(ws.length), ws.sort().join(''));
 
 print_obj(`zhRegExp\n`, new zhRegExp(word));
 print_obj(`zhRegExp Unicode\n`, new zhRegExp(word, 'u'));

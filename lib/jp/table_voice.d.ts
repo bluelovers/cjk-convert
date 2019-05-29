@@ -46,4 +46,8 @@ export declare function toVoice02(char: string | ITableVoiceKeys): string;
 export declare function toVoice03(char: string | ITableVoiceKeys): string;
 declare type IArrayOrReadonly<U> = U[] | readonly U[];
 export declare function _buildTablePlus<T extends string, U extends string>(table_plus: Record<T, IArrayOrReadonly<U>>): Record<U | T, ITableVoiceValues>;
+/**
+ * 清濁音
+ * [清音, 濁音, 半濁音]
+ */
 export default getVoiceAll;

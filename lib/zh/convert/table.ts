@@ -288,8 +288,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 
 	'怜': '怜',
 
-	'蕩': '荡',
 	'盪': '荡',
+	'蕩': '荡',
 
 	'悽': '悽',
 

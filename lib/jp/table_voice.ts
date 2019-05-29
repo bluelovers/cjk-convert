@@ -284,4 +284,8 @@ export function _buildTablePlus<T extends string, U extends string>(table_plus: 
 	return table_plus
 }
 
+/**
+ * 清濁音
+ * [清音, 濁音, 半濁音]
+ */
 export default getVoiceAll
