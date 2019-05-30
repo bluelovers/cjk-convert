@@ -56,7 +56,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[裸]/ug, '果'],
 	[/[凱凯鎧铠]/ug, '凱'],
 	[/[帖贴]/ug, '貼'],
-	[/[什甚]/ug, '什'],
+	[/[甚]/ug, '什'],
 	[/[聯联連连]/ug, '連'],
 	[/[像]/ug, '象'],
 	[/[藉]/ug, '借'],
@@ -83,7 +83,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[灌贯潅]/ug, '貫'],
 	[/[倒]/ug, '到'],
 	[/[秤]/ug, '平'],
-	[/[勋勛勲勳]/ug, '勋'],
+	[/[勛勲勳]/ug, '勋'],
 	[/[麗丽莉]/ug, '利'],
 	[/[已巳]/ug, '己'],
 	[/[嗬]/ug, '呵'],
@@ -91,6 +91,8 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[杰潔洁]/ug, '傑'],
 	[/[嘻]/ug, '嬉'],
 	[/[痲痳麻]/ug, '嘛'],
+	[/[狗]/ug, '犬'],
+	[/[彿拂]/ug, '佛'],
 ]);
 
 //console.log(_greedyTableCacheTest);
@@ -111,7 +113,9 @@ export function _greedyTableBuild(data: [RegExp, string][]): {
 	let arr = _greedyTableCacheRegexp
 		.reduce(function (arr, r)
 		{
-			let s = r[0].source.replace(/^.*\[|\].*$/ug, '');
+			let s = r[0].source
+				.replace(/^.*\[|\].*$/ug, '')
+			;
 
 			let a = UString.split(s, '').concat(r[1]);
 
