@@ -169,6 +169,8 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'注': '註',
 
+
+
 });
 
 /**
@@ -353,6 +355,9 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'祢': '祢',
 
 	'注': '注',
+
+	'恒': '恒',
+	'恆': '恒',
 
 });
 
@@ -556,6 +561,9 @@ Object
 
 	'家',
 	'傢',
+
+	'亘',
+	'亙',
 
 ].forEach(function (v)
 {
