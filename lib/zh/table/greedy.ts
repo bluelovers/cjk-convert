@@ -99,6 +99,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[褔]/ug, '福'],
 	[/[捱]/ug, '挨'],
 	[/[拼]/ug, '拚'],
+	[/[飄飘飃]/ug, '漂'],
 ]);
 
 //console.log(_greedyTableCacheTest);
