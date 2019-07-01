@@ -1,6 +1,6 @@
 {
   "name": "cjk-conv",
-  "version": "1.1.66",
+  "version": "1.1.67",
   "description": "convert chinese, japanese 簡繁日漢字轉換 ( merge/split submodule from node-novel, regexp-cjk, str-util )",
   "keywords": [
     "char",
@@ -61,16 +61,16 @@
   },
   "scripts": {
     "build-table": "node ./script/build-str-table",
+    "check": "yarn run build-table && yarn run check:list",
+    "check:list": "ts-node ./test/list.ts",
     "coverage": "npx nyc npm run test",
     "dts-bundle": "node ./test/dts-bundle.js && git add cjk-conv.d.ts",
     "ncu": "npx npm-check-updates -u",
-    "precommit": "npm run build-table && npm run dts-bundle",
-    "prepublishOnly": "npx npm-check-updates -u --packageFile ./package.json && npm run sort-package-json && npm run test:both && npm run dts-bundle && git add cjk-conv.d.ts && npm run test",
+    "precommit": "yarn run build-table && yarn run dts-bundle",
+    "prepublishOnly": "npx npm-check-updates -u --packageFile ./package.json && yarn run sort-package-json && yarn run check && yarn run dts-bundle && git add cjk-conv.d.ts && yarn run test",
     "postpublish": "echo postpublish && node ./script/publish-after",
     "sort-package-json": "npx sort-package-json ./package.json",
     "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\"",
-    "test:both": "npm run build-table && npm run test:list",
-    "test:list": "ts-node ./test/list.ts",
     "travis": "typedoc --options ./typedoc.config.js"
   },
   "pre-commit": [
@@ -85,7 +85,7 @@
     "uni-string": "^1.1.2"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.11",
+    "@bluelovers/tsconfig": "^1.0.12",
     "cross-spawn-extra": "^1.0.6",
     "debug-color2": "^1.1.6",
     "diff": "^4.0.1",
