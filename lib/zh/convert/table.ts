@@ -360,6 +360,7 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'恆': '恒',
 
 	'晒': '晒',
+	'杆': '杆',
 
 });
 
