@@ -359,6 +359,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'恒': '恒',
 	'恆': '恒',
 
+	'晒': '晒',
+
 });
 
 [
