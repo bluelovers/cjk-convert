@@ -102,6 +102,10 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[飄飘飃]/ug, '漂'],
 	[/[佔沾]/ug, '占'],
 	[/[気氣汽滊炁]/ug, '气'],
+	[/[撩遼]/ug, '辽'],
+	[/[做]/ug, '作'],
+	[/[搜捜]/ug, '蒐'],
+	[/[叟傁]/ug, '叟'],
 ]);
 
 //console.log(_greedyTableCacheTest);
