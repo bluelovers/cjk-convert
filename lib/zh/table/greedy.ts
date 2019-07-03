@@ -9,7 +9,7 @@ import { IOptions } from './list';
 export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheTest } = _greedyTableBuild([
 	[/[噁悪惡]/g, '恶'],
 	[/[繋繫係]/g, '系'],
-	[/[糊鬍]/g, '胡'],
+	[/[糊鬍葫衚楜]/g, '胡'],
 	[/[儅噹當]/g, '当'],
 	[/[復複覆]/g, '复'],
 	[/[囌蘇甦]/g, '苏'],
@@ -106,6 +106,14 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[做]/ug, '作'],
 	[/[搜捜]/ug, '蒐'],
 	[/[叟傁]/ug, '叟'],
+	[/[謝谢]/ug, '榭'],
+	[/[形]/ug, '型'],
+	[/[雇頋顧顾]/ug, '僱'],
+	[/[廬芦蘆]/ug, '庐'],
+	[/[耽躭]/ug, '眈'],
+	[/[傹竟競竸誩𥪰𧡟𧫘𧫙𧮣𨐼]/ug, '竞'],
+	[/[殖]/ug, '植'],
+	[/[佬姥]/ug, '老'],
 ]);
 
 //console.log(_greedyTableCacheTest);
