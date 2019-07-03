@@ -362,6 +362,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'晒': '晒',
 	'杆': '杆',
 
+	'坂': '坂',
+
 });
 
 [
