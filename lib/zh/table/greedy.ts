@@ -42,11 +42,11 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[檯臺颱儓]/g, '台'],
 	[/[宻祕秘]/g, '密'],
 	[/[謎谜]/g, '迷'],
-	[/[砂莎]/g, '沙'],
+	[/[砂莎紗纱]/g, '沙'],
 	[/[編篇编]/g, '篇'],
 	[/[冶]/g, '治'],
 	[/[炼煉錬鍊𫔀練练]/ug, '練'],
-	[/[亞亚婭娅]/ug, '亚'],
+	[/[亞亚婭娅椏桠]/ug, '亚'],
 	[/[塞賽]/ug, '赛'],
 	[/[腾騰籐籘]/ug, '藤'],
 	[/[妳祢禰]/ug, '你'],
@@ -94,7 +94,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[狗]/ug, '犬'],
 	[/[彿拂]/ug, '佛'],
 	[/[亙恆恒]/ug, '亘'],
-	[/[附]/ug, '付'],
+	[/[附副]/ug, '付'],
 	[/[伽枷珈迦]/ug, '加'],
 	[/[褔]/ug, '福'],
 	[/[捱]/ug, '挨'],
@@ -118,6 +118,10 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[㠪炬矩鉅]/ug, '巨'],
 	[/[鏈链炼錬鍊𫔀䃛𧹯練练連连]/ug, '煉'],
 	[/[刴剁剐剮劏]/ug, '㓥'],
+	[/[枏楠]/ug, '南'],
+	[/[璐𡽘𨱴]/ug, '路'],
+	[/[侂拓杔託讬]/ug, '托'],
+	[/[悕睎稀]/ug, '希'],
 ]);
 
 //console.log(_greedyTableCacheTest);
