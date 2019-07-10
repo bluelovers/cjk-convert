@@ -122,6 +122,10 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[璐𡽘𨱴]/ug, '路'],
 	[/[侂拓杔託讬]/ug, '托'],
 	[/[悕睎稀]/ug, '希'],
+	[/[帼幗国國]/ug, '囯'],
+	[/[返]/ug, '反'],
+	[/[陽阳]/ug, '佯'],
+	[/[来莱萊]/ug, '來'],
 ]);
 
 //console.log(_greedyTableCacheTest);
