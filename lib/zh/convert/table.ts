@@ -575,6 +575,9 @@ Object
 	'亘',
 	'亙',
 
+	'洩',
+	'泄',
+
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
