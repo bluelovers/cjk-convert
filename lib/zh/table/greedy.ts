@@ -135,6 +135,10 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[擀杆桿]/ug, '扞'],
 	[/[脼郞𥇑]/ug, '郎'],
 	[/[芭]/ug, '巴'],
+	[/[涅湼]/ug, '捏'],
+	[/[择擇沢泽澤]/ug, '択'],
+	[/[幵開]/ug, '开'],
+	[/[珮]/ug, '佩'],
 ]);
 
 //console.log(_greedyTableCacheTest);

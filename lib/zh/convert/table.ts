@@ -578,6 +578,9 @@ Object
 	'洩',
 	'泄',
 
+	'珮',
+	'佩',
+
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;

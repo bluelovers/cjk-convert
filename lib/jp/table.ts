@@ -114,6 +114,8 @@ const PLUS_TABLE: IPLUS_TABLE = array_unique<IPLUS_TABLE>([
 	["鶫", "鶇󠄀", "鸫"],
 	["鶇", "鶇󠄀", "鸫"],
 
+	["効", "效󠄀", null],
+
 ]);
 
 const PLUS_TABLE_SAFE: IPLUS_TABLE = array_unique([
