@@ -139,6 +139,9 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[择擇沢泽澤]/ug, '択'],
 	[/[幵開]/ug, '开'],
 	[/[珮]/ug, '佩'],
+	[/[喩籲龥]/ug, '喻'],
+	[/[值]/ug, '値'],
+	[/[臓臟贓赃髒]/ug, '脏'],
 ]);
 
 //console.log(_greedyTableCacheTest);
