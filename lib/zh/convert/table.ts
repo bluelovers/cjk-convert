@@ -169,7 +169,7 @@ table_cn2tw = Object.assign(table_cn2tw, {
 
 	'注': '註',
 
-
+	'克': '剋',
 
 });
 
@@ -363,6 +363,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 	'杆': '杆',
 
 	'坂': '坂',
+
+	'克': '克',
 
 });
 
@@ -580,6 +582,8 @@ Object
 
 	'珮',
 	'佩',
+
+	'尅',
 
 ].forEach(function (v)
 {

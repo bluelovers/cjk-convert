@@ -126,6 +126,7 @@ export const SAFE_MODE_CHAR = array_unique([
 	'谷',
 	'穀',
 	'注',
+	'克',
 ]);
 
 export function getOptionsSkip(options: IOptions, skip = SAFE_MODE_CHAR)
