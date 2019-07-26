@@ -23,7 +23,7 @@ console.inspectOptions = {
 
 NodeUtil.inspect.defaultOptions.colors = true;
 
-let word = `挿插揷插`;
+let word = `玲鈴铃林琳`;
 
 let ws = array_unique(UString.split(word, ''));
 
