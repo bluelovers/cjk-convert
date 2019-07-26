@@ -65,25 +65,33 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<h1 id="cjk-conv">cjk-conv</h1>
+				<a href="#cjk-conv" id="cjk-conv" style="color: inherit; text-decoration: none;">
+					<h1>cjk-conv</h1>
+				</a>
 				<blockquote>
 					<p>convert chinese, japanese 簡繁日漢字轉換 ( merge/split submodule from node-novel, regexp-cjk, str-util )</p>
 				</blockquote>
 				<p><code>npm install cjk-conv</code></p>
 				<p><a href="https://demonovel.netlify.com/tool/cjk-conv">LIVE DEMO</a></p>
-				<h2 id="usage">usage</h2>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>usage</h2>
+				</a>
 				<pre><code class="language-ts"><span class="hljs-keyword">import</span> cjkConv <span class="hljs-keyword">from</span> <span class="hljs-string">'cjk-conv'</span>;
 <span class="hljs-keyword">import</span> { cjkConv } <span class="hljs-keyword">from</span> <span class="hljs-string">'cjk-conv'</span>;
 <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> cjkConv <span class="hljs-keyword">from</span> <span class="hljs-string">'cjk-conv'</span>;
 <span class="hljs-keyword">const</span> cjkConv = <span class="hljs-built_in">require</span>(<span class="hljs-string">"cjk-conv"</span>);</code></pre>
-				<h3 id="api">api</h3>
+				<a href="#api" id="api" style="color: inherit; text-decoration: none;">
+					<h3>api</h3>
+				</a>
 				<p><a href="lib/index.d.ts">see</a></p>
 				<pre><code class="language-ts">{ zhConvert, tw2cn, cn2tw }
 
 { zhTable }
 
 { jpConvert, zh2jp, jp2zht, jp2zhs, cjk2zht, cjk2zhs, cjk2jp }</code></pre>
-				<h3 id="jpconvert">jpConvert</h3>
+				<a href="#jpconvert" id="jpconvert" style="color: inherit; text-decoration: none;">
+					<h3>jpConvert</h3>
+				</a>
 				<pre><code class="language-ts"><span class="hljs-keyword">let</span> t = <span class="hljs-string">'魔物解説　ランク等話　蚀蝕蝕王で触王 冒険者ギルド解説 蚀|蝕战|戦马|馬亚|亞國預中日漢字對照表'</span>;
 
 <span class="hljs-comment">/**
@@ -117,7 +125,10 @@
 
 [cjk2jp ] 魔物解説　ランク等話　蝕蝕蝕王で触王 冒険者ギルド解説 蝕</span>|<span class="hljs-string">蝕戦</span>|<span class="hljs-string">戦馬</span>|<span class="hljs-string">馬亜</span>|<span class="hljs-string">亜国預中日漢字対照表
 [cjk2zhs] 魔物解说　ランク等话　蚀蚀蚀王で触王 冒险者ギルド解说 蚀</span>|<span class="hljs-string">蚀战</span>|<span class="hljs-string">战马</span>|<span class="hljs-string">马亚</span>|<span class="hljs-string">亚国預中日汉字对照表
-[cjk2zht] 魔物解說　ランク等話　蝕蝕蝕王で觸王 冒險者ギルド解說 蝕</span>|<span class="hljs-string">蝕戰</span>|<span class="hljs-string">戰馬</span>|<span class="hljs-string">馬亞</span>|<span class="hljs-string">亞國預中日漢字對照表</span></code></pre><h3 id="zhconvert">zhConvert</h3>
+[cjk2zht] 魔物解說　ランク等話　蝕蝕蝕王で觸王 冒險者ギルド解說 蝕</span>|<span class="hljs-string">蝕戰</span>|<span class="hljs-string">戰馬</span>|<span class="hljs-string">馬亞</span>|<span class="hljs-string">亞國預中日漢字對照表</span></code></pre>
+				<a href="#zhconvert" id="zhconvert" style="color: inherit; text-decoration: none;">
+					<h3>zhConvert</h3>
+				</a>
 				<ul>
 					<li><a href="lib/zh/convert/index.d.ts">see</a></li>
 				</ul>
@@ -141,7 +152,9 @@ cn2 = tw2cn(tw, {
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'input=%s =&gt; tw =%s'</span>, input, tw);
 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'input=%s =&gt; cn2=%s'</span>, tw, cn2);
 </code></pre>
-				<h4 id="zhconvertmin">zhConvertMin</h4>
+				<a href="#zhconvertmin" id="zhconvertmin" style="color: inherit; text-decoration: none;">
+					<h4>zhConvertMin</h4>
+				</a>
 				<ul>
 					<li><a href="lib/zh/convert/min.d.ts">min.d.ts</a></li>
 				</ul>
@@ -158,9 +171,14 @@ cn2 = tw2cn(tw, {
     safe: <span class="hljs-literal">false</span>,
 }));</code></pre>
 				<pre><code><span class="hljs-symbol">1 </span><span class="hljs-comment">'並且之後在深海変異成亞種的半人魚。順便說一句，當時人魚國的守護神《海之神》特裡斯坦，發現在神代時代時被自己封印的宿敵復活了。'</span>
-<span class="hljs-symbol">2 </span><span class="hljs-comment">'並且之后在深海変異成亞種的半人魚。順便說一句，當時人魚國的守護神《海之神》特里斯坦，發現在神代時代時被自己封印的宿敵復活了。'</span></code></pre><h3 id="zhtable">zhTable</h3>
+<span class="hljs-symbol">2 </span><span class="hljs-comment">'並且之后在深海変異成亞種的半人魚。順便說一句，當時人魚國的守護神《海之神》特里斯坦，發現在神代時代時被自己封印的宿敵復活了。'</span></code></pre>
+				<a href="#zhtable" id="zhtable" style="color: inherit; text-decoration: none;">
+					<h3>zhTable</h3>
+				</a>
 				<p>提供給 <a href="https://www.npmjs.com/package/regexp-cjk"><code>regexp-cjk</code></a> 使用</p>
-				<h3 id="zhtablelist">zhTableList</h3>
+				<a href="#zhtablelist" id="zhtablelist" style="color: inherit; text-decoration: none;">
+					<h3>zhTableList</h3>
+				</a>
 				<p><a href="lib/zh/table/list.d.ts">API</a></p>
 				<p><em>port from <a href="https://github.com/bluelovers/node-segment/blob/master/lib/util/cjk.ts">novel-segment</a></em></p>
 				<pre><code class="language-ts"><span class="hljs-keyword">import</span> zhTableList <span class="hljs-keyword">from</span> <span class="hljs-string">'cjk-conv/lib/zh/table/list'</span>;</code></pre>
@@ -172,7 +190,9 @@ zhTableList.textList(<span class="hljs-string">'司马'</span>)
 
 zhTableList.arrCjk([<span class="hljs-string">'司马'</span>, <span class="hljs-string">'上官'</span>, <span class="hljs-string">'欧阳'</span>, <span class="hljs-string">'夏侯'</span>])
 <span class="hljs-comment">// =&gt; [ '司马', '上官', '欧阳', '夏侯', '司馬', '歐陽', '欧陽' ]</span></code></pre>
-				<h3 id="slugify">slugify</h3>
+				<a href="#slugify" id="slugify" style="color: inherit; text-decoration: none;">
+					<h3>slugify</h3>
+				</a>
 				<blockquote>
 					<p>可以用來作為檢查不同字串是否為相同的類似/異體漢字</p>
 				</blockquote>
@@ -208,6 +228,9 @@ print_diff(<span class="hljs-string">'slugify true'</span>, slugify(word, <span 
 						<a href="modules/_lib_jp_index_.html">"lib/jp/index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="modules/_lib_jp_list_.html">"lib/jp/list"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="modules/_lib_jp_table_.html">"lib/jp/table"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -221,6 +244,9 @@ print_diff(<span class="hljs-string">'slugify true'</span>, slugify(word, <span 
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_lib_util_strtable_.html">"lib/util/strtable"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_lib_util_zero_width_.html">"lib/util/zero-<wbr>width"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_lib_zh_convert_core_.html">"lib/zh/convert/core"</a>
@@ -300,6 +326,7 @@ print_diff(<span class="hljs-string">'slugify true'</span>, slugify(word, <span 
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -348,7 +375,7 @@ print_diff(<span class="hljs-string">'slugify true'</span>, slugify(word, <span 
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>

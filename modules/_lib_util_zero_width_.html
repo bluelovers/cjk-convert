@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ITABLE | cjk-conv</title>
+	<title>&quot;lib/util/zero-width&quot; | cjk-conv</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,30 +57,89 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_lib_jp_core_.html">&quot;lib/jp/core&quot;</a>
-				</li>
-				<li>
-					<a href="_lib_jp_core_.itable.html">ITABLE</a>
+					<a href="_lib_util_zero_width_.html">&quot;lib/util/zero-width&quot;</a>
 				</li>
 			</ul>
-			<h1>Interface ITABLE</h1>
+			<h1>External module &quot;lib/util/zero-width&quot;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-hierarchy">
-				<h3>Hierarchy</h3>
-				<ul class="tsd-hierarchy">
-					<li>
-						<span class="target">ITABLE</span>
-					</li>
-				</ul>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_lib_util_zero_width_.html#zerowidthlist" class="tsd-kind-icon">zero<wbr>Width<wbr>List</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_lib_util_zero_width_.html#zerowidthre" class="tsd-kind-icon">zero<wbr>Width<wbr>Re</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_lib_util_zero_width_.html#removezerowidth" class="tsd-kind-icon">remove<wbr>Zero<wbr>Width</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
 			</section>
-			<section class="tsd-panel tsd-kind-interface tsd-parent-kind-external-module">
-				<h3 class="tsd-before-signature">Indexable</h3>
-				<div class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><a href="_lib_jp_core_.itablesub.html" class="tsd-signature-type">ITABLESUB</a></div>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+					<a name="zerowidthlist" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> zero<wbr>Width<wbr>List</h3>
+					<div class="tsd-signature tsd-kind-icon">zero<wbr>Width<wbr>List<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">"󠄀"</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"‌"</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"‍"</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"​"</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"﻿"</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"‎"</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">"‏"</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> =&nbsp;[&#x27;\udb40\udd00&#x27;,&#x27;\u200c&#x27;,&#x27;\u200d&#x27;,&#x27;\u200b&#x27;,&#x27;\ufeff&#x27;,&#x27;\u200e&#x27;,&#x27;\u200f&#x27;,] as const</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/a00f987/lib/util/zero-width.ts#L5">lib/util/zero-width.ts:5</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Created by user on 2019/7/26.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+					<a name="zerowidthre" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> zero<wbr>Width<wbr>Re</h3>
+					<div class="tsd-signature tsd-kind-icon">zero<wbr>Width<wbr>Re<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> =&nbsp;new RegExp(zeroWidthList.join(&#x27;|&#x27;), &#x27;ug&#x27;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/a00f987/lib/util/zero-width.ts#L15">lib/util/zero-width.ts:15</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="removezerowidth" class="tsd-anchor"></a>
+					<h3>remove<wbr>Zero<wbr>Width</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Zero<wbr>Width<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/bluelovers/cjk-convert/blob/a00f987/lib/util/zero-width.ts#L17">lib/util/zero-width.ts:17</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -91,98 +150,20 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html">"lib/jp/core"</a>
-						<ul>
-							<li class=" tsd-kind-module tsd-parent-kind-external-module">
-								<a href="../modules/_lib_jp_core_._.html">_</a>
-							</li>
-						</ul>
+						<a href="_lib_util_zero_width_.html">"lib/util/zero-<wbr>width"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_lib_jp_core_.ifrom2to.html" class="tsd-kind-icon">IFrom2<wbr>To</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_lib_jp_core_.ioptions.html" class="tsd-kind-icon">IOptions</a>
-					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_lib_jp_core_.itable.html" class="tsd-kind-icon">ITABLE</a>
-					</li>
-				</ul>
-				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_lib_jp_core_.itablesub.html" class="tsd-kind-icon">ITABLESUB</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_lib_jp_core_.itable_main.html" class="tsd-kind-icon">ITABLE_<wbr>MAIN</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#ikey_from_to" class="tsd-kind-icon">IKEY_<wbr>FROM_<wbr>TO</a>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+						<a href="_lib_util_zero_width_.html#zerowidthlist" class="tsd-kind-icon">zero<wbr>Width<wbr>List</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#key_jp" class="tsd-kind-icon">KEY_<wbr>JP</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#key_zhs" class="tsd-kind-icon">KEY_<wbr>ZHS</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#key_zht" class="tsd-kind-icon">KEY_<wbr>ZHT</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#regexp_test" class="tsd-kind-icon">REGEXP_<wbr>TEST</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#table" class="tsd-kind-icon">TABLE</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#table_safe" class="tsd-kind-icon">TABLE_<wbr>SAFE</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#cjk2jp" class="tsd-kind-icon">cjk2jp</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#inited" class="tsd-kind-icon">inited</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#jp2zhs" class="tsd-kind-icon">jp2zhs</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#jp2zht" class="tsd-kind-icon">jp2zht</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#zhs2jp" class="tsd-kind-icon">zhs2jp</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#zhs2zht" class="tsd-kind-icon">zhs2zht</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#zht2jp" class="tsd-kind-icon">zht2jp</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#zht2zhs" class="tsd-kind-icon">zht2zhs</a>
+						<a href="_lib_util_zero_width_.html#zerowidthre" class="tsd-kind-icon">zero<wbr>Width<wbr>Re</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#_getdata" class="tsd-kind-icon">_getdata</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#cjk2zhs" class="tsd-kind-icon">cjk2zhs</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#cjk2zht" class="tsd-kind-icon">cjk2zht</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#init" class="tsd-kind-icon">init</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#zh2jp" class="tsd-kind-icon">zh2jp</a>
-					</li>
-					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
-						<a href="../modules/_lib_jp_core_.html#defaultoptions" class="tsd-kind-icon">default<wbr>Options</a>
+						<a href="_lib_util_zero_width_.html#removezerowidth" class="tsd-kind-icon">remove<wbr>Zero<wbr>Width</a>
 					</li>
 				</ul>
 			</nav>
