@@ -17,18 +17,20 @@ export const KEY_JP = 'jp';
 export const KEY_ZHT = 'zht';
 export const KEY_ZHS = 'zhs';
 
-let inited = false;
-export let TABLE: {
-	jp: ITABLE,
-	zht: ITABLE,
-	zhs: ITABLE,
-};
+export type IKEY_FROM_TO = typeof KEY_JP | typeof KEY_ZHT | typeof KEY_ZHS | 'jp' | 'zht' | 'zhs';
 
-export let TABLE_SAFE: {
-	jp: ITABLE,
-	zht: ITABLE,
-	zhs: ITABLE,
-};
+let inited = false;
+
+export let TABLE: ITABLE_MAIN;
+
+export let TABLE_SAFE: ITABLE_MAIN;
+
+export interface ITABLE_MAIN
+{
+	[KEY_JP]: ITABLE,
+	[KEY_ZHT]: ITABLE,
+	[KEY_ZHS]: ITABLE,
+}
 
 export interface ITABLE
 {
@@ -37,9 +39,9 @@ export interface ITABLE
 
 export interface ITABLESUB
 {
-	jp: string,
-	zht: string,
-	zhs: string,
+	[KEY_JP]: string,
+	[KEY_ZHT]: string,
+	[KEY_ZHS]: string,
 }
 
 export interface IOptions
@@ -74,9 +76,9 @@ namespace _
 
 	let langs = Object.keys(TABLE);
 
-	langs.forEach(function (from: string)
+	langs.forEach(function (from: IKEY_FROM_TO)
 	{
-		langs.forEach(function (to: string)
+		langs.forEach(function (to: IKEY_FROM_TO)
 		{
 			if (from == to) return;
 
@@ -313,11 +315,7 @@ export function init(overwrite?: boolean)
 	TABLE = _(ZHJP_TABLE);
 	TABLE_SAFE = _(ZHJP_TABLE_SAFE);
 
-	function _(src): {
-		jp: ITABLE,
-		zht: ITABLE,
-		zhs: ITABLE,
-	}
+	function _(src): ITABLE_MAIN
 	{
 		let to = {};
 		to[KEY_JP] = {} as ITABLE;
@@ -339,8 +337,8 @@ export function init(overwrite?: boolean)
 				to[k][c] = to[k][c] || {} as ITABLESUB;
 
 				to[k][c][k] = c;
-				to[k][c].zht = zht[0];
-				to[k][c].zhs = zhs[0];
+				to[k][c][KEY_ZHT] = zht[0];
+				to[k][c][KEY_ZHS] = zhs[0];
 			}
 
 			k = KEY_ZHT;
@@ -353,9 +351,9 @@ export function init(overwrite?: boolean)
 
 				to[k][c] = to[k][c] || {} as ITABLESUB;
 
-				to[k][c].jp = jp[0];
+				to[k][c][KEY_JP] = jp[0];
 				to[k][c][k] = c;
-				to[k][c].zhs = zhs[0];
+				to[k][c][KEY_ZHS] = zhs[0];
 			}
 
 			k = KEY_ZHS;
@@ -368,8 +366,8 @@ export function init(overwrite?: boolean)
 
 				to[k][c] = to[k][c] || {} as ITABLESUB;
 
-				to[k][c].jp = jp[0];
-				to[k][c].zht = zht[0];
+				to[k][c][KEY_JP] = jp[0];
+				to[k][c][KEY_ZHT] = zht[0];
 				to[k][c][k] = c;
 			}
 		});
@@ -383,7 +381,7 @@ export function init(overwrite?: boolean)
 	return TABLE;
 }
 
-export function _getdata(char: string, from: string, to: string, safe?: boolean): string
+export function _getdata(char: string, from: IKEY_FROM_TO, to: IKEY_FROM_TO, safe?: boolean): string
 {
 	if (safe)
 	{

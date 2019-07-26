@@ -11,23 +11,21 @@ export { ZHJP_TABLE, ZHJP_TABLE_SAFE };
 export declare const KEY_JP = "jp";
 export declare const KEY_ZHT = "zht";
 export declare const KEY_ZHS = "zhs";
-export declare let TABLE: {
-    jp: ITABLE;
-    zht: ITABLE;
-    zhs: ITABLE;
-};
-export declare let TABLE_SAFE: {
-    jp: ITABLE;
-    zht: ITABLE;
-    zhs: ITABLE;
-};
+export declare type IKEY_FROM_TO = typeof KEY_JP | typeof KEY_ZHT | typeof KEY_ZHS | 'jp' | 'zht' | 'zhs';
+export declare let TABLE: ITABLE_MAIN;
+export declare let TABLE_SAFE: ITABLE_MAIN;
+export interface ITABLE_MAIN {
+    [KEY_JP]: ITABLE;
+    [KEY_ZHT]: ITABLE;
+    [KEY_ZHS]: ITABLE;
+}
 export interface ITABLE {
     [key: string]: ITABLESUB;
 }
 export interface ITABLESUB {
-    jp: string;
-    zht: string;
-    zhs: string;
+    [KEY_JP]: string;
+    [KEY_ZHT]: string;
+    [KEY_ZHS]: string;
 }
 export interface IOptions {
     /**
@@ -110,12 +108,8 @@ export declare function cjk2zht(str: any, options?: IOptions): string;
  * @returns {string}
  */
 export declare function cjk2zhs(str: any, options?: IOptions): string;
-export declare function init(overwrite?: boolean): {
-    jp: ITABLE;
-    zht: ITABLE;
-    zhs: ITABLE;
-};
-export declare function _getdata(char: string, from: string, to: string, safe?: boolean): string;
+export declare function init(overwrite?: boolean): ITABLE_MAIN;
+export declare function _getdata(char: string, from: IKEY_FROM_TO, to: IKEY_FROM_TO, safe?: boolean): string;
 export interface IFrom2To extends Function {
     (str: any, options?: IOptions): string;
 }

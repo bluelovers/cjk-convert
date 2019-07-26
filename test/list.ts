@@ -14,6 +14,7 @@ import UString = require('uni-string');
 import { console } from 'debug-color2';
 import jsdiff = require('diff');
 import NodeUtil = require('util');
+import jpList from '../lib/jp/list';
 
 console.enabledColor = true;
 console.inspectOptions = {
@@ -22,7 +23,7 @@ console.inspectOptions = {
 
 NodeUtil.inspect.defaultOptions.colors = true;
 
-let word = `撥播拨撥`;
+let word = `挿插揷插`;
 
 let ws = array_unique(UString.split(word, ''));
 
@@ -94,6 +95,20 @@ print_diff('jp2zhs false', jp2zhs(word, {
 print_diff('zh2jp false', zh2jp(word, {
 	safe: false,
 }), word);
+
+print_obj('jpList.zh2jp false\n', _table_each2(word, (s) => jpList.zh2jp(s, {
+	safe: false,
+})));
+print_obj('jpList.zh2jp true\n', _table_each2(word, (s) => jpList.zh2jp(s, {
+	safe: true,
+})));
+
+print_obj('jpList.jp2zh false\n', _table_each2(word, (s) => jpList.jp2zh(s, {
+	safe: false,
+})));
+print_obj('jpList.jp2zh true\n', _table_each2(word, (s) => jpList.jp2zh(s, {
+	safe: true,
+})));
 
 print_diff('slugify', slugify(word), word);
 print_diff('slugify true', slugify(word, true), word);

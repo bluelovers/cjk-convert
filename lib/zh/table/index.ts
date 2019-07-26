@@ -7,6 +7,7 @@ import libTable from './table';
 import { array_unique } from 'array-hyper-unique';
 import { slugify } from './list';
 import { greedyTableCharArray } from './greedy';
+import jpList from '../../jp/list';
 
 export { libTable }
 
@@ -100,8 +101,14 @@ export function auto(char: string, options: IOptions = {}): string[]
 		(greedyTable && cjk2zhs(char)),
 		(greedyTable && cjk2zht(char)),
 
-		(greedyTable > 1 && greedyTableCharArray(char)),
+		(greedyTable && jpList.zh2jp(char, {
+			safe: greedyTable <= 1
+		})),
+		(greedyTable && jpList.jp2zh(char, {
+			safe: greedyTable <= 1
+		})),
 
+		(greedyTable > 1 && greedyTableCharArray(char)),
 		);
 
 	/*

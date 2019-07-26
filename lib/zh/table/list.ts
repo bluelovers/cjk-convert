@@ -4,8 +4,8 @@
 
 import zhTable, { IOptions as IOptionsZhTable } from './index';
 import { IOptions as IOptionsCjkConv } from '../convert';
-import { cn2tw } from '../../zh/convert/index';
-import { cjk2jp, cjk2zhs, cjk2zht } from '../../jp/index';
+import { cn2tw } from '../convert';
+import { cjk2jp, cjk2zhs, cjk2zht } from '../../jp';
 
 import UString from 'uni-string';
 import { _greedyTableBuild, greedyTableReplace, greedyTableTest } from './greedy';
