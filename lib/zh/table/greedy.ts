@@ -163,6 +163,10 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[菲非]/ug, '斐'],
 	[/[衩釵钗]/ug, '叉'],
 	[/[淇琪祺]/ug, '其'],
+	[/[壇談譚谈谭]/ug, '坛'],
+	[/[材柴]/ug, '才'],
+	[/[唸]/ug, '念'],
+	[/[趾]/ug, '指'],
 ]);
 
 //console.log(_greedyTableCacheTest);
