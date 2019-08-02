@@ -585,6 +585,9 @@ Object
 
 	'尅',
 
+	'剿',
+	'勦',
+
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;

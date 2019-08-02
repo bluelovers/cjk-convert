@@ -7,6 +7,7 @@ import { array_unique } from 'array-hyper-unique';
 import { IOptions } from './list';
 
 export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheTest } = _greedyTableBuild([
+
 	[/[噁悪惡]/g, '恶'],
 	[/[繋繫係]/g, '系'],
 	[/[糊鬍葫衚楜]/g, '胡'],
@@ -82,7 +83,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[註]/ug, '注'],
 	[/[灌贯潅]/ug, '貫'],
 	[/[倒]/ug, '到'],
-	[/[秤]/ug, '平'],
+	[/[儭秤称稱衬襯]/ug, '平'],
 	[/[勛勲勳]/ug, '勋'],
 	[/[麗丽莉]/ug, '利'],
 	[/[已巳]/ug, '己'],
@@ -167,6 +168,12 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[材柴]/ug, '才'],
 	[/[唸]/ug, '念'],
 	[/[趾]/ug, '指'],
+	[/[仕]/ug, '士'],
+	[/[嬢孃]/ug, '娘'],
+	[/[哑唖瘂痖]/ug, '啞'],
+	[/[动働仂]/ug, '動'],
+	[/[查査]/ug, '察'],
+
 ]);
 
 //console.log(_greedyTableCacheTest);
