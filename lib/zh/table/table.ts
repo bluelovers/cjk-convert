@@ -3,9 +3,11 @@
  */
 
 import { IOptions } from '../convert/core';
-import { tw2cn, cn2tw} from '../convert/index';
+import { tw2cn, cn2tw } from '../convert/index';
 import { array_unique } from 'array-hyper-unique';
 import deepmerge = require('deepmerge-plus');
+import { lazyAll as _jpListLazyAll } from '../../jp/list';
+import { ITSArrayListMaybeReadonly } from 'ts-type';
 
 export let _table_tw = {
 	'罗': '羅',
@@ -1396,6 +1398,7 @@ let table_plus_core = {
 		'勛',
 		'勳',
 		'勋',
+		'勲',
 	],
 
 	'祕': [
@@ -1709,15 +1712,31 @@ let table_plus_core = {
 		'祸',
 	],
 
-	'產': [
-		'產',
-		'产',
+	...jpListLazyAllMap([
+		'営',
 		'産',
-	],
-
-	'査': [
 		'査',
-		'查',
+		'絵',
+		'懐',
+		'釈',
+		'蔵',
+		'娯',
+		'焼',
+		'拡',
+		'賎',
+		'銭',
+		'雑',
+		'聴',
+		'帯',
+		'閲',
+		'覧',
+		'悪',
+		'亜',
+	] as const),
+
+	'侮': [
+		'侮',
+		'侮',
 	],
 
 } as const;
@@ -1767,7 +1786,9 @@ export function _buildTablePlus<T extends string, U extends string>(table_plus: 
 	return table_plus
 }
 
-export function _mergeTable<T extends string, U extends string>(table_jp: Record<T, IArrayOrReadonly<string>>, table_plus: Record<U, IArrayOrReadonly<string>>): Record<U | T, string[]>
+export function _mergeTable<T extends string, U extends string>(table_jp: Record<T, IArrayOrReadonly<string>>,
+	table_plus: Record<U, IArrayOrReadonly<string>>,
+): Record<U | T, string[]>
 {
 	// @ts-ignore
 	return deepmerge(table_jp, table_plus);
@@ -1838,6 +1859,26 @@ export function cn(char: string, options: IOptions = {}): string[]
 	//console.log('tw2cn', char, a);
 
 	return a;
+}
+
+type IRecordMap<K extends string> = {
+	[P in K]: (P & string)[]
+};
+
+function jpListLazyAllMap<T extends string>(arr: ITSArrayListMaybeReadonly<T>)
+{
+return (arr as T[]).reduce((a, b) => {
+	a[b] = jpListLazyAll(b);
+	return a;
+}, {} as IRecordMap<T>)
+}
+
+function jpListLazyAll<T extends string>(char: T): (T & string)[]
+{
+	return _jpListLazyAll(char, {
+		safe: false,
+		includeSelf: true,
+	}) as any
 }
 
 export default exports as typeof import('./table');

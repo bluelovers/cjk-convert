@@ -6,7 +6,8 @@ import { array_unique_overwrite } from 'array-hyper-unique';
 
 export interface IOptions
 {
-	safe?: boolean
+	safe?: boolean,
+	includeSelf?: boolean,
 }
 
 export function _fromA2B(char: string, from: IKEY_FROM_TO, to: IKEY_FROM_TO, options: IOptions = {})
@@ -34,6 +35,11 @@ export function _fromA2B(char: string, from: IKEY_FROM_TO, to: IKEY_FROM_TO, opt
 
 				})
 			;
+
+			if (options && options.includeSelf)
+			{
+				list.push(char);
+			}
 
 			list = array_unique_overwrite(list);
 		}
@@ -76,6 +82,27 @@ export function jp2zh(char: string, options?: IOptions)
 {
 	let arr = jp2zht(char, options)
 		.concat(jp2zhs(char, options));
+
+	return array_unique_overwrite(arr)
+}
+
+export function lazyAll(char: string, options?: IOptions)
+{
+	let arr = zh2jp(char, options)
+		.reduce((a, b) => {
+
+			a.push(b, ...jp2zh(b, options));
+
+			return a;
+		}, [] as string[])
+		.concat(jp2zh(char, options)
+			.reduce((a, b) => {
+
+				a.push(b, ...zh2jp(b, options));
+
+				return a;
+			}, [] as string[]))
+	;
 
 	return array_unique_overwrite(arr)
 }
