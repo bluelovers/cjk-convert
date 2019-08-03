@@ -140,7 +140,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[择擇沢泽澤]/ug, '択'],
 	[/[幵開]/ug, '开'],
 	[/[珮]/ug, '佩'],
-	[/[喩籲龥]/ug, '喻'],
+	[/[喩籲龥吁]/ug, '喻'],
 	[/[值]/ug, '値'],
 	[/[臓臟贓赃髒]/ug, '脏'],
 	[/[㊤]/ug, '上'],
@@ -173,6 +173,13 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[哑唖瘂痖]/ug, '啞'],
 	[/[动働仂]/ug, '動'],
 	[/[查査]/ug, '察'],
+	[/[鉄銕鐡鐵铁𨫓]/ug, '鉃'],
+	[/[归歸皈]/ug, '帰'],
+	[/[瘡疮創]/ug, '创'],
+	[/[拷烤]/ug, '考'],
+	[/[込]/ug, '入'],
+	[/[伦侖倫]/ug, '仑'],
+	[/[仔]/ug, '子'],
 
 ]);
 

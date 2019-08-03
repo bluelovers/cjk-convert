@@ -23,7 +23,7 @@ console.inspectOptions = {
 
 NodeUtil.inspect.defaultOptions.colors = true;
 
-let word = `査查察`;
+let word = `侮侮`;
 
 let ws = array_unique(UString.split(word, ''));
 
@@ -105,9 +105,21 @@ print_obj('jpList.zh2jp true\n', _table_each2(word, (s) => jpList.zh2jp(s, {
 
 print_obj('jpList.jp2zh false\n', _table_each2(word, (s) => jpList.jp2zh(s, {
 	safe: false,
+	includeSelf: true,
 })));
 print_obj('jpList.jp2zh true\n', _table_each2(word, (s) => jpList.jp2zh(s, {
 	safe: true,
+	includeSelf: true,
+})));
+
+print_obj('jpList.lazyAll false\n', _table_each2(word, (s) => jpList.lazyAll(s, {
+	safe: false,
+	includeSelf: true,
+})));
+
+print_obj('jpList.lazyAll true\n', _table_each2(word, (s) => jpList.lazyAll(s, {
+	safe: true,
+	includeSelf: true,
 })));
 
 print_diff('slugify', slugify(word), word);
