@@ -180,6 +180,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[込]/ug, '入'],
 	[/[伦侖倫]/ug, '仑'],
 	[/[仔]/ug, '子'],
+	[/[彎湾灣]/ug, '弯'],
 
 ]);
 
