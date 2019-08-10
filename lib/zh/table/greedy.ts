@@ -184,6 +184,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[荧萤蛍螢]/ug, '熒'],
 	[/[挣掙爭]/ug, '争'],
 	[/[漲胀脹]/ug, '涨'],
+	[/[無冇沒没]/ug, '无'],
 
 ]);
 
