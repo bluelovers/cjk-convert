@@ -590,6 +590,12 @@ Object
 	'剿',
 	'勦',
 
+	'沉',
+	'沈',
+
+	'搾',
+	'榨',
+
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
