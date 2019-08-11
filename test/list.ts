@@ -23,7 +23,7 @@ console.inspectOptions = {
 
 NodeUtil.inspect.defaultOptions.colors = true;
 
-let word = `迭疊`;
+let word = `飄漂`;
 
 let ws = array_unique(UString.split(word, ''));
 
