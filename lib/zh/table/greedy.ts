@@ -193,6 +193,8 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[背]/ug, '揹'],
 	[/[団團糰]/ug, '团'],
 	[/[榚]/ug, '糕'],
+	[/[須须]/ug, '需'],
+	[/[紆紓纡纾]/ug, '抒'],
 
 ]);
 

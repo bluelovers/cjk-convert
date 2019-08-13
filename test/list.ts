@@ -23,7 +23,7 @@ console.inspectOptions = {
 
 NodeUtil.inspect.defaultOptions.colors = true;
 
-let word = `飄漂`;
+let word = `向嚮`;
 
 let ws = array_unique(UString.split(word, ''));
 
