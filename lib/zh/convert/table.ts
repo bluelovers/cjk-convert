@@ -596,6 +596,9 @@ Object
 	'搾',
 	'榨',
 
+	'筱',
+	'篠',
+
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
