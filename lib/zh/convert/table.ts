@@ -599,6 +599,12 @@ Object
 	'筱',
 	'篠',
 
+	'陞',
+
+	'獃',
+
+	'盃',
+
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
