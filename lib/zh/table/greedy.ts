@@ -208,6 +208,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[擄虏虜]/ug, '掳'],
 	[/[翹跷蹺]/ug, '翘'],
 	[/[腳角]/ug, '脚'],
+	[/[值直]/ug, '値'],
 
 ]);
 
