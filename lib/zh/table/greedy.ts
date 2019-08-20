@@ -79,7 +79,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[阿]/ug, '啊'],
 	[/[家]/ug, '傢'],
 	[/[爆]/ug, '暴'],
-	[/[網䋄䋞綱纲]/ug, '网'],
+	[/[䋄䋞冈刚剛堈岗岡崗綱網纲缸鋼钢]/ug, '网'],
 	[/[註]/ug, '注'],
 	[/[灌贯潅]/ug, '貫'],
 	[/[倒]/ug, '到'],
@@ -200,7 +200,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[筿篠]/ug, '筱'],
 	[/[跟]/ug, '根'],
 	[/[曝爆]/ug, '暴'],
-	[/[熳]/ug, '漫'],
+	[/[㬅嫚曼熳蔓]/ug, '漫'],
 	[/[昇陞]/ug, '升'],
 	[/[待獃]/ug, '呆'],
 	[/[煙腌菸醃]/ug, '烟'],
@@ -209,6 +209,8 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[翹跷蹺]/ug, '翘'],
 	[/[腳角]/ug, '脚'],
 	[/[值直]/ug, '値'],
+	[/[词辞辭]/ug, '詞'],
+	[/[意義]/ug, '义'],
 
 ]);
 

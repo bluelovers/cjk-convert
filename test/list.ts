@@ -23,7 +23,7 @@ console.inspectOptions = {
 
 NodeUtil.inspect.defaultOptions.colors = true;
 
-let word = `直值直值値値`;
+let word = `复复復複覆`;
 
 let ws = array_unique(UString.split(word, ''));
 
