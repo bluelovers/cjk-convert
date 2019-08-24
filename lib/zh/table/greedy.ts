@@ -211,6 +211,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[值直]/ug, '値'],
 	[/[词辞辭]/ug, '詞'],
 	[/[意義]/ug, '义'],
+	[/[梗]/ug, '哏'],
 
 ]);
 
