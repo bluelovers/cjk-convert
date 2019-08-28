@@ -21,7 +21,7 @@ export const SAFE_MODE_CHAR_MIN = array_unique(_SAFE_MODE_CHAR
 	.slice()
 	.concat([
 		//'忧',
-		'脏',
+		//'脏',
 		'划',
 		'准',
 		'发',
