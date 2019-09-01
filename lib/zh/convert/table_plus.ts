@@ -15,6 +15,7 @@ export let table_cn2tw_plus: ITable = {
 	'啮': '齧',
 	'赃': '贓',
 	'荡': '蕩',
+	'发': '發',
 };
 
 export let table_tw2cn_min_plus: ITable = {
