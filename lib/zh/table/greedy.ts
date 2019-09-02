@@ -219,6 +219,8 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[決絕絶绝訣诀]/ug, '决'],
 	[/[嶽𡶦]/ug, '岳'],
 	[/[授]/ug, '受'],
+	[/[線线缐腺]/ug, '綫'],
+	[/[壱壹]/ug, '一'],
 
 ]);
 
