@@ -16,5 +16,5 @@ export declare function tw2cn_min(text: string, options?: IOptions, ...argv: any
  */
 export declare function cn2tw_min(text: string, options?: IOptions, ...argv: any[]): string;
 export declare function fixOptions(options: IOptions, table: ITable): IOptions;
-declare const _default: typeof import("./min.js");
+declare const _default: typeof import("./min");
 export default _default;

@@ -3,10 +3,10 @@
  */
 import { IOptions } from '../convert/core';
 export declare let _table_tw: {
-    readonly '罗': "羅";
-    readonly '恶': "惡";
-    readonly '苏': "蘇";
-    readonly '馆': "館";
+    readonly 罗: "羅";
+    readonly 恶: "惡";
+    readonly 苏: "蘇";
+    readonly 馆: "館";
 };
 /**
  * 此表內符合以下任意值時會觸發
