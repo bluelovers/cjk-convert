@@ -1,6 +1,6 @@
 {
   "name": "cjk-conv",
-  "version": "1.2.28",
+  "version": "1.2.30",
   "description": "convert chinese, japanese 簡繁日漢字轉換 ( merge/split submodule from node-novel, regexp-cjk, str-util )",
   "keywords": [
     "char",
@@ -65,12 +65,12 @@
     "check:list": "ts-node ./test/list.ts",
     "coverage": "npx nyc npm run test",
     "dts-bundle": "node ./test/dts-bundle.js && git add cjk-conv.d.ts",
-    "ncu": "npx npm-check-updates -u",
+    "ncu": "npx yarn-tool ncu -u",
     "precommit": "yarn run build-table && yarn run dts-bundle",
-    "prepublishOnly": "npx npm-check-updates -u --packageFile ./package.json && yarn run sort-package-json && yarn run check && yarn run dts-bundle && git add cjk-conv.d.ts && yarn run test",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run check && yarn run dts-bundle && git add cjk-conv.d.ts && yarn run test",
     "postpublish": "echo postpublish && node ./script/publish-after",
-    "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "npx mocha \"!(node_modules)\\**\\*.+(test|spec).js\"",
+    "sort-package-json": "npx yarn-tool sort",
+    "test": "npx mocha !(node_modules)/**/*.spec.js",
     "travis": "typedoc --options ./typedoc.config.js"
   },
   "pre-commit": [
@@ -82,14 +82,14 @@
     "deepmerge-plus": "^2.1.3",
     "japanese": "^1.2.0",
     "regexp-helper": "^1.0.8",
-    "ts-type": "^1.2.9",
+    "ts-type": "^1.2.12",
     "uni-string": "^1.1.2"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.13",
-    "cross-spawn-extra": "^1.0.6",
-    "debug-color2": "^1.1.6",
-    "diff": "^4.0.1",
+    "@bluelovers/tsconfig": "^1.0.15",
+    "cross-spawn-extra": "^2.0.0",
+    "debug-color2": "^1.1.7",
+    "diff": "^4.0.2",
     "fs-extra": "^8"
   },
   "_types": "cjk-conv.d.ts"
