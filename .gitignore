@@ -36,3 +36,5 @@ tests/temp*
 
 
 /.eslintrc.json.tpl
+/package.d.ts
+*.tsbuildinfo
