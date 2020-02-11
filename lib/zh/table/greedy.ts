@@ -227,6 +227,9 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[略畧]/ug, '掠'],
 	[/[簽籖籤]/ug, '签'],
 	[/[幺庅麼麽]/ug, '么'],
+	[/[芒茫]/ug, '杧'],
+	[/[跃躍]/ug, '趯'],
+	[/[弥彌瀰]/ug, '㳽'],
 
 ]);
 

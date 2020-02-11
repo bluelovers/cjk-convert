@@ -449,6 +449,8 @@ Object
 
 		'劏': '㓥',
 
+		'瀰': '㳽',
+
 	})
 	.forEach(function (v)
 	{
