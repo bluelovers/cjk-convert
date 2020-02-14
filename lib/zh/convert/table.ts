@@ -368,6 +368,8 @@ table_tw2cn = Object.assign(table_tw2cn, {
 
 	'咏': '咏',
 
+	'袜': '袜',
+
 });
 
 [
