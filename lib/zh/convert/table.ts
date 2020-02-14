@@ -451,6 +451,8 @@ Object
 
 		'瀰': '㳽',
 
+		'箋': '笺',
+
 	})
 	.forEach(function (v)
 	{
@@ -606,6 +608,8 @@ Object
 	'獃',
 
 	'盃',
+
+	'牋',
 
 ].forEach(function (v)
 {
