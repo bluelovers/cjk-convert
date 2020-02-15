@@ -122,6 +122,8 @@ const PLUS_TABLE: IPLUS_TABLE = array_unique<IPLUS_TABLE>([
 
 	["箋", "箋", "笺"],
 
+	["窓", "窗", "窗"],
+
 ]);
 
 const PLUS_TABLE_SAFE: IPLUS_TABLE = array_unique([
