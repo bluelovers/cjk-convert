@@ -10,7 +10,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 
 	[/[噁悪惡]/g, '恶'],
 	[/[繋繫係]/g, '系'],
-	[/[糊鬍葫衚楜]/g, '胡'],
+	[/[糊鬍葫衚楜煳]/g, '胡'],
 	[/[儅噹當]/g, '当'],
 	[/[復複覆]/g, '复'],
 	[/[囌蘇甦]/g, '苏'],
@@ -234,6 +234,7 @@ export const { _greedyTableCacheRegexp, _greedyTableCacheMap, _greedyTableCacheT
 	[/[囪囱窓窗窻]/ug, '䆫'],
 	[/[凾涵]/ug, '函'],
 	[/[耸聳]/ug, '悚'],
+	[/[落]/ug, '洛'],
 
 ]);
 
