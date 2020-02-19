@@ -613,6 +613,8 @@ Object
 
 	'牋',
 
+	'竝',
+
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
