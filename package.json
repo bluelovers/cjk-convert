@@ -1,6 +1,6 @@
 {
   "name": "cjk-conv",
-  "version": "1.2.41",
+  "version": "1.2.42",
   "description": "convert chinese, japanese 簡繁日漢字轉換 ( merge/split submodule from node-novel, regexp-cjk, str-util )",
   "keywords": [
     "char",
@@ -87,11 +87,11 @@
     "uni-string": "^1.1.2"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.18",
+    "@bluelovers/tsconfig": "^1.0.19",
     "cross-spawn-extra": "^2.0.0",
     "debug-color2": "^1.1.7",
     "diff": "^4.0.2",
-    "fs-extra": "^8"
+    "fs-extra": "^9"
   },
   "_types": "cjk-conv.d.ts"
 }

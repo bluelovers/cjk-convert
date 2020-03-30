@@ -39,3 +39,4 @@ tests/temp*
 /package.d.ts
 *.tsbuildinfo
 /test/debug.log
+*.map
