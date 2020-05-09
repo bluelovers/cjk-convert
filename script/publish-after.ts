@@ -33,7 +33,7 @@ import * as CrossSpawn from 'cross-spawn-extra';
 		stdio: 'inherit',
 	};
 
-	let msg = `npm publish ${PackageJson.version}`;
+	let msg = `chore(release): publish ${PackageJson.version}`;
 
 	await crossSpawn('git', [
 		'commit',
