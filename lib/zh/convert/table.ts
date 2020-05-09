@@ -615,6 +615,8 @@ Object
 
 	'竝',
 
+	'弔',
+
 ].forEach(function (v)
 {
 	table_tw2cn[v] = v;
