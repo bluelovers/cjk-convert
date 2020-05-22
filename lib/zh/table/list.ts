@@ -8,7 +8,7 @@ import { cn2tw } from '../convert';
 import { cjk2jp, cjk2zhs, cjk2zht } from '../../jp';
 
 import UString from 'uni-string';
-import { _greedyTableBuild, greedyTableReplace, greedyTableTest } from './greedy';
+import { greedyTableReplace } from '@lazy-cjk/zh-table-greedy';
 
 export type IOptions = {
 	optionsZhTable?: IOptionsZhTable,

@@ -6,7 +6,7 @@ import { jp2zht, jp2zhs, zh2jp, cjk2zht, cjk2zhs, cjk2jp } from '../../jp';
 import libTable from './table';
 import { array_unique } from 'array-hyper-unique';
 import { slugify } from './list';
-import { greedyTableCharArray } from './greedy';
+import { greedyTableCharArray } from '@lazy-cjk/zh-table-greedy';
 import jpList from '../../jp/list';
 
 export { libTable }
