@@ -77,7 +77,7 @@
   },
   "dependencies": {
     "@lazy-cjk/zh-convert-table": "^1.0.0",
-    "@lazy-cjk/zh-table-greedy": "^1.0.0",
+    "@lazy-cjk/zh-table-greedy": "^1.0.1",
     "array-hyper-unique": "^1.1.0",
     "chinese_convert": "1.0.8",
     "deepmerge-plus": "^2.1.3",
