@@ -27,19 +27,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = __importDefault(require("path"));
 const package_json_1 = __importDefault(require("../package.json"));
-/// <reference types="cross-spawn" />
-(async () => {
+const cross_spawn_extra_1 = __importDefault(require("cross-spawn-extra"));
+const git_root2_1 = __importDefault(require("git-root2"));
+exports.default = (async () => {
     const project_root = path_1.default.join(__dirname, '..');
-    let crossSpawn;
-    // @ts-ignore
-    crossSpawn = await Promise.resolve().then(() => __importStar(require('cross-spawn')));
     let gitroot;
-    // @ts-ignore
-    gitroot = await Promise.resolve().then(() => __importStar(require('git-root2')));
-    // @ts-ignore
-    gitroot = gitroot(__dirname);
+    gitroot = git_root2_1.default(__dirname);
     if (!gitroot || path_1.default.relative(gitroot, project_root)) {
-        let __root_ws = path_1.default.join(project_root, '../../..');
+        let __root_ws = await Promise.resolve().then(() => __importStar(require('../../../__root_ws'))).then(m => m.__root_ws)
+            .catch(e => null);
         if (!__root_ws || path_1.default.relative(gitroot, __root_ws)) {
             console.warn(`no git exists`);
             console.warn(`__root_ws`, __root_ws);
@@ -53,7 +49,7 @@ const package_json_1 = __importDefault(require("../package.json"));
         stdio: 'inherit',
     };
     let msg = `build(cache): build cache v${package_json_1.default.version}`;
-    await crossSpawn('git', [
+    await cross_spawn_extra_1.default.async('git', [
         'commit',
         '.',
         '-m',

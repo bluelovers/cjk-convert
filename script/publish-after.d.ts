@@ -1,4 +1,5 @@
 /**
  * Created by user on 2018/7/24/024.
  */
-export {};
+declare const _default: Promise<void>;
+export default _default;

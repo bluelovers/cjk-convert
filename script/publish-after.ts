@@ -5,26 +5,22 @@
 import path from 'path';
 import PackageJson from '../package.json';
 import CrossSpawn from 'cross-spawn-extra';
-/// <reference types="cross-spawn" />
+import getGitRoot from 'git-root2';
 
-(async () =>
+export default (async () =>
 {
 	const project_root = path.join(__dirname, '..');
 
-	let crossSpawn: typeof CrossSpawn;
-	// @ts-ignore
-	crossSpawn = await import('cross-spawn');
-
 	let gitroot: string;
 
-	// @ts-ignore
-	gitroot = await import('git-root2');
-	// @ts-ignore
-	gitroot = gitroot(__dirname);
+	gitroot = getGitRoot(__dirname);
 
 	if (!gitroot || path.relative(gitroot, project_root))
 	{
-		let __root_ws = path.join(project_root, '../../..');
+		let __root_ws = await import('../../../__root_ws')
+			.then(m => m.__root_ws)
+			.catch(e => null)
+		;
 
 		if (!__root_ws || path.relative(gitroot, __root_ws))
 		{
@@ -43,7 +39,7 @@ import CrossSpawn from 'cross-spawn-extra';
 
 	let msg = `build(cache): build cache v${PackageJson.version}`;
 
-	await crossSpawn('git', [
+	await CrossSpawn.async('git', [
 		'commit',
 		'.',
 		'-m',

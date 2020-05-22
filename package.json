@@ -65,10 +65,12 @@
     "test": "jest --coverage",
     "build-table": "ts-node ./script/build-str-table",
     "build-table:commit": "ts-node ./script/publish-after",
-    "prepublishOnly": "yarn run test",
+    "prepublishOnly": "yarn run build-table && yarn run test && yarn run build-table:commit",
+    "postpublish": "yarn run postpublishOnly:add",
     "check": "yarn run build-table && yarn run check:list",
     "check:list": "ts-node ./test/list.ts",
     "ncu": "npx yarn-tool ncu -u",
+    "postpublishOnly:add": "npx yarn-tool root run postpublishOnly:add cjk-conv",
     "precommit": "yarn run build-table",
     "sort-package-json": "npx yarn-tool sort",
     "travis": "typedoc --options ./typedoc.config.js"
