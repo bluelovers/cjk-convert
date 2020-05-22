@@ -15,7 +15,7 @@ import { array_unique } from 'array-hyper-unique';
  * @see https://www.jpmarumaru.com/tw/teachKanjiComparison.asp
  */
 // @ts-ignore
-import teachKanjiComparison = require('./teachKanjiComparison.json');
+import teachKanjiComparison from './teachKanjiComparison.json';
 
 type IPLUS_TABLE = [string, string, string][];
 

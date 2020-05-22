@@ -5,7 +5,7 @@
 import { IOptions } from '../convert/core';
 import { tw2cn, cn2tw } from '../convert/index';
 import { array_unique } from 'array-hyper-unique';
-import deepmerge = require('deepmerge-plus');
+import deepmerge from 'deepmerge-plus';
 import { lazyAll as _jpListLazyAll } from '../../jp/list';
 import { ITSArrayListMaybeReadonly } from 'ts-type';
 

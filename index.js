@@ -11,10 +11,13 @@ var __createBinding = (this && this.__createBinding) || (Object.create ? (functi
 }));
 var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
-}
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.cjkConv = exports.version = void 0;
-const index_1 = require("./lib/index");
+const index_1 = __importDefault(require("./lib/index"));
 exports.cjkConv = index_1.default;
 exports.version = require("./package.json").version;
 exports.default = index_1.default;

@@ -22,7 +22,6 @@ import {
 	SAFE_MODE_CHAR,
 	textMap,
 } from './core';
-import zhConvert = require('./index');
 import { table_cn2tw_plus, table_tw2cn_plus } from './table_plus';
 import { wiki_s2t_v2, wiki_t2s_v2 } from './wikipedia';
 
@@ -63,7 +62,7 @@ export {
 	SAFE_MODE_CHAR,
 }
 
-export default zhConvert;
+export default exports as typeof import('./index');
 
 //console.log(cn2tw('轉换最里后裡後轉换最后'));
 //console.log(tw2cn('轉换最里后裡後轉换最后'));

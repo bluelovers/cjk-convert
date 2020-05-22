@@ -62,21 +62,17 @@
   "scripts": {
     "coverage": "npx nyc npm run test",
     "pretest": "yarn run check",
-    "test": "npx mocha !(node_modules)/**/*.spec.js",
-    "build-table": "node ./script/build-str-table",
-    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run dts-bundle && git add cjk-conv.d.ts && yarn run test",
-    "postpublish": "echo postpublish && node ./script/publish-after",
+    "test": "jest --coverage",
+    "build-table": "ts-node ./script/build-str-table",
+    "build-table:commit": "ts-node ./script/publish-after",
+    "prepublishOnly": "yarn run test",
     "check": "yarn run build-table && yarn run check:list",
     "check:list": "ts-node ./test/list.ts",
-    "dts-bundle": "node ./test/dts-bundle.js && git add cjk-conv.d.ts",
     "ncu": "npx yarn-tool ncu -u",
-    "precommit": "yarn run build-table && yarn run dts-bundle",
+    "precommit": "yarn run build-table",
     "sort-package-json": "npx yarn-tool sort",
     "travis": "typedoc --options ./typedoc.config.js"
   },
-  "pre-commit": [
-    "precommit"
-  ],
   "dependencies": {
     "array-hyper-unique": "^1.1.0",
     "chinese_convert": "1.0.8",
@@ -87,13 +83,11 @@
     "uni-string": "^1.1.2"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "^1.0.19",
     "@types/diff": "^4.0.2",
-    "@types/fs-extra": "^8.1.0",
+    "@types/fs-extra": "^9.0.1",
     "cross-spawn-extra": "^2.0.0",
     "debug-color2": "^1.1.7",
     "diff": "^4.0.2",
     "fs-extra": "^9"
-  },
-  "_types": "cjk-conv.d.ts"
+  }
 }

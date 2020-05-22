@@ -2,8 +2,8 @@
  * Created by user on 2018/8/30/030.
  */
 
-import _table_cn2tw = require('chinese_convert/cn2tw');
-import _table_tw2cn = require('chinese_convert/tw2cn');
+import _table_cn2tw from 'chinese_convert/cn2tw';
+import _table_tw2cn from 'chinese_convert/tw2cn';
 
 import { ITable } from './core';
 import { wiki_s2t_v2, wiki_t2s_v2 } from './wikipedia';

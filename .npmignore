@@ -1,10 +1,3 @@
-# Created by .ignore support plugin (hsz.mobi)
-/test/
-/.idea/
-/docs/
-#/package-lock.json
-
-### npm template
 .idea
 ~ci.list.txt
 ~ci.log.txt
@@ -12,54 +5,78 @@
 *.stackdump
 *.bak
 *.old
+*.log
 tsconfig.json
 package-lock.json
 test
 .github
 .gitkeep
 /.*
-#package-lock.json
-/typedoc.config.js
-/script/
-### jsonly template
-*.ts
-!*.d.ts
-*.tmp
-### jsonly_bin template
-bin/*.ts
-/pre-commit-hook.bat
-### tsonly_test template
-test/*.js
-test/*.d.ts
-tests/*.js
-tests/*.d.ts
-__test__/*.js
-__test__/*.d.ts
-__tests__/*.js
-__tests__/*.d.ts
-### test template
-*.spec.ts
-*.spec.js
-*.spec.js.map
-*.test.ts
-*.test.js
-*.test.js.map
-### npm2 template
 tests
 /~*
 __test__
 __tests__
+node_modules
 /node_modules/
 **/node_modules/
-### Example user template template
-### Example user template
-# IntelliJ project files
-*.iml
-out
-gen
-### git_ts_bin template
-bin/*.d.ts
-### temp template
-/*.log
-/*.lock
-/cjk-conv.d.ts
+*.ts
+!*.d.ts
+/bin/**/*.d.ts
+/bin/*.d.ts
+*.tgz
+/tsconfig.json.tpl
+yarn-error.log
+.git
+yarn.lock
+.env.local
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.vue.js
+*.vue.d.ts
+*.vue.js.map
+.nyc_output
+coverage
+/*.tpl
+webpack.config.js
+vue.config.js
+/jestconfig.json
+/tslint.json
+.git
+webpack.*.config.js
+webpack.*.config.d.ts
+webpack.*.config.js.map
+webpack.*.config.ts
+karma.conf.js
+/_config.yml
+intellij-style-guide.xml
+jest.config.js
+*.tsbuildinfo
+tsconfig.*.json
+tsconfig.esm.json.tpl
+/package.d.ts
+.mocharc.yml
+jest.config.js
+jest.config.*
+/report.*.json
+now.json
+/Makefile
+*.spec.d.ts
+*.spec.js
+*.spec.ts
+*.spec.tsx
+__mocks__
+__tests__
+__snapshots__
+*.snap
+!npm-shrinkwrap.json
+/example/
+/script/
+/.browserslistrc

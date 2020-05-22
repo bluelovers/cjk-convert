@@ -5,7 +5,7 @@
 import { array_unique } from 'array-hyper-unique';
 import * as _table_cn2tw from 'chinese_convert/cn2tw';
 import * as _table_tw2cn from 'chinese_convert/tw2cn';
-import UString = require('uni-string');
+import UString from 'uni-string';
 import { _re_cjk_conv } from 'regexp-helper/lib/cjk-conv';
 
 export interface ITable

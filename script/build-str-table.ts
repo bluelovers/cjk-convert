@@ -1,8 +1,8 @@
 import { toStrTable, toStrTableArray } from '../lib/util/strtable';
 import { table_tw2cn, table_cn2tw } from '../lib/zh/convert/table';
 import { SAFE_MODE_CHAR_MIN } from '../lib/zh/convert/min';
-import fs = require('fs-extra');
-import path = require('path');
+import fs from 'fs-extra';
+import path from 'path';
 import { table_cn2tw_plus, table_tw2cn_plus, table_cn2tw_min_plus, table_tw2cn_min_plus } from '../lib/zh/convert/table_plus';
 
 let build_path = path.join(__dirname, '../build');

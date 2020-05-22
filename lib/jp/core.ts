@@ -76,8 +76,10 @@ namespace _
 
 	let langs = Object.keys(TABLE);
 
+	// @ts-ignore
 	langs.forEach(function (from: IKEY_FROM_TO)
 	{
+		// @ts-ignore
 		langs.forEach(function (to: IKEY_FROM_TO)
 		{
 			if (from == to) return;

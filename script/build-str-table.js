@@ -1,12 +1,15 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const strtable_1 = require("../lib/util/strtable");
 const table_1 = require("../lib/zh/convert/table");
 const min_1 = require("../lib/zh/convert/min");
-const fs = require("fs-extra");
-const path = require("path");
+const fs_extra_1 = __importDefault(require("fs-extra"));
+const path_1 = __importDefault(require("path"));
 const table_plus_1 = require("../lib/zh/convert/table_plus");
-let build_path = path.join(__dirname, '../build');
+let build_path = path_1.default.join(__dirname, '../build');
 (async () => {
     await build('table_tw2cn', table_1.table_tw2cn, table_plus_1.table_tw2cn_plus);
     await new Promise(function (done) {
@@ -45,14 +48,14 @@ async function buildDebug(name, table1, table2, table_plus, table_min_plus) {
         ignore: true,
     });
     let t2 = strtable_1.toStrTableArray(out.safe);
-    let path_out = path.join(build_path, 'zh/convert/');
+    let path_out = path_1.default.join(build_path, 'zh/convert/');
     let ID = 'safe';
     return Promise.all([
-        fs.outputFile(path.join(path_out, ID, `${name}.base.from.txt`), t1.from.join('')),
-        fs.outputFile(path.join(path_out, ID, `${name}.base.to.txt`), t1.to.join('')),
-        fs.outputFile(path.join(path_out, ID, `${name}.unicode.from.txt`), t2.from.join('')),
-        fs.outputFile(path.join(path_out, ID, `${name}.unicode.to.txt`), t2.to.join('')),
-        fs.outputJSON(path.join(path_out, `${name}.debug.json`), out, {
+        fs_extra_1.default.outputFile(path_1.default.join(path_out, ID, `${name}.base.from.txt`), t1.from.join('')),
+        fs_extra_1.default.outputFile(path_1.default.join(path_out, ID, `${name}.base.to.txt`), t1.to.join('')),
+        fs_extra_1.default.outputFile(path_1.default.join(path_out, ID, `${name}.unicode.from.txt`), t2.from.join('')),
+        fs_extra_1.default.outputFile(path_1.default.join(path_out, ID, `${name}.unicode.to.txt`), t2.to.join('')),
+        fs_extra_1.default.outputJSON(path_1.default.join(path_out, `${name}.debug.json`), out, {
             spaces: "\t",
         })
     ]);
@@ -77,16 +80,16 @@ table1 : ${Object.keys(table).length}
 table2 : ${Object.keys(table2).length}
 base   : ${t1.from.length}
 unicode: ${t2.from.length}`);
-    let path_out = path.join(build_path, 'zh/convert/');
+    let path_out = path_1.default.join(build_path, 'zh/convert/');
     let ID = 'unsafe';
     return Promise.all([
-        fs.outputJSON(path.join(path_out, `${name}.json`), table2, {
+        fs_extra_1.default.outputJSON(path_1.default.join(path_out, `${name}.json`), table2, {
             spaces: "\t",
         }),
-        fs.outputFile(path.join(path_out, ID, `${name}.base.from.txt`), t1.from.join('')),
-        fs.outputFile(path.join(path_out, ID, `${name}.base.to.txt`), t1.to.join('')),
-        fs.outputFile(path.join(path_out, ID, `${name}.unicode.from.txt`), t2.from.join('')),
-        fs.outputFile(path.join(path_out, ID, `${name}.unicode.to.txt`), t2.to.join('')),
+        fs_extra_1.default.outputFile(path_1.default.join(path_out, ID, `${name}.base.from.txt`), t1.from.join('')),
+        fs_extra_1.default.outputFile(path_1.default.join(path_out, ID, `${name}.base.to.txt`), t1.to.join('')),
+        fs_extra_1.default.outputFile(path_1.default.join(path_out, ID, `${name}.unicode.from.txt`), t2.from.join('')),
+        fs_extra_1.default.outputFile(path_1.default.join(path_out, ID, `${name}.unicode.to.txt`), t2.to.join('')),
     ]);
 }
 //# sourceMappingURL=build-str-table.js.map

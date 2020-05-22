@@ -2,8 +2,8 @@
  * Created by user on 2018/7/29/029.
  */
 
-import tableTw2CnDebug = require('../../../build/zh/convert/table_tw2cn.debug.json');
-import tableCn2TwDebug = require('../../../build/zh/convert/table_cn2tw.debug.json');
+import tableTw2CnDebug from '../../../build/zh/convert/table_tw2cn.debug.json';
+import tableCn2TwDebug from '../../../build/zh/convert/table_cn2tw.debug.json';
 import {
 	defaultOptions,
 	getOptions,
