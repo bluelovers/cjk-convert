@@ -63,7 +63,7 @@
     "coverage": "npx nyc npm run test",
     "pretest": "yarn run check",
     "test": "jest --coverage",
-    "build-table": "ts-node ./script/build-str-table",
+    "build-table": "yarn-tool ws run prepublishOnly:lerna && ts-node ./script/build-str-table",
     "build-table:commit": "ts-node ./script/publish-after",
     "prepublishOnly": "yarn run build-table && yarn run test && yarn run build-table:commit",
     "postpublish": "yarn run postpublishOnly:add",
