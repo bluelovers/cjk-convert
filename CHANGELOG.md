@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.50](https://github.com/bluelovers/cjk-convert/compare/cjk-conv@1.2.49...cjk-conv@1.2.50) (2020-05-26)
+
+
+### Features
+
+* 堀窟 ([677c758](https://github.com/bluelovers/cjk-convert/commit/677c758f1c0c9786fd8af5f4a5d2a56383d35f4d))
+
+
+
+
+
 ## [1.2.49](https://github.com/bluelovers/cjk-convert/compare/cjk-conv@1.2.48...cjk-conv@1.2.49) (2020-05-23)
 
 
