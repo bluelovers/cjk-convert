@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.54](https://github.com/bluelovers/cjk-convert/compare/cjk-conv@1.2.53...cjk-conv@1.2.54) (2020-05-27)
+
+**Note:** Version bump only for package cjk-conv
+
+
+
+
+
 ## [1.2.53](https://github.com/bluelovers/cjk-convert/compare/cjk-conv@1.2.52...cjk-conv@1.2.53) (2020-05-27)
 
 **Note:** Version bump only for package cjk-conv
