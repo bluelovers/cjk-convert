@@ -8,6 +8,8 @@
     "characters",
     "chinese",
     "cjk",
+    "cjk-conv",
+    "regexp-cjk",
     "cn",
     "cn2tw",
     "conv",
@@ -80,6 +82,7 @@
     "travis": "typedoc --options ./typedoc.config.js"
   },
   "dependencies": {
+    "@lazy-cjk/jp-table-comparison": "^1.0.0",
     "@lazy-cjk/jp-table-voice": "^1.0.2",
     "@lazy-cjk/zh-convert-table": "^1.0.2",
     "@lazy-cjk/zh-table-greedy": "^1.0.9",

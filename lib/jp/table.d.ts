@@ -7,7 +7,6 @@
  * @see https://hanzi.unihan.com.cn/CJKCompare
  * @see http://www5b.biglobe.ne.jp/%7Eharigaya/variants.html
  */
-export declare let TABLE: string[][];
-export declare let TABLE_SAFE: string[][];
-export declare function addNew(table: string[][], jp: any, zht: any, zhs: any): string[][];
+export * from '@lazy-cjk/jp-table-comparison';
+import TABLE from '@lazy-cjk/jp-table-comparison';
 export default TABLE;
