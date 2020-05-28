@@ -86,6 +86,7 @@
     "@lazy-cjk/jp-table-comparison": "^1.0.2",
     "@lazy-cjk/jp-table-convert": "^1.0.2",
     "@lazy-cjk/jp-table-voice": "^1.0.3",
+    "@lazy-cjk/novel-filename": "^1.0.0",
     "@lazy-cjk/util": "^1.0.0",
     "@lazy-cjk/zh-convert-table": "^1.0.3",
     "@lazy-cjk/zh-table-alias": "^1.0.0",
