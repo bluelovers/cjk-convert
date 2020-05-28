@@ -82,12 +82,13 @@
     "travis": "typedoc --options ./typedoc.config.js"
   },
   "dependencies": {
-    "@lazy-cjk/util": "^1.0.0",
     "@lazy-cjk/jp-table-alias": "^1.0.0",
     "@lazy-cjk/jp-table-comparison": "^1.0.2",
     "@lazy-cjk/jp-table-convert": "^1.0.2",
     "@lazy-cjk/jp-table-voice": "^1.0.3",
+    "@lazy-cjk/util": "^1.0.0",
     "@lazy-cjk/zh-convert-table": "^1.0.3",
+    "@lazy-cjk/zh-table-alias": "^1.0.0",
     "@lazy-cjk/zh-table-greedy": "^1.0.10",
     "array-hyper-unique": "^1.1.0",
     "chinese_convert": "1.0.8",
