@@ -82,6 +82,7 @@
     "travis": "typedoc --options ./typedoc.config.js"
   },
   "dependencies": {
+    "@lazy-cjk/util": "^1.0.0",
     "@lazy-cjk/jp-table-alias": "^1.0.0",
     "@lazy-cjk/jp-table-comparison": "^1.0.2",
     "@lazy-cjk/jp-table-convert": "^1.0.2",
