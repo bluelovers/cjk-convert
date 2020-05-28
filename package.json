@@ -1,6 +1,6 @@
 {
   "name": "cjk-conv",
-  "version": "1.2.55",
+  "version": "1.2.56",
   "description": "convert chinese, japanese 簡繁日漢字轉換 ( merge/split submodule from node-novel, regexp-cjk, str-util )",
   "keywords": [
     "char",
@@ -82,8 +82,8 @@
     "travis": "typedoc --options ./typedoc.config.js"
   },
   "dependencies": {
-    "@lazy-cjk/jp-table-comparison": "^1.0.1",
-    "@lazy-cjk/jp-table-convert": "^1.0.1",
+    "@lazy-cjk/jp-table-comparison": "^1.0.2",
+    "@lazy-cjk/jp-table-convert": "^1.0.2",
     "@lazy-cjk/jp-table-voice": "^1.0.3",
     "@lazy-cjk/zh-convert-table": "^1.0.3",
     "@lazy-cjk/zh-table-greedy": "^1.0.10",
