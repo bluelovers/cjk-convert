@@ -4,52 +4,17 @@
  * same as chinese_convert, but a little bug fix
  */
 
-//import { cn2tw as _cn2tw, tw2cn as _tw2cn } from 'chinese_convert';
+import { _call, getOptions, getOptionsSkip } from '@lazy-cjk/zh-convert/lib/util';
+import { IOptions } from '@lazy-cjk/jp-table-convert/lib/types';
+import { ITable } from '@lazy-cjk/zh-convert/lib/types';
+import { defaultOptions, REGEXP_TEST, SAFE_MODE_CHAR } from '@lazy-cjk/zh-convert/lib/const';
+import { cn2tw, tw2cn } from '@lazy-cjk/zh-convert';
+import { _cn2tw, _tw2cn } from '@lazy-cjk/zh-convert/lib/core';
+import { table_cn2tw, table_tw2cn } from '@lazy-cjk/zh-convert/lib/table';
 
-import {
-	table_cn2tw as _table_cn2tw,
-	table_tw2cn as _table_tw2cn,
-} from './table';
-
-import {
-	_call,
-	defaultOptions,
-	getOptions,
-	getOptionsSkip,
-	IOptions,
-	ITable,
-	REGEXP_TEST,
-	SAFE_MODE_CHAR,
-	textMap,
-} from './core';
-import { table_cn2tw_plus, table_tw2cn_plus } from './table_plus';
-import { wiki_s2t_v2, wiki_t2s_v2 } from './wikipedia';
-
-export function cn2tw(text: string, options: IOptions = {}, ...argv): string
-{
-	return _call(_cn2tw, text, options, ...argv);
-}
-
-export function tw2cn(text: string, options: IOptions = {}, ...argv): string
-{
-	return _call(_tw2cn, text, options, ...argv);
-}
-
-export let table_cn2tw: ITable = Object.assign({}, _table_cn2tw, table_cn2tw_plus);
-
-export let table_tw2cn: ITable = Object.assign({}, _table_tw2cn, table_tw2cn_plus);
-
-export function _cn2tw(text: string): string
-{
-	// @ts-ignore
-	return textMap(text, table_cn2tw);
-}
-
-export function _tw2cn(text: string): string
-{
-	// @ts-ignore
-	return textMap(text, table_tw2cn);
-}
+export { cn2tw, tw2cn }
+export { _cn2tw, _tw2cn }
+export { table_cn2tw, table_tw2cn }
 
 export {
 	_call,
