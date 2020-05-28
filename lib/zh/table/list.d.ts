@@ -1,42 +1,6 @@
 /**
  * Created by user on 2018/6/10/010.
  */
-import { IOptions as IOptionsZhTable } from './index';
-import { IOptions as IOptionsCjkConv } from '../convert';
-export declare type IOptions = {
-    optionsZhTable?: IOptionsZhTable;
-    skip?: any;
-    lang?: 'cn' | 'jp' | 'auto' | string;
-};
-/**
- *
- * @example
- * ```
- * charTableList('司马')
- * // => [ [ '司' ], [ '馬', '马' ] ]
- * ```
- */
-export declare function charTableList(text: string, options?: IOptions): string[][];
-/**
- *
- * @example
- * textList('司马')
- * // => [ '司馬', '司马' ]
- */
-export declare function textList(text: string, options?: IOptions): string[];
-/**
- * @example
- * arrCjk(['司马', '上官', '欧阳', '夏侯'])
- * // => [ '司马', '上官', '欧阳', '夏侯', '司馬', '歐陽', '欧陽' ]
- */
-export declare function arrCjk(arr: string[], options?: IOptionsCjkConv): string[];
-/**
- * 用來標準化字串 作為排序用
- */
-export declare function slugify(input: string, options?: IOptions, unsafe2?: boolean): string;
-/**
- * 用來標準化字串 作為排序用
- */
-export declare function slugify(input: string, unsafe2?: boolean): string;
-declare const _default: typeof import("./list");
-export default _default;
+export * from '@lazy-cjk/zh-table-list/list';
+import m from '@lazy-cjk/zh-table-list/list';
+export default m;
