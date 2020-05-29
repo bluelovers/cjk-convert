@@ -3,6 +3,7 @@
  */
 
 export * from '@lazy-cjk/zh-table-list/list';
+export { slugify } from '@lazy-cjk/zh-slugify';
 import m from '@lazy-cjk/zh-table-list/list';
 
 export default m
