@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.58](https://github.com/bluelovers/cjk-convert/compare/cjk-conv@1.2.57...cjk-conv@1.2.58) (2020-05-29)
+
+
+### Features
+
+* zh-table-greedy 摩|磨 ([48e20b4](https://github.com/bluelovers/cjk-convert/commit/48e20b4845c1475ec1c8f92410898380dc5e98a6))
+
+
+
+
+
 ## [1.2.57](https://github.com/bluelovers/cjk-convert/compare/cjk-conv@1.2.56...cjk-conv@1.2.57) (2020-05-28)
 
 **Note:** Version bump only for package cjk-conv
