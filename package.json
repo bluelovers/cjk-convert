@@ -108,5 +108,6 @@
     "debug-color2": "^1.1.7",
     "diff": "^4.0.2",
     "fs-extra": "^9"
-  }
+  },
+  "gitHead": "84da12815921fe73cbb5cccb4c9e5dd9cfdcea00"
 }
