@@ -16,10 +16,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.cjkConv = exports.version = void 0;
+exports.cjkConv = void 0;
 const index_1 = __importDefault(require("./lib/index"));
 exports.cjkConv = index_1.default;
-exports.version = require("./package.json").version;
-exports.default = index_1.default;
+__exportStar(require("./version"), exports);
 __exportStar(require("./lib/index"), exports);
+exports.default = index_1.default;
 //# sourceMappingURL=index.js.map

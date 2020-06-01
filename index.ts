@@ -3,9 +3,9 @@
  */
 
 import cjkConv from './lib/index';
-
-export const version = require("./package.json").version as string;
+export * from './version';
 
 export { cjkConv }
-export default cjkConv;
+
 export * from './lib/index';
+export default cjkConv;
