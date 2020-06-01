@@ -1,5 +1,5 @@
 import { cn2tw, tw2cn } from '../../lib/zh/convert';
-import table_same from '@lazy-cjk/zh-convert-table/test/raw/table_same';
+import table_same from '@lazy-cjk/zh-convert-table/lib/table/table_same';
 
 describe(`simple check`, () =>
 {
