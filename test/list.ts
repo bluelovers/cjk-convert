@@ -23,7 +23,7 @@ console.inspectOptions = {
 
 NodeUtil.inspect.defaultOptions.colors = true;
 
-let word = `傍彷徬旁`;
+let word = `戆戇灨贑贛赣𥫔𧹄𧹉𫎬`;
 
 let ws = array_unique(UString.split(word, ''));
 
