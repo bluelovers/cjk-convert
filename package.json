@@ -45,13 +45,13 @@
     "zhs",
     "zht"
   ],
-  "homepage": "https://github.com/bluelovers/cjk-convert#readme",
+  "homepage": "https://github.com/bluelovers/ws-regexp/tree/master/packages/cjk-conv#readme",
   "bugs": {
-    "url": "https://github.com/bluelovers/cjk-convert/issues"
+    "url": "https://github.com/bluelovers/ws-regexp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/cjk-convert.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -109,6 +109,5 @@
     "debug-color2": "^1.1.7",
     "diff": "^4.0.2",
     "fs-extra": "^9"
-  },
-  "gitHead": "3bd5e2d251d59c760e47ac09487c70a409332763"
+  }
 }
