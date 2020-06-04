@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.74](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.73...cjk-conv@1.2.74) (2020-06-04)
+
+
+### Bug Fixes
+
+* avoid multi re-export bug of typescript ([2ba787b](https://github.com/bluelovers/ws-regexp/commit/2ba787be11ecf9e5821c735b0e53dc2f85b4f8e6))
+
+
+### Features
+
+* npx @yarn-tool/fix-ws-links ([4b2084b](https://github.com/bluelovers/ws-regexp/commit/4b2084b4f1b937bfeac2770f66c7aa1f9f05c2bd))
+
+
+
+
+
 ## [1.2.73](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.72...cjk-conv@1.2.73) (2020-06-04)
 
 **Note:** Version bump only for package cjk-conv
