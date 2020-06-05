@@ -102,12 +102,5 @@
     "ts-type": "^1.2.17",
     "uni-string": "^1.1.2"
   },
-  "devDependencies": {
-    "@types/diff": "^4.0.2",
-    "@types/fs-extra": "^9.0.1",
-    "cross-spawn-extra": "^2.0.0",
-    "debug-color2": "^1.1.7",
-    "diff": "^4.0.2",
-    "fs-extra": "^9"
-  }
+  "devDependencies": {}
 }
