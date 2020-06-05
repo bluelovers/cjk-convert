@@ -94,7 +94,7 @@
     "@lazy-cjk/zh-table-alias": "^1.0.12",
     "@lazy-cjk/zh-table-greedy": "^1.0.21",
     "@lazy-cjk/zh-table-list": "^1.0.15",
-    "array-hyper-unique": "^1.1.0",
+    "array-hyper-unique": "^1.1.2",
     "chinese_convert": "1.0.8",
     "deepmerge-plus": "^2.1.3",
     "japanese": "^1.2.0",
