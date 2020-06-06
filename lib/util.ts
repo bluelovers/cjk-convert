@@ -3,7 +3,6 @@
  */
 
 import UString from 'uni-string';
-export { array_unique, lazy_unique } from 'array-hyper-unique';
 
 export interface IcharCodeAtFn
 {
