@@ -94,6 +94,6 @@
     "@lazy-cjk/zh-table-alias": "^1.0.14",
     "@lazy-cjk/zh-table-greedy": "^1.0.22",
     "@lazy-cjk/zh-table-list": "^1.0.17",
-    "uni-string": "^1.1.2"
+    "uni-string": "^1.1.7"
   }
 }
