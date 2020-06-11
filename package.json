@@ -1,6 +1,6 @@
 {
   "name": "cjk-conv",
-  "version": "1.2.84",
+  "version": "1.2.85",
   "description": "convert chinese, japanese 簡繁日漢字轉換 ( merge/split submodule from node-novel, regexp-cjk, str-util )",
   "keywords": [
     "char",
@@ -90,10 +90,10 @@
     "@lazy-cjk/util": "^1.0.6",
     "@lazy-cjk/zh-convert": "^1.0.16",
     "@lazy-cjk/zh-convert-table": "^1.0.8",
-    "@lazy-cjk/zh-slugify": "^1.0.27",
+    "@lazy-cjk/zh-slugify": "^1.0.28",
     "@lazy-cjk/zh-table-alias": "^1.0.21",
-    "@lazy-cjk/zh-table-greedy": "^1.0.27",
-    "@lazy-cjk/zh-table-list": "^1.0.24",
+    "@lazy-cjk/zh-table-greedy": "^1.0.28",
+    "@lazy-cjk/zh-table-list": "^1.0.25",
     "uni-string": "^1.1.9"
   },
   "gitHead": "b8c0cb19ff443b9c08281b1af16c07401abfbf58"
