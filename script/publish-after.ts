@@ -5,7 +5,7 @@
 import path from 'path';
 import PackageJson from '../package.json';
 import CrossSpawn from 'cross-spawn-extra';
-import getGitRoot from 'git-root2';
+import getGitRoot from 'git-root2/core';
 
 export default (async () =>
 {

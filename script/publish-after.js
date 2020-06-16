@@ -28,11 +28,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = __importDefault(require("path"));
 const package_json_1 = __importDefault(require("../package.json"));
 const cross_spawn_extra_1 = __importDefault(require("cross-spawn-extra"));
-const git_root2_1 = __importDefault(require("git-root2"));
+const core_1 = __importDefault(require("git-root2/core"));
 exports.default = (async () => {
     const project_root = path_1.default.join(__dirname, '..');
     let gitroot;
-    gitroot = git_root2_1.default(__dirname);
+    gitroot = core_1.default(__dirname);
     if (!gitroot || path_1.default.relative(gitroot, project_root)) {
         let __root_ws = await Promise.resolve().then(() => __importStar(require('../../../__root_ws'))).then(m => m.__root_ws)
             .catch(e => null);
