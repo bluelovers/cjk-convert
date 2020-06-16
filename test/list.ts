@@ -15,6 +15,7 @@ import { console } from 'debug-color2';
 import jsdiff = require('diff');
 import NodeUtil = require('util');
 import jpList from '../lib/jp/list';
+import { trimWithZeroWidth } from 'zero-width';
 
 console.enabledColor = true;
 console.inspectOptions = {
@@ -25,7 +26,13 @@ NodeUtil.inspect.defaultOptions.colors = true;
 
 let word = `契楔偰`;
 
-let ws = array_unique(UString.split(word, ''));
+let ws = array_unique(UString.split(word, '').map(s => {
+	if (typeof s === 'string')
+	{
+		return trimWithZeroWidth(s)
+	}
+	return s
+}));
 
 word = ws.join('');
 
