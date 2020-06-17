@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.86](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.85...cjk-conv@1.2.86) (2020-06-17)
+
+
+### 🐛　Bug Fixes
+
+* avoid bug of https://youtrack.jetbrains.com/issue/WEB-46035 ([507c8cc](https://github.com/bluelovers/ws-regexp/commit/507c8cca29e791c4bd1577a452a421bdd00b48f2))
+
+
+### 🔖　Miscellaneous
+
+* . ([cca8829](https://github.com/bluelovers/ws-regexp/commit/cca88296b25dc8f003e9fa2ac6237618269ceda2))
+* . ([9fabaaf](https://github.com/bluelovers/ws-regexp/commit/9fabaafb0fe169844fc443c040966c28271a0f99))
+
+
+
+
+
 ## [1.2.85](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.84...cjk-conv@1.2.85) (2020-06-11)
 
 **Note:** Version bump only for package cjk-conv
