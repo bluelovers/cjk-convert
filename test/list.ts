@@ -24,7 +24,7 @@ console.inspectOptions = {
 
 NodeUtil.inspect.defaultOptions.colors = true;
 
-let word = `契楔偰`;
+let word = `姓性`;
 
 let ws = array_unique(UString.split(word, '').map(s => {
 	if (typeof s === 'string')

@@ -73,10 +73,10 @@
     "prepublishOnly_": "yarn run test",
     "postpublish": "yarn run postpublishOnly:add",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "postpublishOnly:add": "npx yarn-tool root run postpublishOnly:add cjk-conv",
     "check": "yarn run build-table && yarn run check:list",
     "check:list": "ts-node ./test/list.ts",
     "ncu": "npx yarn-tool ncu -u",
-    "postpublishOnly:add": "npx yarn-tool root run postpublishOnly:add cjk-conv",
     "precommit": "yarn run build-table",
     "sort-package-json": "npx yarn-tool sort",
     "travis": "typedoc --options ./typedoc.config.js"
