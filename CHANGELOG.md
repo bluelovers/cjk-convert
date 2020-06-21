@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.88](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.87...cjk-conv@1.2.88) (2020-06-21)
+
+
+### 🛠　Build System
+
+* **typescript:** update .js ([cac940c](https://github.com/bluelovers/ws-regexp/commit/cac940c28c2e18405f97e04dca5127bcf6f8debc))
+
+
+
+
+
 ## [1.2.87](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.86...cjk-conv@1.2.87) (2020-06-20)
 
 
