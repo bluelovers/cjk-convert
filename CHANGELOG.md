@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.91](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.90...cjk-conv@1.2.91) (2020-06-29)
+
+**Note:** Version bump only for package cjk-conv
+
+
+
+
+
 ## [1.2.90](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.89...cjk-conv@1.2.90) (2020-06-28)
 
 **Note:** Version bump only for package cjk-conv
