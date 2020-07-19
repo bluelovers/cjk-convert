@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.104](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.103...cjk-conv@1.2.104) (2020-07-19)
+
+
+### 🛠　Build System
+
+* update typescript ([0906138](https://github.com/bluelovers/ws-regexp/commit/09061382af8b98173cadd92adf736d744c74575d))
+
+
+
+
+
 ## [1.2.103](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.102...cjk-conv@1.2.103) (2020-07-08)
 
 **Note:** Version bump only for package cjk-conv
