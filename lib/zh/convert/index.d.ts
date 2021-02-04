@@ -14,5 +14,5 @@ export { cn2tw, tw2cn };
 export { _cn2tw, _tw2cn };
 export { table_cn2tw, table_tw2cn };
 export { _call, IOptions, ITable, getOptions, defaultOptions, REGEXP_TEST, getOptionsSkip, SAFE_MODE_CHAR, };
-declare const _default: typeof import(".");
+declare const _default: typeof import("./index");
 export default _default;
