@@ -69,7 +69,7 @@
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
     "prepublish:lockfile": "npx sync-lockfile .",
-    "prepublishOnly": "yarn run test && yarn run build-table:commit",
+    "preversion": "yarn run test && yarn run build-table:commit",
     "prepublishOnly_": "yarn run test",
     "postpublish": "yarn run postpublishOnly:add",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
