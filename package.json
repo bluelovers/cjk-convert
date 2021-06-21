@@ -1,6 +1,6 @@
 {
   "name": "cjk-conv",
-  "version": "1.2.123",
+  "version": "1.2.124",
   "description": "convert chinese, japanese 簡繁日漢字轉換 ( merge/split submodule from node-novel, regexp-cjk, str-util )",
   "keywords": [
     "char",
@@ -82,18 +82,18 @@
     "travis": "typedoc --options ./typedoc.config.js"
   },
   "dependencies": {
-    "@lazy-cjk/jp-table-alias": "^1.0.27",
-    "@lazy-cjk/jp-table-comparison": "^1.0.14",
-    "@lazy-cjk/jp-table-convert": "^1.0.28",
-    "@lazy-cjk/jp-table-voice": "^1.0.18",
-    "@lazy-cjk/novel-filename": "^1.0.35",
-    "@lazy-cjk/util": "^1.0.7",
-    "@lazy-cjk/zh-convert": "^1.0.34",
-    "@lazy-cjk/zh-convert-table": "^1.0.19",
-    "@lazy-cjk/zh-slugify": "^1.0.65",
-    "@lazy-cjk/zh-table-alias": "^1.0.44",
-    "@lazy-cjk/zh-table-greedy": "^1.0.61",
-    "@lazy-cjk/zh-table-list": "^1.0.62",
+    "@lazy-cjk/jp-table-alias": "^1.0.28",
+    "@lazy-cjk/jp-table-comparison": "^1.0.17",
+    "@lazy-cjk/jp-table-convert": "^1.0.30",
+    "@lazy-cjk/jp-table-voice": "^1.0.21",
+    "@lazy-cjk/novel-filename": "^1.0.36",
+    "@lazy-cjk/util": "^1.0.9",
+    "@lazy-cjk/zh-convert": "^1.0.35",
+    "@lazy-cjk/zh-convert-table": "^1.0.21",
+    "@lazy-cjk/zh-slugify": "^1.0.66",
+    "@lazy-cjk/zh-table-alias": "^1.0.45",
+    "@lazy-cjk/zh-table-greedy": "^1.0.63",
+    "@lazy-cjk/zh-table-list": "^1.0.63",
     "tslib": "^2.3.0",
     "uni-string": "^1.1.10"
   },
