@@ -68,8 +68,8 @@
     "build-table:commit": "yarn workspace @lazy-cjk/zh-convert-table run build:commit && yarn workspace @lazy-cjk/zh-table-alias run build:commit && yarn workspace @lazy-cjk/zh-convert run build:commit && yarn workspace @lazy-cjk/zh-table-greedy run build:commit && yarn workspace @lazy-cjk/static-build-zh-convert run build:commit",
     "npm:publish": "npm publish",
     "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
-    "prepublish:lockfile": "npx sync-lockfile .",
     "preversion": "yarn run test && yarn run build-table:commit",
+    "prepublish:lockfile": "npx sync-lockfile .",
     "prepublishOnly_": "yarn run test",
     "postpublish": "yarn run postpublishOnly:add",
     "postpublish_": "git commit -m \"chore(release): publish\" .",
@@ -94,6 +94,7 @@
     "@lazy-cjk/zh-table-alias": "^1.0.44",
     "@lazy-cjk/zh-table-greedy": "^1.0.61",
     "@lazy-cjk/zh-table-list": "^1.0.62",
+    "tslib": "^2.3.0",
     "uni-string": "^1.1.10"
   },
   "gitHead": "28bfe8c18ca5ffc7623f9f40ebb69c298ca2a57b"

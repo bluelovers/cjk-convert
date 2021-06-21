@@ -1,13 +1,11 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
 const strtable_1 = require("../lib/util/strtable");
 const table_1 = require("../lib/zh/convert/table");
 const min_1 = require("../lib/zh/convert/min");
-const fs_extra_1 = __importDefault(require("fs-extra"));
-const path_1 = __importDefault(require("path"));
+const fs_extra_1 = tslib_1.__importDefault(require("fs-extra"));
+const path_1 = tslib_1.__importDefault(require("path"));
 const table_plus_1 = require("../lib/zh/convert/table_plus");
 let build_path = path_1.default.join(__dirname, '../build');
 (async () => {
