@@ -4,16 +4,16 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const path_1 = tslib_1.__importDefault(require("path"));
-const package_json_1 = tslib_1.__importDefault(require("../package.json"));
-const cross_spawn_extra_1 = tslib_1.__importDefault(require("cross-spawn-extra"));
-const core_1 = tslib_1.__importDefault(require("git-root2/core"));
+const path_1 = (0, tslib_1.__importDefault)(require("path"));
+const package_json_1 = (0, tslib_1.__importDefault)(require("../package.json"));
+const cross_spawn_extra_1 = (0, tslib_1.__importDefault)(require("cross-spawn-extra"));
+const core_1 = (0, tslib_1.__importDefault)(require("git-root2/core"));
 exports.default = (async () => {
     const project_root = path_1.default.join(__dirname, '..');
     let gitroot;
-    gitroot = core_1.default(__dirname);
+    gitroot = (0, core_1.default)(__dirname);
     if (!gitroot || path_1.default.relative(gitroot, project_root)) {
-        let __root_ws = await Promise.resolve().then(() => tslib_1.__importStar(require('../../../__root_ws'))).then(m => m.__root_ws)
+        let __root_ws = await Promise.resolve().then(() => (0, tslib_1.__importStar)(require('../../../__root_ws'))).then(m => m.__root_ws)
             .catch(e => null);
         if (!__root_ws || path_1.default.relative(gitroot, __root_ws)) {
             console.warn(`no git exists`);

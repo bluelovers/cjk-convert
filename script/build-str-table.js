@@ -4,8 +4,8 @@ const tslib_1 = require("tslib");
 const strtable_1 = require("../lib/util/strtable");
 const table_1 = require("../lib/zh/convert/table");
 const min_1 = require("../lib/zh/convert/min");
-const fs_extra_1 = tslib_1.__importDefault(require("fs-extra"));
-const path_1 = tslib_1.__importDefault(require("path"));
+const fs_extra_1 = (0, tslib_1.__importDefault)(require("fs-extra"));
+const path_1 = (0, tslib_1.__importDefault)(require("path"));
 const table_plus_1 = require("../lib/zh/convert/table_plus");
 let build_path = path_1.default.join(__dirname, '../build');
 (async () => {
@@ -41,11 +41,11 @@ async function buildDebug(name, table1, table2, table_plus, table_min_plus) {
     if (table_min_plus) {
         Object.assign(out.safe, table_min_plus);
     }
-    let t1 = strtable_1.toStrTableArray(out.safe, {
+    let t1 = (0, strtable_1.toStrTableArray)(out.safe, {
         coreJs: true,
         ignore: true,
     });
-    let t2 = strtable_1.toStrTableArray(out.safe);
+    let t2 = (0, strtable_1.toStrTableArray)(out.safe);
     let path_out = path_1.default.join(build_path, 'zh/convert/');
     let ID = 'safe';
     return Promise.all([
@@ -68,11 +68,11 @@ function build(name, table, table_plus) {
     if (table_plus) {
         Object.assign(table2, table_plus);
     }
-    let t1 = strtable_1.toStrTableArray(table2, {
+    let t1 = (0, strtable_1.toStrTableArray)(table2, {
         coreJs: true,
         ignore: true,
     });
-    let t2 = strtable_1.toStrTableArray(table2);
+    let t2 = (0, strtable_1.toStrTableArray)(table2);
     console.log(`build: ${name}
 table1 : ${Object.keys(table).length}
 table2 : ${Object.keys(table2).length}
