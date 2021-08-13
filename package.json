@@ -94,7 +94,7 @@
     "@lazy-cjk/zh-table-alias": "^1.0.49",
     "@lazy-cjk/zh-table-greedy": "^1.0.70",
     "@lazy-cjk/zh-table-list": "^1.0.69",
-    "tslib": "^2.3.0",
+    "tslib": "^2.3.1",
     "uni-string": "^1.1.11"
   },
   "gitHead": "901f2bb686b7fba8be5d948d1e7566271aa13082"
