@@ -10,7 +10,7 @@ import { cn2tw, tw2cn } from '../lib/zh/convert';
 import libTable from '../lib/zh/table';
 import { cn2tw_min, tw2cn_min } from '../lib/zh/convert/min';
 import { zhRegExp } from 'regexp-cjk';
-import UString = require('uni-string');
+import { UString } from 'uni-string';
 import { console } from 'debug-color2';
 import jsdiff = require('diff');
 import NodeUtil = require('util');
@@ -24,7 +24,7 @@ console.inspectOptions = {
 
 NodeUtil.inspect.defaultOptions.colors = true;
 
-let word = `仆僕`;
+let word = `蚵蚝蠔`;
 
 let ws = array_unique(UString.split(word, '').map(s => {
 	if (typeof s === 'string')

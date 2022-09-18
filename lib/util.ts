@@ -2,7 +2,7 @@
  * Created by user on 2017/12/9/009.
  */
 
-import UString from 'uni-string';
+import { UString } from 'uni-string';
 
 export interface IcharCodeAtFn
 {
