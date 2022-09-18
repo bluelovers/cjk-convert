@@ -51,7 +51,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluelovers/ws-regexp.git"
+    "url": "git+https://github.com/bluelovers/ws-regexp.git",
+    "directory": "packages/cjk-conv"
   },
   "license": "ISC",
   "author": "bluelovers",
@@ -64,6 +65,9 @@
     "coverage": "npx nyc npm run test",
     "pretest": "yarn run check",
     "test": "jest",
+    "test:jest": "jest --passWithNoTests",
+    "test:jest:snapshot": "yarn run test:jest -- -u",
+    "test:snapshot": "yarn run test -- -u",
     "build-table": "ynpx @yarn-tool/fix-ws-links && yarn workspace @lazy-cjk/zh-convert-table run build && yarn workspace @lazy-cjk/zh-table-alias run build && yarn workspace @lazy-cjk/zh-convert run build && yarn workspace @lazy-cjk/zh-table-greedy run build && yarn workspace @lazy-cjk/static-build-zh-convert run build",
     "build-table:commit": "yarn workspace @lazy-cjk/zh-convert-table run build:commit && yarn workspace @lazy-cjk/zh-table-alias run build:commit && yarn workspace @lazy-cjk/zh-convert run build:commit && yarn workspace @lazy-cjk/zh-table-greedy run build:commit && yarn workspace @lazy-cjk/static-build-zh-convert run build:commit",
     "npm:publish": "npm publish",
@@ -94,8 +98,8 @@
     "@lazy-cjk/zh-table-alias": "^1.0.58",
     "@lazy-cjk/zh-table-greedy": "^1.0.84",
     "@lazy-cjk/zh-table-list": "^1.0.80",
-    "tslib": "^2.3.1",
-    "uni-string": "^1.1.12"
+    "tslib": ">=2",
+    "uni-string": "^2.0.1"
   },
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771"
 }
