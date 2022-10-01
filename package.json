@@ -68,6 +68,7 @@
     "test:jest": "jest --passWithNoTests",
     "test:jest:snapshot": "yarn run test:jest -- -u",
     "test:snapshot": "yarn run test -- -u",
+    "test:tsd": "ynpx tsd",
     "build-table": "ynpx @yarn-tool/fix-ws-links && yarn workspace @lazy-cjk/zh-convert-table run build && yarn workspace @lazy-cjk/zh-table-alias run build && yarn workspace @lazy-cjk/zh-convert run build && yarn workspace @lazy-cjk/zh-table-greedy run build && yarn workspace @lazy-cjk/static-build-zh-convert run build",
     "build-table:commit": "yarn workspace @lazy-cjk/zh-convert-table run build:commit && yarn workspace @lazy-cjk/zh-table-alias run build:commit && yarn workspace @lazy-cjk/zh-convert run build:commit && yarn workspace @lazy-cjk/zh-table-greedy run build:commit && yarn workspace @lazy-cjk/static-build-zh-convert run build:commit",
     "npm:publish": "npm publish",
