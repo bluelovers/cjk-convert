@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.140](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.139...cjk-conv@1.2.140) (2022-10-16)
+
+
+
+### 📦　Code Refactoring
+
+* update import ([1c65802](https://github.com/bluelovers/ws-regexp/commit/1c658029a945b07193d30d26bddafd1ba23944a5))
+
+
+### 📚　Documentation
+
+* update meta and deps ([333919c](https://github.com/bluelovers/ws-regexp/commit/333919c0bfbed688463fa4850d47ec29cbf0a1a2))
+
+
+### 🚨　Tests
+
+* update snapshot ([b305f86](https://github.com/bluelovers/ws-regexp/commit/b305f86986b073c1504fc842d019a61453a69741))
+
+
+### 📌　Dependencies
+
+* update deps ([2811845](https://github.com/bluelovers/ws-regexp/commit/28118450fad02f8883bf328a98b2166f7b6b3fc3))
+* update deps ([84eb794](https://github.com/bluelovers/ws-regexp/commit/84eb7941e3fbd630fde0b2996fb5e2f9be101179))
+
+
+
 ## [1.2.139](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.138...cjk-conv@1.2.139) (2022-02-04)
 
 
