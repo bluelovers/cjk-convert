@@ -100,7 +100,7 @@
     "@lazy-cjk/zh-table-greedy": "^1.0.84",
     "@lazy-cjk/zh-table-list": "^1.0.80",
     "tslib": ">=2",
-    "uni-string": "^2.0.1"
+    "uni-string": "^2.0.2"
   },
   "gitHead": "6ba1fb06770d29bdd7f0747551359a22052ab771"
 }
