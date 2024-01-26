@@ -24,7 +24,7 @@ console.inspectOptions = {
 
 NodeUtil.inspect.defaultOptions.colors = true;
 
-let word = `蚵蚝蠔`;
+let word = `捶搥椎槌錘鎚锤`;
 
 let ws = array_unique(UString.split(word, '').map(s => {
 	if (typeof s === 'string')
