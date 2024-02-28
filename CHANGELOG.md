@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.145](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.144...cjk-conv@1.2.145) (2024-02-28)
+
+
+
+### 🔖　Miscellaneous
+
+* . ([bc3fad3](https://github.com/bluelovers/ws-regexp/commit/bc3fad3796d5b1792e14ac6b27896732616e58b8))
+
+
+
 ## [1.2.144](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.143...cjk-conv@1.2.144) (2024-01-29)
 
 
