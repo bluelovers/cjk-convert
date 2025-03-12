@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.150](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.149...cjk-conv@1.2.150) (2025-03-12)
+
+
+
+### 🐛　Bug Fixes
+
+* **dict:** 暨曁及 [#3](https://github.com/bluelovers/ws-regexp/issues/3) and add to greedy ([c74e543](https://github.com/bluelovers/ws-regexp/commit/c74e5430d6da9bbc911600757084fd5ac0f44eb4))
+
+
+
 ## [1.2.149](https://github.com/bluelovers/ws-regexp/compare/cjk-conv@1.2.148...cjk-conv@1.2.149) (2024-09-03)
 
 **Note:** Version bump only for package cjk-conv
